@@ -1,0 +1,7 @@
+extends: existence
+message: "Classify contextual vocabulary: '%s'."
+level: suggestion
+ignorecase: true
+scope: text
+tokens:
+  - '\breal(?:-| )time\b'

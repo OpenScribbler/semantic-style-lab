@@ -1,0 +1,29 @@
+id: setup
+label: set up / setup
+vale_check: Lab.ContextualSetup
+source:
+  guide: Lab house style
+  url: https://developers.google.com/style/hyphens
+  rationale: The preferred form depends on whether the words act as a verb phrase or name a thing.
+question: What function does the marked setup term perform in this passage?
+variants:
+  - set up
+  - setup
+  - set-up
+contexts:
+  verb_phrase:
+    description: The term expresses the action of configuring or preparing something.
+    expected: set up
+  noun:
+    description: The term is the head of a noun phrase and names a configuration, arrangement, or preparation process; it does not modify a following noun.
+    expected: setup
+  modifier:
+    description: The term directly precedes and modifies a noun, as in setup wizard, setup page, or setup process.
+    expected: setup
+  literal:
+    description: The term reproduces code, a UI label, a quotation, or an official name that must be preserved.
+    preserve: true
+  ambiguous:
+    description: The passage is genuinely incomplete or admits multiple grammatical parses, so the term's function cannot be determined.
+review_at: 0.55
+flag_at: 0.9

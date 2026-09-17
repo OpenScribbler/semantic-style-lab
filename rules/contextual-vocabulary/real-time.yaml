@@ -1,0 +1,25 @@
+id: real-time
+label: real time / real-time
+vale_check: Lab.ContextualRealTime
+source:
+  guide: Google developer documentation style guide
+  url: https://developers.google.com/style/hyphens
+  rationale: A compound modifier is hyphenated before a noun; an adverbial or noun phrase is open.
+question: Is the marked term directly modifying the noun that follows it, standing as its own phrase, or being reproduced literally?
+variants:
+  - real time
+  - real-time
+contexts:
+  standalone:
+    description: There is no separate noun immediately after the closing ⟧ marker that the marked term modifies. The next word might instead be a verb, preposition, or punctuation, as in updates in ⟦real time⟧ or the ⟦real time⟧ changed.
+    expected: real time
+  before_noun:
+    description: A separate noun appears immediately after the closing ⟧ marker, and the marked term modifies that noun, as in ⟦real-time⟧ update, ⟦real-time⟧ monitor, or ⟦real-time⟧ data.
+    expected: real-time
+  literal:
+    description: The term reproduces code, a UI label, a quotation, or an official name that must be preserved.
+    preserve: true
+  ambiguous:
+    description: The passage is incomplete and does not reveal whether a following noun is being modified.
+review_at: 0.55
+flag_at: 0.9

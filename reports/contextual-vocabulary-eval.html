@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contextual vocabulary experiment</title>
+  <style>
+    :root { color-scheme:light dark; --bg:#f5f1e8; --panel:#fffdf7; --ink:#27231d; --muted:#716a60; --line:#d9d0c1; --good:#18794e; --warn:#9a6700; --blue:#175cd3; }
+    * { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 ui-sans-serif,system-ui,sans-serif }
+    main { width:min(1050px,calc(100% - 28px)); margin:auto; padding:46px 0 70px }
+    h1,h2 { line-height:1.15; letter-spacing:-.025em } h1 { font-size:clamp(2.2rem,6vw,4.2rem); max-width:850px; margin:.2em 0 }
+    h2 { margin-top:2.2em } p { max-width:76ch } a { color:var(--blue) }
+    .eyebrow { color:var(--blue); font-weight:750; text-transform:uppercase; letter-spacing:.08em; font-size:.78rem }
+    .lede { color:var(--muted); font-size:1.18rem } .verdict { background:var(--panel); border-left:5px solid var(--warn); border-radius:0 12px 12px 0; padding:18px 22px; margin:26px 0 }
+    .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; margin:26px 0 }
+    .card,.flow,.case { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:17px }
+    .metric { display:block; font-size:1.9rem; font-weight:800 } .label { color:var(--muted); font-size:.85rem }
+    .good { color:var(--good) } .warn { color:var(--warn) }
+    .flow { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; text-align:center; align-items:center }
+    .flow div:not(:last-child)::after { content:'→'; float:right; transform:translate(20px,-1.5em); color:var(--muted) }
+    .cases { display:grid; grid-template-columns:1fr 1fr; gap:14px } .case h3 { margin:.1em 0 .6em }
+    code { background:color-mix(in srgb,var(--line) 50%,transparent); border-radius:4px; padding:.12em .35em }
+    li { margin:.4em 0 } footer { border-top:1px solid var(--line); margin-top:44px; padding-top:18px; color:var(--muted) }
+    @media(max-width:720px) { .grid,.flow,.cases { grid-template-columns:1fr 1fr } .flow div::after { display:none } }
+    @media(max-width:430px) { .grid,.flow,.cases { grid-template-columns:1fr } }
+    @media(prefers-color-scheme:dark) { :root { --bg:#171713; --panel:#211f1a; --ink:#eee9dc; --muted:#aaa294; --line:#474238; --good:#53b985; --warn:#e5ad3d; --blue:#78a9ff } }
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">Semantic Style Lab · 17 September 2026</div>
+  <h1>Vale found every term. Jev made the right policy decision 87.8% of the time.</h1>
+  <p class="lede">A first vertical slice for vocabulary whose spacing or hyphenation depends on grammatical context, UI text, code, or official names.</p>
+  <div class="verdict"><strong>Promising, not automation-ready.</strong> The architecture works, cost is negligible, and the failures are measurable. Modifier recall needs improvement before edits should be applied automatically.</div>
+
+  <div class="grid">
+    <div class="card"><span class="metric good">87.8%</span><span class="label">policy accuracy over 90 decisions</span></div>
+    <div class="card"><span class="metric good">93.3%</span><span class="label">policy stability across 3 runs</span></div>
+    <div class="card"><span class="metric warn">60%</span><span class="label">recall on 5 seeded sample errors</span></div>
+    <div class="card"><span class="metric">$0.00151</span><span class="label">fixture-run input cost</span></div>
+  </div>
+
+  <h2>The compiled workflow</h2>
+  <div class="flow">
+    <div><strong>Vale</strong><br><span class="label">enumerates variants</span></div>
+    <div><strong>Jev</strong><br><span class="label">classifies context</span></div>
+    <div><strong>Rule record</strong><br><span class="label">selects policy</span></div>
+    <div><strong>Editing LLM</strong><br><span class="label">gets one bounded diff</span></div>
+  </div>
+
+  <h2>Three initial term families</h2>
+  <ul>
+    <li><code>set up</code> / <code>setup</code> / <code>set-up</code>: 100% policy accuracy</li>
+    <li><code>command line</code> / <code>command-line</code>: 76.7% policy accuracy</li>
+    <li><code>real time</code> / <code>real-time</code>: 86.7% policy accuracy</li>
+  </ul>
+
+  <h2>End-to-end adversarial sample</h2>
+  <div class="cases">
+    <section class="case"><h3 class="good">Found</h3><ul>
+      <li><code>complete the set up</code> → <code>complete the setup</code></li>
+      <li><code>from the command-line</code> → <code>from the command line</code></li>
+      <li><code>in real-time</code> → <code>in real time</code></li>
+    </ul></section>
+    <section class="case"><h3 class="warn">Missed</h3><ul>
+      <li><code>command line client</code> → <code>command-line client</code></li>
+      <li><code>real time updates</code> → <code>real-time updates</code></li>
+    </ul></section>
+  </div>
+  <p>Vale enumerated all seven prose candidates and skipped the inline-code occurrence. The systematic problem is not enumeration: Jev sometimes fails to recognize that an unhyphenated phrase modifies the following noun.</p>
+
+  <h2>What the fixtures taught us</h2>
+  <p>The current surface form can bias classification: an already hyphenated phrase sometimes looks like a modifier even when a verb follows it. Literal quotations are also boundary cases. Marking the exact occurrence and asking an observable syntactic question helped, but did not eliminate either issue.</p>
+  <p>The next experiment should test a deterministic part-of-speech or dependency cue before Jev, while retaining Jev for UI labels, official names, quotations, and genuinely ambiguous syntax.</p>
+
+  <h2>Artifacts</h2>
+  <ul>
+    <li><a href="contextual-vocabulary-eval.json">Repeated fixture results</a></li>
+    <li><a href="sample-audit.json">End-to-end sample audit</a></li>
+    <li><a href="contextual-vocabulary-eval.md">Markdown interpretation</a></li>
+  </ul>
+  <footer>Jev 1.13.0 · 35,871 input tokens and 4,794 output tokens for the repeated fixture benchmark. Cost shown uses $0.042 per million input tokens and excludes output charges.</footer>
+</main></body>
+</html>
