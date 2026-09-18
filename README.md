@@ -75,6 +75,29 @@ The larger [real-world HTML report](reports/real-world-experiment.html) compares
 development and held-out results across two strategy versions. Corpus source
 revisions, links, and licenses are under [`corpus/`](corpus/).
 
+## Compile and test the Google style guide
+
+The larger experiment inventories the public Google developer documentation
+style guide, runs 12 initial semantic rules over 27 real Syllago pages, and
+compares two constrained editors on 20 pages:
+
+```bash
+bun run compile:google-guide -- --vale-dir /path/to/vale/styles/Google
+bun run audit:google-semantic -- --root /path/to/docs --output reports/audit.local.json
+bun run experiment:editor-ab -- --root /path/to/docs --audit reports/audit.local.json --output reports/editor-ab.local.json
+bun run report:google-experiment
+```
+
+The paired editor experiment does not change the source documentation. Its
+compiled path accepts edits only when their source line maps to an enumerated
+Jev finding; pages without findings skip the editor. This boundary matters: an
+editor explicitly instructed not to invent unrelated violations still did so.
+
+Open the [interactive Google-guide report](reports/google-style-experiment.html)
+to review 20 blind A/B pairs and label all 31 Jev findings. See the
+[experiment notes](docs/google-style-experiment.md) for the design, recorded
+results, and limitations.
+
 ## Design boundary
 
 Use an ordinary Vale vocabulary or substitution when one form is always right.

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["page", "suggestions"],
+  "properties": {
+    "page": {"type": "string"},
+    "suggestions": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["line", "rule", "original", "replacement", "rationale", "confidence"],
+        "properties": {
+          "line": {"type": "integer", "minimum": 1},
+          "rule": {"type": "string"},
+          "original": {"type": "string"},
+          "replacement": {"type": "string"},
+          "rationale": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2104 @@
+{
+  "generated_at": "2026-09-18T02:16:11.554Z",
+  "design": "paired page-level comparison: full-guide instruction versus Jev findings plus rule records",
+  "page_count": 20,
+  "call_count": 40,
+  "pages_with_findings": 16,
+  "control_pages": 4,
+  "results": [
+    {
+      "path": "advanced/registry-privacy.mdx",
+      "method": "baseline",
+      "finding_count": 0,
+      "result": {
+        "page": "advanced/registry-privacy.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title: Registry Privacy",
+            "replacement": "title: Registry privacy",
+            "rationale": "The page title uses title case instead of sentence case.",
+            "confidence": 1
+          },
+          {
+            "line": 8,
+            "rule": "Don't put spaces before or after an em dash.",
+            "original": "This is a soft gate — it prevents mistakes, not intentional circumvention.",
+            "replacement": "This is a soft gate—it prevents mistakes, not intentional circumvention.",
+            "rationale": "Remove the spaces surrounding the em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 14,
+            "rule": "Don't use numbers in headings to indicate a sequence of sections.",
+            "original": "### 1. Detection",
+            "replacement": "### Detection",
+            "rationale": "The heading hierarchy and document order already convey the sequence.",
+            "confidence": 1
+          },
+          {
+            "line": 22,
+            "rule": "Don't use numbers in headings to indicate a sequence of sections.",
+            "original": "### 2. Tainting",
+            "replacement": "### Tainting",
+            "rationale": "The heading hierarchy and document order already convey the sequence.",
+            "confidence": 1
+          },
+          {
+            "line": 33,
+            "rule": "Don't use numbers in headings to indicate a sequence of sections.",
+            "original": "### 3. Enforcement (four gates)",
+            "replacement": "### Enforcement (four gates)",
+            "rationale": "The heading hierarchy and document order already convey the sequence.",
+            "confidence": 1
+          },
+          {
+            "line": 44,
+            "rule": "Don't use numbers in headings to indicate a sequence of sections.",
+            "original": "### 4. Scope",
+            "replacement": "### Scope",
+            "rationale": "The heading hierarchy and document order already convey the sequence.",
+            "confidence": 1
+          },
+          {
+            "line": 46,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title=\"Soft Gate\"",
+            "replacement": "title=\"Soft gate\"",
+            "rationale": "The aside title uses title case instead of sentence case.",
+            "confidence": 1
+          },
+          {
+            "line": 73,
+            "rule": "End complete-sentence list items with appropriate punctuation.",
+            "original": "1. Content added from the private registry is automatically tainted\n2. Team members can freely install tainted content to their providers\n3. Tainted content cannot be accidentally published to public registries\n4. To share content publicly, create it fresh or re-add from a public source",
+            "replacement": "1. Content added from the private registry is automatically tainted.\n2. Team members can freely install tainted content to their providers.\n3. Tainted content cannot be accidentally published to public registries.\n4. To share content publicly, create it fresh or re-add from a public source.",
+            "rationale": "These list items are complete sentences and require ending punctuation.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/registry-privacy.mdx",
+      "method": "compiled",
+      "finding_count": 0,
+      "result": {
+        "page": "advanced/registry-privacy.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for titles and headings",
+            "original": "title: Registry Privacy",
+            "replacement": "title: Registry privacy",
+            "rationale": "Google developer documentation uses sentence-style capitalization for document titles.",
+            "confidence": 0.98
+          },
+          {
+            "line": 18,
+            "rule": "Use consistent punctuation in lists",
+            "original": "- **API probes**: Checks GitHub, GitLab, or Bitbucket APIs for the repository's privacy status\n- **Manifest field**: An optional `visibility` field in `registry.yaml` provides explicit control\n- **Default**: Unknown visibility defaults to **private** (safe default)",
+            "replacement": "- **API probes**: Checks GitHub, GitLab, or Bitbucket APIs for the repository's privacy status.\n- **Manifest field**: An optional `visibility` field in `registry.yaml` provides explicit control.\n- **Default**: Unknown visibility defaults to **private**, which is the safe default.",
+            "rationale": "These list items are complete sentences, so they should end with periods. The final edit also replaces an abrupt parenthetical fragment with a grammatical clause.",
+            "confidence": 0.97
+          },
+          {
+            "line": 46,
+            "rule": "Use sentence case for titles and headings",
+            "original": "title=\"Soft Gate\"",
+            "replacement": "title=\"Soft gate\"",
+            "rationale": "Use sentence-style capitalization for the aside title.",
+            "confidence": 0.99
+          },
+          {
+            "line": 48,
+            "rule": "Avoid slashes when a conjunction is clearer",
+            "original": "- Direct filesystem operations (copy/paste)",
+            "replacement": "- Direct filesystem operations (copying and pasting)",
+            "rationale": "The conjunction is clearer and more accessible than a slash construction.",
+            "confidence": 0.96
+          },
+          {
+            "line": 49,
+            "rule": "Capitalize product and technology names correctly",
+            "original": "- Direct git commands",
+            "replacement": "- Direct Git commands",
+            "rationale": "Git is a proper name and should be capitalized.",
+            "confidence": 0.99
+          },
+          {
+            "line": 73,
+            "rule": "Use consistent punctuation in lists",
+            "original": "1. Content added from the private registry is automatically tainted\n2. Team members can freely install tainted content to their providers\n3. Tainted content cannot be accidentally published to public registries\n4. To share content publicly, create it fresh or re-add from a public source",
+            "replacement": "1. Content added from the private registry is automatically tainted.\n2. Team members can freely install tainted content to their providers.\n3. Tainted content cannot be accidentally published to public registries.\n4. To share content publicly, create it fresh or re-add it from a public source.",
+            "rationale": "These numbered list items are complete sentences and should end with periods. Adding “it” also makes the final compound instruction grammatically parallel.",
+            "confidence": 0.97
+          },
+          {
+            "line": 92,
+            "rule": "Capitalize product and technology names correctly",
+            "original": "git-based registries",
+            "replacement": "Git-based registries",
+            "rationale": "Git is a proper name and should be capitalized, including in a compound modifier.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/sandbox.mdx",
+      "method": "baseline",
+      "finding_count": 2,
+      "result": {
+        "page": "advanced/sandbox.mdx",
+        "suggestions": [
+          {
+            "line": 6,
+            "rule": "Em dashes",
+            "original": "code — installing packages, running scripts, making API calls — the sandbox",
+            "replacement": "code—installing packages, running scripts, making API calls—the sandbox",
+            "rationale": "Remove spaces around em dashes, as required by the style guide.",
+            "confidence": 0.99
+          },
+          {
+            "line": 8,
+            "rule": "Complete sentences",
+            "original": "Linux only. macOS and Windows are not supported.",
+            "replacement": "The sandbox supports Linux only. It doesn't support macOS or Windows.",
+            "rationale": "Replace the sentence fragment with complete sentences and use a contraction for a natural, conversational tone.",
+            "confidence": 0.98
+          },
+          {
+            "line": 24,
+            "rule": "Version terminology",
+            "original": "**bubblewrap** (`bwrap`) >= 0.4.0 — the container runtime",
+            "replacement": "**bubblewrap** (`bwrap`) version 0.4.0 or later—the container runtime",
+            "rationale": "Express the version requirement in words and remove spaces around the em dash.",
+            "confidence": 0.98
+          },
+          {
+            "line": 25,
+            "rule": "Version terminology",
+            "original": "**socat** >= 1.7.0 — used for network proxying through the sandbox boundary",
+            "replacement": "**socat** version 1.7.0 or later—used for network proxying through the sandbox boundary",
+            "rationale": "Express the version requirement in words and remove spaces around the em dash.",
+            "confidence": 0.98
+          },
+          {
+            "line": 54,
+            "rule": "Articles",
+            "original": "Once prerequisites are in place,",
+            "replacement": "After the prerequisites are in place,",
+            "rationale": "Add the missing article and use a more direct time transition.",
+            "confidence": 0.96
+          },
+          {
+            "line": 73,
+            "rule": "Latin abbreviations",
+            "original": "# Allow a localhost port (e.g., a local dev server)",
+            "replacement": "# Allow a localhost port (for example, for a local dev server)",
+            "rationale": "Use “for example” instead of the Latin abbreviation “e.g.”",
+            "confidence": 0.99
+          },
+          {
+            "line": 106,
+            "rule": "Complete sentences",
+            "original": "Ports control which localhost services are reachable from inside the sandbox. Useful for local dev servers, databases, or other services running on your machine.",
+            "replacement": "Ports control which localhost services are reachable from inside the sandbox, such as local development servers, databases, or other services running on your machine.",
+            "rationale": "Eliminate the sentence fragment and spell out “development” in narrative text.",
+            "confidence": 0.98
+          },
+          {
+            "line": 121,
+            "rule": "Em dashes",
+            "original": "By default, none are forwarded — the sandbox starts with a clean environment.",
+            "replacement": "By default, none are forwarded, so the sandbox starts with a clean environment.",
+            "rationale": "Use a conjunction to state the causal relationship directly and avoid a spaced em dash.",
+            "confidence": 0.97
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/sandbox.mdx",
+      "method": "compiled",
+      "finding_count": 2,
+      "result": {
+        "page": "advanced/sandbox.mdx",
+        "suggestions": [
+          {
+            "line": 14,
+            "rule": "Avoid misleading anthropomorphism",
+            "original": "The sandboxed process can only see your current working directory.",
+            "replacement": "The sandboxed process can access only your current working directory.",
+            "rationale": "Describes the process's access literally and avoids attributing human perception to software.",
+            "confidence": 0.94
+          },
+          {
+            "line": 60,
+            "rule": "Address the reader directly",
+            "original": "The provider works normally from the user's perspective, but its access is constrained to what you've allowed.",
+            "replacement": "The provider works normally for you, but its access is constrained to what you've allowed.",
+            "rationale": "Addresses the reader directly and avoids referring to the reader as “the user.”",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/team-setup.mdx",
+      "method": "baseline",
+      "finding_count": 3,
+      "result": {
+        "page": "advanced/team-setup.mdx",
+        "suggestions": [
+          {
+            "line": 10,
+            "rule": "Use preferred terminology and capitalization.",
+            "original": "git repo",
+            "replacement": "Git repository",
+            "rationale": "The style guide prefers “repository” to “repo,” and Git is a proper name.",
+            "confidence": 1
+          },
+          {
+            "line": 14,
+            "rule": "Use parallel imperative steps, end complete sentences with periods, and avoid “etc.”",
+            "original": "1. Create a git repo (GitHub, GitLab, etc.)\n2. Add syllago content — rules, skills, agents, hooks, MCP configs — following the standard directory layout\n3. Push to your git host\n4. Share the URL with your team",
+            "replacement": "1. Create a Git repository on a hosting service such as GitHub or GitLab.\n2. Add syllago content, including rules, skills, agents, hooks, and MCP configurations, by following the standard directory layout.\n3. Push the repository to your Git host.\n4. Share the URL with your team.",
+            "rationale": "The revision makes the procedure parallel and consistently punctuated, expands “configs,” replaces “repo,” capitalizes Git, and replaces “etc.” with specific language.",
+            "confidence": 0.99
+          },
+          {
+            "line": 19,
+            "rule": "Use preferred terminology and capitalization.",
+            "original": "git repo",
+            "replacement": "Git repository",
+            "rationale": "The style guide prefers “repository” to “repo,” and Git is a proper name.",
+            "confidence": 1
+          },
+          {
+            "line": 47,
+            "rule": "Define abbreviations on first use.",
+            "original": "via PR",
+            "replacement": "through a pull request (PR)",
+            "rationale": "Spell out an abbreviation at its first occurrence unless readers are certain to recognize it.",
+            "confidence": 0.99
+          },
+          {
+            "line": 55,
+            "rule": "Prefer precise, plain language and preferred terminology.",
+            "original": "`syllago share` also works for arbitrary team repos that aren't structured as registries — drop the `--to` flag and configure a default team repo target.",
+            "replacement": "`syllago share` also works for team repositories that aren't structured as registries. Omit the `--to` flag and configure a default team repository target.",
+            "rationale": "The revision replaces “repos,” removes the imprecise modifier “arbitrary,” and replaces the informal instruction “drop” with “omit.”",
+            "confidence": 0.98
+          },
+          {
+            "line": 61,
+            "rule": "Use clear, direct language.",
+            "original": "A [loadout](/using-syllago/collections/loadouts/) bundles multiple content items into a single apply-as-a-unit configuration.",
+            "replacement": "A [loadout](/using-syllago/collections/loadouts/) bundles multiple content items into a single configuration that you can apply as a unit.",
+            "rationale": "The replacement removes the difficult-to-parse compound modifier while preserving the meaning.",
+            "confidence": 0.97
+          },
+          {
+            "line": 71,
+            "rule": "Avoid “etc.” and unnecessary abbreviations.",
+            "original": "The interactive creator walks through selecting which content items to include — team rules, shared skills, standard MCP configs, etc.",
+            "replacement": "The interactive creator guides you through selecting content items such as team rules, shared skills, and standard MCP configurations.",
+            "rationale": "The replacement addresses the reader directly, expands “configs,” and replaces “etc.” with a complete example list.",
+            "confidence": 0.99
+          },
+          {
+            "line": 113,
+            "rule": "Define abbreviations on first use.",
+            "original": "in CI pipelines",
+            "replacement": "in continuous integration (CI) pipelines",
+            "rationale": "The heading doesn't define the abbreviation, so expand CI at its first use in the section text.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/team-setup.mdx",
+      "method": "compiled",
+      "finding_count": 3,
+      "result": {
+        "page": "advanced/team-setup.mdx",
+        "suggestions": [
+          {
+            "line": 57,
+            "rule": "Give pronouns clear referents",
+            "original": "This means team standards can evolve from the bottom up.",
+            "replacement": "With this workflow, team standards can evolve from the bottom up.",
+            "rationale": "Names the workflow as the referent instead of using the ambiguous pronoun “This.”",
+            "confidence": 0.94
+          },
+          {
+            "line": 57,
+            "rule": "Avoid unsubstantiated or minimizing claims",
+            "original": "the best content gets published",
+            "replacement": "selected content gets published",
+            "rationale": "Removes the subjective, unsubstantiated claim that published content is necessarily the best.",
+            "confidence": 0.92
+          },
+          {
+            "line": 156,
+            "rule": "Avoid unsubstantiated or minimizing claims",
+            "original": "Loadouts make it easy to apply.",
+            "replacement": "Loadouts apply registry content as a unit.",
+            "rationale": "Describes the concrete benefit of loadouts without minimizing the effort involved.",
+            "confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/troubleshooting.mdx",
+      "method": "baseline",
+      "finding_count": 0,
+      "result": {
+        "page": "advanced/troubleshooting.mdx",
+        "suggestions": [
+          {
+            "line": 14,
+            "rule": "Use clear, complete terminology instead of abbreviations.",
+            "original": "env var",
+            "replacement": "environment variable",
+            "rationale": "Expands an informal abbreviation for clarity, especially for readers who might be unfamiliar with it.",
+            "confidence": 0.99
+          },
+          {
+            "line": 57,
+            "rule": "Avoid unnecessary words and use precise language.",
+            "original": "verify what's actually imported",
+            "replacement": "verify which content is imported",
+            "rationale": "Removes the unnecessary intensifier “actually” and states the object more precisely.",
+            "confidence": 0.98
+          },
+          {
+            "line": 58,
+            "rule": "Use “or” instead of “versus” when presenting alternatives.",
+            "original": "registry vs library",
+            "replacement": "registry or library",
+            "rationale": "Uses a clearer conjunction and avoids the informal abbreviation “vs.”",
+            "confidence": 0.99
+          },
+          {
+            "line": 91,
+            "rule": "Avoid colloquial language in technical documentation.",
+            "original": "Sync command errors out",
+            "replacement": "Sync command returns an error",
+            "rationale": "Replaces the colloquial phrasal verb with precise technical wording.",
+            "confidence": 0.99
+          },
+          {
+            "line": 95,
+            "rule": "Use the official capitalization of product and technology names.",
+            "original": "typically git",
+            "replacement": "typically Git",
+            "rationale": "Git is a proper product name and should be capitalized.",
+            "confidence": 1
+          },
+          {
+            "line": 119,
+            "rule": "Use precise nouns and omit unnecessary commas in compound predicates.",
+            "original": "Ensure your user owns the directory, or has write access.",
+            "replacement": "Ensure that your user account owns the directory or has write access.",
+            "rationale": "Clarifies that the account owns the directory and removes the unnecessary comma before “or.”",
+            "confidence": 0.98
+          },
+          {
+            "line": 132,
+            "rule": "Use “such as” to introduce examples.",
+            "original": "a code like `CONVERT_001` or `REGISTRY_002`",
+            "replacement": "a code such as `CONVERT_001` or `REGISTRY_002`",
+            "rationale": "Makes clear that the named codes are examples rather than similar items.",
+            "confidence": 0.97
+          },
+          {
+            "line": 134,
+            "rule": "Avoid redundant modifiers.",
+            "original": "See the full [error codes reference](/errors/) for the complete list.",
+            "replacement": "See the [error codes reference](/errors/) for the complete list.",
+            "rationale": "“Full” and “complete” express the same idea, so one is sufficient.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "advanced/troubleshooting.mdx",
+      "method": "compiled",
+      "finding_count": 0,
+      "result": {
+        "page": "advanced/troubleshooting.mdx",
+        "suggestions": [
+          {
+            "line": 14,
+            "rule": "Use full words instead of abbreviations in prose",
+            "original": "env var",
+            "replacement": "environment variable",
+            "rationale": "Spells out an abbreviation for clarity while preserving the standard variable name in code formatting.",
+            "confidence": 0.99
+          },
+          {
+            "line": 58,
+            "rule": "Prefer short, direct sentences",
+            "original": "Check the `--source` filter — content may be in a different source (registry vs library):",
+            "replacement": "Check the `--source` filter. Content may be in a different source (registry or library):",
+            "rationale": "Replaces the parenthetical abbreviation and separates two independent ideas for easier scanning.",
+            "confidence": 0.96
+          },
+          {
+            "line": 91,
+            "rule": "Avoid colloquial language",
+            "original": "Sync command errors out",
+            "replacement": "Sync command returns an error",
+            "rationale": "Uses precise, professional wording for the command behavior.",
+            "confidence": 0.99
+          },
+          {
+            "line": 95,
+            "rule": "Use correct product capitalization",
+            "original": "typically git",
+            "replacement": "typically Git",
+            "rationale": "Capitalizes the Git product name correctly.",
+            "confidence": 0.99
+          },
+          {
+            "line": 119,
+            "rule": "Don't separate compound predicates with a comma",
+            "original": "Ensure your user owns the directory, or has write access.",
+            "replacement": "Ensure your user owns the directory or has write access.",
+            "rationale": "Removes an unnecessary comma between two predicates that share the same subject.",
+            "confidence": 0.99
+          },
+          {
+            "line": 120,
+            "rule": "Avoid slashes in prose",
+            "original": "On macOS/Linux:",
+            "replacement": "On macOS or Linux:",
+            "rationale": "Uses a conjunction to express the alternatives clearly.",
+            "confidence": 0.99
+          },
+          {
+            "line": 132,
+            "rule": "Use \"such as\" to introduce examples",
+            "original": "a code like `CONVERT_001` or `REGISTRY_002`",
+            "replacement": "a code such as `CONVERT_001` or `REGISTRY_002`",
+            "rationale": "Clarifies that the named codes are examples rather than comparisons.",
+            "confidence": 0.97
+          },
+          {
+            "line": 134,
+            "rule": "Avoid redundant wording",
+            "original": "See the full [error codes reference](/errors/) for the complete list.",
+            "replacement": "See the [error codes reference](/errors/) for the complete list.",
+            "rationale": "Removes “full,” which duplicates the meaning of “complete.”",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "for-ai-assistants.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "for-ai-assistants.mdx",
+        "suggestions": [
+          {
+            "line": 6,
+            "rule": "Em dashes",
+            "original": "standard — a convention",
+            "replacement": "standard—a convention",
+            "rationale": "Don't put spaces before or after an em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 7,
+            "rule": "Capitalization",
+            "original": "Large Language Models",
+            "replacement": "large language models",
+            "rationale": "Use lowercase for a common noun rather than unnecessary title capitalization.",
+            "confidence": 0.99
+          },
+          {
+            "line": 19,
+            "rule": "Clear and unambiguous language",
+            "original": "## How to use these",
+            "replacement": "## How to use these resources",
+            "rationale": "Replace the vague pronoun with the specific noun it refers to.",
+            "confidence": 0.96
+          },
+          {
+            "line": 36,
+            "rule": "List punctuation",
+            "original": "- Use `llms-small.txt` when you just need an overview or are working with smaller context windows",
+            "replacement": "- Use `llms-small.txt` when you just need an overview or are working with smaller context windows.",
+            "rationale": "End a list item that contains a complete sentence with a period.",
+            "confidence": 1
+          },
+          {
+            "line": 37,
+            "rule": "List punctuation",
+            "original": "- Use `llms-full.txt` when you need detailed information about specific features",
+            "replacement": "- Use `llms-full.txt` when you need detailed information about specific features.",
+            "rationale": "End a list item that contains a complete sentence with a period.",
+            "confidence": 1
+          },
+          {
+            "line": 38,
+            "rule": "List punctuation",
+            "original": "- The **Copy page** button (top-right of any page) copies individual page content for focused questions",
+            "replacement": "- The **Copy page** button (top-right of any page) copies individual page content for focused questions.",
+            "rationale": "End a list item that contains a complete sentence with a period.",
+            "confidence": 1
+          },
+          {
+            "line": 42,
+            "rule": "Em dashes",
+            "original": "docs — not in",
+            "replacement": "docs—not in",
+            "rationale": "Don't put spaces before or after an em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 46,
+            "rule": "Em dashes",
+            "original": "file — try",
+            "replacement": "file—try",
+            "rationale": "Don't put spaces before or after an em dash.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "for-ai-assistants.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "for-ai-assistants.mdx",
+        "suggestions": [
+          {
+            "line": 19,
+            "rule": "Give pronouns clear referents",
+            "original": "## How to use these",
+            "replacement": "## How to use these resources",
+            "rationale": "Add a noun after the demonstrative so that the heading clearly identifies what readers will use.",
+            "confidence": 0.98
+          },
+          {
+            "line": 40,
+            "rule": "Give pronouns clear referents",
+            "original": "## Verify it worked",
+            "replacement": "## Verify that the assistant received the documentation",
+            "rationale": "Replace the ambiguous pronoun with the specific outcome that the verification checks.",
+            "confidence": 0.94
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/choose-your-path.mdx",
+      "method": "baseline",
+      "finding_count": 2,
+      "result": {
+        "page": "getting-started/choose-your-path.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for document titles.",
+            "original": "title: Choose Your Path",
+            "replacement": "title: Choose your path",
+            "rationale": "The page title uses title case instead of sentence case.",
+            "confidence": 1
+          },
+          {
+            "line": 6,
+            "rule": "Use clear, concise language and omit spaces around em dashes.",
+            "original": "Syllago serves several different jobs, so the docs are dense enough that it helps to pick a path. Find your role below and follow the suggested route — you can wander into the rest later.",
+            "replacement": "Syllago serves several purposes, so it helps to choose a path through the documentation. Find your role below and follow the suggested route—you can explore the rest later.",
+            "rationale": "Replaces awkward and figurative wording with clearer language and formats the em dash correctly.",
+            "confidence": 0.97
+          },
+          {
+            "line": 13,
+            "rule": "Use sentence case for link text and colons to separate list items from their descriptions.",
+            "original": "1. [Install syllago](/getting-started/installation/)\n2. [Quick Start: import from your existing tools](/getting-started/quick-start/)\n3. [Loadouts](/using-syllago/collections/loadouts/) — bundle a \"Python stack\" or \"frontend review\" profile and switch with one command\n4. [The TUI](/using-syllago/tui/) — browse, install, and manage content interactively",
+            "replacement": "1. [Install syllago](/getting-started/installation/)\n2. [Quick start: import from your existing tools](/getting-started/quick-start/)\n3. [Loadouts](/using-syllago/collections/loadouts/): bundle a \"Python stack\" or \"frontend review\" profile and switch with one command\n4. [The TUI](/using-syllago/tui/): browse, install, and manage content interactively",
+            "rationale": "Applies sentence case and replaces em dashes used as description separators with colons.",
+            "confidence": 0.99
+          },
+          {
+            "line": 22,
+            "rule": "Spell out abbreviations on first use and avoid shortened words in non-code text.",
+            "original": "You want CI to fail if the config drifts.",
+            "replacement": "You want continuous integration (CI) to fail if the configuration drifts.",
+            "rationale": "Defines CI and replaces the discouraged shortening \"config\" with \"configuration.\"",
+            "confidence": 0.99
+          },
+          {
+            "line": 25,
+            "rule": "Use sentence case for link text and colons to separate list items from their descriptions.",
+            "original": "1. [Local vs. Global architecture](/using-syllago/local-vs-global/) — why and how to commit `.syllago/` to your repo\n2. [`.syllago.yaml` Format](/using-syllago/syllago-yaml/) — the file your team will share\n3. [`syllago sync-install`](/using-syllago/cli-reference/sync-install/) — one command in CI that pulls registries and installs to a provider\n4. [Team setup](/advanced/team-setup/) — multi-developer workflows",
+            "replacement": "1. [Local vs. global architecture](/using-syllago/local-vs-global/): why and how to commit `.syllago/` to your repo\n2. [`.syllago.yaml` format](/using-syllago/syllago-yaml/): the file your team will share\n3. [`syllago sync-install`](/using-syllago/cli-reference/sync-install/): one command in CI that pulls registries and installs to a provider\n4. [Team setup](/advanced/team-setup/): multi-developer workflows",
+            "rationale": "Applies sentence case and replaces em dashes used as description separators with colons.",
+            "confidence": 0.99
+          },
+          {
+            "line": 34,
+            "rule": "Use literal, globally understandable language.",
+            "original": "You're standing syllago up for an organization. You need a private registry, signed manifests, and guardrails that prevent internal rules from leaking to public registries.",
+            "replacement": "You're setting up syllago for an organization. You need a private registry, signed manifests, and controls that prevent internal rules from leaking to public registries.",
+            "rationale": "Replaces the colloquial phrase \"standing up\" and the metaphor \"guardrails\" with direct terms.",
+            "confidence": 0.97
+          },
+          {
+            "line": 37,
+            "rule": "Use colons to separate list items from their descriptions.",
+            "original": "1. [Registries](/using-syllago/collections/registries/) — how shared content distribution works\n2. [Registry privacy](/advanced/registry-privacy/) — privacy gates and taint propagation\n3. [MOAT trust tiers](/moat/trust-tiers/) — signing, provenance, and trusted roots\n4. [Sandbox](/advanced/sandbox/) — running AI providers under bubblewrap restrictions",
+            "replacement": "1. [Registries](/using-syllago/collections/registries/): how shared content distribution works\n2. [Registry privacy](/advanced/registry-privacy/): privacy gates and taint propagation\n3. [MOAT trust tiers](/moat/trust-tiers/): signing, provenance, and trusted roots\n4. [Sandbox](/advanced/sandbox/): running AI providers under bubblewrap restrictions",
+            "rationale": "The style guide recommends colons or periods, rather than dashes, between list items and their descriptions.",
+            "confidence": 1
+          },
+          {
+            "line": 46,
+            "rule": "Don't put spaces around an em dash.",
+            "original": "foundation — you",
+            "replacement": "foundation—you",
+            "rationale": "Google style formats em dashes without surrounding spaces.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/choose-your-path.mdx",
+      "method": "compiled",
+      "finding_count": 2,
+      "result": {
+        "page": "getting-started/choose-your-path.mdx",
+        "suggestions": [
+          {
+            "line": 26,
+            "rule": "Use present tense for current behavior",
+            "original": "the file your team will share",
+            "replacement": "the file your team shares",
+            "rationale": "Uses present tense to describe the file's current purpose more directly.",
+            "confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/core-concepts.mdx",
+      "method": "baseline",
+      "finding_count": 3,
+      "result": {
+        "page": "getting-started/core-concepts.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for titles",
+            "original": "title: Core Concepts",
+            "replacement": "title: Core concepts",
+            "rationale": "Google style uses sentence case for document titles.",
+            "confidence": 1
+          },
+          {
+            "line": 3,
+            "rule": "Don't put spaces around an em dash",
+            "original": "How syllago works — providers, content types, collections, and format conversion.",
+            "replacement": "How syllago works—providers, content types, collections, and format conversion.",
+            "rationale": "Em dashes don't have surrounding spaces in Google style.",
+            "confidence": 1
+          },
+          {
+            "line": 6,
+            "rule": "Avoid anthropomorphism and shortened words",
+            "original": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place.",
+            "replacement": "Every AI coding tool requires its rules, skills, and configurations in a different format and location.",
+            "rationale": "Software doesn't have human wants, and Google style recommends using “configuration” instead of “config” in prose.",
+            "confidence": 0.99
+          },
+          {
+            "line": 12,
+            "rule": "Don't put spaces around an em dash",
+            "original": "automatically — you",
+            "replacement": "automatically—you",
+            "rationale": "Em dashes don't have surrounding spaces in Google style.",
+            "confidence": 1
+          },
+          {
+            "line": 42,
+            "rule": "Use sentence case for table headings",
+            "original": "Content Type",
+            "replacement": "Content type",
+            "rationale": "Google style uses sentence case for all table elements, including column headings.",
+            "confidence": 1
+          },
+          {
+            "line": 81,
+            "rule": "Avoid undefined abbreviations and shortened words",
+            "original": "When you've created content locally that you want to share back, use `syllago share` — pass `--to <registry>` to open a PR against a registry repo, or omit it to share directly with a default team repo:",
+            "replacement": "When you've created content locally that you want to share, use `syllago share`. Pass `--to <registry>` to open a pull request against a registry repository, or omit it to share directly with a default team repository:",
+            "rationale": "Spelling out “pull request” and “repository” improves clarity, and splitting the sentence removes an incorrectly spaced em dash.",
+            "confidence": 0.99
+          },
+          {
+            "line": 115,
+            "rule": "Use a colon between a label and its description",
+            "original": "**Inbound** — When",
+            "replacement": "**Inbound:** When",
+            "rationale": "Google style recommends a colon or period, rather than a dash, between an item and its description.",
+            "confidence": 1
+          },
+          {
+            "line": 116,
+            "rule": "Use a colon between a label and its description",
+            "original": "**Outbound** — When",
+            "replacement": "**Outbound:** When",
+            "rationale": "Google style recommends a colon or period, rather than a dash, between an item and its description.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/core-concepts.mdx",
+      "method": "compiled",
+      "finding_count": 3,
+      "result": {
+        "page": "getting-started/core-concepts.mdx",
+        "suggestions": [
+          {
+            "line": 6,
+            "rule": "Avoid misleading anthropomorphism",
+            "original": "wants",
+            "replacement": "requires",
+            "rationale": "Describes a technical requirement directly instead of attributing a human desire to software.",
+            "confidence": 0.99
+          },
+          {
+            "line": 8,
+            "rule": "Avoid pre-announcing content",
+            "original": "This page covers the four concepts that make the rest of the docs make sense: **providers**, **content types**, **collections**, and **format conversion**.",
+            "replacement": "The four core concepts are **providers**, **content types**, **collections**, and **format conversion**.",
+            "rationale": "States the scope directly instead of announcing what the page covers.",
+            "confidence": 0.95
+          },
+          {
+            "line": 51,
+            "rule": "Use present tense for current behavior",
+            "original": "will work",
+            "replacement": "works",
+            "rationale": "Uses present tense for the support matrix's current behavior.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/installation.mdx",
+      "method": "baseline",
+      "finding_count": 0,
+      "result": {
+        "page": "getting-started/installation.mdx",
+        "suggestions": [
+          {
+            "line": 18,
+            "rule": "Use complete sentences",
+            "original": "Downloads the latest release binary and verifies its SHA-256 checksum.",
+            "replacement": "The install script downloads the latest release binary and verifies its SHA-256 checksum.",
+            "rationale": "Adds an explicit subject to make the sentence complete and clear.",
+            "confidence": 0.99
+          },
+          {
+            "line": 24,
+            "rule": "Use complete sentences",
+            "original": "Installs to `~/.local/bin` by default.",
+            "replacement": "The install script installs syllago in `~/.local/bin` by default.",
+            "rationale": "Adds a subject and identifies what the script installs.",
+            "confidence": 0.99
+          },
+          {
+            "line": 30,
+            "rule": "Use clear, concise language",
+            "original": "The install script creates a `syl` alias symlink automatically, so you can use either `syllago` or `syl` to run commands.",
+            "replacement": "The install script automatically creates a symbolic link named `syl`, so you can run commands with either `syllago` or `syl`.",
+            "rationale": "Replaces the unclear phrase \"alias symlink\" with standard terminology and streamlines the sentence.",
+            "confidence": 0.97
+          },
+          {
+            "line": 44,
+            "rule": "Use complete sentences and words instead of symbols in prose",
+            "original": "Requires Go 1.26+.",
+            "replacement": "This installation method requires Go 1.26 or later.",
+            "rationale": "Adds a subject and replaces the plus sign with clear prose.",
+            "confidence": 0.99
+          },
+          {
+            "line": 48,
+            "rule": "Use complete sentences and words instead of symbols in prose",
+            "original": "Requires Go 1.26+.",
+            "replacement": "Building from source requires Go 1.26 or later.",
+            "rationale": "Adds a subject, supplies specific context, and replaces the plus sign with clear prose.",
+            "confidence": 0.99
+          },
+          {
+            "line": 68,
+            "rule": "Use complete sentences",
+            "original": "Updates syllago to the latest release.",
+            "replacement": "This command updates syllago to the latest release.",
+            "rationale": "Adds an explicit subject so the description is a complete sentence.",
+            "confidence": 0.99
+          },
+          {
+            "line": 72,
+            "rule": "Use correct product and technology capitalization",
+            "original": "bash",
+            "replacement": "Bash",
+            "rationale": "Uses the conventional capitalization for the Bash shell, consistent with the tab label on the page.",
+            "confidence": 0.99
+          },
+          {
+            "line": 145,
+            "rule": "Use plain, direct language",
+            "original": "Head to the [Quick Start](/getting-started/quick-start/)",
+            "replacement": "Go to the [Quick Start](/getting-started/quick-start/)",
+            "rationale": "Replaces an informal idiom with a direct instruction.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/installation.mdx",
+      "method": "compiled",
+      "finding_count": 0,
+      "result": {
+        "page": "getting-started/installation.mdx",
+        "suggestions": [
+          {
+            "line": 14,
+            "rule": "Use “or later” instead of a plus sign for version ranges",
+            "original": "1.26+ (only for `go install` or building from source)",
+            "replacement": "1.26 or later (only for `go install` or building from source)",
+            "rationale": "Expresses the minimum supported version explicitly and accessibly.",
+            "confidence": 0.99
+          },
+          {
+            "line": 18,
+            "rule": "Write complete sentences",
+            "original": "Downloads the latest release binary and verifies its SHA-256 checksum. Works on Linux, macOS, and Windows.",
+            "replacement": "The install script downloads the latest release binary and verifies its SHA-256 checksum. It works on Linux, macOS, and Windows.",
+            "rationale": "Adds explicit subjects to two sentence fragments without changing their meaning.",
+            "confidence": 0.98
+          },
+          {
+            "line": 24,
+            "rule": "Write complete sentences",
+            "original": "Installs to `~/.local/bin` by default.",
+            "replacement": "The script installs syllago in `~/.local/bin` by default.",
+            "rationale": "Replaces a sentence fragment with a complete sentence and clarifies what the script installs.",
+            "confidence": 0.97
+          },
+          {
+            "line": 44,
+            "rule": "Use “or later” instead of a plus sign for version ranges",
+            "original": "Requires Go 1.26+.",
+            "replacement": "Requires Go 1.26 or later.",
+            "rationale": "States the minimum required version explicitly.",
+            "confidence": 0.99
+          },
+          {
+            "line": 48,
+            "rule": "Use “or later” instead of a plus sign for version ranges",
+            "original": "Requires Go 1.26+.",
+            "replacement": "Requires Go 1.26 or later.",
+            "rationale": "States the minimum required version explicitly.",
+            "confidence": 0.99
+          },
+          {
+            "line": 68,
+            "rule": "Write complete sentences",
+            "original": "Updates syllago to the latest release.",
+            "replacement": "This command updates syllago to the latest release.",
+            "rationale": "Adds an explicit subject and clearly connects the description to the preceding command.",
+            "confidence": 0.98
+          },
+          {
+            "line": 145,
+            "rule": "Use clear, direct language",
+            "original": "Head to the [Quick Start](/getting-started/quick-start/) to start managing your AI coding tool content.",
+            "replacement": "Go to the [Quick Start](/getting-started/quick-start/) to start managing your AI coding tool content.",
+            "rationale": "Replaces the colloquial phrase “Head to” with the more direct “Go to.”",
+            "confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/mental-models.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "getting-started/mental-models.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for document titles.",
+            "original": "title: Mental Models",
+            "replacement": "title: Mental models",
+            "rationale": "Document titles use sentence case.",
+            "confidence": 1
+          },
+          {
+            "line": 6,
+            "rule": "Avoid idiomatic language and write for a global audience.",
+            "original": "If a word feels unfamiliar, the chances are good you already have a working mental model from somewhere else.",
+            "replacement": "If a word feels unfamiliar, you probably already have a working mental model from somewhere else.",
+            "rationale": "“The chances are good” is an unnecessary idiom; “probably” is shorter and easier to translate.",
+            "confidence": 0.98
+          },
+          {
+            "line": 16,
+            "rule": "Use precise language and introduce examples clearly.",
+            "original": "The kind of thing (rule, skill, agent, hook…).",
+            "replacement": "The kind of content, such as a rule, skill, agent, or hook.",
+            "rationale": "Replaces the vague word “thing” and the trailing ellipsis with a clear example list.",
+            "confidence": 0.96
+          },
+          {
+            "line": 17,
+            "rule": "Don't use Latin abbreviations such as “e.g.”; use “for example.”",
+            "original": "(e.g. `hierarchical_loading`)",
+            "replacement": "(for example, `hierarchical_loading`)",
+            "rationale": "Uses the style guide's preferred English phrase.",
+            "confidence": 1
+          },
+          {
+            "line": 22,
+            "rule": "Avoid undefined abbreviations and shortened words.",
+            "original": "A confined environment for running an AI provider with restricted FS, network, and env access.",
+            "replacement": "A confined environment for running an AI provider with restricted access to the file system, network, and environment variables.",
+            "rationale": "Spells out “FS” and “env” and clarifies what access is restricted.",
+            "confidence": 0.99
+          },
+          {
+            "line": 24,
+            "rule": "Use clear, descriptive headings and avoid idioms.",
+            "original": "## When you'd reach for each one",
+            "replacement": "## When to use each concept",
+            "rationale": "Replaces the idiomatic phrase “reach for” and gives the vague pronoun “one” a clear referent.",
+            "confidence": 0.98
+          },
+          {
+            "line": 26,
+            "rule": "Put the goal or condition before the instruction, and use words instead of symbols in prose.",
+            "original": "- Trying things out on your own machine? **Library** + `install`.",
+            "replacement": "- To try content on your own machine, use **Library** and `install`.",
+            "rationale": "Turns the question and fragment into a direct instruction and replaces the informal plus sign with “and.”",
+            "confidence": 0.97
+          },
+          {
+            "line": 30,
+            "rule": "Put the goal or condition before the instruction.",
+            "original": "- Asking \"will this work in Kiro?\" Run [`syllago compat`](/using-syllago/cli-reference/compat/).",
+            "replacement": "- To check whether this content works in Kiro, run [`syllago compat`](/using-syllago/cli-reference/compat/).",
+            "rationale": "Recasts the conversational question as a concise, goal-first instruction.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/mental-models.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "getting-started/mental-models.mdx",
+        "suggestions": [
+          {
+            "line": 30,
+            "rule": "Give pronouns clear referents",
+            "original": "this",
+            "replacement": "this content",
+            "rationale": "Names the item whose compatibility with Kiro is being checked, removing the need to infer the pronoun's referent.",
+            "confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/quick-start.mdx",
+      "method": "baseline",
+      "finding_count": 2,
+      "result": {
+        "page": "getting-started/quick-start.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title: Quick Start",
+            "replacement": "title: Quick start",
+            "rationale": "Sentence case capitalizes only the first word and proper nouns.",
+            "confidence": 1
+          },
+          {
+            "line": 8,
+            "rule": "Use a comma after an introductory phrase, and don't put spaces around an em dash.",
+            "original": "In the next five minutes you'll move real content between AI coding tools — no manual format conversion, no copy-pasting config files.",
+            "replacement": "In the next five minutes, you'll move real content between AI coding tools—no manual format conversion and no copy-pasting config files.",
+            "rationale": "Adds the introductory comma, formats the em dash correctly, and avoids a comma splice-like list construction.",
+            "confidence": 0.99
+          },
+          {
+            "line": 11,
+            "rule": "Prefer short, direct sentences over an em dash joining separate instructions.",
+            "original": "Install syllago first — see [Installation](/getting-started/installation/).",
+            "replacement": "Install syllago first. See [Installation](/getting-started/installation/).",
+            "rationale": "Separates two imperative instructions for clarity and removes an incorrectly spaced em dash.",
+            "confidence": 0.99
+          },
+          {
+            "line": 16,
+            "rule": "Use a colon, not a dash, between an item and its description.",
+            "original": "[**Import from your existing tools**](#import-from-your-existing-tools) — pull in rules, skills, or context you already have configured in an AI coding tool",
+            "replacement": "[**Import from your existing tools**](#import-from-your-existing-tools): pull in rules, skills, or context you already have configured in an AI coding tool",
+            "rationale": "A colon clearly introduces the list item's description.",
+            "confidence": 0.99
+          },
+          {
+            "line": 17,
+            "rule": "Use a colon, not a dash, between an item and its description.",
+            "original": "[**Browse a registry**](#browse-a-registry) — discover and install shared content from a team or community registry",
+            "replacement": "[**Browse a registry**](#browse-a-registry): discover and install shared content from a team or community registry",
+            "rationale": "A colon clearly introduces the list item's description.",
+            "confidence": 0.99
+          },
+          {
+            "line": 29,
+            "rule": "Use code font for keyboard keys and imperative language for actions.",
+            "original": "In the provider picker, **space** toggles a selection and **enter** confirms.",
+            "replacement": "In the provider picker, press `Space` to toggle a selection, and then press `Enter` to confirm.",
+            "rationale": "Formats key names correctly and tells the reader directly what to do.",
+            "confidence": 0.99
+          },
+          {
+            "line": 41,
+            "rule": "Use italics, not bold, when introducing a term; don't put spaces around an em dash.",
+            "original": "**discovery mode** —",
+            "replacement": "_discovery mode_—",
+            "rationale": "The phrase introduces a term rather than naming a UI element, and the em dash should be unspaced.",
+            "confidence": 0.99
+          },
+          {
+            "line": 82,
+            "rule": "Use correct product capitalization and avoid informal abbreviations.",
+            "original": "Registries are git repos of shared content — team standards, community collections, curated configurations.",
+            "replacement": "Registries are Git repositories of shared content, such as team standards, community collections, and curated configurations.",
+            "rationale": "Capitalizes Git, expands the informal abbreviation \"repos,\" and introduces the examples explicitly.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/quick-start.mdx",
+      "method": "compiled",
+      "finding_count": 2,
+      "result": {
+        "page": "getting-started/quick-start.mdx",
+        "suggestions": []
+      }
+    },
+    {
+      "path": "getting-started/why-syllago.mdx",
+      "method": "baseline",
+      "finding_count": 8,
+      "result": {
+        "page": "getting-started/why-syllago.mdx",
+        "suggestions": [
+          {
+            "line": 8,
+            "rule": "Clarity and directness",
+            "original": "Syllago exists to fix that.",
+            "replacement": "Syllago exists to address this fragmentation.",
+            "rationale": "Replace the vague pronoun “that” with the specific problem being addressed.",
+            "confidence": 0.94
+          },
+          {
+            "line": 22,
+            "rule": "Clear, precise language",
+            "original": "MCP servers compound it — each client wires them up its own way.",
+            "replacement": "MCP servers compound the problem—each client configures them differently.",
+            "rationale": "Replace vague and colloquial wording with precise language, and remove spaces around the em dash.",
+            "confidence": 0.98
+          },
+          {
+            "line": 24,
+            "rule": "Lists and parallel structure",
+            "original": "configuration drift between teammates who use different tools, broken toolchains when a provider renames a directory.",
+            "replacement": "configuration drift between teammates who use different tools, and broken toolchains when a provider renames a directory.",
+            "rationale": "Add a conjunction before the final item in the series.",
+            "confidence": 0.99
+          },
+          {
+            "line": 28,
+            "rule": "Em dashes",
+            "original": "Syllago is a content manager for AI coding tools — think `apt`, `brew`, or `npm`, but for AI-assistant configuration.",
+            "replacement": "Syllago is a content manager for AI coding tools—think `apt`, `brew`, or `npm`, but for AI-assistant configuration.",
+            "rationale": "Don't put spaces on either side of an em dash.",
+            "confidence": 0.99
+          },
+          {
+            "line": 53,
+            "rule": "Em dashes",
+            "original": "Manual maintenance is fine — genuinely — if you use one AI tool, or two tools with a handful of rules that rarely change.",
+            "replacement": "Manual maintenance is fine—genuinely—if you use one AI tool, or two tools with a handful of rules that rarely change.",
+            "rationale": "Don't put spaces on either side of em dashes.",
+            "confidence": 0.99
+          },
+          {
+            "line": 55,
+            "rule": "Sentence structure",
+            "original": "Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \"share\" a rule that diverged three edits ago.",
+            "replacement": "Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version; a provider renames its config directory, and your shell script silently writes to the old one; or two teammates \"share\" a rule that diverged three edits ago.",
+            "rationale": "Use semicolons and a final conjunction to distinguish the three independent examples clearly.",
+            "confidence": 0.98
+          },
+          {
+            "line": 57,
+            "rule": "Complete sentences and clarity",
+            "original": "Rule of thumb: one tool, skip syllago. Two tools and light usage, either works. Three or more tools, or any team sharing, and a manager pays for itself.",
+            "replacement": "As a rule of thumb, skip syllago if you use one tool. Either option works for light use with two tools. A manager pays for itself if you use three or more tools or share configuration across a team.",
+            "rationale": "Replace compressed sentence fragments with complete sentences and clarify what the team shares.",
+            "confidence": 0.97
+          },
+          {
+            "line": 61,
+            "rule": "Parallel structure, symbols, and em dashes",
+            "original": "[rulesync](https://github.com/dyoshikawa/rulesync) is the main alternative, and it's a good tool — mature, actively maintained, and supporting a substantially longer list of AI tools than syllago (40+ versus syllago's 15).",
+            "replacement": "[rulesync](https://github.com/dyoshikawa/rulesync) is the main alternative and a good tool—it's mature, actively maintained, and supports a substantially longer list of AI tools than syllago (more than 40 versus syllago's 15).",
+            "rationale": "Make the description grammatically parallel, spell out “more than” instead of using a plus sign, and remove spaces around the em dash.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "getting-started/why-syllago.mdx",
+      "method": "compiled",
+      "finding_count": 8,
+      "result": {
+        "page": "getting-started/why-syllago.mdx",
+        "suggestions": [
+          {
+            "line": 6,
+            "rule": "anthropomorphism",
+            "original": "each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others.",
+            "replacement": "each tool stores its rules, skills, and configuration in a slightly different place and format. The tools don't share configuration.",
+            "rationale": "Describes observable tool behavior instead of attributing desires or knowledge to software.",
+            "confidence": 0.98
+          },
+          {
+            "line": 22,
+            "rule": "ambiguous-pronoun",
+            "original": "MCP servers compound it",
+            "replacement": "MCP servers compound the fragmentation",
+            "rationale": "Replaces “it” with its explicit referent.",
+            "confidence": 0.96
+          },
+          {
+            "line": 31,
+            "rule": "unnecessary-future-tense",
+            "original": "where features will degrade in translation",
+            "replacement": "where features degrade in translation",
+            "rationale": "Uses present tense to describe current compatibility behavior.",
+            "confidence": 0.97
+          },
+          {
+            "line": 45,
+            "rule": "anthropomorphism",
+            "original": "Syllago decides what to do with it on each provider.",
+            "replacement": "Syllago handles each item according to the provider.",
+            "rationale": "Describes product behavior directly without attributing decision-making to the software.",
+            "confidence": 0.92
+          },
+          {
+            "line": 55,
+            "rule": "unnecessary-future-tense",
+            "original": "where translation will degrade",
+            "replacement": "where translation degrades",
+            "rationale": "Uses present tense for the command's current reporting behavior.",
+            "confidence": 0.97
+          }
+        ]
+      }
+    },
+    {
+      "path": "index.mdx",
+      "method": "baseline",
+      "finding_count": 0,
+      "result": {
+        "page": "index.mdx",
+        "suggestions": [
+          {
+            "line": 10,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title=\"Quick Start\"",
+            "replacement": "title=\"Quick start\"",
+            "rationale": "Card titles should use sentence case.",
+            "confidence": 0.99
+          },
+          {
+            "line": 11,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title=\"CLI Reference\"",
+            "replacement": "title=\"CLI reference\"",
+            "rationale": "Card titles should use sentence case; retain the uppercase initialism.",
+            "confidence": 0.99
+          },
+          {
+            "line": 12,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title=\"Supported Providers\"",
+            "replacement": "title=\"Supported providers\"",
+            "rationale": "Card titles should use sentence case.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "index.mdx",
+      "method": "compiled",
+      "finding_count": 0,
+      "result": {
+        "page": "index.mdx",
+        "suggestions": []
+      }
+    },
+    {
+      "path": "moat/index.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "moat/index.mdx",
+        "suggestions": [
+          {
+            "line": 18,
+            "rule": "Avoid “etc.” when the examples already make the list’s scope clear.",
+            "original": "(a GitHub Actions workflow, an OIDC-federated CI job, etc.)",
+            "replacement": "(such as a GitHub Actions workflow or an OIDC-federated CI job)",
+            "rationale": "Introduces the examples explicitly and removes a discouraged abbreviation.",
+            "confidence": 0.99
+          },
+          {
+            "line": 33,
+            "rule": "Use a period or colon instead of a spaced dash to separate a description from its result.",
+            "original": "Tier meets policy, no revocation, not private — install continues.",
+            "replacement": "Tier meets policy, no revocation, not private. Install continues.",
+            "rationale": "Separates two complete thoughts and avoids a nonstandard spaced em dash.",
+            "confidence": 0.99
+          },
+          {
+            "line": 57,
+            "rule": "Format command output and literal values as code.",
+            "original": "key=value lines",
+            "replacement": "`key=value` lines",
+            "rationale": "The text represents the literal format of command output.",
+            "confidence": 0.99
+          },
+          {
+            "line": 62,
+            "rule": "Use “to” for numeric ranges and words instead of slashes for alternatives.",
+            "original": "Warn (90–179) / Escalated (180–364)",
+            "replacement": "Warn (90 to 179 days) or Escalated (180 to 364 days)",
+            "rationale": "Removes en dashes and an ambiguous slash while making the unit explicit.",
+            "confidence": 0.99
+          },
+          {
+            "line": 65,
+            "rule": "Don't put spaces around an em dash; use a period when separating complete thoughts is clearer.",
+            "original": "Operators who pin their own trusted root via `--trusted-root` or `reg.trusted_root` take responsibility for refreshing it — the 365-day cliff applies only to the bundled root.",
+            "replacement": "Operators who pin their own trusted root via `--trusted-root` or `reg.trusted_root` take responsibility for refreshing it. The 365-day cliff applies only to the bundled root.",
+            "rationale": "Splits two complete thoughts and removes the nonstandard spaced em dash.",
+            "confidence": 0.98
+          },
+          {
+            "line": 84,
+            "rule": "Don't use slashes to separate alternatives.",
+            "original": "(`✓` Verified / `R` Recalled / none)",
+            "replacement": "(`✓` for Verified, `R` for Recalled, or no badge)",
+            "rationale": "States the three alternatives clearly in words.",
+            "confidence": 0.99
+          },
+          {
+            "line": 89,
+            "rule": "Don't use slashes to separate items in a prose list.",
+            "original": "(total / verified / recalled / private)",
+            "replacement": "(total, verified, recalled, and private)",
+            "rationale": "Uses a standard comma-separated list instead of slashes.",
+            "confidence": 0.99
+          },
+          {
+            "line": 102,
+            "rule": "Use complete grammatical constructions and avoid a spaced dash before a cross-reference.",
+            "original": "the deviation is documented and the reasoning recorded as an Architecture Decision Record (ADR) — see",
+            "replacement": "the deviation and its rationale are documented in an Architecture Decision Record (ADR). See",
+            "rationale": "Fixes the omitted verb, uses the more precise term “rationale,” and separates the cross-reference into a new sentence.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "moat/index.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "moat/index.mdx",
+        "suggestions": [
+          {
+            "line": 10,
+            "rule": "Avoid pre-announcing content",
+            "original": "This page describes the pieces of syllago that implement the protocol and the operator-facing surfaces that expose the results.",
+            "replacement": "Syllago implements the protocol across several components and exposes the results through operator-facing surfaces.",
+            "rationale": "States the implementation scope directly instead of announcing what the page describes.",
+            "confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "path": "moat/registry-add-signing-identity.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "moat/registry-add-signing-identity.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for document titles.",
+            "original": "title: Registry Signing Identity",
+            "replacement": "title: Registry signing identity",
+            "rationale": "Sentence case is the standard capitalization style for titles and headings.",
+            "confidence": 0.99
+          },
+          {
+            "line": 8,
+            "rule": "Don't put spaces around em dashes, and use precise nouns.",
+            "original": "add time — not at every verify — so",
+            "replacement": "add time—not during every verification—so",
+            "rationale": "Removes spaces around the em dashes and replaces the awkward noun use of “verify.”",
+            "confidence": 0.99
+          },
+          {
+            "line": 10,
+            "rule": "Use direct, descriptive cross-references.",
+            "original": "The protocol detail is captured in an Architecture Decision Record (ADR) — see [ADR 0007 in the syllago repo](https://github.com/OpenScribbler/syllago/blob/main/docs/adr/0007-moat-slice-1.md).",
+            "replacement": "For protocol details, see [ADR 0007 in the syllago repo](https://github.com/OpenScribbler/syllago/blob/main/docs/adr/0007-moat-slice-1.md).",
+            "rationale": "Uses a concise cross-reference and removes a spaced em dash.",
+            "confidence": 0.98
+          },
+          {
+            "line": 26,
+            "rule": "Avoid vague idioms and spaces around em dashes.",
+            "original": "For those, `syllago registry add <url>` just works — the allowlist supplies the signing profile automatically.",
+            "replacement": "For those registries, `syllago registry add <url>` succeeds without additional flags because the allowlist supplies the signing profile automatically.",
+            "rationale": "Replaces “just works” with a concrete description of the command behavior.",
+            "confidence": 0.98
+          },
+          {
+            "line": 67,
+            "rule": "Don't pre-announce future features; avoid “etc.” when examples suffice.",
+            "original": "Numeric IDs are optional for non-GitHub issuers at slice-2 scope. Additional issuer support (GitLab, Azure, etc.) arrives in later slices.",
+            "replacement": "At slice 2, numeric IDs are optional for non-GitHub issuers. Slice 2 doesn't support additional issuers such as GitLab and Azure.",
+            "rationale": "Describes the current scope without making an unapproved future-looking statement.",
+            "confidence": 0.98
+          },
+          {
+            "line": 85,
+            "rule": "Don't pre-announce future features.",
+            "original": "The word `verified` is deliberately **not** used at slice 2. It is reserved for when revocation checking lands in a later slice.",
+            "replacement": "The word `verified` is deliberately **not** used at slice 2 because slice 2 doesn't include revocation checking.",
+            "rationale": "Explains the current terminology without promising a future capability.",
+            "confidence": 0.99
+          },
+          {
+            "line": 102,
+            "rule": "Prefer plain language and avoid figurative or unnecessarily complex terminology.",
+            "original": "Override roots are **not** staleness-gated — the 365-day cliff only applies to the bundled root that ships with the syllago binary.",
+            "replacement": "Override roots aren't subject to the 365-day staleness limit. That limit applies only to the bundled root that ships with the syllago binary.",
+            "rationale": "Replaces “staleness-gated” and “cliff” with literal language and removes the spaced em dash.",
+            "confidence": 0.99
+          },
+          {
+            "line": 106,
+            "rule": "Use complete sentences and standard compound spelling.",
+            "original": "No silent fall-back to unsigned mode — a pinned profile means the operator has opted into cryptographic gating.",
+            "replacement": "There is no silent fallback to unsigned mode because a pinned profile means that the operator has opted into cryptographic gating.",
+            "rationale": "Turns the fragment into a complete sentence and uses the standard noun spelling “fallback.”",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "moat/registry-add-signing-identity.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "moat/registry-add-signing-identity.mdx",
+        "suggestions": [
+          {
+            "line": 3,
+            "rule": "Use clear, natural phrasing",
+            "original": "at add-time",
+            "replacement": "when you add them",
+            "rationale": "Replaces an awkward compound construction with plain language.",
+            "confidence": 0.96
+          },
+          {
+            "line": 8,
+            "rule": "Use clear, natural phrasing",
+            "original": "at registry-add time — not at every verify —",
+            "replacement": "when you add the registry, not during every verification,",
+            "rationale": "Avoids using command-like terms as awkward nouns and simplifies the sentence.",
+            "confidence": 0.97
+          },
+          {
+            "line": 10,
+            "rule": "Avoid pre-announcing content",
+            "original": "This page covers the operator workflow for `syllago registry add` and the three ways to pin an identity.",
+            "replacement": "Use `syllago registry add` to pin an identity in one of three ways.",
+            "rationale": "States the actionable information directly instead of announcing what the page covers.",
+            "confidence": 0.96
+          },
+          {
+            "line": 17,
+            "rule": "Avoid abbreviations when the full term is clearer",
+            "original": "Two orgs",
+            "replacement": "Two organizations",
+            "rationale": "Uses the full, more formal term in explanatory documentation.",
+            "confidence": 0.94
+          },
+          {
+            "line": 96,
+            "rule": "Write complete, direct sentences",
+            "original": "Precedence: the CLI flag wins over the per-registry config, which wins over the bundled default.",
+            "replacement": "The CLI flag takes precedence over the per-registry configuration, which takes precedence over the bundled default.",
+            "rationale": "Replaces a label-like fragment and informal wording with a complete, precise sentence.",
+            "confidence": 0.97
+          },
+          {
+            "line": 106,
+            "rule": "Use standard spelling and complete sentences",
+            "original": "No silent fall-back to unsigned mode — a pinned profile means the operator has opted into cryptographic gating.",
+            "replacement": "Syllago doesn't silently fall back to unsigned mode because a pinned profile means that the operator has opted into cryptographic gating.",
+            "rationale": "Uses the verb form “fall back” and converts the fragment into a direct sentence.",
+            "confidence": 0.98
+          },
+          {
+            "line": 122,
+            "rule": "Use standard spelling",
+            "original": "non-zero",
+            "replacement": "nonzero",
+            "rationale": "Uses the standard closed form of the prefix “non-.”",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "moat/trust-tiers.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "moat/trust-tiers.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for titles and headings",
+            "original": "title: Trust Tiers",
+            "replacement": "title: Trust tiers",
+            "rationale": "Use sentence case for the page title.",
+            "confidence": 1
+          },
+          {
+            "line": 8,
+            "rule": "Don't put spaces around an em dash",
+            "original": "**trust tier** — a classification",
+            "replacement": "**trust tier**—a classification",
+            "rationale": "Remove spaces before and after the em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 23,
+            "rule": "Don't put spaces around an em dash",
+            "original": "malicious — the registry",
+            "replacement": "malicious—the registry",
+            "rationale": "Remove spaces before and after the em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 35,
+            "rule": "Don't put spaces around an em dash",
+            "original": "publisher's — the two signatures",
+            "replacement": "publisher's—the two signatures",
+            "rationale": "Remove spaces before and after the em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 37,
+            "rule": "Use sentence case for titles and headings",
+            "original": "### The `Unknown` Presentation Label",
+            "replacement": "### The `Unknown` presentation label",
+            "rationale": "Use sentence case for the section heading while preserving the code-formatted label.",
+            "confidence": 1
+          },
+          {
+            "line": 39,
+            "rule": "Don't put spaces around an em dash",
+            "original": "label — `Unknown` — that",
+            "replacement": "label—`Unknown`—that",
+            "rationale": "Remove spaces before and after both em dashes.",
+            "confidence": 1
+          },
+          {
+            "line": 55,
+            "rule": "Don't put spaces around an em dash",
+            "original": "tier — \"Verified (dual-attested by publisher and registry)\" vs \"Verified (registry-attested)\" — so",
+            "replacement": "tier—\"Verified (dual-attested by publisher and registry)\" vs \"Verified (registry-attested)\"—so",
+            "rationale": "Remove spaces before and after both em dashes.",
+            "confidence": 1
+          },
+          {
+            "line": 95,
+            "rule": "Don't put spaces around an em dash",
+            "original": "`Unsigned` — every valid tier passes — so",
+            "replacement": "`Unsigned`—every valid tier passes—so",
+            "rationale": "Remove spaces before and after both em dashes.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "moat/trust-tiers.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "moat/trust-tiers.mdx",
+        "suggestions": [
+          {
+            "line": 28,
+            "rule": "Use complete sentences",
+            "original": "Logic (from `cli/internal/moat/manifest.go`):",
+            "replacement": "Syllago applies the following logic (from `cli/internal/moat/manifest.go`):",
+            "rationale": "Replaces a sentence fragment with a clear, active introductory sentence.",
+            "confidence": 0.95
+          },
+          {
+            "line": 37,
+            "rule": "Use sentence case for headings",
+            "original": "### The `Unknown` Presentation Label",
+            "replacement": "### The `Unknown` presentation label",
+            "rationale": "Uses sentence case while preserving the literal label name.",
+            "confidence": 0.99
+          },
+          {
+            "line": 59,
+            "rule": "Address the reader directly",
+            "original": "the user sees a consistent shape regardless of where they opened it from",
+            "replacement": "you see a consistent shape regardless of where you open it from",
+            "rationale": "Addresses the reader directly and avoids the singular-they construction referring back to “the user.”",
+            "confidence": 0.98
+          },
+          {
+            "line": 70,
+            "rule": "Use clear, natural phrasing",
+            "original": "last fetched-at timestamp",
+            "replacement": "timestamp of the last fetch",
+            "rationale": "Replaces an awkward compound construction with a concise noun phrase.",
+            "confidence": 0.93
+          },
+          {
+            "line": 74,
+            "rule": "Use sentence case for headings",
+            "original": "## Revocation: Two-tier contract",
+            "replacement": "## Revocation: two-tier contract",
+            "rationale": "Uses sentence case after the colon.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/collections/registries.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/collections/registries.mdx",
+        "suggestions": [
+          {
+            "line": 3,
+            "rule": "Use the correct capitalization for product and technology names.",
+            "original": "git-based",
+            "replacement": "Git-based",
+            "rationale": "Capitalize Git as the name of the version-control system.",
+            "confidence": 0.99
+          },
+          {
+            "line": 6,
+            "rule": "Use correct capitalization, spell out shortened terms, and don't surround an em dash with spaces.",
+            "original": "Registries are git repositories that hold shared syllago content. Teams share content into a registry, and consumers add, sync, and browse it locally. Unlike a read-only package feed, registries support contributing back — `syllago share --to <registry>` opens a pull request against the registry repo.",
+            "replacement": "Registries are Git repositories that hold shared syllago content. Teams share content into a registry, and consumers add, sync, and browse it locally. Unlike a read-only package feed, registries support contributing back—`syllago share --to <registry>` opens a pull request against the registry repository.",
+            "rationale": "Capitalize Git, replace the shortened term repo with repository, and remove spaces around the em dash.",
+            "confidence": 0.99
+          },
+          {
+            "line": 10,
+            "rule": "Use correct capitalization and spell out shortened terms.",
+            "original": "git repo",
+            "replacement": "Git repository",
+            "rationale": "Use the proper name Git and the full term repository.",
+            "confidence": 0.99
+          },
+          {
+            "line": 30,
+            "rule": "Use a colon, not a dash, between a term and its description; include necessary articles.",
+            "original": "- `--name` — override the registry name (defaults to name derived from the URL)",
+            "replacement": "- `--name`: Overrides the registry name (defaults to the name derived from the URL)",
+            "rationale": "A colon clearly separates the option from its description, and the revised description is a grammatical sentence fragment.",
+            "confidence": 0.98
+          },
+          {
+            "line": 31,
+            "rule": "Use a colon, not a dash, between a term and its description.",
+            "original": "- `--ref` — pin to a specific branch, tag, or commit (defaults to the repo's default branch)",
+            "replacement": "- `--ref`: Pins the registry to a specific branch, tag, or commit (defaults to the repository's default branch)",
+            "rationale": "Use a colon for an option-description pair, begin the description consistently, and avoid the shortened term repo.",
+            "confidence": 0.98
+          },
+          {
+            "line": 53,
+            "rule": "Don't put spaces before or after an em dash.",
+            "original": "predictable — you",
+            "replacement": "predictable—you",
+            "rationale": "Google style specifies closed em dashes.",
+            "confidence": 1
+          },
+          {
+            "line": 98,
+            "rule": "Use correct capitalization, spell out shortened terms, and make sentence structure explicit.",
+            "original": "This opens a pull request against the registry's git repo. The registry maintainers review and merge through their normal PR workflow — no special tooling required on their end.\n\n`syllago share` works for both registries and arbitrary team repos.",
+            "replacement": "This opens a pull request against the registry's Git repository. The registry maintainers review and merge the pull request through their normal PR workflow—no special tooling is required on their end.\n\n`syllago share` works for both registries and arbitrary team repositories.",
+            "rationale": "Capitalize Git, replace repo with repository, supply the missing object and verb, and remove spaces around the em dash.",
+            "confidence": 0.98
+          },
+          {
+            "line": 118,
+            "rule": "Use correct capitalization, spell out shortened terms, and don't surround an em dash with spaces.",
+            "original": "Or create one manually — a registry is just a git repo with syllago's content structure:",
+            "replacement": "Or create one manually—a registry is just a Git repository with syllago's content structure:",
+            "rationale": "Capitalize Git, use repository instead of repo, and close the spaces around the em dash.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/collections/registries.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/collections/registries.mdx",
+        "suggestions": [
+          {
+            "line": 118,
+            "rule": "Avoid unsubstantiated or minimizing claims",
+            "original": "just a git repo",
+            "replacement": "a git repo",
+            "rationale": "Removes “just,” which can minimize the registry's structure or implementation.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/content-types/skills.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/content-types/skills.mdx",
+        "suggestions": [
+          {
+            "line": 6,
+            "rule": "Use standard punctuation",
+            "original": "skills encode structured procedures -- they include metadata",
+            "replacement": "skills encode structured procedures. They include metadata",
+            "rationale": "Replace the double hyphen with a sentence break to clarify the relationship between the ideas.",
+            "confidence": 0.99
+          },
+          {
+            "line": 24,
+            "rule": "Use precise field references",
+            "original": "The `source_format` records",
+            "replacement": "The `source_format` field records",
+            "rationale": "Identify `source_format` explicitly as a field for grammatical clarity and consistency.",
+            "confidence": 0.99
+          },
+          {
+            "line": 49,
+            "rule": "Use standard punctuation",
+            "original": "The frontmatter `name` and `description` fields are the skill's identity -- they determine how the AI discovers and activates the skill.",
+            "replacement": "The frontmatter `name` and `description` fields are the skill's identity. They determine how the AI discovers and activates the skill.",
+            "rationale": "Replace the double hyphen with a sentence break to make the explanation easier to read.",
+            "confidence": 0.99
+          },
+          {
+            "line": 55,
+            "rule": "Use sentence case",
+            "original": "Provider Support",
+            "replacement": "Provider support",
+            "rationale": "Google style recommends sentence case for table headings.",
+            "confidence": 0.99
+          },
+          {
+            "line": 97,
+            "rule": "Write complete introductory sentences",
+            "original": "Converting a skill from Claude Code format to Gemini CLI:",
+            "replacement": "To convert a skill from Claude Code format to Gemini CLI, run the following command:",
+            "rationale": "Use a complete sentence to introduce the command and state the reader's action directly.",
+            "confidence": 0.99
+          },
+          {
+            "line": 116,
+            "rule": "Avoid sentence fragments",
+            "original": "Becomes a Gemini CLI file without frontmatter, with metadata folded into the body:",
+            "replacement": "The command produces a Gemini CLI file without frontmatter and folds the metadata into the body:",
+            "rationale": "Replace the fragment with a complete, active-voice sentence.",
+            "confidence": 0.99
+          },
+          {
+            "line": 126,
+            "rule": "Prefer active voice",
+            "original": "The `description` field is preserved as prose rather than lost, and tool name references in the body are automatically translated to Gemini's equivalents.",
+            "replacement": "The conversion preserves the `description` field as prose and automatically translates tool name references in the body to Gemini's equivalents.",
+            "rationale": "Active voice makes the actor and both conversion effects clearer.",
+            "confidence": 0.98
+          },
+          {
+            "line": 146,
+            "rule": "Use sentence case and standard punctuation",
+            "original": "- [Content Types Overview](/using-syllago/content-types/) -- compatibility matrix and all content types\n- [Format Conversion](/using-syllago/format-conversion/) -- how syllago converts between provider formats",
+            "replacement": "- [Content types overview](/using-syllago/content-types/): compatibility matrix and all content types\n- [Format conversion](/using-syllago/format-conversion/): how syllago converts between provider formats",
+            "rationale": "Use sentence case for link text and colons, rather than double hyphens, to introduce the link descriptions.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/content-types/skills.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/content-types/skills.mdx",
+        "suggestions": [
+          {
+            "line": 90,
+            "rule": "Avoid misleading anthropomorphism",
+            "original": "The AI reads these fields to understand when and how to apply the skill.",
+            "replacement": "The AI uses these fields to determine when and how to apply the skill.",
+            "rationale": "Describes the system's behavior directly without attributing human understanding to it.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/format-conversion.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/format-conversion.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case for titles and headings.",
+            "original": "title: Format Conversion",
+            "replacement": "title: Format conversion",
+            "rationale": "The page title uses title case instead of sentence case.",
+            "confidence": 1
+          },
+          {
+            "line": 8,
+            "rule": "Don't put spaces around an em dash.",
+            "original": "canonical format — a provider-neutral representation",
+            "replacement": "canonical format—a provider-neutral representation",
+            "rationale": "Remove the spaces surrounding the em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 20,
+            "rule": "Use a colon or period, not a dash, between an item and its description.",
+            "original": "**Translated** — The field has a canonical equivalent.",
+            "replacement": "**Translated:** The field has a canonical equivalent.",
+            "rationale": "The bold term functions as a run-in heading for its description.",
+            "confidence": 1
+          },
+          {
+            "line": 29,
+            "rule": "Use a colon or period, not a dash, between an item and its description.",
+            "original": "**Embedded as prose** — The field has no canonical equivalent.",
+            "replacement": "**Embedded as prose:** The field has no canonical equivalent.",
+            "rationale": "The bold term functions as a run-in heading for its description.",
+            "confidence": 1
+          },
+          {
+            "line": 37,
+            "rule": "Use a colon or period, not a dash, between an item and its description.",
+            "original": "**Dropped with warning** — The field can't be meaningfully preserved.",
+            "replacement": "**Dropped with warning:** The field can't be meaningfully preserved.",
+            "rationale": "The bold term functions as a run-in heading for its description.",
+            "confidence": 1
+          },
+          {
+            "line": 107,
+            "rule": "Use a colon or period, not a dash, between an item and its description.",
+            "original": "**Shell injection syntax** —",
+            "replacement": "**Shell injection syntax:**",
+            "rationale": "The bold term functions as a run-in heading for its description.",
+            "confidence": 1
+          },
+          {
+            "line": 109,
+            "rule": "Use a colon or period, not a dash, between an item and its description.",
+            "original": "**Provider-specific variables** —",
+            "replacement": "**Provider-specific variables:**",
+            "rationale": "The bold term functions as a run-in heading for its description.",
+            "confidence": 1
+          },
+          {
+            "line": 116,
+            "rule": "Use \"for example\" instead of \"e.g.\"",
+            "original": "- Unsupported hook events (e.g., Gemini's `before_model` has no Claude Code equivalent)\n- Missing capability support (e.g., `input_rewrite` not available on target)\n- Fields dropped during conversion (e.g., `disabledTools` on MCP servers)\n- Lossy syntax translation (e.g., named variables → positional)",
+            "replacement": "- Unsupported hook events (for example, Gemini's `before_model` has no Claude Code equivalent)\n- Missing capability support (for example, `input_rewrite` not available on target)\n- Fields dropped during conversion (for example, `disabledTools` on MCP servers)\n- Lossy syntax translation (for example, named variables → positional)",
+            "rationale": "The style guide recommends spelling out \"for example\" rather than using the Latin abbreviation.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/format-conversion.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/format-conversion.mdx",
+        "suggestions": [
+          {
+            "line": 109,
+            "rule": "Use present tense for current behavior",
+            "original": "The target provider will not expand them.",
+            "replacement": "The target provider doesn't expand them.",
+            "rationale": "Uses present tense to describe the provider's current behavior.",
+            "confidence": 0.98
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "method": "baseline",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/how-to/install-community-skill.mdx",
+        "suggestions": [
+          {
+            "line": 15,
+            "rule": "Avoid numbers in headings",
+            "original": "## 1. Add a public registry",
+            "replacement": "## Add a public registry",
+            "rationale": "The style guide recommends descriptive task headings without step numbers.",
+            "confidence": 0.99
+          },
+          {
+            "line": 17,
+            "rule": "Use preferred terminology and capitalization",
+            "original": "git repo",
+            "replacement": "Git repository",
+            "rationale": "Capitalize the Git product name, and use “repository” instead of the discouraged abbreviation “repo.”",
+            "confidence": 0.99
+          },
+          {
+            "line": 27,
+            "rule": "Avoid numbers in headings",
+            "original": "## 2. Sync it",
+            "replacement": "## Sync the registry",
+            "rationale": "Remove the step number and replace the ambiguous pronoun with a descriptive task heading.",
+            "confidence": 0.99
+          },
+          {
+            "line": 35,
+            "rule": "Avoid numbers in headings",
+            "original": "## 3. Browse the available skills",
+            "replacement": "## Browse the available skills",
+            "rationale": "The style guide recommends descriptive task headings without step numbers.",
+            "confidence": 0.99
+          },
+          {
+            "line": 43,
+            "rule": "Avoid numbers in headings",
+            "original": "## 4. Install it into Claude Code",
+            "replacement": "## Install the skill into Claude Code",
+            "rationale": "Remove the step number and replace the ambiguous pronoun with the specific noun “skill.”",
+            "confidence": 0.99
+          },
+          {
+            "line": 51,
+            "rule": "Avoid numbers in headings",
+            "original": "## 5. Verify and use it",
+            "replacement": "## Verify and use the skill",
+            "rationale": "Remove the step number and replace the ambiguous pronoun with the specific noun “skill.”",
+            "confidence": 0.99
+          },
+          {
+            "line": 53,
+            "rule": "Use nouns instead of nouns formed from verbs",
+            "original": "Confirm the install:",
+            "replacement": "Verify the installation:",
+            "rationale": "Use the standard noun “installation” and align the instruction with the section heading.",
+            "confidence": 0.96
+          },
+          {
+            "line": 59,
+            "rule": "Don't put spaces around an em dash",
+            "original": "name — Claude",
+            "replacement": "name—Claude",
+            "rationale": "The style guide specifies that an em dash has no surrounding spaces.",
+            "confidence": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "method": "compiled",
+      "finding_count": 1,
+      "result": {
+        "page": "using-syllago/how-to/install-community-skill.mdx",
+        "suggestions": [
+          {
+            "line": 24,
+            "rule": "Avoid misleading anthropomorphism",
+            "original": "If syllago asks you to confirm trust for the registry on first use",
+            "replacement": "If syllago prompts you to confirm trust for the registry on first use",
+            "rationale": "Describes the observable interface behavior directly instead of attributing a conversational action to the software.",
+            "confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/local-vs-global.mdx",
+      "method": "baseline",
+      "finding_count": 2,
+      "result": {
+        "page": "using-syllago/local-vs-global.mdx",
+        "suggestions": [
+          {
+            "line": 2,
+            "rule": "Use sentence case and limit abbreviations in titles",
+            "original": "Local vs. Global",
+            "replacement": "Local versus global",
+            "rationale": "Uses sentence case and spells out an avoidable abbreviation in the page title.",
+            "confidence": 0.99
+          },
+          {
+            "line": 6,
+            "rule": "Don't put spaces around em dashes",
+            "original": "content management — shared registries, cross-team standards, networked distribution",
+            "replacement": "content management—shared registries, cross-team standards, networked distribution",
+            "rationale": "Google style doesn't use spaces before or after an em dash.",
+            "confidence": 1
+          },
+          {
+            "line": 35,
+            "rule": "Use a complete sentence before a colon",
+            "original": "This is the right mode for:",
+            "replacement": "Use this mode for the following purposes:",
+            "rationale": "The text introducing a list must be able to stand alone as a complete sentence.",
+            "confidence": 0.99
+          },
+          {
+            "line": 41,
+            "rule": "Avoid slashes in prose",
+            "original": "The global / shared mode",
+            "replacement": "The global or shared mode",
+            "rationale": "Replaces the slash with a conjunction for clearer, more accessible prose.",
+            "confidence": 0.99
+          },
+          {
+            "line": 44,
+            "rule": "Use the serial comma",
+            "original": "# Add a team registry, sync it, install to your provider of choice",
+            "replacement": "# Add a team registry, sync it, and install to your provider of choice",
+            "rationale": "Adds the required serial comma and conjunction to the three-item series.",
+            "confidence": 0.99
+          },
+          {
+            "line": 52,
+            "rule": "Use a complete sentence before a colon",
+            "original": "This is the right mode for:",
+            "replacement": "Use this mode for the following purposes:",
+            "rationale": "The text introducing a list must be able to stand alone as a complete sentence.",
+            "confidence": 0.99
+          },
+          {
+            "line": 60,
+            "rule": "Punctuate introductory phrases and list introductions correctly",
+            "original": "In practice most teams use both. The split usually looks like:",
+            "replacement": "In practice, most teams use both. The split usually looks like the following:",
+            "rationale": "Adds a comma after the introductory phrase and makes the list introduction a complete sentence.",
+            "confidence": 0.99
+          },
+          {
+            "line": 63,
+            "rule": "Don't hyphenate an adverb ending in -ly; don't space em dashes",
+            "original": "widely-reusable content — generic skills",
+            "replacement": "widely reusable content—generic skills",
+            "rationale": "Removes the unnecessary hyphen after an -ly adverb and the spaces around the em dash.",
+            "confidence": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "using-syllago/local-vs-global.mdx",
+      "method": "compiled",
+      "finding_count": 2,
+      "result": {
+        "page": "using-syllago/local-vs-global.mdx",
+        "suggestions": [
+          {
+            "line": 81,
+            "rule": "Give pronouns clear referents",
+            "original": "applying these patterns at scale",
+            "replacement": "applying local and global configuration patterns at scale",
+            "rationale": "Replaces the vague demonstrative “these” with the specific patterns covered by the page.",
+            "confidence": 0.94
+          }
+        ]
+      }
+    }
+  ]
+}

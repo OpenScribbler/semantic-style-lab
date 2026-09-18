@@ -1,0 +1,768 @@
+{
+  "generated_at": "2026-09-18T02:00:54.203Z",
+  "source": "https://developers.google.com/style",
+  "page_count": 70,
+  "word_list_entries": 598,
+  "actionable_candidate_count": 1241,
+  "vale_rule_count": 36,
+  "by_primary_engine": {
+    "deterministic": 17,
+    "structural": 13,
+    "hybrid": 22,
+    "semantic": 14,
+    "reference": 4
+  },
+  "pages": [
+    {
+      "slug": "abbreviations",
+      "title": "Abbreviations Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/abbreviations",
+      "primary_engine": "hybrid",
+      "heading_count": 11,
+      "actionable_candidate_count": 14,
+      "vale_rules": [
+        "Acronyms",
+        "Slang",
+        "Latin",
+        "Periods"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "accessibility",
+      "title": "Write accessible documentation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/accessibility",
+      "primary_engine": "structural",
+      "heading_count": 16,
+      "actionable_candidate_count": 39,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "anthropomorphism",
+      "title": "Anthropomorphism Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/anthropomorphism",
+      "primary_engine": "semantic",
+      "heading_count": 0,
+      "actionable_candidate_count": 1,
+      "vale_rules": [
+        "Anthropomorphism"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "api-reference-comments",
+      "title": "API reference code comments Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/api-reference-comments",
+      "primary_engine": "hybrid",
+      "heading_count": 11,
+      "actionable_candidate_count": 17,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "articles",
+      "title": "Articles (a, an, the) Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/articles",
+      "primary_engine": "hybrid",
+      "heading_count": 0,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "capitalization",
+      "title": "Capitalization Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/capitalization",
+      "primary_engine": "deterministic",
+      "heading_count": 11,
+      "actionable_candidate_count": 13,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "code-in-text",
+      "title": "Code in text Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/code-in-text",
+      "primary_engine": "hybrid",
+      "heading_count": 9,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "code-samples",
+      "title": "Code samples Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/code-samples",
+      "primary_engine": "structural",
+      "heading_count": 4,
+      "actionable_candidate_count": 2,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "code-syntax",
+      "title": "Document command-line syntax Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/code-syntax",
+      "primary_engine": "hybrid",
+      "heading_count": 18,
+      "actionable_candidate_count": 9,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "colons",
+      "title": "Colons Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/colons",
+      "primary_engine": "deterministic",
+      "heading_count": 4,
+      "actionable_candidate_count": 0,
+      "vale_rules": [
+        "Colons"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "commas",
+      "title": "Commas Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/commas",
+      "primary_engine": "deterministic",
+      "heading_count": 8,
+      "actionable_candidate_count": 5,
+      "vale_rules": [
+        "OxfordComma"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "contractions",
+      "title": "Contractions Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/contractions",
+      "primary_engine": "hybrid",
+      "heading_count": 2,
+      "actionable_candidate_count": 2,
+      "vale_rules": [
+        "Contractions"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "cross-references",
+      "title": "Cross-references and linking Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/cross-references",
+      "primary_engine": "structural",
+      "heading_count": 18,
+      "actionable_candidate_count": 10,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "dashes",
+      "title": "Dashes Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/dashes",
+      "primary_engine": "deterministic",
+      "heading_count": 4,
+      "actionable_candidate_count": 6,
+      "vale_rules": [
+        "EmDash"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "dates-times",
+      "title": "Dates and times Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/dates-times",
+      "primary_engine": "deterministic",
+      "heading_count": 10,
+      "actionable_candidate_count": 10,
+      "vale_rules": [
+        "DateFormat"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "ellipses",
+      "title": "Ellipses Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/ellipses",
+      "primary_engine": "deterministic",
+      "heading_count": 5,
+      "actionable_candidate_count": 4,
+      "vale_rules": [
+        "Ellipses"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "examples",
+      "title": "Example domains and names Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/examples",
+      "primary_engine": "hybrid",
+      "heading_count": 12,
+      "actionable_candidate_count": 7,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "excessive-claims",
+      "title": "Avoid excessive claims Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/excessive-claims",
+      "primary_engine": "semantic",
+      "heading_count": 1,
+      "actionable_candidate_count": 2,
+      "vale_rules": [
+        "ExcessiveClaims"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "filenames",
+      "title": "Filenames and file types Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/filenames",
+      "primary_engine": "structural",
+      "heading_count": 8,
+      "actionable_candidate_count": 9,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "footnotes",
+      "title": "Footnotes Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/footnotes",
+      "primary_engine": "hybrid",
+      "heading_count": 0,
+      "actionable_candidate_count": 2,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "format-examples",
+      "title": "Format examples Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/format-examples",
+      "primary_engine": "hybrid",
+      "heading_count": 1,
+      "actionable_candidate_count": 3,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "future",
+      "title": "Future features Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/future",
+      "primary_engine": "semantic",
+      "heading_count": 0,
+      "actionable_candidate_count": 1,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "headings",
+      "title": "Headings and titles Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/headings",
+      "primary_engine": "structural",
+      "heading_count": 23,
+      "actionable_candidate_count": 15,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "headings-targets",
+      "title": "Make headings into link targets Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/headings-targets",
+      "primary_engine": "structural",
+      "heading_count": 7,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "highlights",
+      "title": "Highlights Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/highlights",
+      "primary_engine": "reference",
+      "heading_count": 5,
+      "actionable_candidate_count": 16,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "html-formatting",
+      "title": "HTML formatting Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/html-formatting",
+      "primary_engine": "structural",
+      "heading_count": 2,
+      "actionable_candidate_count": 3,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "hyphens",
+      "title": "Hyphens Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/hyphens",
+      "primary_engine": "deterministic",
+      "heading_count": 16,
+      "actionable_candidate_count": 9,
+      "vale_rules": [
+        "Ranges",
+        "LyHyphens"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "images",
+      "title": "Diagrams, figures, and other images Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/images",
+      "primary_engine": "structural",
+      "heading_count": 13,
+      "actionable_candidate_count": 30,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "inclusive-documentation",
+      "title": "Write inclusive documentation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/inclusive-documentation",
+      "primary_engine": "semantic",
+      "heading_count": 11,
+      "actionable_candidate_count": 17,
+      "vale_rules": [
+        "GenderBias"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "italics-terms",
+      "title": "Use italics to discuss terms Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/italics-terms",
+      "primary_engine": "hybrid",
+      "heading_count": 2,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "jargon",
+      "title": "Jargon Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/jargon",
+      "primary_engine": "semantic",
+      "heading_count": 1,
+      "actionable_candidate_count": 0,
+      "vale_rules": [
+        "Jargon"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "lists",
+      "title": "Lists Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/lists",
+      "primary_engine": "structural",
+      "heading_count": 15,
+      "actionable_candidate_count": 11,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "markdown",
+      "title": "Markdown versus HTML Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/markdown",
+      "primary_engine": "structural",
+      "heading_count": 0,
+      "actionable_candidate_count": 1,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "mathematical-notation",
+      "title": "Mathematical notation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/mathematical-notation",
+      "primary_engine": "deterministic",
+      "heading_count": 10,
+      "actionable_candidate_count": 5,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "notices",
+      "title": "Notes, cautions, warnings, and other notices Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/notices",
+      "primary_engine": "hybrid",
+      "heading_count": 5,
+      "actionable_candidate_count": 9,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "numbers",
+      "title": "Numbers Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/numbers",
+      "primary_engine": "deterministic",
+      "heading_count": 15,
+      "actionable_candidate_count": 14,
+      "vale_rules": [
+        "Ordinal"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "other-sources",
+      "title": "Third-party content Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/other-sources",
+      "primary_engine": "reference",
+      "heading_count": 1,
+      "actionable_candidate_count": 1,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "paragraph-structure",
+      "title": "Paragraph structure Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/paragraph-structure",
+      "primary_engine": "semantic",
+      "heading_count": 2,
+      "actionable_candidate_count": 2,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "parentheses",
+      "title": "Parentheses Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/parentheses",
+      "primary_engine": "deterministic",
+      "heading_count": 0,
+      "actionable_candidate_count": 1,
+      "vale_rules": [
+        "Parens"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "periods",
+      "title": "Periods and other end punctuation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/periods",
+      "primary_engine": "deterministic",
+      "heading_count": 12,
+      "actionable_candidate_count": 9,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "person",
+      "title": "Second person and first person Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/person",
+      "primary_engine": "semantic",
+      "heading_count": 4,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "philosophy",
+      "title": "Philosophy of this style guide Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/philosophy",
+      "primary_engine": "reference",
+      "heading_count": 3,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "phone-numbers",
+      "title": "Format phone numbers in text Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/phone-numbers",
+      "primary_engine": "deterministic",
+      "heading_count": 9,
+      "actionable_candidate_count": 3,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "placeholders",
+      "title": "Format placeholders Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/placeholders",
+      "primary_engine": "hybrid",
+      "heading_count": 10,
+      "actionable_candidate_count": 5,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "pluralization",
+      "title": "Pluralization Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/pluralization",
+      "primary_engine": "hybrid",
+      "heading_count": 5,
+      "actionable_candidate_count": 4,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "possessives",
+      "title": "Possessives Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/possessives",
+      "primary_engine": "hybrid",
+      "heading_count": 3,
+      "actionable_candidate_count": 4,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "prepositions",
+      "title": "Prepositions Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/prepositions",
+      "primary_engine": "hybrid",
+      "heading_count": 0,
+      "actionable_candidate_count": 1,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "prescriptive-documentation",
+      "title": "Prescriptive documentation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/prescriptive-documentation",
+      "primary_engine": "semantic",
+      "heading_count": 3,
+      "actionable_candidate_count": 1,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "procedures",
+      "title": "Procedures Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/procedures",
+      "primary_engine": "hybrid",
+      "heading_count": 13,
+      "actionable_candidate_count": 7,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "product-names",
+      "title": "Product names Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/product-names",
+      "primary_engine": "hybrid",
+      "heading_count": 8,
+      "actionable_candidate_count": 9,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "pronouns",
+      "title": "Pronouns Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/pronouns",
+      "primary_engine": "semantic",
+      "heading_count": 6,
+      "actionable_candidate_count": 9,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "quotation-marks",
+      "title": "Quotation marks Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/quotation-marks",
+      "primary_engine": "deterministic",
+      "heading_count": 5,
+      "actionable_candidate_count": 3,
+      "vale_rules": [
+        "Quotes"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "reference-verbs",
+      "title": "Verb forms in reference documentation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/reference-verbs",
+      "primary_engine": "hybrid",
+      "heading_count": 0,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "semantic-tagging",
+      "title": "HTML and semantic tagging Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/semantic-tagging",
+      "primary_engine": "structural",
+      "heading_count": 2,
+      "actionable_candidate_count": 3,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "semicolons",
+      "title": "Semicolons Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/semicolons",
+      "primary_engine": "deterministic",
+      "heading_count": 0,
+      "actionable_candidate_count": 0,
+      "vale_rules": [
+        "Semicolons"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "sentence-structure",
+      "title": "Sentence structure Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/sentence-structure",
+      "primary_engine": "semantic",
+      "heading_count": 0,
+      "actionable_candidate_count": 0,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "slashes",
+      "title": "Slashes Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/slashes",
+      "primary_engine": "deterministic",
+      "heading_count": 7,
+      "actionable_candidate_count": 12,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "spelling",
+      "title": "Word list Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/spelling",
+      "primary_engine": "deterministic",
+      "heading_count": 28,
+      "actionable_candidate_count": 383,
+      "vale_rules": [
+        "Spelling"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "tables",
+      "title": "Tables Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/tables",
+      "primary_engine": "structural",
+      "heading_count": 11,
+      "actionable_candidate_count": 19,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "tense",
+      "title": "Present tense Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/tense",
+      "primary_engine": "hybrid",
+      "heading_count": 0,
+      "actionable_candidate_count": 2,
+      "vale_rules": [
+        "Will"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "text-formatting",
+      "title": "Text-formatting summary Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/text-formatting",
+      "primary_engine": "structural",
+      "heading_count": 2,
+      "actionable_candidate_count": 14,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "timeless-documentation",
+      "title": "Timeless documentation Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/timeless-documentation",
+      "primary_engine": "semantic",
+      "heading_count": 2,
+      "actionable_candidate_count": 0,
+      "vale_rules": [
+        "Timeless"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "tone",
+      "title": "Voice and tone Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/tone",
+      "primary_engine": "semantic",
+      "heading_count": 5,
+      "actionable_candidate_count": 12,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "trademarks",
+      "title": "Trademarks Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/trademarks",
+      "primary_engine": "hybrid",
+      "heading_count": 2,
+      "actionable_candidate_count": 1,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "translation",
+      "title": "Write for a global audience Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/translation",
+      "primary_engine": "semantic",
+      "heading_count": 17,
+      "actionable_candidate_count": 36,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "ui-elements",
+      "title": "UI elements and interaction Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/ui-elements",
+      "primary_engine": "hybrid",
+      "heading_count": 25,
+      "actionable_candidate_count": 11,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "units-of-measure",
+      "title": "Units of measurement Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/units-of-measure",
+      "primary_engine": "deterministic",
+      "heading_count": 15,
+      "actionable_candidate_count": 9,
+      "vale_rules": [
+        "Units"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "voice",
+      "title": "Active voice Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/voice",
+      "primary_engine": "semantic",
+      "heading_count": 2,
+      "actionable_candidate_count": 0,
+      "vale_rules": [
+        "Passive"
+      ],
+      "status": "partially_implemented"
+    },
+    {
+      "slug": "whats-new",
+      "title": "What's new Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/whats-new",
+      "primary_engine": "reference",
+      "heading_count": 173,
+      "actionable_candidate_count": 11,
+      "vale_rules": [],
+      "status": "inventoried"
+    },
+    {
+      "slug": "word-list",
+      "title": "Word list Stay organized with collections Save and categorize content based on your preferences.",
+      "url": "https://developers.google.com/style/word-list",
+      "primary_engine": "hybrid",
+      "heading_count": 28,
+      "actionable_candidate_count": 383,
+      "word_list_entries": 598,
+      "vale_rules": [
+        "WordListCase",
+        "AMPM",
+        "WordList"
+      ],
+      "status": "partially_implemented"
+    }
+  ]
+}
