@@ -71,6 +71,7 @@ export async function classifyCandidates(candidates: Candidate[], rules: Context
 			choice: selected,
 			confidence: answer.confidence,
 			probability,
+			strategy: 'choice',
 			...decideStatus(candidate, rule, selected, probability),
 			model: response.model,
 		};

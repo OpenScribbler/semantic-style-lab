@@ -38,12 +38,16 @@ export interface Candidate {
 export interface Classification {
 	candidate: Candidate;
 	choice: string;
-	confidence: number;
+	confidence: number | null;
 	probability: number;
+	strategy?: 'choice' | 'noul';
+	signals?: Record<string, number | undefined>;
 	expectedForm: string | null;
 	status: 'pass' | 'uncertain' | 'review' | 'flag' | 'preserve';
 	model: string;
 }
+
+export type ClassificationStrategy = 'choice' | 'noul';
 
 export interface Fixture {
 	id: string;

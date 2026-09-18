@@ -1,0 +1,321 @@
+{
+  "generated_at": "2026-09-18T00:12:17.709Z",
+  "files": [
+    "test/corpus/contextual-vocabulary.md"
+  ],
+  "candidate_count": 7,
+  "model": "jev-1.13.0",
+  "strategy": "noul",
+  "usage": {
+    "input_tokens": 2931,
+    "output_tokens": 275
+  },
+  "findings": [
+    {
+      "candidate": {
+        "id": "c1",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 3,
+        "span": [
+          42,
+          47
+        ],
+        "match": "set up",
+        "context": "Set up the client, and then complete the ⟦set up⟧.",
+        "ruleId": "setup"
+      },
+      "choice": "noun",
+      "confidence": 0.84,
+      "probability": 0.84,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.16,
+        "modifies_following_noun": 0,
+        "verb_phrase": 0.16
+      },
+      "expectedForm": "setup",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c2",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 5,
+        "span": [
+          13,
+          24
+        ],
+        "match": "command line",
+        "context": "Install the ⟦command line⟧ client from the command-line.",
+        "ruleId": "command-line"
+      },
+      "choice": "before_noun",
+      "confidence": 0.8200000000000001,
+      "probability": 0.8200000000000001,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.18,
+        "modifies_following_noun": 0.88
+      },
+      "expectedForm": "command-line",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c3",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 5,
+        "span": [
+          42,
+          53
+        ],
+        "match": "command-line",
+        "context": "Install the command line client from the ⟦command-line⟧.",
+        "ruleId": "command-line"
+      },
+      "choice": "standalone",
+      "confidence": 0.79,
+      "probability": 0.79,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.21,
+        "modifies_following_noun": 0
+      },
+      "expectedForm": "command line",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c4",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 7,
+        "span": [
+          24,
+          32
+        ],
+        "match": "real time",
+        "context": "The dashboard provides ⟦real time⟧ updates and refreshes in real-time.",
+        "ruleId": "real-time"
+      },
+      "choice": "before_noun",
+      "confidence": 0.88,
+      "probability": 0.88,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.12,
+        "modifies_following_noun": 0.93
+      },
+      "expectedForm": "real-time",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c5",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 7,
+        "span": [
+          59,
+          67
+        ],
+        "match": "real-time",
+        "context": "The dashboard provides real time updates and refreshes in ⟦real-time⟧.",
+        "ruleId": "real-time"
+      },
+      "choice": "standalone",
+      "confidence": 0.84,
+      "probability": 0.84,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.16,
+        "modifies_following_noun": 0
+      },
+      "expectedForm": "real time",
+      "status": "review",
+      "model": "jev-1.13.0"
+    }
+  ],
+  "classifications": [
+    {
+      "candidate": {
+        "id": "c0",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 3,
+        "span": [
+          1,
+          6
+        ],
+        "match": "Set up",
+        "context": "⟦Set up⟧ the client, and then complete the set up.",
+        "ruleId": "setup"
+      },
+      "choice": "verb_phrase",
+      "confidence": 0.8200000000000001,
+      "probability": 0.8200000000000001,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.18,
+        "modifies_following_noun": 0.08,
+        "verb_phrase": 0.96
+      },
+      "expectedForm": "set up",
+      "status": "pass",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c1",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 3,
+        "span": [
+          42,
+          47
+        ],
+        "match": "set up",
+        "context": "Set up the client, and then complete the ⟦set up⟧.",
+        "ruleId": "setup"
+      },
+      "choice": "noun",
+      "confidence": 0.84,
+      "probability": 0.84,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.16,
+        "modifies_following_noun": 0,
+        "verb_phrase": 0.16
+      },
+      "expectedForm": "setup",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c2",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 5,
+        "span": [
+          13,
+          24
+        ],
+        "match": "command line",
+        "context": "Install the ⟦command line⟧ client from the command-line.",
+        "ruleId": "command-line"
+      },
+      "choice": "before_noun",
+      "confidence": 0.8200000000000001,
+      "probability": 0.8200000000000001,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.18,
+        "modifies_following_noun": 0.88
+      },
+      "expectedForm": "command-line",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c3",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 5,
+        "span": [
+          42,
+          53
+        ],
+        "match": "command-line",
+        "context": "Install the command line client from the ⟦command-line⟧.",
+        "ruleId": "command-line"
+      },
+      "choice": "standalone",
+      "confidence": 0.79,
+      "probability": 0.79,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.21,
+        "modifies_following_noun": 0
+      },
+      "expectedForm": "command line",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c4",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 7,
+        "span": [
+          24,
+          32
+        ],
+        "match": "real time",
+        "context": "The dashboard provides ⟦real time⟧ updates and refreshes in real-time.",
+        "ruleId": "real-time"
+      },
+      "choice": "before_noun",
+      "confidence": 0.88,
+      "probability": 0.88,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.12,
+        "modifies_following_noun": 0.93
+      },
+      "expectedForm": "real-time",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c5",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 7,
+        "span": [
+          59,
+          67
+        ],
+        "match": "real-time",
+        "context": "The dashboard provides real time updates and refreshes in ⟦real-time⟧.",
+        "ruleId": "real-time"
+      },
+      "choice": "standalone",
+      "confidence": 0.84,
+      "probability": 0.84,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.16,
+        "modifies_following_noun": 0
+      },
+      "expectedForm": "real time",
+      "status": "review",
+      "model": "jev-1.13.0"
+    },
+    {
+      "candidate": {
+        "id": "c6",
+        "file": "test/corpus/contextual-vocabulary.md",
+        "line": 9,
+        "span": [
+          10,
+          14
+        ],
+        "match": "Setup",
+        "context": "Select **⟦Setup⟧** to continue. Run the `setup` command if the button is unavailable.",
+        "ruleId": "setup"
+      },
+      "choice": "literal",
+      "confidence": 0.88,
+      "probability": 0.88,
+      "strategy": "noul",
+      "signals": {
+        "literal": 0.88,
+        "modifies_following_noun": 0,
+        "verb_phrase": 0.14
+      },
+      "expectedForm": null,
+      "status": "preserve",
+      "model": "jev-1.13.0"
+    }
+  ]
+}

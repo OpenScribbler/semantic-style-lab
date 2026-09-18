@@ -1,6 +1,7 @@
 import { classifyCandidates } from './jev';
+import { classifyCandidatesWithNoul } from './jev-noul';
 import { loadRules } from './rules';
-import type { Candidate, Fixture } from './types';
+import type { Candidate, ClassificationStrategy, Fixture } from './types';
 
 export function parseEvalArgs(args: string[]) {
 	const fixtureIndex = args.indexOf('--fixture');
@@ -9,14 +10,17 @@ export function parseEvalArgs(args: string[]) {
 	const output = outputIndex >= 0 ? args[outputIndex + 1] : undefined;
 	const runsIndex = args.indexOf('--runs');
 	const runs = runsIndex >= 0 ? Number(args[runsIndex + 1]) : 1;
+	const strategyIndex = args.indexOf('--strategy');
+	const strategy = (strategyIndex >= 0 ? args[strategyIndex + 1] : 'choice') as ClassificationStrategy;
 	if (!fixturePath) throw new Error('--fixture requires a path');
 	if (outputIndex >= 0 && !output) throw new Error('--output requires a path');
 	if (!Number.isInteger(runs) || runs < 1 || runs > 10) throw new Error('--runs must be an integer from 1 to 10');
-	return { fixturePath, output, runs };
+	if (!['choice', 'noul'].includes(strategy)) throw new Error('--strategy must be choice or noul');
+	return { fixturePath, output, runs, strategy };
 }
 
 async function main() {
-	const { fixturePath, output, runs } = parseEvalArgs(process.argv.slice(2));
+	const { fixturePath, output, runs, strategy } = parseEvalArgs(process.argv.slice(2));
 	const fixtures = (await Bun.file(fixturePath).json()) as Fixture[];
 	const rules = await loadRules();
 	const candidates: Candidate[] = fixtures.map((fixture, index) => ({
@@ -30,7 +34,10 @@ async function main() {
 	}));
 	const ruleById = new Map(rules.map((rule) => [rule.id, rule]));
 	const classifyRun = async () => {
-		const run = await classifyCandidates(candidates, rules);
+		const run =
+			strategy === 'noul'
+				? await classifyCandidatesWithNoul(candidates, rules)
+				: await classifyCandidates(candidates, rules);
 		return {
 			model: run.model,
 			usage: run.usage,
@@ -49,6 +56,7 @@ async function main() {
 					predicted_context: classification.choice,
 					confidence: classification.confidence,
 					probability: classification.probability,
+					signals: classification.signals,
 					status: classification.status,
 					expected_form: classification.expectedForm,
 					expected_policy: expectedPolicy,
@@ -101,6 +109,7 @@ async function main() {
 	);
 	const report = {
 		generated_at: new Date().toISOString(),
+		strategy,
 		model: completedRuns[0]?.model,
 		runs,
 		usage: {

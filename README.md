@@ -13,7 +13,9 @@ context:
 - `real time` / `real-time`
 
 This is intentionally different from asking a model to apply an entire style
-guide. Each request contains one passage and one bounded choice among contexts.
+guide. Each request contains marked passages and narrow semantic questions. The
+default strategy uses independent Noul judgments and composes them into policy
+with code.
 
 ## Setup
 
@@ -40,12 +42,14 @@ violations.
 ```bash
 bun run audit -- test/corpus/contextual-vocabulary.md
 bun run audit -- test/corpus/contextual-vocabulary.md --json
+bun run audit -- test/corpus/contextual-vocabulary.md --output reports/sample.local.json
 ```
 
 ## Evaluate the labeled fixture set
 
 ```bash
-bun run evaluate -- --runs 3 --output reports/contextual-vocabulary.local.json
+bun run evaluate -- --strategy noul --runs 3 --output reports/contextual-vocabulary.local.json
+bun run evaluate -- --strategy choice --runs 3 --output reports/contextual-vocabulary-choice.local.json
 ```
 
 The initial fixture set contains correct forms, incorrect forms, UI/code/name
@@ -54,8 +58,10 @@ occurring examples before using thresholds as a quality gate.
 Multiple runs also measure whether Jev reaches a stable contextual and policy
 decision for each fixture.
 
-See the [initial HTML report](reports/contextual-vocabulary-eval.html) for the
-recorded metrics, end-to-end misses, and next experiment.
+See the [HTML report](reports/contextual-vocabulary-eval.html) for the recorded
+strategy comparison, end-to-end result, and next experiment. The
+[Jev design notes](docs/jev-design-notes.md) map the relevant official guidance
+to this architecture.
 
 ## Design boundary
 

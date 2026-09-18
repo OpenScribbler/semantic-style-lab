@@ -11,10 +11,11 @@ Use Vale to enumerate every configured variant and Jev to classify why the term 
 
 1. Locate the relevant rule records under `rules/contextual-vocabulary/`.
 2. Run `bun run candidates -- <files...>` and confirm that Vale finds variants without linting code spans.
-3. Run `bun run audit -- <files...> --json` with `TYPESAFE_API_KEY` set.
-4. Treat `flag` as a proposed terminology violation, `review` as a plausible candidate, `uncertain` as a low-confidence candidate, and `preserve` as an intentional literal or name.
-5. For an edit, give the editing model only the finding, its rule record, and the local passage. Request a minimal diff and preserve code, UI labels, quotations, and official names.
-6. Re-run the audit after editing. Never silence a family merely to remove a valid exception; add a labeled fixture or refine its contexts.
+3. Pre-parse observable boundaries in code. For compound modifiers, extract the actual word after the candidate; do not ask Jev about an abstract “following noun” when the boundary can be supplied explicitly.
+4. Run `bun run audit -- <files...> --json --strategy noul` with `TYPESAFE_API_KEY` set.
+5. Inspect the raw Noul signals. Treat `flag` as a proposed terminology violation, `review` as a plausible candidate, `uncertain` as a low-support candidate, and `preserve` as an intentional literal or name.
+6. For an edit, give the editing model only the finding, its rule record, and the local passage. Request a minimal diff and preserve code, UI labels, quotations, and official names.
+7. Re-run the audit after editing. Never silence a family merely to remove a valid exception; add a labeled fixture or refine its questions.
 
 ## Add a rule
 
@@ -29,4 +30,4 @@ Define:
 - an ambiguous choice that routes uncertain prose to review;
 - labeled correct, incorrect, literal, and ambiguous fixtures.
 
-Ask Jev to classify the contextual function, not to decide correctness directly. The rule record maps the selected function to policy, keeping the decision auditable and independently testable.
+Ask Jev atomic semantic questions, not whether the prose is correct. Prefer Noul for independent yes/no properties such as literal status, verb use, or whether an explicitly supplied next word is a modified noun. Compose those probabilities into a context in code. Use Choice only when the alternatives are naturally mutually exclusive. The rule record maps the composed context to policy, keeping the decision auditable and independently testable.

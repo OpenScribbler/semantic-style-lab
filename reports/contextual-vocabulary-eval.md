@@ -1,57 +1,64 @@
-# Contextual vocabulary evaluation
+# Contextual vocabulary strategy comparison
 
 Generated from Jev 1.13.0 on 2026-09-17.
 
 ## Result
 
-The approach is promising but not ready to automate edits.
+The next-word Noul strategy reached **98.9% policy accuracy** across 90 decisions
+and surfaced all five seeded errors in the end-to-end sample. The result is strong
+enough to justify a larger real-prose evaluation, but not automatic editing.
 
-- 30 labeled fixtures across three contextual term families
-- 3 repeated runs, producing 90 decisions
-- 83.3% exact context accuracy
-- 87.8% style-policy accuracy
-- 93.3% policy stability across runs
-- 35,871 input tokens: approximately **$0.00151** at $0.042/MTok
+| Strategy | Policy accuracy | Policy stability | Input tokens | Input cost |
+| --- | ---: | ---: | ---: | ---: |
+| One multi-class Choice | 92.2% | 96.7% | 35,871 | $0.00151 |
+| Naive atomic Noul | 81.1% | 96.7% | 39,411 | $0.00166 |
+| Noul with parsed next word | **98.9%** | 96.7% | 36,957 | $0.00155 |
 
-`setup` reached 100% policy accuracy in the recorded run. `command-line` reached
-76.7%, and `real-time` reached 86.7%. The main systematic failure was surface-form
-anchoring: Jev sometimes treated an already hyphenated term as a modifier even
-when a verb followed it.
+Costs use $0.042 per million input tokens and exclude output charges.
+
+## Why the second strategy failed
+
+Breaking a Choice into yes/no questions was not sufficient. The abstract question
+“Does the marked term modify a following noun?” still let Jev count a noun inside
+the marked phrase or anchor on its current hyphenation. Policy accuracy fell to
+81.1%.
+
+The third strategy used code to extract the actual word after the candidate. Jev
+then answered whether that explicit word was a noun modified by the marked term.
+That narrow boundary removed all repeated `real-time` errors and left one unstable
+literal classification in 90 decisions.
 
 ## End-to-end sample
 
-Vale enumerated seven prose candidates and skipped the inline-code occurrence.
-The sample contained five intentionally incorrect forms. Jev surfaced three:
+Vale enumerated seven prose candidates and skipped the configured inline-code
+occurrence. The next-word Noul audit surfaced all five seeded errors:
 
 1. `complete the set up` → `complete the setup`
-2. `from the command-line` → `from the command line`
-3. `in real-time` → `in real time`
+2. `command line client` → `command-line client`
+3. `from the command-line` → `from the command line`
+4. `real time updates` → `real-time updates`
+5. `in real-time` → `in real time`
 
-It missed two compound modifiers:
-
-1. `command line client` → `command-line client`
-2. `real time updates` → `real-time updates`
-
-Observed recall on this tiny adversarial sample is therefore 60%. This is too
-small to generalize, but it identifies the next useful experiment: separate
-candidate enumeration from a more mechanical syntactic question about the word
-immediately following the marked term.
+All five were routed to review rather than edited automatically.
 
 ## Interpretation
 
-The architecture worked as intended:
+The experiment supports a specific architecture:
 
-- Vale found every configured surface form and supplied exact source locations.
-- Jev received one marked occurrence and one bounded rule at a time.
-- Rule records, rather than the model, mapped context to preferred spelling.
-- UI and code literals could be preserved instead of globally allowlisted.
+1. Vale or regex over-finds known surface forms.
+2. Code extracts any reliable structural facts, such as the exact following word.
+3. Jev supplies narrow semantic probabilities: literal status, verb use, and the
+   grammatical role of the supplied next word.
+4. Versioned rule records map the composed semantic context to expected style.
+5. An editing LLM receives only a bounded finding and local passage.
 
-The experiment also showed why labeled fixtures matter. Early “ambiguous” cases
-were actually awkward but classifiable sentences, and linguistics-heavy labels
-reduced accuracy. Replacing those labels with observable relationships improved
-the benchmark, but modifier recall remains the first issue to solve.
+Next, freeze the prompts and evaluate at least 100 naturally occurring examples
+from multiple documentation projects. Split threshold calibration from held-out
+evaluation and report violation precision and recall, not just context accuracy.
 
 Raw data:
 
-- [`contextual-vocabulary-eval.json`](contextual-vocabulary-eval.json)
-- [`sample-audit.json`](sample-audit.json)
+- [Choice](contextual-vocabulary-choice-latest.json)
+- [Naive Noul](contextual-vocabulary-noul.json)
+- [Next-word Noul](contextual-vocabulary-noul-next-word.json)
+- [End-to-end audit](sample-audit-noul.json)

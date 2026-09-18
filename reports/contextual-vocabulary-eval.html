@@ -13,7 +13,7 @@
     .eyebrow { color:var(--blue); font-weight:750; text-transform:uppercase; letter-spacing:.08em; font-size:.78rem }
     .lede { color:var(--muted); font-size:1.18rem } .verdict { background:var(--panel); border-left:5px solid var(--warn); border-radius:0 12px 12px 0; padding:18px 22px; margin:26px 0 }
     .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; margin:26px 0 }
-    .card,.flow,.case { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:17px }
+    .card,.flow,.case,.table-wrap { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:17px }
     .metric { display:block; font-size:1.9rem; font-weight:800 } .label { color:var(--muted); font-size:.85rem }
     .good { color:var(--good) } .warn { color:var(--warn) }
     .flow { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; text-align:center; align-items:center }
@@ -21,6 +21,7 @@
     .cases { display:grid; grid-template-columns:1fr 1fr; gap:14px } .case h3 { margin:.1em 0 .6em }
     code { background:color-mix(in srgb,var(--line) 50%,transparent); border-radius:4px; padding:.12em .35em }
     li { margin:.4em 0 } footer { border-top:1px solid var(--line); margin-top:44px; padding-top:18px; color:var(--muted) }
+    table { width:100%; border-collapse:collapse } th,td { padding:11px 9px; border-bottom:1px solid var(--line); text-align:right } th:first-child,td:first-child { text-align:left } tr:last-child td { border-bottom:0 } .table-wrap { overflow-x:auto }
     @media(max-width:720px) { .grid,.flow,.cases { grid-template-columns:1fr 1fr } .flow div::after { display:none } }
     @media(max-width:430px) { .grid,.flow,.cases { grid-template-columns:1fr } }
     @media(prefers-color-scheme:dark) { :root { --bg:#171713; --panel:#211f1a; --ink:#eee9dc; --muted:#aaa294; --line:#474238; --good:#53b985; --warn:#e5ad3d; --blue:#78a9ff } }
@@ -28,56 +29,72 @@
 </head>
 <body><main>
   <div class="eyebrow">Semantic Style Lab · 17 September 2026</div>
-  <h1>Vale found every term. Jev made the right policy decision 87.8% of the time.</h1>
-  <p class="lede">A first vertical slice for vocabulary whose spacing or hyphenation depends on grammatical context, UI text, code, or official names.</p>
-  <div class="verdict"><strong>Promising, not automation-ready.</strong> The architecture works, cost is negligible, and the failures are measurable. Modifier recall needs improvement before edits should be applied automatically.</div>
+  <h1>Giving Jev the actual next word raised policy accuracy to 98.9%.</h1>
+  <p class="lede">Three strategies tested the same 30 contextual vocabulary fixtures over three runs. The decisive improvement came from doing more deterministic parsing before asking the semantic question.</p>
+  <div class="verdict"><strong>Worth pursuing, with a larger corpus next.</strong> The result supports the Vale + Jev + rule-record architecture, but 30 synthetic fixtures are an engineering probe—not evidence for unattended editing.</div>
 
   <div class="grid">
-    <div class="card"><span class="metric good">87.8%</span><span class="label">policy accuracy over 90 decisions</span></div>
-    <div class="card"><span class="metric good">93.3%</span><span class="label">policy stability across 3 runs</span></div>
-    <div class="card"><span class="metric warn">60%</span><span class="label">recall on 5 seeded sample errors</span></div>
-    <div class="card"><span class="metric">$0.00151</span><span class="label">fixture-run input cost</span></div>
+    <div class="card"><span class="metric good">98.9%</span><span class="label">policy accuracy over 90 decisions</span></div>
+    <div class="card"><span class="metric good">96.7%</span><span class="label">policy stability across 3 runs</span></div>
+    <div class="card"><span class="metric good">5 / 5</span><span class="label">seeded sample errors surfaced</span></div>
+    <div class="card"><span class="metric">$0.00155</span><span class="label">input cost for the winning benchmark</span></div>
   </div>
+
+  <h2>The comparison</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Strategy</th><th>Policy accuracy</th><th>Policy stability</th><th>Input tokens</th><th>Input cost</th></tr></thead>
+    <tbody>
+      <tr><td>One multi-class Choice</td><td>92.2%</td><td>96.7%</td><td>35,871</td><td>$0.00151</td></tr>
+      <tr><td>Naive atomic Noul</td><td class="warn">81.1%</td><td>96.7%</td><td>39,411</td><td>$0.00166</td></tr>
+      <tr><td><strong>Noul + parsed next word</strong></td><td class="good"><strong>98.9%</strong></td><td>96.7%</td><td>36,957</td><td>$0.00155</td></tr>
+    </tbody>
+  </table></div>
+  <p>The negative middle result matters. “Does this modify a following noun?” was still too abstract: Jev sometimes counted a noun inside the marked phrase. Code now extracts <code>following_word</code>; Jev judges whether that explicit word is a noun modified by the term.</p>
 
   <h2>The compiled workflow</h2>
   <div class="flow">
     <div><strong>Vale</strong><br><span class="label">enumerates variants</span></div>
-    <div><strong>Jev</strong><br><span class="label">classifies context</span></div>
-    <div><strong>Rule record</strong><br><span class="label">selects policy</span></div>
-    <div><strong>Editing LLM</strong><br><span class="label">gets one bounded diff</span></div>
+    <div><strong>Code</strong><br><span class="label">extracts exact boundaries</span></div>
+    <div><strong>Jev</strong><br><span class="label">returns atomic probabilities</span></div>
+    <div><strong>Rule record</strong><br><span class="label">selects style policy</span></div>
   </div>
+  <p>An editing LLM can then receive only one finding, its local passage, and the applicable rule—not the entire style guide or repository.</p>
 
-  <h2>Three initial term families</h2>
+  <h2>Winning result by term family</h2>
   <ul>
     <li><code>set up</code> / <code>setup</code> / <code>set-up</code>: 100% policy accuracy</li>
-    <li><code>command line</code> / <code>command-line</code>: 76.7% policy accuracy</li>
-    <li><code>real time</code> / <code>real-time</code>: 86.7% policy accuracy</li>
+    <li><code>command line</code> / <code>command-line</code>: 96.7% policy accuracy</li>
+    <li><code>real time</code> / <code>real-time</code>: 100% policy accuracy</li>
   </ul>
 
   <h2>End-to-end adversarial sample</h2>
   <div class="cases">
-    <section class="case"><h3 class="good">Found</h3><ul>
+    <section class="case"><h3 class="good">All five surfaced</h3><ul>
       <li><code>complete the set up</code> → <code>complete the setup</code></li>
+      <li><code>command line client</code> → <code>command-line client</code></li>
       <li><code>from the command-line</code> → <code>from the command line</code></li>
+      <li><code>real time updates</code> → <code>real-time updates</code></li>
       <li><code>in real-time</code> → <code>in real time</code></li>
     </ul></section>
-    <section class="case"><h3 class="warn">Missed</h3><ul>
-      <li><code>command line client</code> → <code>command-line client</code></li>
-      <li><code>real time updates</code> → <code>real-time updates</code></li>
+    <section class="case"><h3>Guardrails retained</h3><ul>
+      <li>Vale enumerated all seven prose candidates.</li>
+      <li>Vale skipped the configured inline-code occurrence.</li>
+      <li>Raw Noul probabilities remain in the report.</li>
+      <li>All five corrections were routed to review, not auto-edited.</li>
     </ul></section>
   </div>
-  <p>Vale enumerated all seven prose candidates and skipped the inline-code occurrence. The systematic problem is not enumeration: Jev sometimes fails to recognize that an unhyphenated phrase modifies the following noun.</p>
 
-  <h2>What the fixtures taught us</h2>
-  <p>The current surface form can bias classification: an already hyphenated phrase sometimes looks like a modifier even when a verb follows it. Literal quotations are also boundary cases. Marking the exact occurrence and asking an observable syntactic question helped, but did not eliminate either issue.</p>
-  <p>The next experiment should test a deterministic part-of-speech or dependency cue before Jev, while retaining Jev for UI labels, official names, quotations, and genuinely ambiguous syntax.</p>
+  <h2>What to test next</h2>
+  <p>Freeze these prompts, then add real prose without tuning against it: at least 100 labeled occurrences from multiple documentation projects. Include headings, links, tables, quotations, UI strings, product names, punctuation boundaries, and words that can be either nouns or verbs. Measure violation precision and recall separately, calibrate thresholds on a development split, and keep a held-out set.</p>
 
   <h2>Artifacts</h2>
   <ul>
-    <li><a href="contextual-vocabulary-eval.json">Repeated fixture results</a></li>
-    <li><a href="sample-audit.json">End-to-end sample audit</a></li>
+    <li><a href="contextual-vocabulary-choice-latest.json">Choice results</a></li>
+    <li><a href="contextual-vocabulary-noul.json">Naive Noul results</a></li>
+    <li><a href="contextual-vocabulary-noul-next-word.json">Next-word Noul results</a></li>
+    <li><a href="sample-audit-noul.json">End-to-end Noul audit</a></li>
     <li><a href="contextual-vocabulary-eval.md">Markdown interpretation</a></li>
   </ul>
-  <footer>Jev 1.13.0 · 35,871 input tokens and 4,794 output tokens for the repeated fixture benchmark. Cost shown uses $0.042 per million input tokens and excludes output charges.</footer>
+  <footer>Jev 1.13.0. Costs use $0.042 per million input tokens and exclude output charges. Percentages describe this small labeled fixture set only.</footer>
 </main></body>
 </html>
