@@ -17,6 +17,8 @@ Use Vale to enumerate every configured variant and Jev to classify why the term 
 6. For an edit, give the editing model only the finding, its rule record, and the local passage. Request a minimal diff and preserve code, UI labels, quotations, and official names.
 7. Re-run the audit after editing. Never silence a family merely to remove a valid exception; add a labeled fixture or refine its questions.
 
+For a benchmark, create counterfactual surface variants from each labeled natural-language context. Keep every variant of one source sentence in the same split. Report policy accuracy, violation precision and recall, repeated-run stability, and whether all surface variants receive the same semantic context. Tune only on the development split, then freeze the strategy before running held-out fixtures.
+
 ## Add a rule
 
 Create a rule only when at least two surface forms can be correct depending on context. Use an ordinary Vale substitution or vocabulary entry when one form is globally preferred.

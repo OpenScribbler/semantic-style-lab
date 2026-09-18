@@ -1,0 +1,1749 @@
+{
+  "generated_at": "2026-09-18T00:30:19.835Z",
+  "strategy": "noul",
+  "strategy_version": "noul-next-word-v2",
+  "split": "all",
+  "model": "jev-1.13.0",
+  "runs": 3,
+  "usage": {
+    "input_tokens": 37515,
+    "output_tokens": 4158
+  },
+  "fixture_count": 30,
+  "context_accuracy": 1,
+  "policy_accuracy": 1,
+  "context_stability": 1,
+  "policy_stability": 1,
+  "by_rule": {
+    "command-line": {
+      "count": 10,
+      "context_accuracy": 1,
+      "policy_accuracy": 1,
+      "context_stability": 1
+    },
+    "real-time": {
+      "count": 10,
+      "context_accuracy": 1,
+      "policy_accuracy": 1,
+      "context_stability": 1
+    },
+    "setup": {
+      "count": 10,
+      "context_accuracy": 1,
+      "policy_accuracy": 1,
+      "context_stability": 1
+    }
+  },
+  "results": [
+    {
+      "id": "setup-01",
+      "rule": "setup",
+      "text": "Set up the provider before you install a rule.",
+      "match": "Set up",
+      "expected_context": "verb_phrase",
+      "predictions": [
+        {
+          "predicted_context": "verb_phrase",
+          "confidence": null,
+          "probability": 0.81,
+          "signals": {
+            "literal": 0.19,
+            "modifies_following_noun": 0.07,
+            "verb_phrase": 0.96
+          },
+          "status": "pass",
+          "expected_form": "set up",
+          "expected_policy": "set up",
+          "predicted_policy": "set up",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "verb_phrase",
+          "confidence": null,
+          "probability": 0.8,
+          "signals": {
+            "literal": 0.2,
+            "modifies_following_noun": 0.07,
+            "verb_phrase": 0.96
+          },
+          "status": "pass",
+          "expected_form": "set up",
+          "expected_policy": "set up",
+          "predicted_policy": "set up",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "verb_phrase",
+          "confidence": null,
+          "probability": 0.81,
+          "signals": {
+            "literal": 0.19,
+            "modifies_following_noun": 0.07,
+            "verb_phrase": 0.96
+          },
+          "status": "pass",
+          "expected_form": "set up",
+          "expected_policy": "set up",
+          "predicted_policy": "set up",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-02",
+      "rule": "setup",
+      "text": "Setup the provider before you install a rule.",
+      "match": "Setup",
+      "expected_context": "verb_phrase",
+      "predictions": [
+        {
+          "predicted_context": "verb_phrase",
+          "confidence": null,
+          "probability": 0.76,
+          "signals": {
+            "literal": 0.24,
+            "modifies_following_noun": 0.09,
+            "verb_phrase": 0.94
+          },
+          "status": "review",
+          "expected_form": "set up",
+          "expected_policy": "set up",
+          "predicted_policy": "set up",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "verb_phrase",
+          "confidence": null,
+          "probability": 0.77,
+          "signals": {
+            "literal": 0.23,
+            "modifies_following_noun": 0.1,
+            "verb_phrase": 0.95
+          },
+          "status": "review",
+          "expected_form": "set up",
+          "expected_policy": "set up",
+          "predicted_policy": "set up",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "verb_phrase",
+          "confidence": null,
+          "probability": 0.79,
+          "signals": {
+            "literal": 0.21,
+            "modifies_following_noun": 0.1,
+            "verb_phrase": 0.94
+          },
+          "status": "review",
+          "expected_form": "set up",
+          "expected_policy": "set up",
+          "predicted_policy": "set up",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-03",
+      "rule": "setup",
+      "text": "Complete the setup before you continue.",
+      "match": "setup",
+      "expected_context": "noun",
+      "predictions": [
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.14,
+            "modifies_following_noun": 0.08,
+            "verb_phrase": 0.13
+          },
+          "status": "pass",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.12,
+            "modifies_following_noun": 0.08,
+            "verb_phrase": 0.13
+          },
+          "status": "pass",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.12,
+            "modifies_following_noun": 0.08,
+            "verb_phrase": 0.16
+          },
+          "status": "pass",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-04",
+      "rule": "setup",
+      "text": "The set up takes less than a minute.",
+      "match": "set up",
+      "expected_context": "noun",
+      "predictions": [
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.89,
+          "signals": {
+            "literal": 0.11,
+            "modifies_following_noun": 0.08,
+            "verb_phrase": 0.1
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.89,
+          "signals": {
+            "literal": 0.11,
+            "modifies_following_noun": 0.08,
+            "verb_phrase": 0.11
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.89,
+          "signals": {
+            "literal": 0.11,
+            "modifies_following_noun": 0.08,
+            "verb_phrase": 0.1
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-05",
+      "rule": "setup",
+      "text": "The setup wizard detects installed providers.",
+      "match": "setup",
+      "expected_context": "modifier",
+      "predictions": [
+        {
+          "predicted_context": "modifier",
+          "confidence": null,
+          "probability": 0.72,
+          "signals": {
+            "literal": 0.28,
+            "modifies_following_noun": 0.88,
+            "verb_phrase": 0.09
+          },
+          "status": "pass",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "modifier",
+          "confidence": null,
+          "probability": 0.73,
+          "signals": {
+            "literal": 0.27,
+            "modifies_following_noun": 0.88,
+            "verb_phrase": 0.08
+          },
+          "status": "pass",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "modifier",
+          "confidence": null,
+          "probability": 0.7,
+          "signals": {
+            "literal": 0.3,
+            "modifies_following_noun": 0.88,
+            "verb_phrase": 0.09
+          },
+          "status": "pass",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-06",
+      "rule": "setup",
+      "text": "Close the set-up window after initialization.",
+      "match": "set-up",
+      "expected_context": "modifier",
+      "predictions": [
+        {
+          "predicted_context": "modifier",
+          "confidence": null,
+          "probability": 0.5900000000000001,
+          "signals": {
+            "literal": 0.41,
+            "modifies_following_noun": 0.85,
+            "verb_phrase": 0.09
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "modifier",
+          "confidence": null,
+          "probability": 0.5700000000000001,
+          "signals": {
+            "literal": 0.43,
+            "modifies_following_noun": 0.86,
+            "verb_phrase": 0.09
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "modifier",
+          "confidence": null,
+          "probability": 0.62,
+          "signals": {
+            "literal": 0.38,
+            "modifies_following_noun": 0.85,
+            "verb_phrase": 0.09
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-07",
+      "rule": "setup",
+      "text": "Select **Setup** in the navigation menu.",
+      "match": "Setup",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.87,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.13
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.87,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.13
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.87,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.14
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-08",
+      "rule": "setup",
+      "text": "Run the `setup` subcommand.",
+      "match": "setup",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.83,
+          "signals": {
+            "literal": 0.83,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.35
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.82,
+          "signals": {
+            "literal": 0.82,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.36
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.85,
+          "signals": {
+            "literal": 0.85,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.36
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-09",
+      "rule": "setup",
+      "text": "The documentation calls this phase \"set-up\" throughout.",
+      "match": "set-up",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.84,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.09
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.84,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.1
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.84,
+            "modifies_following_noun": 0,
+            "verb_phrase": 0.1
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "setup-10",
+      "rule": "setup",
+      "text": "Check the set up before continuing.",
+      "match": "set up",
+      "expected_context": "noun",
+      "predictions": [
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.81,
+          "signals": {
+            "literal": 0.12,
+            "modifies_following_noun": 0.11,
+            "verb_phrase": 0.19
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.8200000000000001,
+          "signals": {
+            "literal": 0.13,
+            "modifies_following_noun": 0.1,
+            "verb_phrase": 0.18
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "noun",
+          "confidence": null,
+          "probability": 0.83,
+          "signals": {
+            "literal": 0.12,
+            "modifies_following_noun": 0.1,
+            "verb_phrase": 0.17
+          },
+          "status": "review",
+          "expected_form": "setup",
+          "expected_policy": "setup",
+          "predicted_policy": "setup",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-01",
+      "rule": "command-line",
+      "text": "Enter the value on the command line.",
+      "match": "command line",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.81,
+          "signals": {
+            "literal": 0.19,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.81,
+          "signals": {
+            "literal": 0.19,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.78,
+          "signals": {
+            "literal": 0.22,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-02",
+      "rule": "command-line",
+      "text": "The command-line contains an invalid quote.",
+      "match": "command-line",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.74,
+          "signals": {
+            "literal": 0.26,
+            "modifies_following_noun": 0.15
+          },
+          "status": "review",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.79,
+          "signals": {
+            "literal": 0.21,
+            "modifies_following_noun": 0.15
+          },
+          "status": "review",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.77,
+          "signals": {
+            "literal": 0.23,
+            "modifies_following_noun": 0.15
+          },
+          "status": "review",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-03",
+      "rule": "command-line",
+      "text": "Install the command-line tool.",
+      "match": "command-line",
+      "expected_context": "before_noun",
+      "predictions": [
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.65,
+          "signals": {
+            "literal": 0.35,
+            "modifies_following_noun": 0.79
+          },
+          "status": "pass",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.6699999999999999,
+          "signals": {
+            "literal": 0.33,
+            "modifies_following_noun": 0.78
+          },
+          "status": "pass",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.7,
+          "signals": {
+            "literal": 0.3,
+            "modifies_following_noun": 0.8
+          },
+          "status": "pass",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-04",
+      "rule": "command-line",
+      "text": "Use the command line interface to create a project.",
+      "match": "command line",
+      "expected_context": "before_noun",
+      "predictions": [
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.8,
+          "signals": {
+            "literal": 0.2,
+            "modifies_following_noun": 0.84
+          },
+          "status": "review",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.8,
+          "signals": {
+            "literal": 0.2,
+            "modifies_following_noun": 0.82
+          },
+          "status": "review",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.79,
+          "signals": {
+            "literal": 0.21,
+            "modifies_following_noun": 0.82
+          },
+          "status": "review",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-05",
+      "rule": "command-line",
+      "text": "The command line is available after installation.",
+      "match": "command line",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.78,
+          "signals": {
+            "literal": 0.22,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.75,
+          "signals": {
+            "literal": 0.25,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.72,
+          "signals": {
+            "literal": 0.28,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-06",
+      "rule": "command-line",
+      "text": "Add a command-line argument for the output path.",
+      "match": "command-line",
+      "expected_context": "before_noun",
+      "predictions": [
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.78,
+          "signals": {
+            "literal": 0.22,
+            "modifies_following_noun": 0.82
+          },
+          "status": "pass",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.76,
+          "signals": {
+            "literal": 0.24,
+            "modifies_following_noun": 0.88
+          },
+          "status": "pass",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.78,
+          "signals": {
+            "literal": 0.22,
+            "modifies_following_noun": 0.87
+          },
+          "status": "pass",
+          "expected_form": "command-line",
+          "expected_policy": "command-line",
+          "predicted_policy": "command-line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-07",
+      "rule": "command-line",
+      "text": "Select **Command Line** from the launcher.",
+      "match": "Command Line",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.86,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.85,
+          "signals": {
+            "literal": 0.85,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.86,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-08",
+      "rule": "command-line",
+      "text": "Apple distributes the Command Line Tools for Xcode package.",
+      "match": "Command Line",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.87,
+            "modifies_following_noun": 0.66
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.86,
+            "modifies_following_noun": 0.63
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.88,
+          "signals": {
+            "literal": 0.88,
+            "modifies_following_noun": 0.62
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-09",
+      "rule": "command-line",
+      "text": "The error message contains the phrase \"command-line unavailable\".",
+      "match": "command-line",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.85,
+          "signals": {
+            "literal": 0.85,
+            "modifies_following_noun": 0.16
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.85,
+          "signals": {
+            "literal": 0.85,
+            "modifies_following_noun": 0.22
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.84,
+            "modifies_following_noun": 0.2
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "command-10",
+      "rule": "command-line",
+      "text": "The command-line changed after the update.",
+      "match": "command-line",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.56,
+          "signals": {
+            "literal": 0.44,
+            "modifies_following_noun": 0.24
+          },
+          "status": "review",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.63,
+          "signals": {
+            "literal": 0.37,
+            "modifies_following_noun": 0.24
+          },
+          "status": "review",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.5800000000000001,
+          "signals": {
+            "literal": 0.42,
+            "modifies_following_noun": 0.18
+          },
+          "status": "review",
+          "expected_form": "command line",
+          "expected_policy": "command line",
+          "predicted_policy": "command line",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-01",
+      "rule": "real-time",
+      "text": "The dashboard updates in real time.",
+      "match": "real time",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.13,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.88,
+          "signals": {
+            "literal": 0.12,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.13,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-02",
+      "rule": "real-time",
+      "text": "The dashboard updates in real-time.",
+      "match": "real-time",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.77,
+          "signals": {
+            "literal": 0.23,
+            "modifies_following_noun": 0
+          },
+          "status": "review",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.71,
+          "signals": {
+            "literal": 0.29,
+            "modifies_following_noun": 0
+          },
+          "status": "review",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.74,
+          "signals": {
+            "literal": 0.26,
+            "modifies_following_noun": 0
+          },
+          "status": "review",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-03",
+      "rule": "real-time",
+      "text": "Enable real-time updates for this workspace.",
+      "match": "real-time",
+      "expected_context": "before_noun",
+      "predictions": [
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.6599999999999999,
+          "signals": {
+            "literal": 0.34,
+            "modifies_following_noun": 0.84
+          },
+          "status": "pass",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.64,
+          "signals": {
+            "literal": 0.36,
+            "modifies_following_noun": 0.85
+          },
+          "status": "pass",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.6,
+          "signals": {
+            "literal": 0.4,
+            "modifies_following_noun": 0.84
+          },
+          "status": "pass",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-04",
+      "rule": "real-time",
+      "text": "Enable real time updates for this workspace.",
+      "match": "real time",
+      "expected_context": "before_noun",
+      "predictions": [
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.78,
+          "signals": {
+            "literal": 0.22,
+            "modifies_following_noun": 0.83
+          },
+          "status": "review",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.79,
+          "signals": {
+            "literal": 0.21,
+            "modifies_following_noun": 0.8
+          },
+          "status": "review",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.74,
+          "signals": {
+            "literal": 0.26,
+            "modifies_following_noun": 0.8
+          },
+          "status": "review",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-05",
+      "rule": "real-time",
+      "text": "Users can observe changes in real time.",
+      "match": "real time",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.87,
+          "signals": {
+            "literal": 0.13,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.14,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.14,
+            "modifies_following_noun": 0
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-06",
+      "rule": "real-time",
+      "text": "The real-time monitor displays incoming events.",
+      "match": "real-time",
+      "expected_context": "before_noun",
+      "predictions": [
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.79,
+          "signals": {
+            "literal": 0.21,
+            "modifies_following_noun": 0.9
+          },
+          "status": "pass",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.74,
+          "signals": {
+            "literal": 0.26,
+            "modifies_following_noun": 0.89
+          },
+          "status": "pass",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "before_noun",
+          "confidence": null,
+          "probability": 0.72,
+          "signals": {
+            "literal": 0.28,
+            "modifies_following_noun": 0.9
+          },
+          "status": "pass",
+          "expected_form": "real-time",
+          "expected_policy": "real-time",
+          "predicted_policy": "real-time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-07",
+      "rule": "real-time",
+      "text": "Select **Real Time** in the display menu.",
+      "match": "Real Time",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.78,
+          "signals": {
+            "literal": 0.78,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.8,
+          "signals": {
+            "literal": 0.8,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.81,
+          "signals": {
+            "literal": 0.81,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-08",
+      "rule": "real-time",
+      "text": "The API returns `mode=real-time`.",
+      "match": "real-time",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.84,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.84,
+          "signals": {
+            "literal": 0.84,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.86,
+          "signals": {
+            "literal": 0.86,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-09",
+      "rule": "real-time",
+      "text": "The report defines \"real time\" as a delay below 100 milliseconds.",
+      "match": "real time",
+      "expected_context": "literal",
+      "predictions": [
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.6,
+          "signals": {
+            "literal": 0.6,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.58,
+          "signals": {
+            "literal": 0.58,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "literal",
+          "confidence": null,
+          "probability": 0.59,
+          "signals": {
+            "literal": 0.59,
+            "modifies_following_noun": 0
+          },
+          "status": "preserve",
+          "expected_form": null,
+          "expected_policy": "preserve",
+          "predicted_policy": "preserve",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    },
+    {
+      "id": "realtime-10",
+      "rule": "real-time",
+      "text": "The real time changed after synchronization.",
+      "match": "real time",
+      "expected_context": "standalone",
+      "predictions": [
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.8,
+          "signals": {
+            "literal": 0.2,
+            "modifies_following_noun": 0.11
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.79,
+          "signals": {
+            "literal": 0.21,
+            "modifies_following_noun": 0.1
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        },
+        {
+          "predicted_context": "standalone",
+          "confidence": null,
+          "probability": 0.8,
+          "signals": {
+            "literal": 0.2,
+            "modifies_following_noun": 0.09
+          },
+          "status": "pass",
+          "expected_form": "real time",
+          "expected_policy": "real time",
+          "predicted_policy": "real time",
+          "context_correct": true,
+          "policy_correct": true
+        }
+      ],
+      "context_stable": true,
+      "policy_stable": true
+    }
+  ]
+}

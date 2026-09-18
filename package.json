@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "audit": "bun src/audit.ts",
+    "build:corpus": "bun src/build-real-world-fixtures.ts",
     "candidates": "bun src/candidates-cli.ts",
     "evaluate": "bun src/evaluate.ts",
+    "report:real-world": "bun src/summarize-real-world.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },

@@ -1,0 +1,289 @@
+{
+  "generated_at": "2026-09-18T00:30:56.610Z",
+  "model": "jev-1.13.0",
+  "input_price_per_mtok_usd": 0.042,
+  "corpus": {
+    "source_occurrences": 60,
+    "fixtures": 140,
+    "counterfactual_fixtures": 80,
+    "projects": [
+      "kubernetes",
+      "docker",
+      "github"
+    ]
+  },
+  "benchmarks": [
+    {
+      "label": "v1 development",
+      "strategy_version": "noul-next-word-v1",
+      "split": "dev",
+      "fixtures": 70,
+      "decisions": 350,
+      "policy_accuracy": 0.8942857142857142,
+      "context_accuracy": 0.8371428571428572,
+      "policy_stability": 0.9285714285714286,
+      "surface_invariance": 0.84,
+      "counterfactual_policy_accuracy": 0.865,
+      "violation_precision": 0.9238095238095239,
+      "violation_recall": 0.97,
+      "confusion": {
+        "tp": 194,
+        "fp": 16,
+        "fn": 6,
+        "tn": 134
+      },
+      "status_counts": {
+        "pass": 140,
+        "review": 204,
+        "flag": 1,
+        "uncertain": 5
+      },
+      "by_rule": {
+        "command-line": {
+          "count": 20,
+          "context_accuracy": 0.9,
+          "policy_accuracy": 0.9,
+          "context_stability": 1
+        },
+        "real-time": {
+          "count": 20,
+          "context_accuracy": 0.92,
+          "policy_accuracy": 0.92,
+          "context_stability": 0.9
+        },
+        "setup": {
+          "count": 30,
+          "context_accuracy": 0.74,
+          "policy_accuracy": 0.8733333333333333,
+          "context_stability": 0.9
+        }
+      },
+      "by_source": {
+        "kubernetes": 1,
+        "docker": 0.8869565217391304,
+        "github": 0.7913043478260869
+      },
+      "usage": {
+        "input_tokens": 158740,
+        "output_tokens": 20240
+      },
+      "input_cost_usd": 0.00666708
+    },
+    {
+      "label": "v1 held out",
+      "strategy_version": "noul-next-word-v1",
+      "split": "heldout",
+      "fixtures": 70,
+      "decisions": 350,
+      "policy_accuracy": 0.9142857142857143,
+      "context_accuracy": 0.9057142857142857,
+      "policy_stability": 0.9571428571428572,
+      "surface_invariance": 0.9066666666666666,
+      "counterfactual_policy_accuracy": 0.895,
+      "violation_precision": 0.9554455445544554,
+      "violation_recall": 0.965,
+      "confusion": {
+        "tp": 193,
+        "fp": 9,
+        "fn": 7,
+        "tn": 141
+      },
+      "status_counts": {
+        "pass": 148,
+        "uncertain": 6,
+        "review": 196
+      },
+      "by_rule": {
+        "command-line": {
+          "count": 20,
+          "context_accuracy": 0.94,
+          "policy_accuracy": 0.94,
+          "context_stability": 0.9
+        },
+        "real-time": {
+          "count": 20,
+          "context_accuracy": 1,
+          "policy_accuracy": 1,
+          "context_stability": 1
+        },
+        "setup": {
+          "count": 30,
+          "context_accuracy": 0.82,
+          "policy_accuracy": 0.84,
+          "context_stability": 0.9333333333333333
+        }
+      },
+      "by_source": {
+        "kubernetes": 0.8916666666666667,
+        "docker": 1,
+        "github": 0.8521739130434782
+      },
+      "usage": {
+        "input_tokens": 154055,
+        "output_tokens": 19360
+      },
+      "input_cost_usd": 0.00647031
+    },
+    {
+      "label": "v2 development",
+      "strategy_version": "noul-next-word-v2",
+      "split": "dev",
+      "fixtures": 70,
+      "decisions": 350,
+      "policy_accuracy": 0.9971428571428571,
+      "context_accuracy": 0.9971428571428571,
+      "policy_stability": 0.9857142857142858,
+      "surface_invariance": 0.9933333333333333,
+      "counterfactual_policy_accuracy": 0.995,
+      "violation_precision": 1,
+      "violation_recall": 1,
+      "confusion": {
+        "tp": 200,
+        "fp": 0,
+        "fn": 0,
+        "tn": 150
+      },
+      "status_counts": {
+        "pass": 150,
+        "review": 193,
+        "uncertain": 6,
+        "flag": 1
+      },
+      "by_rule": {
+        "command-line": {
+          "count": 20,
+          "context_accuracy": 1,
+          "policy_accuracy": 1,
+          "context_stability": 1
+        },
+        "real-time": {
+          "count": 20,
+          "context_accuracy": 1,
+          "policy_accuracy": 1,
+          "context_stability": 1
+        },
+        "setup": {
+          "count": 30,
+          "context_accuracy": 0.9933333333333333,
+          "policy_accuracy": 0.9933333333333333,
+          "context_stability": 0.9666666666666667
+        }
+      },
+      "by_source": {
+        "kubernetes": 0.9916666666666667,
+        "docker": 1,
+        "github": 1
+      },
+      "usage": {
+        "input_tokens": 150615,
+        "output_tokens": 17950
+      },
+      "input_cost_usd": 0.00632583
+    },
+    {
+      "label": "v2 held out",
+      "strategy_version": "noul-next-word-v2",
+      "split": "heldout",
+      "fixtures": 70,
+      "decisions": 350,
+      "policy_accuracy": 0.9714285714285714,
+      "context_accuracy": 0.9714285714285714,
+      "policy_stability": 0.9714285714285714,
+      "surface_invariance": 0.96,
+      "counterfactual_policy_accuracy": 0.95,
+      "violation_precision": 1,
+      "violation_recall": 0.975,
+      "confusion": {
+        "tp": 195,
+        "fp": 0,
+        "fn": 5,
+        "tn": 150
+      },
+      "status_counts": {
+        "pass": 155,
+        "review": 189,
+        "uncertain": 5,
+        "flag": 1
+      },
+      "by_rule": {
+        "command-line": {
+          "count": 20,
+          "context_accuracy": 1,
+          "policy_accuracy": 1,
+          "context_stability": 1
+        },
+        "real-time": {
+          "count": 20,
+          "context_accuracy": 1,
+          "policy_accuracy": 1,
+          "context_stability": 1
+        },
+        "setup": {
+          "count": 30,
+          "context_accuracy": 0.9333333333333333,
+          "policy_accuracy": 0.9333333333333333,
+          "context_stability": 0.9333333333333333
+        }
+      },
+      "by_source": {
+        "kubernetes": 0.925,
+        "docker": 1,
+        "github": 0.991304347826087
+      },
+      "usage": {
+        "input_tokens": 150890,
+        "output_tokens": 18010
+      },
+      "input_cost_usd": 0.00633738
+    }
+  ],
+  "regression": {
+    "synthetic_policy_accuracy": 1,
+    "synthetic_policy_stability": 1,
+    "seeded_sample_findings": 5
+  },
+  "heldout_failure_cases": [
+    {
+      "seed_id": "setup-02",
+      "text": "The behavior does vary depending on exactly how your cluster is setup.",
+      "match": "setup",
+      "expected_context": "verb_phrase",
+      "predicted_contexts": [
+        "noun",
+        "noun",
+        "noun",
+        "noun",
+        "noun"
+      ],
+      "source_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/best-practices/multiple-zones.md#L127"
+    },
+    {
+      "seed_id": "setup-02",
+      "text": "The behavior does vary depending on exactly how your cluster is set-up.",
+      "match": "set-up",
+      "expected_context": "verb_phrase",
+      "predicted_contexts": [
+        "noun",
+        "noun",
+        "noun",
+        "verb_phrase",
+        "noun"
+      ],
+      "source_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/best-practices/multiple-zones.md#L127"
+    },
+    {
+      "seed_id": "setup-16",
+      "text": "Organizations can set-up invoicing to sponsor accounts.",
+      "match": "set-up",
+      "expected_context": "verb_phrase",
+      "predicted_contexts": [
+        "verb_phrase",
+        "verb_phrase",
+        "ambiguous",
+        "verb_phrase",
+        "verb_phrase"
+      ],
+      "source_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md#L4"
+    }
+  ]
+}

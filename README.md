@@ -52,6 +52,14 @@ bun run evaluate -- --strategy noul --runs 3 --output reports/contextual-vocabul
 bun run evaluate -- --strategy choice --runs 3 --output reports/contextual-vocabulary-choice.local.json
 ```
 
+Build and evaluate the provenance-tracked real-world corpus:
+
+```bash
+bun run build:corpus
+bun run evaluate -- --fixture test/fixtures/real-world-contextual-vocabulary.json --split heldout --strategy noul --runs 5 --output reports/real-world-heldout.local.json
+bun run report:real-world
+```
+
 The initial fixture set contains correct forms, incorrect forms, UI/code/name
 exceptions, and deliberately ambiguous passages. Expand it with naturally
 occurring examples before using thresholds as a quality gate.
@@ -62,6 +70,10 @@ See the [HTML report](reports/contextual-vocabulary-eval.html) for the recorded
 strategy comparison, end-to-end result, and next experiment. The
 [Jev design notes](docs/jev-design-notes.md) map the relevant official guidance
 to this architecture.
+
+The larger [real-world HTML report](reports/real-world-experiment.html) compares
+development and held-out results across two strategy versions. Corpus source
+revisions, links, and licenses are under [`corpus/`](corpus/).
 
 ## Design boundary
 

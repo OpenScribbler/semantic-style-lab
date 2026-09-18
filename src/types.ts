@@ -55,4 +55,17 @@ export interface Fixture {
 	text: string;
 	match: string;
 	expected_context: string;
+	split?: 'dev' | 'heldout';
+	seed_id?: string;
+	counterfactual?: boolean;
+	source?: {
+		project: string;
+		name: string;
+		revision: string;
+		path: string;
+		line: number;
+		url: string;
+		license: string;
+		license_url: string;
+	};
 }

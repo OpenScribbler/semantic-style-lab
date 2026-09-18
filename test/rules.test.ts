@@ -2,7 +2,12 @@ import { describe, expect, test } from 'vitest';
 
 import { parseEvalArgs } from '../src/evaluate';
 import { decideStatus } from '../src/jev';
-import { buildNoulRequest, composeContext, followingWord } from '../src/jev-noul';
+import {
+	buildNoulRequest,
+	composeContext,
+	followingWord,
+	followingWordForModifier,
+} from '../src/jev-noul';
 import { loadRules } from '../src/rules';
 import type { Candidate } from '../src/types';
 
@@ -23,7 +28,12 @@ describe('contextual rules', () => {
 			output: 'report.json',
 			runs: 1,
 			strategy: 'choice',
+			split: 'all',
 		});
+	});
+
+	test('accepts a held-out fixture split', () => {
+		expect(parseEvalArgs(['--split', 'heldout']).split).toBe('heldout');
 	});
 
 	test('accepts the atomic Noul evaluation strategy', () => {
@@ -63,6 +73,8 @@ describe('contextual rules', () => {
 	test('extracts only an actual word after the marked occurrence', () => {
 		expect(followingWord('Use the ⟦command line⟧ interface.')).toBe('interface');
 		expect(followingWord('Updates arrive in ⟦real time⟧.')).toBeNull();
+		expect(followingWordForModifier('The ⟦command line⟧ itself changed.')).toBeNull();
+		expect(followingWordForModifier('Updates arrive in ⟦real time⟧ by polling.')).toBeNull();
 	});
 
 	test('flags a confident mismatch', async () => {

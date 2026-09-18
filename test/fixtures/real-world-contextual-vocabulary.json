@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "setup-01-v1",
+    "rule": "setup",
+    "text": "Using a NodePort gives you the freedom to set up your own load balancing solution,",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-01",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/services-networking/service.md",
+      "line": 481,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/services-networking/service.md#L481",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-01-v2",
+    "rule": "setup",
+    "text": "Using a NodePort gives you the freedom to setup your own load balancing solution,",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-01",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/services-networking/service.md",
+      "line": 481,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/services-networking/service.md#L481",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-01-v3",
+    "rule": "setup",
+    "text": "Using a NodePort gives you the freedom to set-up your own load balancing solution,",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-01",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/services-networking/service.md",
+      "line": 481,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/services-networking/service.md#L481",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-02-v1",
+    "rule": "setup",
+    "text": "The behavior does vary depending on exactly how your cluster is set up.",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-02",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/best-practices/multiple-zones.md",
+      "line": 127,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/best-practices/multiple-zones.md#L127",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-02-v2",
+    "rule": "setup",
+    "text": "The behavior does vary depending on exactly how your cluster is setup.",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-02",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/best-practices/multiple-zones.md",
+      "line": 127,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/best-practices/multiple-zones.md#L127",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-02-v3",
+    "rule": "setup",
+    "text": "The behavior does vary depending on exactly how your cluster is set-up.",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-02",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/best-practices/multiple-zones.md",
+      "line": 127,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/best-practices/multiple-zones.md#L127",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-03-v1",
+    "rule": "setup",
+    "text": "This is usually set up by the Kubernetes provider or by the operator when installing a CSI driver.",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-03",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/security/rbac-good-practices.md",
+      "line": 136,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/security/rbac-good-practices.md#L136",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-03-v2",
+    "rule": "setup",
+    "text": "This is usually setup by the Kubernetes provider or by the operator when installing a CSI driver.",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-03",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/security/rbac-good-practices.md",
+      "line": 136,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/security/rbac-good-practices.md#L136",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-03-v3",
+    "rule": "setup",
+    "text": "This is usually set-up by the Kubernetes provider or by the operator when installing a CSI driver.",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-03",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/security/rbac-good-practices.md",
+      "line": 136,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/security/rbac-good-practices.md#L136",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-04-v1",
+    "rule": "setup",
+    "text": "Only a few CNI plugins support Windows. More details and set up instructions can be found in the plugin documentation.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-04",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/production-environment/tools/kubeadm/create-cluster-kubeadm.md",
+      "line": 342,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm.md#L342",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-04-v2",
+    "rule": "setup",
+    "text": "Only a few CNI plugins support Windows. More details and setup instructions can be found in the plugin documentation.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-04",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/production-environment/tools/kubeadm/create-cluster-kubeadm.md",
+      "line": 342,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm.md#L342",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-04-v3",
+    "rule": "setup",
+    "text": "Only a few CNI plugins support Windows. More details and set-up instructions can be found in the plugin documentation.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-04",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/production-environment/tools/kubeadm/create-cluster-kubeadm.md",
+      "line": 342,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm.md#L342",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-05-v1",
+    "rule": "setup",
+    "text": "The driver can perform node-specific set up on the selected node.",
+    "match": "set up",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-05",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/resource-management/dynamic-resource-allocation/how-dra-works.md",
+      "line": 215,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works.md#L215",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-05-v2",
+    "rule": "setup",
+    "text": "The driver can perform node-specific setup on the selected node.",
+    "match": "setup",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-05",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/resource-management/dynamic-resource-allocation/how-dra-works.md",
+      "line": 215,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works.md#L215",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-05-v3",
+    "rule": "setup",
+    "text": "The driver can perform node-specific set-up on the selected node.",
+    "match": "set-up",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-05",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/resource-management/dynamic-resource-allocation/how-dra-works.md",
+      "line": 215,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works.md#L215",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-06-v1",
+    "rule": "setup",
+    "text": "This might be valuable based on different Kubernetes environment set up.",
+    "match": "set up",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-06",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/security/application-security-checklist.md",
+      "line": 111,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/security/application-security-checklist.md#L111",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-06-v2",
+    "rule": "setup",
+    "text": "This might be valuable based on different Kubernetes environment setup.",
+    "match": "setup",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-06",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/security/application-security-checklist.md",
+      "line": 111,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/security/application-security-checklist.md#L111",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-06-v3",
+    "rule": "setup",
+    "text": "This might be valuable based on different Kubernetes environment set-up.",
+    "match": "set-up",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-06",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/security/application-security-checklist.md",
+      "line": 111,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/security/application-security-checklist.md#L111",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-07-v1",
+    "rule": "setup",
+    "text": "However, for simplicity, set up scripts typically start all control plane components on the same machine.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-07",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/architecture/_index.md",
+      "line": 40,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/architecture/_index.md#L40",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-07-v2",
+    "rule": "setup",
+    "text": "However, for simplicity, setup scripts typically start all control plane components on the same machine.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-07",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/architecture/_index.md",
+      "line": 40,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/architecture/_index.md#L40",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-07-v3",
+    "rule": "setup",
+    "text": "However, for simplicity, set-up scripts typically start all control plane components on the same machine.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-07",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/architecture/_index.md",
+      "line": 40,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/architecture/_index.md#L40",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-08-v1",
+    "rule": "setup",
+    "text": "When the Pod restarts, the set up process is re-executed.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-08",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/workloads/pods/pod-lifecycle.md",
+      "line": 530,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/workloads/pods/pod-lifecycle.md#L530",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-08-v2",
+    "rule": "setup",
+    "text": "When the Pod restarts, the setup process is re-executed.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-08",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/workloads/pods/pod-lifecycle.md",
+      "line": 530,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/workloads/pods/pod-lifecycle.md#L530",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-08-v3",
+    "rule": "setup",
+    "text": "When the Pod restarts, the set-up process is re-executed.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-08",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/workloads/pods/pod-lifecycle.md",
+      "line": 530,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/workloads/pods/pod-lifecycle.md#L530",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "setup-09-v1",
+    "rule": "setup",
+    "text": "To configure SCIM in Okta, set up your connection using the following steps.",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-09",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/security/provisioning/scim/provision-scim.md",
+      "line": 81,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/provisioning/scim/provision-scim.md#L81",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-09-v2",
+    "rule": "setup",
+    "text": "To configure SCIM in Okta, setup your connection using the following steps.",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-09",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/security/provisioning/scim/provision-scim.md",
+      "line": 81,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/provisioning/scim/provision-scim.md#L81",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-09-v3",
+    "rule": "setup",
+    "text": "To configure SCIM in Okta, set-up your connection using the following steps.",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-09",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/security/provisioning/scim/provision-scim.md",
+      "line": 81,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/security/provisioning/scim/provision-scim.md#L81",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-10-v1",
+    "rule": "setup",
+    "text": "Docker recommends switching to modern alternatives to future-proof your set up.",
+    "match": "set up",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-10",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/features/vmm.md",
+      "line": 78,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/features/vmm.md#L78",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-10-v2",
+    "rule": "setup",
+    "text": "Docker recommends switching to modern alternatives to future-proof your setup.",
+    "match": "setup",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-10",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/features/vmm.md",
+      "line": 78,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/features/vmm.md#L78",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-10-v3",
+    "rule": "setup",
+    "text": "Docker recommends switching to modern alternatives to future-proof your set-up.",
+    "match": "set-up",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-10",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/features/vmm.md",
+      "line": 78,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/features/vmm.md#L78",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-11-v1",
+    "rule": "setup",
+    "text": "For a mock server set up, you can use the following minimal configuration.",
+    "match": "set up",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-11",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/dex.md",
+      "line": 46,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/dex.md#L46",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-11-v2",
+    "rule": "setup",
+    "text": "For a mock server setup, you can use the following minimal configuration.",
+    "match": "setup",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-11",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/dex.md",
+      "line": 46,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/dex.md#L46",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-11-v3",
+    "rule": "setup",
+    "text": "For a mock server set-up, you can use the following minimal configuration.",
+    "match": "set-up",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-11",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/dex.md",
+      "line": 46,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/dex.md#L46",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-12-v1",
+    "rule": "setup",
+    "text": "Several set up steps in this guide require JSON files, registry keys, or .plist files.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-12",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/admin-set-up.md",
+      "line": 127,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/admin-set-up.md#L127",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-12-v2",
+    "rule": "setup",
+    "text": "Several setup steps in this guide require JSON files, registry keys, or .plist files.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-12",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/admin-set-up.md",
+      "line": 127,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/admin-set-up.md#L127",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-12-v3",
+    "rule": "setup",
+    "text": "Several set-up steps in this guide require JSON files, registry keys, or .plist files.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-12",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/admin-set-up.md",
+      "line": 127,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/admin-set-up.md#L127",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-13-v1",
+    "rule": "setup",
+    "text": "Use the container lifecycle methods for set up tasks like creating buckets, topics, or queues.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-13",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/testcontainers-java-service-configuration.md",
+      "line": 227,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/testcontainers-java-service-configuration.md#L227",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-13-v2",
+    "rule": "setup",
+    "text": "Use the container lifecycle methods for setup tasks like creating buckets, topics, or queues.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-13",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/testcontainers-java-service-configuration.md",
+      "line": 227,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/testcontainers-java-service-configuration.md#L227",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-13-v3",
+    "rule": "setup",
+    "text": "Use the container lifecycle methods for set-up tasks like creating buckets, topics, or queues.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-13",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/testcontainers-java-service-configuration.md",
+      "line": 227,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/testcontainers-java-service-configuration.md#L227",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-14-v1",
+    "rule": "setup",
+    "text": "In this section, you'll learn how to set up a development environment for your containerized application.",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-14",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/deno.md",
+      "line": 218,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/deno.md#L218",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-14-v2",
+    "rule": "setup",
+    "text": "In this section, you'll learn how to setup a development environment for your containerized application.",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-14",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/deno.md",
+      "line": 218,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/deno.md#L218",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-14-v3",
+    "rule": "setup",
+    "text": "In this section, you'll learn how to set-up a development environment for your containerized application.",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-14",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "guides/deno.md",
+      "line": 218,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/guides/deno.md#L218",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "setup-15-v1",
+    "rule": "setup",
+    "text": "You can set up repositories for different purposes based on your needs.",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-15",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md",
+      "line": 25,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md#L25",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-15-v2",
+    "rule": "setup",
+    "text": "You can setup repositories for different purposes based on your needs.",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-15",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md",
+      "line": 25,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md#L25",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-15-v3",
+    "rule": "setup",
+    "text": "You can set-up repositories for different purposes based on your needs.",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "dev",
+    "seed_id": "setup-15",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md",
+      "line": 25,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md#L25",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-16-v1",
+    "rule": "setup",
+    "text": "Organizations can set up invoicing to sponsor accounts.",
+    "match": "set up",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-16",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-16-v2",
+    "rule": "setup",
+    "text": "Organizations can setup invoicing to sponsor accounts.",
+    "match": "setup",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-16",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-16-v3",
+    "rule": "setup",
+    "text": "Organizations can set-up invoicing to sponsor accounts.",
+    "match": "set-up",
+    "expected_context": "verb_phrase",
+    "split": "heldout",
+    "seed_id": "setup-16",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-17-v1",
+    "rule": "setup",
+    "text": "For set up steps, see the guide for using your own model provider.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-17",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/quickstart-copilot-app.md",
+      "line": 30,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/quickstart-copilot-app.md#L30",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-17-v2",
+    "rule": "setup",
+    "text": "For setup steps, see the guide for using your own model provider.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-17",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/quickstart-copilot-app.md",
+      "line": 30,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/quickstart-copilot-app.md#L30",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-17-v3",
+    "rule": "setup",
+    "text": "For set-up steps, see the guide for using your own model provider.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "dev",
+    "seed_id": "setup-17",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/quickstart-copilot-app.md",
+      "line": 30,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/quickstart-copilot-app.md#L30",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-18-v1",
+    "rule": "setup",
+    "text": "Describe when and how to use available set up actions that configure the language version on the runner.",
+    "match": "set up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-18",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/writing-for-github-docs/templates.md",
+      "line": 352,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/writing-for-github-docs/templates.md#L352",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-18-v2",
+    "rule": "setup",
+    "text": "Describe when and how to use available setup actions that configure the language version on the runner.",
+    "match": "setup",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-18",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/writing-for-github-docs/templates.md",
+      "line": 352,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/writing-for-github-docs/templates.md#L352",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-18-v3",
+    "rule": "setup",
+    "text": "Describe when and how to use available set-up actions that configure the language version on the runner.",
+    "match": "set-up",
+    "expected_context": "modifier",
+    "split": "heldout",
+    "seed_id": "setup-18",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/writing-for-github-docs/templates.md",
+      "line": 352,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/writing-for-github-docs/templates.md#L352",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-19-v1",
+    "rule": "setup",
+    "text": "This guide will use the REST API to demonstrate a set up that you can use.",
+    "match": "set up",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-19",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "rest/guides/delivering-deployments.md",
+      "line": 20,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/rest/guides/delivering-deployments.md#L20",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-19-v2",
+    "rule": "setup",
+    "text": "This guide will use the REST API to demonstrate a setup that you can use.",
+    "match": "setup",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-19",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "rest/guides/delivering-deployments.md",
+      "line": 20,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/rest/guides/delivering-deployments.md#L20",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-19-v3",
+    "rule": "setup",
+    "text": "This guide will use the REST API to demonstrate a set-up that you can use.",
+    "match": "set-up",
+    "expected_context": "noun",
+    "split": "dev",
+    "seed_id": "setup-19",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "rest/guides/delivering-deployments.md",
+      "line": 20,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/rest/guides/delivering-deployments.md#L20",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-20-v1",
+    "rule": "setup",
+    "text": "You don't need to build your own deployment set up to use this example.",
+    "match": "set up",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-20",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "rest/guides/delivering-deployments.md",
+      "line": 187,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/rest/guides/delivering-deployments.md#L187",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-20-v2",
+    "rule": "setup",
+    "text": "You don't need to build your own deployment setup to use this example.",
+    "match": "setup",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-20",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "rest/guides/delivering-deployments.md",
+      "line": 187,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/rest/guides/delivering-deployments.md#L187",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "setup-20-v3",
+    "rule": "setup",
+    "text": "You don't need to build your own deployment set-up to use this example.",
+    "match": "set-up",
+    "expected_context": "noun",
+    "split": "heldout",
+    "seed_id": "setup-20",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "rest/guides/delivering-deployments.md",
+      "line": 187,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/rest/guides/delivering-deployments.md#L187",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-01-v1",
+    "rule": "command-line",
+    "text": "Before you set up a cluster, you need the kubectl command line tool.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-01",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/learning-environment/_index.md",
+      "line": 15,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/learning-environment/_index.md#L15",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-01-v2",
+    "rule": "command-line",
+    "text": "Before you set up a cluster, you need the kubectl command-line tool.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-01",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/learning-environment/_index.md",
+      "line": 15,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/learning-environment/_index.md#L15",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-02-v1",
+    "rule": "command-line",
+    "text": "The adapter accepts a command line argument for the sandbox image.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "command-02",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/production-environment/container-runtimes.md",
+      "line": 338,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/production-environment/container-runtimes.md#L338",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-02-v2",
+    "rule": "command-line",
+    "text": "The adapter accepts a command-line argument for the sandbox image.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "command-02",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "setup/production-environment/container-runtimes.md",
+      "line": 338,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/setup/production-environment/container-runtimes.md#L338",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-03-v1",
+    "rule": "command-line",
+    "text": "The endpoint shows you the command line arguments that were used to start a component.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-03",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/instrumentation/zpages.md",
+      "line": 136,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/instrumentation/zpages.md#L136",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-03-v2",
+    "rule": "command-line",
+    "text": "The endpoint shows you the command-line arguments that were used to start a component.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-03",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/instrumentation/zpages.md",
+      "line": 136,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/instrumentation/zpages.md#L136",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-04-v1",
+    "rule": "command-line",
+    "text": "The endpoint reports command line flags and defaults.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "command-04",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/instrumentation/zpages.md",
+      "line": 139,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/instrumentation/zpages.md#L139",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-04-v2",
+    "rule": "command-line",
+    "text": "The endpoint reports command-line flags and defaults.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "command-04",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/instrumentation/zpages.md",
+      "line": 139,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/instrumentation/zpages.md#L139",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-05-v1",
+    "rule": "command-line",
+    "text": "A ConfigMap can be consumed as environment variables, command line arguments, or configuration files.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-05",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/glossary/configmap.md",
+      "line": 14,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/glossary/configmap.md#L14",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-05-v2",
+    "rule": "command-line",
+    "text": "A ConfigMap can be consumed as environment variables, command-line arguments, or configuration files.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-05",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/glossary/configmap.md",
+      "line": 14,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/glossary/configmap.md#L14",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-06-v1",
+    "rule": "command-line",
+    "text": "You need to use the Git command line to complete these steps.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-06",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "contribute/advanced.md",
+      "line": 13,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/contribute/advanced.md#L13",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-06-v2",
+    "rule": "command-line",
+    "text": "You need to use the Git command-line to complete these steps.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-06",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "contribute/advanced.md",
+      "line": 13,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/contribute/advanced.md#L13",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-07-v1",
+    "rule": "command-line",
+    "text": "To check this, you can use etcdctl on the command line.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "command-07",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "tasks/administer-cluster/encrypt-data.md",
+      "line": 529,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/tasks/administer-cluster/encrypt-data.md#L529",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-07-v2",
+    "rule": "command-line",
+    "text": "To check this, you can use etcdctl on the command-line.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "command-07",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "tasks/administer-cluster/encrypt-data.md",
+      "line": 529,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/tasks/administer-cluster/encrypt-data.md#L529",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-08-v1",
+    "rule": "command-line",
+    "text": "At this point, all requests we make from the command line are scoped to the development namespace.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-08",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "tutorials/cluster-management/namespaces-walkthrough.md",
+      "line": 225,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/tutorials/cluster-management/namespaces-walkthrough.md#L225",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-08-v2",
+    "rule": "command-line",
+    "text": "At this point, all requests we make from the command-line are scoped to the development namespace.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-08",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "tutorials/cluster-management/namespaces-walkthrough.md",
+      "line": 225,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/tutorials/cluster-management/namespaces-walkthrough.md#L225",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "command-09-v1",
+    "rule": "command-line",
+    "text": "Install and use the docker dhi command line interface to browse the catalog.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-09",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/dhi/tools/_index.md",
+      "line": 12,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/dhi/tools/_index.md#L12",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-09-v2",
+    "rule": "command-line",
+    "text": "Install and use the docker dhi command-line interface to browse the catalog.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-09",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/dhi/tools/_index.md",
+      "line": 12,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/dhi/tools/_index.md#L12",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-10-v1",
+    "rule": "command-line",
+    "text": "This page contains instructions to install the Docker Compose plugin on Linux from the command line.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-10",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/compose/install/linux.md",
+      "line": 12,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/compose/install/linux.md#L12",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-10-v2",
+    "rule": "command-line",
+    "text": "This page contains instructions to install the Docker Compose plugin on Linux from the command-line.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-10",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/compose/install/linux.md",
+      "line": 12,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/compose/install/linux.md#L12",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-11-v1",
+    "rule": "command-line",
+    "text": "Each step, when applicable, shows Docker Hub and command line instructions.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-11",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/dhi/how-to/select-enterprise.md",
+      "line": 29,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/dhi/how-to/select-enterprise.md#L29",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-11-v2",
+    "rule": "command-line",
+    "text": "Each step, when applicable, shows Docker Hub and command-line instructions.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-11",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/dhi/how-to/select-enterprise.md",
+      "line": 29,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/dhi/how-to/select-enterprise.md#L29",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-12-v1",
+    "rule": "command-line",
+    "text": "The Docker command line does not support logging in using an email address as a username.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-12",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/previous-versions/2.x-mac.md",
+      "line": 355,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/previous-versions/2.x-mac.md#L355",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-12-v2",
+    "rule": "command-line",
+    "text": "The Docker command-line does not support logging in using an email address as a username.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-12",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/previous-versions/2.x-mac.md",
+      "line": 355,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/previous-versions/2.x-mac.md#L355",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-13-v1",
+    "rule": "command-line",
+    "text": "This release provides pre-filled prompts when deeplinking from command line failure hints.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-13",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/release-notes.md",
+      "line": 1124,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/release-notes.md#L1124",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-13-v2",
+    "rule": "command-line",
+    "text": "This release provides pre-filled prompts when deeplinking from command-line failure hints.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-13",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/release-notes.md",
+      "line": 1124,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/release-notes.md#L1124",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-14-v1",
+    "rule": "command-line",
+    "text": "Learn how to capture OpenTelemetry metrics for the Docker command line.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-14",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/engine/cli/otel.md",
+      "line": 3,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/engine/cli/otel.md#L3",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-14-v2",
+    "rule": "command-line",
+    "text": "Learn how to capture OpenTelemetry metrics for the Docker command-line.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-14",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/engine/cli/otel.md",
+      "line": 3,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/engine/cli/otel.md#L3",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "command-15-v1",
+    "rule": "command-line",
+    "text": "The command line itself never named that path.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "command-15",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/reference/copilot-cli-reference/cli-command-reference.md",
+      "line": 1423,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/reference/copilot-cli-reference/cli-command-reference.md#L1423",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-15-v2",
+    "rule": "command-line",
+    "text": "The command-line itself never named that path.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "command-15",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/reference/copilot-cli-reference/cli-command-reference.md",
+      "line": 1423,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/reference/copilot-cli-reference/cli-command-reference.md#L1423",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-16-v1",
+    "rule": "command-line",
+    "text": "On the command line, navigate to the repository that contains the commit you want to amend.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-16",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "pull-requests/how-tos/commit-changes/changing-a-commit-message.md",
+      "line": 28,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/pull-requests/how-tos/commit-changes/changing-a-commit-message.md#L28",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-16-v2",
+    "rule": "command-line",
+    "text": "On the command-line, navigate to the repository that contains the commit you want to amend.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-16",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "pull-requests/how-tos/commit-changes/changing-a-commit-message.md",
+      "line": 28,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/pull-requests/how-tos/commit-changes/changing-a-commit-message.md#L28",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-17-v1",
+    "rule": "command-line",
+    "text": "Attach local images and videos without leaving the command line.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "command-17",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "github-cli/github-cli/attaching-files-with-github-cli.md",
+      "line": 3,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/github-cli/github-cli/attaching-files-with-github-cli.md#L3",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-17-v2",
+    "rule": "command-line",
+    "text": "Attach local images and videos without leaving the command-line.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "command-17",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "github-cli/github-cli/attaching-files-with-github-cli.md",
+      "line": 3,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/github-cli/github-cli/attaching-files-with-github-cli.md#L3",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-18-v1",
+    "rule": "command-line",
+    "text": "You can use Git on the command line to commit changes and then push them.",
+    "match": "command line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-18",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/collaborating-on-github-docs/using-git-on-github-docs.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/collaborating-on-github-docs/using-git-on-github-docs.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-18-v2",
+    "rule": "command-line",
+    "text": "You can use Git on the command-line to commit changes and then push them.",
+    "match": "command-line",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "command-18",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/collaborating-on-github-docs/using-git-on-github-docs.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/collaborating-on-github-docs/using-git-on-github-docs.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-19-v1",
+    "rule": "command-line",
+    "text": "Show me the Rust code for a simple, useful command line tool that asks for user input.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-19",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/tutorials/learn-a-new-language.md",
+      "line": 77,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/tutorials/learn-a-new-language.md#L77",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-19-v2",
+    "rule": "command-line",
+    "text": "Show me the Rust code for a simple, useful command-line tool that asks for user input.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "command-19",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/tutorials/learn-a-new-language.md",
+      "line": 77,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/tutorials/learn-a-new-language.md#L77",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-20-v1",
+    "rule": "command-line",
+    "text": "Follow these guidelines for alt text for images of command line interfaces.",
+    "match": "command line",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "command-20",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/style-guide-and-content-model/style-guide.md",
+      "line": 520,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/style-guide-and-content-model/style-guide.md#L520",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "command-20-v2",
+    "rule": "command-line",
+    "text": "Follow these guidelines for alt text for images of command-line interfaces.",
+    "match": "command-line",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "command-20",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "contributing/style-guide-and-content-model/style-guide.md",
+      "line": 520,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/contributing/style-guide-and-content-model/style-guide.md#L520",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-01-v1",
+    "rule": "real-time",
+    "text": "The controller adjusts requests based on historical utilization and real time events such as out-of-memory conditions.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-01",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/workloads/autoscaling/vertical-pod-autoscale.md",
+      "line": 38,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/workloads/autoscaling/vertical-pod-autoscale.md#L38",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-01-v2",
+    "rule": "real-time",
+    "text": "The controller adjusts requests based on historical utilization and real-time events such as out-of-memory conditions.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-01",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/workloads/autoscaling/vertical-pod-autoscale.md",
+      "line": 38,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/workloads/autoscaling/vertical-pod-autoscale.md#L38",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-02-v1",
+    "rule": "real-time",
+    "text": "Importantly this is not based on real time feedback.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-02",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/services-networking/topology-aware-routing.md",
+      "line": 137,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/services-networking/topology-aware-routing.md#L137",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-02-v2",
+    "rule": "real-time",
+    "text": "Importantly this is not based on real-time feedback.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-02",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "concepts/services-networking/topology-aware-routing.md",
+      "line": 137,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/concepts/services-networking/topology-aware-routing.md#L137",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-03-v1",
+    "rule": "real-time",
+    "text": "Use these endpoints for human inspection to gain real time debugging information of a component binary.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-03",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/instrumentation/zpages.md",
+      "line": 18,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/instrumentation/zpages.md#L18",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-03-v2",
+    "rule": "real-time",
+    "text": "Use these endpoints for human inspection to gain real-time debugging information of a component binary.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-03",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "reference/instrumentation/zpages.md",
+      "line": 18,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/reference/instrumentation/zpages.md#L18",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-04-v1",
+    "rule": "real-time",
+    "text": "The cluster admin can allow unsafe sysctls for special situations such as high-performance or real time application tuning.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-04",
+    "counterfactual": true,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "tasks/administer-cluster/sysctl-cluster.md",
+      "line": 108,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/tasks/administer-cluster/sysctl-cluster.md#L108",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-04-v2",
+    "rule": "real-time",
+    "text": "The cluster admin can allow unsafe sysctls for special situations such as high-performance or real-time application tuning.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-04",
+    "counterfactual": false,
+    "source": {
+      "project": "kubernetes",
+      "name": "Kubernetes documentation",
+      "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+      "path": "tasks/administer-cluster/sysctl-cluster.md",
+      "line": 108,
+      "url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/content/en/docs/tasks/administer-cluster/sysctl-cluster.md#L108",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-05-v1",
+    "rule": "real-time",
+    "text": "Your security status for images is updated in real time.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-05",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/scout/explore/analysis.md",
+      "line": 23,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/explore/analysis.md#L23",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-05-v2",
+    "rule": "real-time",
+    "text": "Your security status for images is updated in real-time.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-05",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/scout/explore/analysis.md",
+      "line": 23,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/explore/analysis.md#L23",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-06-v1",
+    "rule": "real-time",
+    "text": "The flag follows the log stream in real time, interleaving output from both services.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "realtime-06",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/compose/gettingstarted.md",
+      "line": 491,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/compose/gettingstarted.md#L491",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-06-v2",
+    "rule": "real-time",
+    "text": "The flag follows the log stream in real-time, interleaving output from both services.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "realtime-06",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/compose/gettingstarted.md",
+      "line": 491,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/compose/gettingstarted.md#L491",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-07-v1",
+    "rule": "real-time",
+    "text": "The interface allows you to monitor Compose operations in real time by receiving events about changes.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-07",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/compose/compose-sdk.md",
+      "line": 137,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/compose/compose-sdk.md#L137",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-07-v2",
+    "rule": "real-time",
+    "text": "The interface allows you to monitor Compose operations in real-time by receiving events about changes.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-07",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/compose/compose-sdk.md",
+      "line": 137,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/compose/compose-sdk.md#L137",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-08-v1",
+    "rule": "real-time",
+    "text": "The new integration gives you real time security insights for your workloads.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-08",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/scout/release-notes/platform.md",
+      "line": 340,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/release-notes/platform.md#L340",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-08-v2",
+    "rule": "real-time",
+    "text": "The new integration gives you real-time security insights for your workloads.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-08",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/scout/release-notes/platform.md",
+      "line": 340,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/scout/release-notes/platform.md#L340",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-09-v1",
+    "rule": "real-time",
+    "text": "This allows for efficient allocation based on real time needs.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-09",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "get-started/docker-concepts/running-containers/multi-container-applications.md",
+      "line": 36,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/running-containers/multi-container-applications.md#L36",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-09-v2",
+    "rule": "real-time",
+    "text": "This allows for efficient allocation based on real-time needs.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-09",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "get-started/docker-concepts/running-containers/multi-container-applications.md",
+      "line": 36,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/running-containers/multi-container-applications.md#L36",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-10-v1",
+    "rule": "real-time",
+    "text": "You can use the command to monitor the real time resource usage of running containers.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-10",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "get-started/docker-concepts/running-containers/overriding-container-defaults.md",
+      "line": 64,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md#L64",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-10-v2",
+    "rule": "real-time",
+    "text": "You can use the command to monitor the real-time resource usage of running containers.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-10",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "get-started/docker-concepts/running-containers/overriding-container-defaults.md",
+      "line": 64,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md#L64",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-11-v1",
+    "rule": "real-time",
+    "text": "Insights data is not real time and is updated daily.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-11",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/accounts/organization/insights.md",
+      "line": 48,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/organization/insights.md#L48",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-11-v2",
+    "rule": "real-time",
+    "text": "Insights data is not real-time and is updated daily.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-11",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/accounts/organization/insights.md",
+      "line": 48,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/accounts/organization/insights.md#L48",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-12-v1",
+    "rule": "real-time",
+    "text": "Select Logs to view output from the container in real time.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "realtime-12",
+    "counterfactual": false,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/use-desktop/container.md",
+      "line": 38,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/use-desktop/container.md#L38",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-12-v2",
+    "rule": "real-time",
+    "text": "Select Logs to view output from the container in real-time.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "realtime-12",
+    "counterfactual": true,
+    "source": {
+      "project": "docker",
+      "name": "Docker documentation",
+      "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+      "path": "manuals/desktop/use-desktop/container.md",
+      "line": 38,
+      "url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/content/manuals/desktop/use-desktop/container.md#L38",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-13-v1",
+    "rule": "real-time",
+    "text": "Streaming is available for real time output.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-13",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/sdk-quickstart.md",
+      "line": 2113,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/sdk-quickstart.md#L2113",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-13-v2",
+    "rule": "real-time",
+    "text": "Streaming is available for real-time output.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "dev",
+    "seed_id": "realtime-13",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/sdk-quickstart.md",
+      "line": 2113,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/sdk-quickstart.md#L2113",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-14-v1",
+    "rule": "real-time",
+    "text": "The plan includes real time code suggestions.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-14",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/plans.md",
+      "line": 196,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/plans.md#L196",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-14-v2",
+    "rule": "real-time",
+    "text": "The plan includes real-time code suggestions.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-14",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/get-started/plans.md",
+      "line": 196,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/get-started/plans.md#L196",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-15-v1",
+    "rule": "real-time",
+    "text": "Live Share lets you collaboratively edit and debug with others in real time.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-15",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "codespaces/developing-in-a-codespace/working-collaboratively-in-a-codespace.md",
+      "line": 15,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/codespaces/developing-in-a-codespace/working-collaboratively-in-a-codespace.md#L15",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-15-v2",
+    "rule": "real-time",
+    "text": "Live Share lets you collaboratively edit and debug with others in real-time.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-15",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "codespaces/developing-in-a-codespace/working-collaboratively-in-a-codespace.md",
+      "line": 15,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/codespaces/developing-in-a-codespace/working-collaboratively-in-a-codespace.md#L15",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-16-v1",
+    "rule": "real-time",
+    "text": "Monitor an agent's progress in real time, steer it with follow-up prompts, and stop sessions.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "realtime-16",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-16-v2",
+    "rule": "real-time",
+    "text": "Monitor an agent's progress in real-time, steer it with follow-up prompts, and stop sessions.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "heldout",
+    "seed_id": "realtime-16",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents.md",
+      "line": 4,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/copilot-on-github/use-copilot-agents/manage-and-track-agents.md#L4",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-17-v1",
+    "rule": "real-time",
+    "text": "The incremental chunk is streamed in real time.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-17",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/copilot-sdk/features/streaming-events.md",
+      "line": 284,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/copilot-sdk/features/streaming-events.md#L284",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-17-v2",
+    "rule": "real-time",
+    "text": "The incremental chunk is streamed in real-time.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-17",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/copilot-sdk/features/streaming-events.md",
+      "line": 284,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/copilot-sdk/features/streaming-events.md#L284",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-18-v1",
+    "rule": "real-time",
+    "text": "The security overview provides real time data about alerts across your organization.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-18",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "code-security/tutorials/remediate-leaked-secrets/assessing-ghsp-impact.md",
+      "line": 33,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/code-security/tutorials/remediate-leaked-secrets/assessing-ghsp-impact.md#L33",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-18-v2",
+    "rule": "real-time",
+    "text": "The security overview provides real-time data about alerts across your organization.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-18",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "code-security/tutorials/remediate-leaked-secrets/assessing-ghsp-impact.md",
+      "line": 33,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/code-security/tutorials/remediate-leaked-secrets/assessing-ghsp-impact.md#L33",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-19-v1",
+    "rule": "real-time",
+    "text": "Follow the session log in real time.",
+    "match": "real time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-19",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-from-cli.md",
+      "line": 28,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-from-cli.md#L28",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-19-v2",
+    "rule": "real-time",
+    "text": "Follow the session log in real-time.",
+    "match": "real-time",
+    "expected_context": "standalone",
+    "split": "dev",
+    "seed_id": "realtime-19",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-from-cli.md",
+      "line": 28,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-from-cli.md#L28",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-20-v1",
+    "rule": "real-time",
+    "text": "Auto chooses models based on real time system health and model performance.",
+    "match": "real time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-20",
+    "counterfactual": true,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/copilot-cli/cli-best-practices.md",
+      "line": 96,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/copilot-cli/cli-best-practices.md#L96",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  },
+  {
+    "id": "realtime-20-v2",
+    "rule": "real-time",
+    "text": "Auto chooses models based on real-time system health and model performance.",
+    "match": "real-time",
+    "expected_context": "before_noun",
+    "split": "heldout",
+    "seed_id": "realtime-20",
+    "counterfactual": false,
+    "source": {
+      "project": "github",
+      "name": "GitHub documentation",
+      "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+      "path": "copilot/how-tos/copilot-cli/cli-best-practices.md",
+      "line": 96,
+      "url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/content/copilot/how-tos/copilot-cli/cli-best-practices.md#L96",
+      "license": "CC BY 4.0",
+      "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+    }
+  }
+]

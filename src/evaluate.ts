@@ -12,16 +12,22 @@ export function parseEvalArgs(args: string[]) {
 	const runs = runsIndex >= 0 ? Number(args[runsIndex + 1]) : 1;
 	const strategyIndex = args.indexOf('--strategy');
 	const strategy = (strategyIndex >= 0 ? args[strategyIndex + 1] : 'choice') as ClassificationStrategy;
+	const splitIndex = args.indexOf('--split');
+	const split = splitIndex >= 0 ? args[splitIndex + 1] : 'all';
 	if (!fixturePath) throw new Error('--fixture requires a path');
 	if (outputIndex >= 0 && !output) throw new Error('--output requires a path');
 	if (!Number.isInteger(runs) || runs < 1 || runs > 10) throw new Error('--runs must be an integer from 1 to 10');
 	if (!['choice', 'noul'].includes(strategy)) throw new Error('--strategy must be choice or noul');
-	return { fixturePath, output, runs, strategy };
+	if (!['all', 'dev', 'heldout'].includes(split ?? ''))
+		throw new Error('--split must be all, dev, or heldout');
+	return { fixturePath, output, runs, strategy, split };
 }
 
 async function main() {
-	const { fixturePath, output, runs, strategy } = parseEvalArgs(process.argv.slice(2));
-	const fixtures = (await Bun.file(fixturePath).json()) as Fixture[];
+	const { fixturePath, output, runs, strategy, split } = parseEvalArgs(process.argv.slice(2));
+	const allFixtures = (await Bun.file(fixturePath).json()) as Fixture[];
+	const fixtures = split === 'all' ? allFixtures : allFixtures.filter((fixture) => fixture.split === split);
+	if (fixtures.length === 0) throw new Error(`No fixtures found for split ${split}`);
 	const rules = await loadRules();
 	const candidates: Candidate[] = fixtures.map((fixture, index) => ({
 		id: fixture.id,
@@ -40,6 +46,7 @@ async function main() {
 				: await classifyCandidates(candidates, rules);
 		return {
 			model: run.model,
+			strategyVersion: run.strategyVersion,
 			usage: run.usage,
 			results: run.results.map((classification, index) => {
 				const fixture = fixtures[index];
@@ -110,6 +117,8 @@ async function main() {
 	const report = {
 		generated_at: new Date().toISOString(),
 		strategy,
+		strategy_version: completedRuns[0]?.strategyVersion,
+		split,
 		model: completedRuns[0]?.model,
 		runs,
 		usage: {

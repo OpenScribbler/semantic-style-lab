@@ -1,0 +1,26 @@
+{
+  "kubernetes": {
+    "name": "Kubernetes documentation",
+    "repository": "https://github.com/kubernetes/website",
+    "revision": "05915f1428ddc49ecd59d71ac584add1411df5da",
+    "root": "content/en/docs",
+    "license": "CC BY 4.0",
+    "license_url": "https://github.com/kubernetes/website/blob/05915f1428ddc49ecd59d71ac584add1411df5da/LICENSE"
+  },
+  "docker": {
+    "name": "Docker documentation",
+    "repository": "https://github.com/docker/docs",
+    "revision": "ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383",
+    "root": "content",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/docker/docs/blob/ae6b9eeae1463ed0dc5fd03d3ca5ffd2c29d6383/LICENSE"
+  },
+  "github": {
+    "name": "GitHub documentation",
+    "repository": "https://github.com/github/docs",
+    "revision": "2320b38e746de554f7f3d2b83520bc0f26485abc",
+    "root": "content",
+    "license": "CC BY 4.0",
+    "license_url": "https://github.com/github/docs/blob/2320b38e746de554f7f3d2b83520bc0f26485abc/LICENSE"
+  }
+}

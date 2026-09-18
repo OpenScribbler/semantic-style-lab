@@ -56,7 +56,13 @@ export function buildRequest(candidates: Candidate[], rules: ContextualRule[]) {
 }
 
 export async function classifyCandidates(candidates: Candidate[], rules: ContextualRule[]) {
-	if (candidates.length === 0) return { model: 'not-called', usage: { input_tokens: 0, output_tokens: 0 }, results: [] };
+	if (candidates.length === 0)
+		return {
+			model: 'not-called',
+			usage: { input_tokens: 0, output_tokens: 0 },
+			strategyVersion: 'choice-v1',
+			results: [],
+		};
 	if (!process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set.');
 	const request = buildRequest(candidates, rules);
 	const response = await new TypeSafeClient().systemOne(request);
@@ -76,5 +82,5 @@ export async function classifyCandidates(candidates: Candidate[], rules: Context
 			model: response.model,
 		};
 	});
-	return { model: response.model, usage: response.usage, results };
+	return { model: response.model, usage: response.usage, strategyVersion: 'choice-v1', results };
 }

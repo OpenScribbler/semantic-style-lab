@@ -40,6 +40,7 @@ const report = {
 	candidate_count: candidates.length,
 	model: result.model,
 	strategy,
+	strategy_version: result.strategyVersion,
 	usage: result.usage,
 	findings: result.results.filter((item) => item.status !== 'pass' && item.status !== 'preserve'),
 	classifications: result.results,

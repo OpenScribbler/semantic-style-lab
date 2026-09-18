@@ -43,6 +43,14 @@ synthetic fixture set. That is evidence for the decomposition, not a production
 quality claim. The corpus must grow to include real documentation, difficult
 literal boundaries, headings, tables, links, and multiple sentence structures.
 
+The subsequent real-world experiment used 60 labeled contexts from pinned
+Kubernetes, Docker, and GitHub documentation revisions. Counterfactual spellings
+prevented the classifier from succeeding by trusting the existing surface form.
+Development failures led to a second decomposition: code rejects closed-class
+following words, and Jev distinguishes a verb's direct object from a noun modified
+by the target. With that strategy frozen, held-out policy accuracy was 97.1% over
+350 repeated decisions; violation precision was 100% and recall was 97.5%.
+
 ## Relevant official documentation
 
 - [How to build with System One](https://docs.typesafe.ai/concepts/how-to-build-with-system-one)

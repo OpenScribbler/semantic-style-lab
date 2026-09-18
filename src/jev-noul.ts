@@ -10,12 +10,47 @@ export interface SemanticSignals extends Record<string, number | undefined> {
 	modifies_following_noun: number;
 }
 
+export const NOUL_STRATEGY_VERSION = 'noul-next-word-v2';
+
+const closedClassFollowingWords = new Set([
+	'and',
+	'are',
+	'as',
+	'at',
+	'but',
+	'by',
+	'for',
+	'from',
+	'in',
+	'is',
+	'itself',
+	'nor',
+	'of',
+	'on',
+	'or',
+	'than',
+	'that',
+	'then',
+	'to',
+	'was',
+	'were',
+	'when',
+	'while',
+	'with',
+	'without',
+]);
+
 const signalId = (candidateId: string, signal: keyof SemanticSignals) =>
 	`${candidateId}__${signal}`;
 
 export function followingWord(markedPassage: string) {
 	const afterTarget = markedPassage.split('⟧', 2)[1] ?? '';
 	return afterTarget.match(/^\s+([\p{L}\p{N}_]+)/u)?.[1] ?? null;
+}
+
+export function followingWordForModifier(markedPassage: string) {
+	const word = followingWord(markedPassage);
+	return word && !closedClassFollowingWords.has(word.toLocaleLowerCase()) ? word : null;
 }
 
 export function buildNoulRequest(candidates: Candidate[], rules: ContextualRule[]) {
@@ -37,12 +72,16 @@ export function buildNoulRequest(candidates: Candidate[], rules: ContextualRule[
 				false: 'The marked occurrence is ordinary prose whose spelling can be governed by the style rule.',
 			},
 		);
-		if (followingWord(candidate.context)) {
+		if (followingWordForModifier(candidate.context)) {
+			const setupContrast =
+				rule.id === 'setup'
+					? ' A noun used as the direct object of the verb set up is false: in set up repositories, repositories is an object; in setup instructions, instructions is modified by setup.'
+					: '';
 			questions[signalId(candidate.id, 'modifies_following_noun')] = noul(
 				{
 					question: `In \`${inspect}.passage\`, is \`${inspect}.following_word\` a noun that the marked ⟦...⟧ occurrence modifies?`,
 					focus:
-						'Judge the grammatical role of the explicitly supplied following_word in the full passage. Determine it independently of the marked term\'s current spelling, spacing, capitalization, or hyphenation. Answer no when following_word is a verb, preposition, adverb, or other non-noun.',
+						`Judge the grammatical relationship of the explicitly supplied following_word in the full passage. Determine it independently of the marked term's current spelling, spacing, capitalization, or hyphenation. Answer no when following_word is a verb, preposition, adverb, direct object, or other word not modified by the target.${setupContrast}`,
 				},
 				{
 					true: 'following_word is a noun, and the marked occurrence acts as its modifier.',
@@ -70,7 +109,7 @@ export function buildNoulRequest(candidates: Candidate[], rules: ContextualRule[
 			candidates: candidates.map((candidate) => ({
 				marked_term: candidate.match,
 				passage: candidate.context,
-				following_word: followingWord(candidate.context),
+				following_word: followingWordForModifier(candidate.context),
 				style_family: candidate.ruleId,
 				file: candidate.file,
 				line: candidate.line,
@@ -110,7 +149,12 @@ export function composeContext(rule: ContextualRule, signals: SemanticSignals) {
 
 export async function classifyCandidatesWithNoul(candidates: Candidate[], rules: ContextualRule[]) {
 	if (candidates.length === 0)
-		return { model: 'not-called', usage: { input_tokens: 0, output_tokens: 0 }, results: [] };
+		return {
+			model: 'not-called',
+			usage: { input_tokens: 0, output_tokens: 0 },
+			strategyVersion: NOUL_STRATEGY_VERSION,
+			results: [],
+		};
 	if (!process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set.');
 	const request = buildNoulRequest(candidates, rules);
 	const response = await new TypeSafeClient().systemOne(request);
@@ -120,7 +164,7 @@ export async function classifyCandidatesWithNoul(candidates: Candidate[], rules:
 		const rule = ruleById.get(candidate.ruleId)!;
 		const signals: SemanticSignals = {
 			literal: read(signalId(candidate.id, 'literal')),
-			modifies_following_noun: followingWord(candidate.context)
+			modifies_following_noun: followingWordForModifier(candidate.context)
 				? read(signalId(candidate.id, 'modifies_following_noun'))
 				: 0,
 			...(rule.id === 'setup'
@@ -139,5 +183,5 @@ export async function classifyCandidatesWithNoul(candidates: Candidate[], rules:
 			model: response.model,
 		};
 	});
-	return { model: response.model, usage: response.usage, results };
+	return { model: response.model, usage: response.usage, strategyVersion: NOUL_STRATEGY_VERSION, results };
 }
