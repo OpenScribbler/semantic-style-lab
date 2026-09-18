@@ -124,6 +124,9 @@ code from prose using exact MDX source spans, then applies a semicolon-specific 
 clarity judgment to 13 real prose occurrences. Its six-case review is documented
 in [the experiment notes](docs/semicolon-experiment.md), and every raw Jev request
 and response is retained under [`reports/semicolon-raw/`](reports/semicolon-raw/).
+The completed [calibration analysis](reports/semicolon-calibration-analysis.md)
+rejects Jev suppression for this rule: deterministic MDX filtering followed by
+retaining prose alerts preserves all seven labeled true findings.
 
 ## Design boundary
 

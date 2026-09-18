@@ -47,9 +47,21 @@ Open `reports/semicolon-calibration.html`. It asks for six decisions covering
 distinct clause relationships and hides the Jev result until after each answer.
 The report saves choices locally and provides a copy-to-chat JSON action.
 
+The project owner labeled all six as violations. Combined with the earlier prose
+anchor, all seven human-labeled prose semicolons are actionable. At the provisional
+0.25 suppression threshold, the generic Jev judgment retains five of seven true
+findings; the semicolon-specific judgment retains only one of seven.
+
+The experiment therefore rejects Jev suppression for this rule. The production
+shape is simpler: use the MDX source classifier to remove non-prose spans, then
+retain every remaining Vale semicolon alert. The exact labels and analysis are in
+`reports/semicolon-calibration.json` and
+`reports/semicolon-calibration-analysis.md`.
+
 ## Reproduce
 
 ```bash
 bun run experiment:semicolon -- --runs 5
 bun run report:semicolon
+bun run analyze:semicolon-calibration
 ```

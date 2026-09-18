@@ -4,6 +4,14 @@ import { classifyMdxOffset } from '../src/mdx-source-classifier';
 import { buildSemicolonRequest } from '../src/run-semicolon-experiment';
 
 describe('semicolon experiment', () => {
+	test('records the calibrated decision to keep prose alerts', async () => {
+		const analysis = await Bun.file('reports/semicolon-calibration-analysis.json').json();
+		expect(analysis.counts.labeled_prose_cases).toBe(7);
+		expect(analysis.counts.human_violations).toBe(7);
+		expect(analysis.provisional_threshold_comparison.specific_true_findings_retained).toBe(1);
+		expect(analysis.decision.use_jev_to_suppress).toBe(false);
+	});
+
 	test.each([
 		["import { Aside } from '@astrojs/starlight/components';", 'mdx_module_syntax'],
 		['import {\n  Aside,\n  Tabs\n} from "components";', 'mdx_module_syntax'],

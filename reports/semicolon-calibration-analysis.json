@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "calibration_source": "reports/semicolon-calibration.json",
+  "prior_anchor_source": "reports/human-calibration.json",
+  "experiment_source": "reports/semicolon-experiment.json",
+  "counts": {
+    "new_human_labels": 6,
+    "labeled_prose_cases": 7,
+    "human_violations": 7,
+    "human_non_violations": 0,
+    "deterministic_non_prose_exclusions": 8
+  },
+  "provisional_threshold_comparison": {
+    "threshold": 0.25,
+    "generic_true_findings_retained": 5,
+    "generic_true_finding_retention_percent": 71.4,
+    "specific_true_findings_retained": 1,
+    "specific_true_finding_retention_percent": 14.3
+  },
+  "decision": {
+    "routing": "deterministic_source_filter_then_keep_prose_alert",
+    "use_jev_to_suppress": false,
+    "rationale": "All seven structurally varied, human-labeled prose semicolons are violations. The semicolon-specific Jev question would suppress six at the provisional threshold."
+  },
+  "labeled_cases": [
+    {
+      "id": "using-syllago/tui.mdx:52:Google.Semicolons:167:;",
+      "path": "using-syllago/tui.mdx",
+      "line": 52,
+      "human_verdict": "violation",
+      "generic_probability": 0.19333333333333336,
+      "specific_probability": 0.14600000000000002,
+      "generic_action_at_0_25": "suppress",
+      "specific_action_at_0_25": "suppress"
+    },
+    {
+      "id": "moat/index.mdx:45:Google.Semicolons:150:;",
+      "path": "moat/index.mdx",
+      "line": 45,
+      "human_verdict": "violation",
+      "generic_probability": 0.26666666666666666,
+      "specific_probability": 0.162,
+      "generic_action_at_0_25": "review",
+      "specific_action_at_0_25": "suppress"
+    },
+    {
+      "id": "moat/index.mdx:80:Google.Semicolons:52:;",
+      "path": "moat/index.mdx",
+      "line": 80,
+      "human_verdict": "violation",
+      "generic_probability": 0.26666666666666666,
+      "specific_probability": 0.17,
+      "generic_action_at_0_25": "review",
+      "specific_action_at_0_25": "suppress"
+    },
+    {
+      "id": "moat/trust-tiers.mdx:83:Google.Semicolons:200:;",
+      "path": "moat/trust-tiers.mdx",
+      "line": 83,
+      "human_verdict": "violation",
+      "generic_probability": 0.33666666666666667,
+      "specific_probability": 0.168,
+      "generic_action_at_0_25": "review",
+      "specific_action_at_0_25": "suppress"
+    },
+    {
+      "id": "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "line": 41,
+      "human_verdict": "violation",
+      "generic_probability": 0.28,
+      "specific_probability": 0.21600000000000003,
+      "generic_action_at_0_25": "review",
+      "specific_action_at_0_25": "suppress"
+    },
+    {
+      "id": "moat/index.mdx:99:Google.Semicolons:58:;",
+      "path": "moat/index.mdx",
+      "line": 99,
+      "human_verdict": "violation",
+      "generic_probability": 0.26666666666666666,
+      "specific_probability": 0.266,
+      "generic_action_at_0_25": "review",
+      "specific_action_at_0_25": "review"
+    },
+    {
+      "id": "getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "path": "getting-started/core-concepts.mdx",
+      "line": 6,
+      "human_verdict": "violation",
+      "generic_probability": 0.23,
+      "specific_probability": 0.164,
+      "generic_action_at_0_25": "suppress",
+      "specific_action_at_0_25": "suppress"
+    }
+  ]
+}

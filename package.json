@@ -13,6 +13,7 @@
     "experiment:reviewer-panel": "bun src/run-reviewer-panel.ts",
     "experiment:adjudicate-panel": "bun src/run-panel-adjudication.ts",
     "analyze:human-calibration": "bun src/analyze-human-calibration.ts",
+    "analyze:semicolon-calibration": "bun src/analyze-semicolon-calibration.ts",
     "report:human-escalation": "bun src/build-human-escalation.ts",
     "report:semicolon": "bun src/build-semicolon-report.ts",
     "report:google-experiment": "bun src/build-google-experiment-report.ts",

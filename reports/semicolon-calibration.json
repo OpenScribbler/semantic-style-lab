@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "experiment": "semicolon-specific-calibration",
+  "exported_at": "2026-09-18T21:49:24.069Z",
+  "labels": {
+    "using-syllago/tui.mdx:52:Google.Semicolons:167:;": "violation",
+    "moat/index.mdx:45:Google.Semicolons:150:;": "violation",
+    "moat/index.mdx:80:Google.Semicolons:52:;": "violation",
+    "moat/trust-tiers.mdx:83:Google.Semicolons:200:;": "violation",
+    "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;": "violation",
+    "moat/index.mdx:99:Google.Semicolons:58:;": "violation"
+  }
+}
