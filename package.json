@@ -11,6 +11,7 @@
     "experiment:vale-jev": "bun src/run-vale-jev-experiment.ts",
     "experiment:reviewer-panel": "bun src/run-reviewer-panel.ts",
     "experiment:adjudicate-panel": "bun src/run-panel-adjudication.ts",
+    "analyze:human-calibration": "bun src/analyze-human-calibration.ts",
     "report:human-escalation": "bun src/build-human-escalation.ts",
     "report:google-experiment": "bun src/build-google-experiment-report.ts",
     "report:vale-jev": "bun src/build-vale-jev-report.ts",

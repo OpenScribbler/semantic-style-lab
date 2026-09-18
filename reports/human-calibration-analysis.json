@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "calibration_source": "reports/human-calibration.json",
+  "policy_source": "policies/syllago-google-style.json",
+  "counts": {
+    "policy_choices": 5,
+    "spot_checks": 8,
+    "decisive_spot_checks": 7,
+    "panel_agreements": 5,
+    "panel_disagreements": 2,
+    "human_uncertain": 1,
+    "panel_agreement_percent_decisive": 71.4,
+    "semantic_agreement_percent_decisive": 50,
+    "unsafe_suppressions_observed": 1
+  },
+  "conclusions": [
+    "The model panel agrees with five of seven decisive human spot checks; that is useful triage, not ground truth.",
+    "The split semantic cases agree with the human on two of four checks, so adjudicated semantic labels must not be expanded without more human examples.",
+    "The global P(violation) <= 0.25 suppression rule is unsafe: it suppressed a prose semicolon the human marked as a violation.",
+    "Code/literal filtering remains valuable: Jev assigned P(violation)=0.05 to the import semicolon, and the human confirmed it is not a violation.",
+    "Use project policy before probabilistic judgment, then rule-specific Jev questions and thresholds, with uncertainty routed to review."
+  ],
+  "comparisons": [
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "kind": "semantic_gap",
+      "rule": "ambiguous-pronoun",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 22,
+      "human_verdict": "violation",
+      "panel_verdict": "violation",
+      "panel_source": "reasoning_adjudicator",
+      "panel_agreement": "split",
+      "comparison": "agree"
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "kind": "semantic_gap",
+      "rule": "reader-address",
+      "path": "moat/trust-tiers.mdx",
+      "line": 59,
+      "human_verdict": "violation",
+      "panel_verdict": "not_violation",
+      "panel_source": "reasoning_adjudicator",
+      "panel_agreement": "split",
+      "comparison": "disagree"
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+      "kind": "semantic_gap",
+      "rule": "anthropomorphism",
+      "path": "advanced/sandbox.mdx",
+      "line": 14,
+      "human_verdict": "violation",
+      "panel_verdict": "not_violation",
+      "panel_source": "reasoning_adjudicator",
+      "panel_agreement": "split",
+      "comparison": "disagree"
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+      "kind": "semantic_gap",
+      "rule": "excessive-claim",
+      "path": "advanced/team-setup.mdx",
+      "line": 156,
+      "human_verdict": "violation",
+      "panel_verdict": "violation",
+      "panel_source": "reasoning_adjudicator",
+      "panel_agreement": "split",
+      "comparison": "agree"
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "kind": "vale_alert",
+      "rule": "Google.Timeless",
+      "path": "advanced/team-setup.mdx",
+      "line": 37,
+      "human_verdict": "not_violation",
+      "panel_verdict": "not_violation",
+      "panel_source": "reasoning_adjudicator",
+      "panel_agreement": "split",
+      "comparison": "agree",
+      "jev_probability": 0.5866666666666666,
+      "jev_probabilities": [
+        0.61,
+        0.58,
+        0.57
+      ],
+      "provisional_action": "review",
+      "action_assessment": "reviewed"
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best",
+      "kind": "vale_alert",
+      "rule": "Google.ExcessiveClaims",
+      "path": "advanced/team-setup.mdx",
+      "line": 57,
+      "human_verdict": "uncertain",
+      "panel_verdict": "violation",
+      "panel_source": "unanimous_panel",
+      "panel_agreement": "unanimous",
+      "comparison": "human_uncertain",
+      "jev_probability": 0.6133333333333333,
+      "jev_probabilities": [
+        0.61,
+        0.63,
+        0.6
+      ],
+      "provisional_action": "review",
+      "action_assessment": "appropriate_review_target"
+    },
+    {
+      "id": "vale:index.mdx:6:Google.Semicolons:67:;",
+      "kind": "vale_alert",
+      "rule": "Google.Semicolons",
+      "path": "index.mdx",
+      "line": 6,
+      "human_verdict": "not_violation",
+      "panel_verdict": "not_violation",
+      "panel_source": "unanimous_panel",
+      "panel_agreement": "unanimous",
+      "comparison": "agree",
+      "jev_probability": 0.05000000000000001,
+      "jev_probabilities": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "provisional_action": "suppress",
+      "action_assessment": "correct_suppression"
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "kind": "vale_alert",
+      "rule": "Google.Semicolons",
+      "path": "getting-started/core-concepts.mdx",
+      "line": 6,
+      "human_verdict": "violation",
+      "panel_verdict": "violation",
+      "panel_source": "panel_majority",
+      "panel_agreement": "majority",
+      "comparison": "agree",
+      "jev_probability": 0.23,
+      "jev_probabilities": [
+        0.23,
+        0.23,
+        0.23
+      ],
+      "provisional_action": "suppress",
+      "action_assessment": "unsafe_suppression"
+    }
+  ]
+}

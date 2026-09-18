@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project": "syllago",
+  "basis": "reports/human-calibration.json",
+  "rules": {
+    "Google.WordList:CLI": {
+      "decision": "allow",
+      "routing": "deterministic_override",
+      "behavior": "Suppress the Google substitution when CLI is clear in context or occurs in an official product name."
+    },
+    "Google.WordListCase:content-type": {
+      "decision": "allow",
+      "routing": "deterministic_override",
+      "behavior": "Treat content type as approved Syllago domain terminology."
+    },
+    "Google.Contractions": {
+      "decision": "context",
+      "routing": "semantic_suggestion",
+      "behavior": "Do not fail CI merely because a contraction is possible. Ask whether a contraction improves naturalness without changing literal or formal text."
+    },
+    "Google.Semicolons": {
+      "decision": "context",
+      "routing": "semantic_review",
+      "behavior": "Discard code and literal syntax deterministically, then report a prose semicolon only when splitting or restructuring improves clarity. Do not auto-suppress from the current global Jev threshold."
+    },
+    "Google.Passive": {
+      "decision": "hidden-actor",
+      "routing": "semantic_review",
+      "behavior": "Report passive voice only when it hides an actor or responsibility the reader needs to act or troubleshoot."
+    }
+  }
+}

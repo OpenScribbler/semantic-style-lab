@@ -113,6 +113,12 @@ high-impact policy choices and eight calibration spot checks. Exact prompts, raw
 responses, normalized labels, and consensus records are retained under
 [`reports/reviewer-panel-raw/`](reports/reviewer-panel-raw/).
 
+The completed [human calibration](reports/human-calibration-analysis.md) found
+five agreements across seven decisive spot checks and one unsafe suppression in
+the provisional global-threshold policy. The resulting Syllago decisions are
+captured as [code-owned policy](policies/syllago-google-style.json); rerun the
+analysis with `bun run analyze:human-calibration`.
+
 ## Design boundary
 
 Use an ordinary Vale vocabulary or substitution when one form is always right.

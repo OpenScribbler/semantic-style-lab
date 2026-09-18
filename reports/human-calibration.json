@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "exported_at": "2026-09-18T21:25:20.358Z",
+  "policies": {
+    "cli": "allow",
+    "content-type": "allow",
+    "contractions": "context",
+    "semicolons": "context",
+    "passive": "hidden-actor"
+  },
+  "cases": {
+    "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22": "violation",
+    "semantic:moat/trust-tiers.mdx:reader-address:59": "violation",
+    "semantic:advanced/sandbox.mdx:anthropomorphism:14": "violation",
+    "semantic:advanced/team-setup.mdx:excessive-claim:156": "violation",
+    "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest": "not_violation",
+    "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best": "uncertain",
+    "vale:index.mdx:6:Google.Semicolons:67:;": "not_violation",
+    "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;": "violation"
+  }
+}

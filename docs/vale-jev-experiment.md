@@ -76,6 +76,26 @@ The focused human report requests 13 decisions: five project-policy choices that
 affect high-volume rule families and eight spot checks. If the spot checks reveal
 systematic disagreement, review expands only for the affected rule family.
 
+## Human calibration result
+
+The project owner completed all 13 decisions. The model panel agreed with five of
+the seven decisive spot checks (71.4%); one additional check was labeled uncertain.
+On the four split semantic cases, the final panel adjudication agreed with the
+human on only two. Panel labels therefore remain useful for triage, but are not
+safe to expand as ground truth for semantic rule families.
+
+The calibration also invalidated the provisional global suppression threshold.
+Jev correctly assigned P(violation)=0.05 to a semicolon in MDX import syntax, but
+assigned P(violation)=0.23 to a prose semicolon the human marked as a violation.
+Both fell below the 0.25 suppression threshold. The next iteration must use
+project policy first, deterministic code/literal exclusions second, and
+rule-specific Jev questions and thresholds third.
+
+The exact response is saved in `reports/human-calibration.json`; the reproducible
+comparison is in `reports/human-calibration-analysis.json` and its readable
+summary. The five policy choices are encoded in
+`policies/syllago-google-style.json`.
+
 Every model call is reproducible. For each chunk, the repository retains the
 exact prompt, raw stdout/stderr response envelope, and normalized labels under
 `reports/reviewer-panel-raw/`. The complete panel labels, adjudication, and merged
@@ -98,4 +118,5 @@ bun run experiment:reviewer-panel -- --reviewer copilot
 bun run experiment:reviewer-panel -- --reviewer codex
 bun run experiment:adjudicate-panel
 bun run report:human-escalation
+bun run analyze:human-calibration
 ```
