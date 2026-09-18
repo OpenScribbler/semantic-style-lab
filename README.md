@@ -94,9 +94,16 @@ Jev finding; pages without findings skip the editor. This boundary matters: an
 editor explicitly instructed not to invent unrelated violations still did so.
 
 Open the [interactive Google-guide report](reports/google-style-experiment.html)
-to review 20 blind A/B pairs and label all 31 Jev findings. See the
+to label all 31 semantic findings, judge whether Vale could reliably own them,
+and validate 23 scoped corrections. See the
 [experiment notes](docs/google-style-experiment.md) for the design, recorded
 results, and limitations.
+
+The separate [Vale + Jev review](reports/vale-jev-experiment.html) tests the
+refinement hypothesis on 256 alerts emitted by the actual Google Vale package.
+Its 108-item review set hides Jev's judgment until after each human label and
+computes precision, true-finding retention, and false-positive removal from the
+saved labels. See the [Vale + Jev experiment notes](docs/vale-jev-experiment.md).
 
 ## Design boundary
 

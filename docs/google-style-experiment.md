@@ -62,7 +62,7 @@ reference findings disappeared in V2, including an apparently valid
 “top-right” reference. Human labels are required before changing that rule or
 threshold.
 
-## Paired editor experiment
+## Editor follow-up
 
 Twenty pages were each sent through two read-only editor calls:
 
@@ -88,13 +88,22 @@ violations. The production-shaped harness now skips the compiled editor when a
 page has no findings and rejects suggestions that do not map to a finding. This
 is evidence for code-owned orchestration, not merely a stronger prompt.
 
+An initial report asked reviewers to pick the more useful of the two page-level
+outputs. That comparison was withdrawn: the editors had different candidate
+sets, and a forced preference involving an empty output does not measure either
+false positives or missed findings. The redesigned report independently labels
+semantic findings, Vale feasibility, and the safety of scoped corrections. The
+raw paired outputs remain historical evidence about prompt scope, not evidence
+that Vale + Jev outperforms Vale.
+
 ## What remains unknown
 
 Suggestion counts are not quality scores. The 31 findings need human labels,
-and the paired edit sets need a blind usefulness review. The interactive HTML
-report stores those choices in browser local storage and can export them as
-JSON. Only after that review should we estimate finding precision, preferred
-editor rate, or rule-level expansion priorities.
+including whether each issue requires semantic context or could be owned by a
+deterministic Vale rule. The 23 finding-mapped corrections can then be accepted,
+revised, or rejected. The interactive HTML report stores those choices in
+browser local storage and can export them as JSON. Only after that review should
+we estimate finding precision, edit acceptance, or rule-level expansion priorities.
 
 This experiment also does not prove complete Google-guide coverage. The
 inventory is a roadmap and the 12 rules are an initial semantic slice.
