@@ -119,6 +119,12 @@ the provisional global-threshold policy. The resulting Syllago decisions are
 captured as [code-owned policy](policies/syllago-google-style.json); rerun the
 analysis with `bun run analyze:human-calibration`.
 
+The follow-up [semicolon calibration](reports/semicolon-calibration.html) separates
+code from prose using exact MDX source spans, then applies a semicolon-specific Jev
+clarity judgment to 13 real prose occurrences. Its six-case review is documented
+in [the experiment notes](docs/semicolon-experiment.md), and every raw Jev request
+and response is retained under [`reports/semicolon-raw/`](reports/semicolon-raw/).
+
 ## Design boundary
 
 Use an ordinary Vale vocabulary or substitution when one form is always right.

@@ -1,0 +1,1112 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-18T21:44:11.970Z",
+  "hypothesis": "Deterministic syntax filtering plus a semicolon-specific Jev clarity judgment improves on both Vale alone and a generic Jev violation judgment.",
+  "model": "jev-1.13.0",
+  "run_count": 5,
+  "input": "reports/vale-jev-experiment.json",
+  "policy": "In Syllago prose, report a semicolon only when replacing it with a period, conjunction, colon, or restructuring would materially improve clarity. Semicolons are not categorically forbidden.",
+  "thresholds": null,
+  "threshold_note": "No automatic Jev threshold is authorized until the prose judgments receive human labels.",
+  "counts": {
+    "vale_candidates": 21,
+    "deterministic_syntax_exclusions": 8,
+    "exclusions_by_source_class": {
+      "mdx_module_syntax": 8
+    },
+    "prose_candidates": 13
+  },
+  "usage": {
+    "input_tokens": 25820,
+    "output_tokens": 1145
+  },
+  "estimated_input_cost_usd": 0.00108444,
+  "candidates": [
+    {
+      "id": "index.mdx:6:Google.Semicolons:67:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        67,
+        67
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { CardGrid, LinkCard } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.05000000000000001,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "jev_range": 0,
+      "action_agreement": 1,
+      "path": "index.mdx",
+      "target_text": "import { CardGrid, LinkCard } from '@astrojs/starlight/components';",
+      "marked_text": "import { CardGrid, LinkCard } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "advanced/registry-privacy.mdx:6:Google.Semicolons:54:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        54,
+        54
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Aside } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.07,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.07,
+        0.07,
+        0.07
+      ],
+      "jev_range": 0,
+      "action_agreement": 1,
+      "path": "advanced/registry-privacy.mdx",
+      "target_text": "import { Aside } from '@astrojs/starlight/components';",
+      "marked_text": "import { Aside } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        321,
+        321
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/); for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/)."
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.23,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.23,
+        0.23,
+        0.23
+      ],
+      "jev_range": 0,
+      "action_agreement": 1,
+      "path": "getting-started/core-concepts.mdx",
+      "target_text": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/); for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+      "marked_text": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/)⟦;⟧ for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.16,
+        0.17,
+        0.17,
+        0.15,
+        0.17
+      ],
+      "semicolon_clarity_probability": 0.164,
+      "semicolon_clarity_range": 0.020000000000000018
+    },
+    {
+      "id": "getting-started/installation.mdx:6:Google.Semicolons:62:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        62,
+        62
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Tabs, TabItem } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.08666666666666667,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.08,
+        0.1,
+        0.08
+      ],
+      "jev_range": 0.020000000000000004,
+      "action_agreement": 1,
+      "path": "getting-started/installation.mdx",
+      "target_text": "import { Tabs, TabItem } from '@astrojs/starlight/components';",
+      "marked_text": "import { Tabs, TabItem } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "getting-started/quick-start.mdx:6:Google.Semicolons:54:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        54,
+        54
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Aside } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.08666666666666667,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.08,
+        0.09,
+        0.09
+      ],
+      "jev_range": 0.009999999999999995,
+      "action_agreement": 1,
+      "path": "getting-started/quick-start.mdx",
+      "target_text": "import { Aside } from '@astrojs/starlight/components';",
+      "marked_text": "import { Aside } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "moat/index.mdx:6:Google.Semicolons:54:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        54,
+        54
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Aside } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.12,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.12,
+        0.13,
+        0.11
+      ],
+      "jev_range": 0.020000000000000004,
+      "action_agreement": 1,
+      "path": "moat/index.mdx",
+      "target_text": "import { Aside } from '@astrojs/starlight/components';",
+      "marked_text": "import { Aside } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "moat/index.mdx:45:Google.Semicolons:150:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 45,
+      "span": [
+        150,
+        150
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 44,
+          "text": ""
+        },
+        {
+          "line": 45,
+          "text": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist; others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL."
+        },
+        {
+          "line": 46,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.26666666666666666,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.27,
+        0.27,
+        0.26
+      ],
+      "jev_range": 0.010000000000000009,
+      "action_agreement": 1,
+      "path": "moat/index.mdx",
+      "target_text": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist; others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+      "marked_text": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist⟦;⟧ others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.16,
+        0.16,
+        0.16,
+        0.16,
+        0.17
+      ],
+      "semicolon_clarity_probability": 0.162,
+      "semicolon_clarity_range": 0.010000000000000009
+    },
+    {
+      "id": "moat/index.mdx:80:Google.Semicolons:52:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 80,
+      "span": [
+        52,
+        52
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 79,
+          "text": ""
+        },
+        {
+          "line": 80,
+          "text": "The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field."
+        },
+        {
+          "line": 81,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.26666666666666666,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.27,
+        0.27,
+        0.26
+      ],
+      "jev_range": 0.010000000000000009,
+      "action_agreement": 1,
+      "path": "moat/index.mdx",
+      "target_text": "The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field.",
+      "marked_text": "The 72-hour staleness threshold is the MOAT default⟦;⟧ a registry's manifest can override it with an explicit `expires` field.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.17,
+        0.17,
+        0.17,
+        0.17,
+        0.17
+      ],
+      "semicolon_clarity_probability": 0.17,
+      "semicolon_clarity_range": 0
+    },
+    {
+      "id": "moat/index.mdx:99:Google.Semicolons:58:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 99,
+      "span": [
+        58,
+        58
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 98,
+          "text": ""
+        },
+        {
+          "line": 99,
+          "text": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0; syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed."
+        },
+        {
+          "line": 100,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.26666666666666666,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.27,
+        0.27,
+        0.26
+      ],
+      "jev_range": 0.010000000000000009,
+      "action_agreement": 1,
+      "path": "moat/index.mdx",
+      "target_text": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0; syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+      "marked_text": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0⟦;⟧ syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.26,
+        0.26,
+        0.28,
+        0.26,
+        0.27
+      ],
+      "semicolon_clarity_probability": 0.266,
+      "semicolon_clarity_range": 0.020000000000000018
+    },
+    {
+      "id": "moat/registry-add-signing-identity.mdx:6:Google.Semicolons:69:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        69,
+        69
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.08333333333333333,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.08,
+        0.09,
+        0.08
+      ],
+      "jev_range": 0.009999999999999995,
+      "action_agreement": 1,
+      "path": "moat/registry-add-signing-identity.mdx",
+      "target_text": "import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';",
+      "marked_text": "import { Aside, Tabs, TabItem } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 126,
+      "span": [
+        36,
+        36
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 125,
+          "text": ""
+        },
+        {
+          "line": 126,
+          "text": "Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band."
+        },
+        {
+          "line": 127,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.27,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.26,
+        0.27,
+        0.28
+      ],
+      "jev_range": 0.020000000000000018,
+      "action_agreement": 1,
+      "path": "moat/registry-add-signing-identity.mdx",
+      "target_text": "Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.",
+      "marked_text": "Numeric IDs do not change on rename⟦;⟧ they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.17,
+        0.17,
+        0.17,
+        0.17,
+        0.17
+      ],
+      "semicolon_clarity_probability": 0.17,
+      "semicolon_clarity_range": 0
+    },
+    {
+      "id": "moat/trust-tiers.mdx:6:Google.Semicolons:54:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        54,
+        54
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Aside } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.12,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.12,
+        0.13,
+        0.11
+      ],
+      "jev_range": 0.020000000000000004,
+      "action_agreement": 1,
+      "path": "moat/trust-tiers.mdx",
+      "target_text": "import { Aside } from '@astrojs/starlight/components';",
+      "marked_text": "import { Aside } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 39,
+      "span": [
+        325,
+        325
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 38,
+          "text": ""
+        },
+        {
+          "line": 39,
+          "text": "Syllago's catalog layer adds one additional label — `Unknown` — that is **not** a MOAT tier. It marks content that was never sourced from a MOAT manifest in the first place (git registries, local content, legacy installs). It exists only so the catalog never has to guess a tier for content the protocol has no opinion about; the drill-down simply shows no trust claim rather than fabricating one."
+        },
+        {
+          "line": 40,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.2933333333333333,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.29,
+        0.29,
+        0.3
+      ],
+      "jev_range": 0.010000000000000009,
+      "action_agreement": 1,
+      "path": "moat/trust-tiers.mdx",
+      "target_text": "Syllago's catalog layer adds one additional label — `Unknown` — that is **not** a MOAT tier. It marks content that was never sourced from a MOAT manifest in the first place (git registries, local content, legacy installs). It exists only so the catalog never has to guess a tier for content the protocol has no opinion about; the drill-down simply shows no trust claim rather than fabricating one.",
+      "marked_text": "Syllago's catalog layer adds one additional label — `Unknown` — that is **not** a MOAT tier. It marks content that was never sourced from a MOAT manifest in the first place (git registries, local content, legacy installs). It exists only so the catalog never has to guess a tier for content the protocol has no opinion about⟦;⟧ the drill-down simply shows no trust claim rather than fabricating one.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19
+      ],
+      "semicolon_clarity_probability": 0.19,
+      "semicolon_clarity_range": 0
+    },
+    {
+      "id": "moat/trust-tiers.mdx:83:Google.Semicolons:200:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 83,
+      "span": [
+        200,
+        200
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 82,
+          "text": ""
+        },
+        {
+          "line": 83,
+          "text": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright; there is no prompt."
+        },
+        {
+          "line": 84,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.33666666666666667,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.34,
+        0.34,
+        0.33
+      ],
+      "jev_range": 0.010000000000000009,
+      "action_agreement": 1,
+      "path": "moat/trust-tiers.mdx",
+      "target_text": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright; there is no prompt.",
+      "marked_text": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright⟦;⟧ there is no prompt.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.17,
+        0.17,
+        0.17,
+        0.16,
+        0.17
+      ],
+      "semicolon_clarity_probability": 0.168,
+      "semicolon_clarity_range": 0.010000000000000009
+    },
+    {
+      "id": "moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 85,
+      "span": [
+        142,
+        142
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 84,
+          "text": ""
+        },
+        {
+          "line": 85,
+          "text": "A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`; pipelines without a TTY exit with code `12` so the failure is unambiguous in CI."
+        },
+        {
+          "line": 86,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.36333333333333334,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.42,
+        0.34,
+        0.33
+      ],
+      "jev_range": 0.08999999999999997,
+      "action_agreement": 1,
+      "path": "moat/trust-tiers.mdx",
+      "target_text": "A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`; pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.",
+      "marked_text": "A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`⟦;⟧ pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.19,
+        0.18,
+        0.18,
+        0.18,
+        0.18
+      ],
+      "semicolon_clarity_probability": 0.182,
+      "semicolon_clarity_range": 0.010000000000000009
+    },
+    {
+      "id": "using-syllago/tui.mdx:52:Google.Semicolons:167:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 52,
+      "span": [
+        167,
+        167
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 51,
+          "text": ""
+        },
+        {
+          "line": 52,
+          "text": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands)."
+        },
+        {
+          "line": 53,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.19333333333333336,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.2,
+        0.18,
+        0.2
+      ],
+      "jev_range": 0.020000000000000018,
+      "action_agreement": 1,
+      "path": "using-syllago/tui.mdx",
+      "target_text": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands).",
+      "marked_text": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration⟦;⟧ the CLI is for scripting and automation (`--json` output on all commands).",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.14,
+        0.15,
+        0.15,
+        0.14,
+        0.15
+      ],
+      "semicolon_clarity_probability": 0.14600000000000002,
+      "semicolon_clarity_range": 0.009999999999999981
+    },
+    {
+      "id": "using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 100,
+      "span": [
+        123,
+        123
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 99,
+          "text": ""
+        },
+        {
+          "line": 100,
+          "text": "`syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry; omit it to share into a default team repo."
+        },
+        {
+          "line": 101,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.31,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.31,
+        0.31,
+        0.31
+      ],
+      "jev_range": 0,
+      "action_agreement": 1,
+      "path": "using-syllago/collections/registries.mdx",
+      "target_text": "`syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry; omit it to share into a default team repo.",
+      "marked_text": "`syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry⟦;⟧ omit it to share into a default team repo.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.17,
+        0.16,
+        0.17,
+        0.16,
+        0.17
+      ],
+      "semicolon_clarity_probability": 0.166,
+      "semicolon_clarity_range": 0.010000000000000009
+    },
+    {
+      "id": "using-syllago/content-types/hooks.mdx:27:Google.Semicolons:138:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 27,
+      "span": [
+        138,
+        138
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 26,
+          "text": ""
+        },
+        {
+          "line": 27,
+          "text": "Hook events use provider-neutral names in the canonical format. The table below lists events supported by both Claude Code and Gemini CLI; see the [Hook Event Matrix](/reference/hook-events/) for every canonical event across all providers."
+        },
+        {
+          "line": 28,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.30666666666666664,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.3,
+        0.32,
+        0.3
+      ],
+      "jev_range": 0.020000000000000018,
+      "action_agreement": 1,
+      "path": "using-syllago/content-types/hooks.mdx",
+      "target_text": "Hook events use provider-neutral names in the canonical format. The table below lists events supported by both Claude Code and Gemini CLI; see the [Hook Event Matrix](/reference/hook-events/) for every canonical event across all providers.",
+      "marked_text": "Hook events use provider-neutral names in the canonical format. The table below lists events supported by both Claude Code and Gemini CLI⟦;⟧ see the [Hook Event Matrix](/reference/hook-events/) for every canonical event across all providers.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.18,
+        0.18,
+        0.19,
+        0.18,
+        0.18
+      ],
+      "semicolon_clarity_probability": 0.182,
+      "semicolon_clarity_range": 0.010000000000000009
+    },
+    {
+      "id": "using-syllago/how-to/claude-code-rules-to-cursor.mdx:61:Google.Semicolons:43:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 61,
+      "span": [
+        43,
+        43
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 60,
+          "text": ""
+        },
+        {
+          "line": 61,
+          "text": "Claude Code stores rules as plain Markdown; Cursor expects **MDC** format (`.mdc` files with metadata frontmatter like `description`, `alwaysApply`, and `globs`). syllago performs that conversion automatically during install — the copy in your library stays in canonical form, so the same rule can also be installed to any other provider. See [Format Conversion](/using-syllago/format-conversion/) for the details."
+        },
+        {
+          "line": 62,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.27666666666666667,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.27,
+        0.28,
+        0.28
+      ],
+      "jev_range": 0.010000000000000009,
+      "action_agreement": 1,
+      "path": "using-syllago/how-to/claude-code-rules-to-cursor.mdx",
+      "target_text": "Claude Code stores rules as plain Markdown; Cursor expects **MDC** format (`.mdc` files with metadata frontmatter like `description`, `alwaysApply`, and `globs`). syllago performs that conversion automatically during install — the copy in your library stays in canonical form, so the same rule can also be installed to any other provider. See [Format Conversion](/using-syllago/format-conversion/) for the details.",
+      "marked_text": "Claude Code stores rules as plain Markdown⟦;⟧ Cursor expects **MDC** format (`.mdc` files with metadata frontmatter like `description`, `alwaysApply`, and `globs`). syllago performs that conversion automatically during install — the copy in your library stays in canonical form, so the same rule can also be installed to any other provider. See [Format Conversion](/using-syllago/format-conversion/) for the details.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.23,
+        0.23,
+        0.24,
+        0.23,
+        0.24
+      ],
+      "semicolon_clarity_probability": 0.23399999999999999,
+      "semicolon_clarity_range": 0.009999999999999981
+    },
+    {
+      "id": "using-syllago/how-to/install-community-skill.mdx:6:Google.Semicolons:54:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 6,
+      "span": [
+        54,
+        54
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "import { Aside } from '@astrojs/starlight/components';"
+        },
+        {
+          "line": 7,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.10333333333333333,
+      "vale_jev_action": "suppress",
+      "jev_probabilities": [
+        0.09,
+        0.1,
+        0.12
+      ],
+      "jev_range": 0.03,
+      "action_agreement": 1,
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "target_text": "import { Aside } from '@astrojs/starlight/components';",
+      "marked_text": "import { Aside } from '@astrojs/starlight/components'⟦;⟧",
+      "source_class": "mdx_module_syntax",
+      "deterministic_action": "exclude_non_prose",
+      "semicolon_clarity_probabilities": null,
+      "semicolon_clarity_probability": null,
+      "semicolon_clarity_range": null
+    },
+    {
+      "id": "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "check": "Google.Semicolons",
+      "severity": "suggestion",
+      "message": "Use semicolons judiciously.",
+      "match": ";",
+      "line": 41,
+      "span": [
+        132,
+        132
+      ],
+      "link": "https://developers.google.com/style/semicolons",
+      "action": {
+        "Name": "",
+        "Params": null
+      },
+      "context": [
+        {
+          "line": 40,
+          "text": ""
+        },
+        {
+          "line": 41,
+          "text": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose."
+        },
+        {
+          "line": 42,
+          "text": ""
+        }
+      ],
+      "jev_probability": 0.28,
+      "vale_jev_action": "review",
+      "jev_probabilities": [
+        0.27,
+        0.3,
+        0.27
+      ],
+      "jev_range": 0.02999999999999997,
+      "action_agreement": 1,
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "target_text": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose.",
+      "marked_text": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`⟦;⟧ substitute the name you actually chose.",
+      "source_class": "prose",
+      "deterministic_action": "send_to_semantic_judgment",
+      "semicolon_clarity_probabilities": [
+        0.21,
+        0.21,
+        0.22,
+        0.21,
+        0.23
+      ],
+      "semicolon_clarity_probability": 0.21600000000000003,
+      "semicolon_clarity_range": 0.020000000000000018
+    }
+  ]
+}

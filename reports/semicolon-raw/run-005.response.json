@@ -1,0 +1,61 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "q1": {
+      "type": "noul",
+      "noul": 0.17
+    },
+    "q2": {
+      "type": "noul",
+      "noul": 0.17
+    },
+    "q3": {
+      "type": "noul",
+      "noul": 0.17
+    },
+    "q4": {
+      "type": "noul",
+      "noul": 0.27
+    },
+    "q5": {
+      "type": "noul",
+      "noul": 0.17
+    },
+    "q6": {
+      "type": "noul",
+      "noul": 0.19
+    },
+    "q7": {
+      "type": "noul",
+      "noul": 0.17
+    },
+    "q8": {
+      "type": "noul",
+      "noul": 0.18
+    },
+    "q9": {
+      "type": "noul",
+      "noul": 0.15
+    },
+    "q10": {
+      "type": "noul",
+      "noul": 0.17
+    },
+    "q11": {
+      "type": "noul",
+      "noul": 0.18
+    },
+    "q12": {
+      "type": "noul",
+      "noul": 0.24
+    },
+    "q13": {
+      "type": "noul",
+      "noul": 0.23
+    }
+  },
+  "usage": {
+    "input_tokens": 5164,
+    "output_tokens": 229
+  }
+}

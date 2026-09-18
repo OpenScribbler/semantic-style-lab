@@ -1,0 +1,301 @@
+{
+  "run": 3,
+  "candidate_ids": [
+    "getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+    "moat/index.mdx:45:Google.Semicolons:150:;",
+    "moat/index.mdx:80:Google.Semicolons:52:;",
+    "moat/index.mdx:99:Google.Semicolons:58:;",
+    "moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+    "moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+    "moat/trust-tiers.mdx:83:Google.Semicolons:200:;",
+    "moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+    "using-syllago/tui.mdx:52:Google.Semicolons:167:;",
+    "using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+    "using-syllago/content-types/hooks.mdx:27:Google.Semicolons:138:;",
+    "using-syllago/how-to/claude-code-rules-to-cursor.mdx:61:Google.Semicolons:43:;",
+    "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;"
+  ],
+  "request": {
+    "model": "jev-latest",
+    "state": {
+      "project_policy": "In Syllago prose, report a semicolon only when replacing it with a period, conjunction, colon, or restructuring would materially improve clarity. Semicolons are not categorically forbidden.",
+      "candidates": [
+        {
+          "path": "getting-started/core-concepts.mdx",
+          "line": 6,
+          "marked_passage": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/)⟦;⟧ for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+          "local_context": [
+            "5 | ",
+            "6 | Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/); for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+            "7 | "
+          ]
+        },
+        {
+          "path": "moat/index.mdx",
+          "line": 45,
+          "marked_passage": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist⟦;⟧ others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+          "local_context": [
+            "44 | ",
+            "45 | Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist; others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+            "46 | "
+          ]
+        },
+        {
+          "path": "moat/index.mdx",
+          "line": 80,
+          "marked_passage": "The 72-hour staleness threshold is the MOAT default⟦;⟧ a registry's manifest can override it with an explicit `expires` field.",
+          "local_context": [
+            "79 | ",
+            "80 | The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field.",
+            "81 | "
+          ]
+        },
+        {
+          "path": "moat/index.mdx",
+          "line": 99,
+          "marked_passage": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0⟦;⟧ syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+          "local_context": [
+            "98 | ",
+            "99 | Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0; syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+            "100 | "
+          ]
+        },
+        {
+          "path": "moat/registry-add-signing-identity.mdx",
+          "line": 126,
+          "marked_passage": "Numeric IDs do not change on rename⟦;⟧ they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.",
+          "local_context": [
+            "125 | ",
+            "126 | Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.",
+            "127 | "
+          ]
+        },
+        {
+          "path": "moat/trust-tiers.mdx",
+          "line": 39,
+          "marked_passage": "Syllago's catalog layer adds one additional label — `Unknown` — that is **not** a MOAT tier. It marks content that was never sourced from a MOAT manifest in the first place (git registries, local content, legacy installs). It exists only so the catalog never has to guess a tier for content the protocol has no opinion about⟦;⟧ the drill-down simply shows no trust claim rather than fabricating one.",
+          "local_context": [
+            "38 | ",
+            "39 | Syllago's catalog layer adds one additional label — `Unknown` — that is **not** a MOAT tier. It marks content that was never sourced from a MOAT manifest in the first place (git registries, local content, legacy installs). It exists only so the catalog never has to guess a tier for content the protocol has no opinion about; the drill-down simply shows no trust claim rather than fabricating one.",
+            "40 | "
+          ]
+        },
+        {
+          "path": "moat/trust-tiers.mdx",
+          "line": 83,
+          "marked_passage": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright⟦;⟧ there is no prompt.",
+          "local_context": [
+            "82 | ",
+            "83 | A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright; there is no prompt.",
+            "84 | "
+          ]
+        },
+        {
+          "path": "moat/trust-tiers.mdx",
+          "line": 85,
+          "marked_passage": "A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`⟦;⟧ pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.",
+          "local_context": [
+            "84 | ",
+            "85 | A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`; pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.",
+            "86 | "
+          ]
+        },
+        {
+          "path": "using-syllago/tui.mdx",
+          "line": 52,
+          "marked_passage": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration⟦;⟧ the CLI is for scripting and automation (`--json` output on all commands).",
+          "local_context": [
+            "51 | ",
+            "52 | The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands).",
+            "53 | "
+          ]
+        },
+        {
+          "path": "using-syllago/collections/registries.mdx",
+          "line": 100,
+          "marked_passage": "`syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry⟦;⟧ omit it to share into a default team repo.",
+          "local_context": [
+            "99 | ",
+            "100 | `syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry; omit it to share into a default team repo.",
+            "101 | "
+          ]
+        },
+        {
+          "path": "using-syllago/content-types/hooks.mdx",
+          "line": 27,
+          "marked_passage": "Hook events use provider-neutral names in the canonical format. The table below lists events supported by both Claude Code and Gemini CLI⟦;⟧ see the [Hook Event Matrix](/reference/hook-events/) for every canonical event across all providers.",
+          "local_context": [
+            "26 | ",
+            "27 | Hook events use provider-neutral names in the canonical format. The table below lists events supported by both Claude Code and Gemini CLI; see the [Hook Event Matrix](/reference/hook-events/) for every canonical event across all providers.",
+            "28 | "
+          ]
+        },
+        {
+          "path": "using-syllago/how-to/claude-code-rules-to-cursor.mdx",
+          "line": 61,
+          "marked_passage": "Claude Code stores rules as plain Markdown⟦;⟧ Cursor expects **MDC** format (`.mdc` files with metadata frontmatter like `description`, `alwaysApply`, and `globs`). syllago performs that conversion automatically during install — the copy in your library stays in canonical form, so the same rule can also be installed to any other provider. See [Format Conversion](/using-syllago/format-conversion/) for the details.",
+          "local_context": [
+            "60 | ",
+            "61 | Claude Code stores rules as plain Markdown; Cursor expects **MDC** format (`.mdc` files with metadata frontmatter like `description`, `alwaysApply`, and `globs`). syllago performs that conversion automatically during install — the copy in your library stays in canonical form, so the same rule can also be installed to any other provider. See [Format Conversion](/using-syllago/format-conversion/) for the details.",
+            "62 | "
+          ]
+        },
+        {
+          "path": "using-syllago/how-to/install-community-skill.mdx",
+          "line": 41,
+          "marked_passage": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`⟦;⟧ substitute the name you actually chose.",
+          "local_context": [
+            "40 | ",
+            "41 | This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose.",
+            "42 | "
+          ]
+        }
+      ]
+    },
+    "questions": {
+      "q1": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[0].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q2": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[1].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q3": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[2].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q4": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[3].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q5": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[4].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q6": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[5].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q7": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[6].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q8": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[7].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q9": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[8].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q10": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[9].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q11": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[10].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q12": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[11].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      },
+      "q13": {
+        "type": "noul",
+        "instructions": {
+          "question": "Would rewriting the marked semicolon in `candidates[12].marked_passage` materially improve clarity for a technical-documentation reader?",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage and local context. A merely possible rewrite is not enough: answer yes only when a period, conjunction, colon, or restructuring would make the relationship easier to understand or the sentence easier to scan. Preserve technical meaning and links."
+        },
+        "criteria": {
+          "true": "The semicolon makes the relationship or sentence structure meaningfully harder to understand, and a concrete rewrite would materially improve clarity.",
+          "false": "The semicolon clearly and concisely connects closely related clauses; rewriting it would be neutral, optional, or less clear."
+        }
+      }
+    }
+  }
+}
