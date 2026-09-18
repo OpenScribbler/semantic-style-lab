@@ -10,7 +10,6 @@ interface Suggestion {
 interface EditorResult {
 	path: string;
 	method: 'baseline' | 'compiled';
-	finding_count: number;
 	result: { suggestions: Suggestion[] };
 }
 
@@ -24,21 +23,12 @@ interface Finding {
 }
 
 function escapeHtml(value: unknown) {
-	return String(value ?? '')
-		.replaceAll('&', '&amp;')
-		.replaceAll('<', '&lt;')
-		.replaceAll('>', '&gt;')
-		.replaceAll('"', '&quot;');
+	return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 }
 
 function argument(name: string, fallback: string) {
 	const index = process.argv.indexOf(name);
 	return index >= 0 ? process.argv[index + 1]! : fallback;
-}
-
-function scopedSuggestions(result: EditorResult, findings: Finding[]) {
-	if (result.method === 'baseline') return result.result.suggestions;
-	return result.result.suggestions.filter((suggestion) => findings.some((finding) => finding.line === suggestion.line));
 }
 
 async function main() {
@@ -48,91 +38,76 @@ async function main() {
 	const v2 = await Bun.file('reports/syllago-google-semantic-v2.json').json();
 	const ab = await Bun.file('reports/editor-ab-results.json').json();
 	const findingsByPage = Object.fromEntries(v2.pages.map((page: { path: string; findings: Finding[] }) => [page.path, page.findings]));
-	const editorResults = (ab.results as EditorResult[]).map((result) => ({
-		...result,
-		raw_suggestion_count: result.result.suggestions.length,
-		suggestions: scopedSuggestions(result, findingsByPage[result.path] ?? []),
-	}));
-	const baseline = editorResults.filter((result) => result.method === 'baseline');
-	const compiled = editorResults.filter((result) => result.method === 'compiled');
-	const rawCompiled = compiled.reduce((sum, result) => sum + result.raw_suggestion_count, 0);
-	const scopedCompiled = compiled.reduce((sum, result) => sum + result.suggestions.length, 0);
+	const compiled = (ab.results as EditorResult[]).filter((result) => result.method === 'compiled');
+	const scopedEdits = compiled.flatMap((result) => result.result.suggestions
+		.filter((suggestion) => (findingsByPage[result.path] ?? []).some((finding: Finding) => finding.line === suggestion.line))
+		.map((suggestion) => ({ path: result.path, ...suggestion })));
 	const payload = JSON.stringify({
 		v2,
-		editorResults,
+		scopedEdits,
 		metrics: {
 			guide_pages: inventory.page_count,
-			word_entries: inventory.word_list_entries,
 			directive_candidates: inventory.actionable_candidate_count,
 			vale_rules: inventory.vale_rule_count,
-			guide_engine_split: inventory.by_primary_engine,
-			vale_covered_pages: inventory.pages.filter((page: { vale_rules: unknown[] }) => page.vale_rules.length > 0).length,
 			v1_findings: v1.finding_count,
 			v2_findings: v2.finding_count,
 			v2_candidates: v2.candidate_count,
 			v2_questions: v2.question_count,
-			input_tokens: v2.usage.input_tokens,
 			jev_cost: v2.usage.input_tokens / 1_000_000 * 0.042,
-			baseline_suggestions: baseline.reduce((sum, result) => sum + result.suggestions.length, 0),
-			raw_compiled_suggestions: rawCompiled,
-			scoped_compiled_suggestions: scopedCompiled,
-			blocked_compiled_suggestions: rawCompiled - scopedCompiled,
+			baseline_suggestions: (ab.results as EditorResult[]).filter((result) => result.method === 'baseline').reduce((sum, result) => sum + result.result.suggestions.length, 0),
+			raw_compiled_suggestions: compiled.reduce((sum, result) => sum + result.result.suggestions.length, 0),
+			scoped_compiled_suggestions: scopedEdits.length,
 		},
 	}).replaceAll('<', '\\u003c');
 	const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Google style × Jev: real-docs experiment</title>
+<title>Google style × Jev evidence review</title>
 <style>
-:root{color-scheme:dark;--ink:#edf5ef;--muted:#9eada3;--paper:#0d1210;--card:#151c18;--line:#334039;--green:#73d49e;--amber:#f0b45c;--red:#ff9385;--blue:#73a7ff;--button:#1d2721;--callout:#132238;--pill:#24312a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 ui-sans-serif,system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:40px 24px 80px}h1{font:700 clamp(32px,5vw,56px)/1.05 ui-serif,Georgia,serif;margin:0 0 12px}h2{margin-top:48px;font-size:26px}h3{margin:0 0 8px}.lede{font-size:19px;max-width:850px;color:#c4d0c8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}.stat strong{display:block;font-size:29px}.stat span,.muted{color:var(--muted)}.callout{border-left:5px solid var(--blue);padding:14px 18px;background:var(--callout)}.finding{border-left:4px solid var(--amber);margin:10px 0}.flag{border-left-color:var(--red)}.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.suggestion{padding:12px 0;border-top:1px solid var(--line)}code{background:#202a24;padding:2px 5px;border-radius:4px}.before{color:var(--red)}.after{color:var(--green)}button{color:var(--ink);border:1px solid #53645a;background:var(--button);border-radius:7px;padding:7px 10px;cursor:pointer}button:hover{border-color:var(--blue)}button.selected{background:var(--blue);border-color:var(--blue);color:#08111d}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.pill{display:inline-block;font-size:12px;padding:2px 7px;border-radius:99px;background:var(--pill)}details{margin:14px 0}.page{margin:22px 0;padding-top:16px;border-top:2px solid var(--line)}@media(max-width:760px){.pair{grid-template-columns:1fr}}
+:root{color-scheme:dark;--ink:#edf5ef;--muted:#9eada3;--paper:#0d1210;--card:#151c18;--line:#334039;--green:#73d49e;--amber:#f0b45c;--red:#ff9385;--blue:#73a7ff;--button:#1d2721;--callout:#132238;--pill:#24312a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 ui-sans-serif,system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:40px 24px 80px}h1{font:700 clamp(32px,5vw,54px)/1.05 ui-serif,Georgia,serif;margin:0 0 12px}h2{margin-top:48px;font-size:26px}h3{margin:0 0 8px}.lede{font-size:19px;max-width:850px;color:#c4d0c8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}.stat strong{display:block;font-size:29px}.stat span,.muted{color:var(--muted)}.callout{border-left:5px solid var(--blue);padding:14px 18px;background:var(--callout)}.finding{border-left:4px solid var(--amber);margin:12px 0}.flag{border-left-color:var(--red)}.edit{margin:12px 0}.suggestion{padding:10px 0}.before{color:var(--red)}.after{color:var(--green)}code{background:#202a24;padding:2px 5px;border-radius:4px}button{color:var(--ink);border:1px solid #53645a;background:var(--button);border-radius:7px;padding:7px 10px;cursor:pointer}button:hover{border-color:var(--blue)}button.selected{background:var(--blue);border-color:var(--blue);color:#08111d}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{display:inline-block;font-size:12px;padding:2px 7px;border-radius:99px;background:var(--pill)}.question{margin:14px 0 3px;font-weight:650}.page{margin:24px 0;padding-top:18px;border-top:2px solid var(--line)}.progress{position:sticky;top:0;z-index:2;background:#111914ee;border:1px solid var(--line);border-radius:10px;padding:10px 14px;backdrop-filter:blur(8px)}
 </style></head><body><main>
 <p class="muted">Semantic Style Lab · generated ${escapeHtml(new Date().toISOString())}</p>
-<h1>Can a compiled style guide make an LLM editor useful?</h1>
-<p class="lede">A real-docs experiment on 27 Syllago pages: compile the public Google guide, use Jev for narrow semantic judgments, and hand an editor a bounded checklist instead of an entire style guide.</p>
+<h1>What did Jev find beyond deterministic style checks?</h1>
+<p class="lede">Label the evidence from the existing Google-guide experiment. This review asks whether each finding is real, whether a deterministic Vale rule could decide it reliably, and whether a proposed correction is safe.</p>
 
-<h2>What we built</h2><div class="grid" id="inventory"></div>
-<p class="callout"><strong>The key architecture:</strong> deterministic code finds candidates and enforces scope; Jev answers small contextual questions; the editor receives only prioritized, traceable findings. A prompt is not trusted to enforce its own boundary.</p>
+<h2>Experiment boundary</h2><div class="grid" id="inventory"></div>
+<p class="callout"><strong>This is not a Vale-versus-Jev benchmark.</strong> The semantic audit used regex candidate enumeration plus Jev. Its job is to identify promising semantic gap rules. A separate experiment runs actual Vale alerts through Jev and compares both systems against human labels.</p>
 
-<h2>First audit calibration</h2><div class="grid" id="audit-stats"></div>
-<p>The v1 audit exposed a structural mistake: numbered conceptual lists were treated as procedures. V2 added local section context and a separate “is this actually a procedure?” probability. Procedure findings dropped from 21 to 1. This is a correction of a known error class, not a claim that all 31 remaining findings are correct.</p>
+<h2>Semantic audit calibration</h2><div class="grid" id="audit-stats"></div>
+<p>V2 added local section context and an independent procedure prerequisite. Procedure false positives fell sharply, but all remaining findings still need human ground truth.</p>
 
-<h2>Paired editor experiment</h2>
-<p>Twenty pages were reviewed twice. The baseline editor received the page plus a link to the full Google guide. The compiled editor received the page plus Jev's findings and matching rule records. Suggestions outside enumerated finding lines are rejected by the compiled pipeline.</p>
-<div class="grid" id="editor-stats"></div>
-<p class="callout">The raw compiled editor still invented out-of-scope edits—including on 3 of 4 zero-finding controls. The deterministic finding gate blocked those edits. This is direct evidence that “don't invent unrelated violations” is not an adequate prompt-only control.</p>
+<h2>Label semantic findings</h2>
+<p>Answer both questions independently. “Vale could decide it” means a deterministic rule could distinguish valid and invalid uses with acceptable noise—not merely that Vale could match the word.</p>
+<div class="toolbar"><button id="export">Export review JSON</button><button id="clear">Clear saved review</button></div>
+<div id="progress" class="progress"></div><div id="report-error" class="callout" hidden></div><div id="findings"></div>
 
-<h2>Blind A/B review</h2>
-<p>Reviewer A and B are assigned per page. Choose the more useful edit set before revealing which workflow produced it. Choices stay in this browser; export them when finished.</p>
-<div class="toolbar"><button id="export">Export review JSON</button><button id="clear">Clear saved review</button></div><div id="report-error" class="callout" hidden></div><div id="pairs"></div>
+<h2>Validate scoped corrections</h2>
+<p>This is a secondary downstream check, not an A/B contest. Review only corrections that code mapped back to an enumerated finding.</p><div id="edits"></div>
 
-<h2>Review Jev findings</h2>
-<p>Mark each finding useful, false positive, or uncertain. This supplies the human labels needed to tune thresholds and rule wording.</p><div id="findings"></div>
-
-<h2>Interpretation</h2>
-<div class="card"><p><strong>What this can establish:</strong> whether a compiled checklist reduces search and over-editing while preserving useful fixes on these pages.</p><p><strong>What it cannot establish yet:</strong> complete Google-guide coverage, generalization to other repositories, or production-grade precision. The inventory is a roadmap; the live semantic slice contains 12 rules.</p><p><strong>Recommended decision gate:</strong> label the 31 findings and the 20 A/B pairs. Expand the rule catalog only if scoped edits win on usefulness and the findings reach an acceptable precision for review—not automatic rewriting.</p></div>
+<h2>What the old editor comparison established</h2><div class="grid" id="editor-stats"></div>
+<p>The whole-guide editor and compiled-checklist editor were solving different search problems, so choosing a “more useful” output was not a fair measure of Vale + Jev. The retained observation is narrower: prompt-only scope control failed, and deterministic gating blocked out-of-scope edits. The raw outputs remain available in the JSON report for inspection.</p>
 </main><script>
 window.addEventListener('error',event=>{const box=document.querySelector('#report-error');box.hidden=false;box.textContent='The interactive report could not render: '+event.message});
 const DATA=${payload};
-const key='semantic-style-google-review-v1';
-let review={pairs:{},findings:{}};
-try{review=JSON.parse(localStorage.getItem(key)||'{"pairs":{},"findings":{}}')}catch(error){console.warn('Review storage is unavailable; use Export review JSON before closing the page.',error)}
+const key='semantic-style-google-evidence-review-v2';
+let review={findings:{},edits:{}};
+try{review=JSON.parse(localStorage.getItem(key)||'{"findings":{},"edits":{}}')}catch(error){console.warn('Review storage unavailable.',error)}
 const save=()=>{try{localStorage.setItem(key,JSON.stringify(review))}catch(error){console.warn('Could not persist review choices.',error)}};
+const esc=s=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML};
 const stat=(n,label)=>'<div class="stat"><strong>'+n+'</strong><span>'+label+'</span></div>';
-document.querySelector('#inventory').innerHTML=stat(DATA.metrics.guide_pages,'official guide pages inventoried')+stat(DATA.metrics.directive_candidates.toLocaleString(),'heuristic directive candidates')+stat(DATA.metrics.word_entries,'word-list entries')+stat(DATA.metrics.vale_rules,'local Google Vale rules')+stat(DATA.metrics.vale_covered_pages,'guide pages linked to Vale rules');
-document.querySelector('#audit-stats').innerHTML=stat(DATA.metrics.v2_candidates,'candidate passages')+stat(DATA.metrics.v2_questions,'atomic Jev questions')+stat(DATA.metrics.v1_findings+' → '+DATA.metrics.v2_findings,'findings after calibration')+stat(DATA.metrics.input_tokens.toLocaleString(),'Jev input tokens')+stat('$'+DATA.metrics.jev_cost.toFixed(4),'estimated Jev input cost');
-document.querySelector('#editor-stats').innerHTML=stat(DATA.metrics.baseline_suggestions,'baseline suggestions')+stat(DATA.metrics.raw_compiled_suggestions,'raw compiled-editor suggestions')+stat(DATA.metrics.scoped_compiled_suggestions,'scope-accepted suggestions')+stat(DATA.metrics.blocked_compiled_suggestions,'out-of-scope suggestions blocked');
-const byPage=DATA.editorResults.reduce((groups,result)=>{(groups[result.path]||(groups[result.path]=[])).push(result);return groups},{});
-const hash=s=>[...s].reduce((n,c)=>n+c.charCodeAt(0),0);
-const suggestionHtml=s=>'<div class="suggestion"><span class="pill">line '+s.line+'</span> <strong>'+esc(s.rule)+'</strong><div class="before">− '+esc(s.original)+'</div><div class="after">+ '+esc(s.replacement)+'</div><small>'+esc(s.rationale)+'</small></div>';
-function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-function renderPairs(){document.querySelector('#pairs').innerHTML=Object.entries(byPage).map(([path,items])=>{const ordered=hash(path)%2?[items.find(x=>x.method==='baseline'),items.find(x=>x.method==='compiled')]:[items.find(x=>x.method==='compiled'),items.find(x=>x.method==='baseline')];const labels=['A','B'];const choice=review.pairs[path];const cards=ordered.map((r,i)=>'<div class="card"><h3>Reviewer '+labels[i]+' <span class="pill">'+r.suggestions.length+' scoped edits</span></h3>'+(r.suggestions.map(suggestionHtml).join('')||'<p class="muted">No edits proposed.</p>')+'</div>').join('');return '<section class="page"><h3>'+esc(path)+'</h3><div class="pair">'+cards+'</div><div class="toolbar">'+['A','B','tie','neither'].map(v=>'<button data-pair="'+esc(path)+'" data-value="'+v+'" class="'+(choice===v?'selected':'')+'">'+v+'</button>').join('')+'</div><details><summary>Reveal workflows</summary><p>Reviewer A: <strong>'+ordered[0].method+'</strong>; Reviewer B: <strong>'+ordered[1].method+'</strong>. Jev findings on page: '+ordered[0].finding_count+'.</p></details></section>'}).join('')}
-function renderFindings(){document.querySelector('#findings').innerHTML=DATA.v2.pages.filter(p=>p.findings.length).map(p=>'<section class="page"><h3>'+esc(p.path)+'</h3>'+p.findings.map(f=>{const id=p.path+':'+f.rule_id+':'+f.line;const choice=review.findings[id];return '<div class="card finding '+(f.status==='flag'?'flag':'')+'"><span class="pill">'+f.status+' '+Math.round(f.probability*100)+'%</span> <strong>'+esc(f.rule_label)+'</strong> · line '+f.line+'<p>'+esc(f.text)+'</p><div class="toolbar">'+['useful','false-positive','unsure'].map(v=>'<button data-finding="'+esc(id)+'" data-value="'+v+'" class="'+(choice===v?'selected':'')+'">'+v+'</button>').join('')+'</div></div>'}).join('')+'</section>').join('')}
-renderPairs();renderFindings();
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.pair){review.pairs[b.dataset.pair]=b.dataset.value;save();renderPairs()}if(b.dataset.finding){review.findings[b.dataset.finding]=b.dataset.value;save();renderFindings()}});
-document.querySelector('#export').onclick=()=>{const blob=new Blob([JSON.stringify(review,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='google-style-experiment-review.json';a.click();URL.revokeObjectURL(a.href)};
-document.querySelector('#clear').onclick=()=>{if(confirm('Clear all saved review choices?')){review={pairs:{},findings:{}};save();renderPairs();renderFindings()}};
+document.querySelector('#inventory').innerHTML=stat(DATA.metrics.guide_pages,'guide pages inventoried')+stat(DATA.metrics.directive_candidates.toLocaleString(),'directive candidates')+stat(DATA.metrics.vale_rules,'Google Vale rules')+stat('12','semantic rules tested');
+document.querySelector('#audit-stats').innerHTML=stat(DATA.metrics.v2_candidates,'candidate passages')+stat(DATA.metrics.v2_questions,'atomic questions')+stat(DATA.metrics.v1_findings+' → '+DATA.metrics.v2_findings,'findings after calibration')+stat('$'+DATA.metrics.jev_cost.toFixed(4),'estimated Jev input cost');
+document.querySelector('#editor-stats').innerHTML=stat(DATA.metrics.baseline_suggestions,'whole-guide suggestions')+stat(DATA.metrics.raw_compiled_suggestions,'raw checklist suggestions')+stat(DATA.metrics.scoped_compiled_suggestions,'finding-mapped corrections');
+const buttons=(id,field,values,current)=>'<div class="toolbar">'+values.map(v=>'<button data-id="'+esc(id)+'" data-field="'+field+'" data-value="'+v[0]+'" class="'+(current===v[0]?'selected':'')+'">'+v[1]+'</button>').join('')+'</div>';
+function renderFindings(){document.querySelector('#findings').innerHTML=DATA.v2.pages.filter(p=>p.findings.length).map(p=>'<section class="page"><h3>'+esc(p.path)+'</h3>'+p.findings.map(f=>{const id=p.path+':'+f.rule_id+':'+f.line;const r=review.findings[id]||{};return '<div class="card finding '+(f.status==='flag'?'flag':'')+'"><span class="pill">'+f.status+' '+Math.round(f.probability*100)+'%</span> <strong>'+esc(f.rule_label)+'</strong> · line '+f.line+'<p>'+esc(f.text)+'</p><p class="question">Does this passage actually violate the stated rule?</p>'+buttons(id,'verdict',[['violation','Real violation'],['not-violation','Not a violation'],['uncertain','Uncertain']],r.verdict)+'<p class="question">Could a deterministic Vale rule decide this reliably?</p>'+buttons(id,'vale_fit',[['yes','Yes'],['no','No — semantic context'],['uncertain','Uncertain']],r.vale_fit)+'</div>'}).join('')+'</section>').join('');renderProgress()}
+function renderEdits(){document.querySelector('#edits').innerHTML=DATA.scopedEdits.map((s,index)=>{const id=s.path+':'+s.line+':'+index;const r=review.edits[id]||{};return '<div class="card edit"><span class="pill">'+esc(s.path)+' · line '+s.line+'</span> <strong>'+esc(s.rule)+'</strong><div class="suggestion"><div class="before">− '+esc(s.original)+'</div><div class="after">+ '+esc(s.replacement)+'</div><small>'+esc(s.rationale)+'</small></div><p class="question">Is this correction safe and sufficient?</p>'+buttons(id,'verdict',[['accept','Accept'],['revise','Needs revision'],['reject','Reject']],r.verdict)+'</div>'}).join('');renderProgress()}
+function renderProgress(){const total=DATA.v2.finding_count*2+DATA.scopedEdits.length;const done=Object.values(review.findings).reduce((n,r)=>n+(r.verdict?1:0)+(r.vale_fit?1:0),0)+Object.values(review.edits).reduce((n,r)=>n+(r.verdict?1:0),0);document.querySelector('#progress').textContent=done+' of '+total+' review decisions complete'}
+renderFindings();renderEdits();
+document.addEventListener('click',event=>{const button=event.target.closest('button[data-id]');if(!button)return;const bucket=button.closest('.finding')?review.findings:review.edits;const item=bucket[button.dataset.id]||(bucket[button.dataset.id]={});item[button.dataset.field]=button.dataset.value;save();renderFindings();renderEdits()});
+document.querySelector('#export').onclick=()=>{const blob=new Blob([JSON.stringify({schema_version:2,experiment:'google-semantic-gap-review',exported_at:new Date().toISOString(),...review},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='google-semantic-gap-review.json';a.click();URL.revokeObjectURL(a.href)};
+document.querySelector('#clear').onclick=()=>{if(confirm('Clear all saved review choices?')){review={findings:{},edits:{}};save();renderFindings();renderEdits()}};
 </script></body></html>`;
 	await Bun.write(output, html);
-	console.error(`Wrote ${output}: ${v2.finding_count} findings and ${ab.page_count} A/B pairs.`);
+	console.error(`Wrote ${output}: ${v2.finding_count} finding reviews and ${scopedEdits.length} correction reviews.`);
 }
 
 if (import.meta.main) main().catch((error) => {
