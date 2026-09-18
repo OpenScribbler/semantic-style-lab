@@ -1,0 +1,179 @@
+{
+  "reviewer": "claude",
+  "item_start": 120,
+  "item_end": 138,
+  "items": [
+    {
+      "id": "semantic:getting-started/quick-start.mdx:overloaded-jargon:16",
+      "kind": "semantic_gap",
+      "path": "getting-started/quick-start.mdx",
+      "line": 16,
+      "rule": "overloaded-jargon",
+      "rule_summary": "Define or replace overloaded jargon",
+      "passage": "Import from your existing tools — pull in rules, skills, or context you already have configured in an AI coding tool"
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "kind": "semantic_gap",
+      "path": "getting-started/quick-start.mdx",
+      "line": 29,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "Follow the terminal prompts: [code] detects the AI coding tools (providers) on your machine and asks you to confirm which ones to manage. In the provider picker, space toggles a selection and enter confirms. When it finishes, your config exists at [code]. To skip the prompts and accept defaults, pass [code]."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:excessive-claim:6",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 6,
+      "rule": "excessive-claim",
+      "rule_summary": "Avoid unsubstantiated or minimizing claims",
+      "passage": "If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:6",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 6,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 6,
+      "rule": "ambiguous-pronoun",
+      "rule_summary": "Give pronouns clear referents",
+      "passage": "If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 22,
+      "rule": "ambiguous-pronoun",
+      "rule_summary": "Give pronouns clear referents",
+      "passage": "Add Roo Code, Cline, Amp, Gemini CLI, Codex, OpenCode, Zed, Factory Droid, Crush, and Pi, and the table grows in every dimension. MCP servers compound it — each client wires them up its own way."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:28",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 28,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "Syllago is a content manager for AI coding tools — think [code], [code], or [code], but for AI-assistant configuration. You maintain one canonical copy of each item. Syllago layers three things on top:"
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 31,
+      "rule": "unnecessary-future-tense",
+      "rule_summary": "Use present tense for current behavior",
+      "passage": "Compatibility checking. [[code]](/using-syllago/cli-reference/compat/) reports which providers can fully consume an item and where features will degrade in translation, so you know before you publish."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:45",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 45,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "You define each item once. Syllago decides what to do with it on each provider."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 55,
+      "rule": "unnecessary-future-tense",
+      "rule_summary": "Use present tense for current behavior",
+      "passage": "The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \"share\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [[code]](/using-syllago/cli-reference/compat/) tells you where translation will degrade."
+    },
+    {
+      "id": "semantic:moat/index.mdx:preannouncement:10",
+      "kind": "semantic_gap",
+      "path": "moat/index.mdx",
+      "line": 10,
+      "rule": "preannouncement",
+      "rule_summary": "Avoid pre-announcing content",
+      "passage": "Syllago adopts MOAT as its provenance layer. This page describes the pieces of syllago that implement the protocol and the operator-facing surfaces that expose the results."
+    },
+    {
+      "id": "semantic:moat/registry-add-signing-identity.mdx:preannouncement:10",
+      "kind": "semantic_gap",
+      "path": "moat/registry-add-signing-identity.mdx",
+      "line": 10,
+      "rule": "preannouncement",
+      "rule_summary": "Avoid pre-announcing content",
+      "passage": "This page covers the operator workflow for [code] and the three ways to pin an identity. The protocol detail is captured in an Architecture Decision Record (ADR) — see ADR 0007 in the syllago repo."
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "kind": "semantic_gap",
+      "path": "moat/trust-tiers.mdx",
+      "line": 59,
+      "rule": "reader-address",
+      "rule_summary": "Address the reader directly",
+      "passage": "The syllago TUI interface exposes a reusable Trust Inspector modal that renders the full trust story for either an item or a whole registry. The same modal serves both scopes so the user sees a consistent shape regardless of where they opened it from."
+    },
+    {
+      "id": "semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109",
+      "kind": "semantic_gap",
+      "path": "using-syllago/format-conversion.mdx",
+      "line": 109,
+      "rule": "unnecessary-future-tense",
+      "rule_summary": "Use present tense for current behavior",
+      "passage": "Provider-specific variables — [code], [code], and similar tokens remain as literal text. The target provider will not expand them."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:excessive-claim:63",
+      "kind": "semantic_gap",
+      "path": "using-syllago/local-vs-global.mdx",
+      "line": 63,
+      "rule": "excessive-claim",
+      "rule_summary": "Avoid unsubstantiated or minimizing claims",
+      "passage": "Global registries hold widely-reusable content — generic skills, security checklists, language-specific best practices."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81",
+      "kind": "semantic_gap",
+      "path": "using-syllago/local-vs-global.mdx",
+      "line": 81,
+      "rule": "ambiguous-pronoun",
+      "rule_summary": "Give pronouns clear referents",
+      "passage": "Team setup — applying these patterns at scale"
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "kind": "semantic_gap",
+      "path": "using-syllago/collections/registries.mdx",
+      "line": 118,
+      "rule": "excessive-claim",
+      "rule_summary": "Avoid unsubstantiated or minimizing claims",
+      "passage": "Or create one manually — a registry is just a git repo with syllago's content structure:"
+    },
+    {
+      "id": "semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90",
+      "kind": "semantic_gap",
+      "path": "using-syllago/content-types/skills.mdx",
+      "line": 90,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "Claude Code stores [code] and [code] as YAML frontmatter. The AI reads these fields to understand when and how to apply the skill."
+    },
+    {
+      "id": "semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24",
+      "kind": "semantic_gap",
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "line": 24,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "If syllago asks you to confirm trust for the registry on first use, review the prompt and accept — this is MOAT's trust-on-first-use check. See Trust tiers for how registry trust works."
+    }
+  ],
+  "prompt": "Independently review documentation style candidates against the Google developer documentation style guide. You are a labeling reviewer, not an editor.\n\nFor every item:\n- verdict=violation only when the exact reported rule genuinely applies to this passage and acting on it would improve Google-style conformance without harming technical meaning.\n- verdict=not_violation for contextual false positives, literal UI/code/product text, inapplicable rules, or harmful recommendations.\n- verdict=uncertain only when the supplied passage is insufficient or the rule permits a genuine judgment call.\n- For semantic_gap items, vale_fit says whether a conventional deterministic Vale/regex rule could reliably make this decision with acceptable noise: deterministic, semantic, or uncertain.\n- For vale_alert items, vale_fit must be not_applicable.\n- Give calibrated confidence and a rationale of at most 18 words.\n- Treat each item independently. Return every id exactly once and do not add ids.\n\nItems:\n[\n  {\n    \"id\": \"semantic:getting-started/quick-start.mdx:overloaded-jargon:16\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/quick-start.mdx\",\n    \"line\": 16,\n    \"rule\": \"overloaded-jargon\",\n    \"rule_summary\": \"Define or replace overloaded jargon\",\n    \"passage\": \"Import from your existing tools — pull in rules, skills, or context you already have configured in an AI coding tool\"\n  },\n  {\n    \"id\": \"semantic:getting-started/quick-start.mdx:anthropomorphism:29\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/quick-start.mdx\",\n    \"line\": 29,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"Follow the terminal prompts: [code] detects the AI coding tools (providers) on your machine and asks you to confirm which ones to manage. In the provider picker, space toggles a selection and enter confirms. When it finishes, your config exists at [code]. To skip the prompts and accept defaults, pass [code].\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:excessive-claim:6\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 6,\n    \"rule\": \"excessive-claim\",\n    \"rule_summary\": \"Avoid unsubstantiated or minimizing claims\",\n    \"passage\": \"If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong.\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:anthropomorphism:6\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 6,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong.\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 6,\n    \"rule\": \"ambiguous-pronoun\",\n    \"rule_summary\": \"Give pronouns clear referents\",\n    \"passage\": \"If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong.\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 22,\n    \"rule\": \"ambiguous-pronoun\",\n    \"rule_summary\": \"Give pronouns clear referents\",\n    \"passage\": \"Add Roo Code, Cline, Amp, Gemini CLI, Codex, OpenCode, Zed, Factory Droid, Crush, and Pi, and the table grows in every dimension. MCP servers compound it — each client wires them up its own way.\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:anthropomorphism:28\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 28,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"Syllago is a content manager for AI coding tools — think [code], [code], or [code], but for AI-assistant configuration. You maintain one canonical copy of each item. Syllago layers three things on top:\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 31,\n    \"rule\": \"unnecessary-future-tense\",\n    \"rule_summary\": \"Use present tense for current behavior\",\n    \"passage\": \"Compatibility checking. [[code]](/using-syllago/cli-reference/compat/) reports which providers can fully consume an item and where features will degrade in translation, so you know before you publish.\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:anthropomorphism:45\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 45,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"You define each item once. Syllago decides what to do with it on each provider.\"\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 55,\n    \"rule\": \"unnecessary-future-tense\",\n    \"rule_summary\": \"Use present tense for current behavior\",\n    \"passage\": \"The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \\\"share\\\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [[code]](/using-syllago/cli-reference/compat/) tells you where translation will degrade.\"\n  },\n  {\n    \"id\": \"semantic:moat/index.mdx:preannouncement:10\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"moat/index.mdx\",\n    \"line\": 10,\n    \"rule\": \"preannouncement\",\n    \"rule_summary\": \"Avoid pre-announcing content\",\n    \"passage\": \"Syllago adopts MOAT as its provenance layer. This page describes the pieces of syllago that implement the protocol and the operator-facing surfaces that expose the results.\"\n  },\n  {\n    \"id\": \"semantic:moat/registry-add-signing-identity.mdx:preannouncement:10\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"moat/registry-add-signing-identity.mdx\",\n    \"line\": 10,\n    \"rule\": \"preannouncement\",\n    \"rule_summary\": \"Avoid pre-announcing content\",\n    \"passage\": \"This page covers the operator workflow for [code] and the three ways to pin an identity. The protocol detail is captured in an Architecture Decision Record (ADR) — see ADR 0007 in the syllago repo.\"\n  },\n  {\n    \"id\": \"semantic:moat/trust-tiers.mdx:reader-address:59\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"moat/trust-tiers.mdx\",\n    \"line\": 59,\n    \"rule\": \"reader-address\",\n    \"rule_summary\": \"Address the reader directly\",\n    \"passage\": \"The syllago TUI interface exposes a reusable Trust Inspector modal that renders the full trust story for either an item or a whole registry. The same modal serves both scopes so the user sees a consistent shape regardless of where they opened it from.\"\n  },\n  {\n    \"id\": \"semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/format-conversion.mdx\",\n    \"line\": 109,\n    \"rule\": \"unnecessary-future-tense\",\n    \"rule_summary\": \"Use present tense for current behavior\",\n    \"passage\": \"Provider-specific variables — [code], [code], and similar tokens remain as literal text. The target provider will not expand them.\"\n  },\n  {\n    \"id\": \"semantic:using-syllago/local-vs-global.mdx:excessive-claim:63\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/local-vs-global.mdx\",\n    \"line\": 63,\n    \"rule\": \"excessive-claim\",\n    \"rule_summary\": \"Avoid unsubstantiated or minimizing claims\",\n    \"passage\": \"Global registries hold widely-reusable content — generic skills, security checklists, language-specific best practices.\"\n  },\n  {\n    \"id\": \"semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/local-vs-global.mdx\",\n    \"line\": 81,\n    \"rule\": \"ambiguous-pronoun\",\n    \"rule_summary\": \"Give pronouns clear referents\",\n    \"passage\": \"Team setup — applying these patterns at scale\"\n  },\n  {\n    \"id\": \"semantic:using-syllago/collections/registries.mdx:excessive-claim:118\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/collections/registries.mdx\",\n    \"line\": 118,\n    \"rule\": \"excessive-claim\",\n    \"rule_summary\": \"Avoid unsubstantiated or minimizing claims\",\n    \"passage\": \"Or create one manually — a registry is just a git repo with syllago's content structure:\"\n  },\n  {\n    \"id\": \"semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/content-types/skills.mdx\",\n    \"line\": 90,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"Claude Code stores [code] and [code] as YAML frontmatter. The AI reads these fields to understand when and how to apply the skill.\"\n  },\n  {\n    \"id\": \"semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/how-to/install-community-skill.mdx\",\n    \"line\": 24,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"If syllago asks you to confirm trust for the registry on first use, review the prompt and accept — this is MOAT's trust-on-first-use check. See Trust tiers for how registry trust works.\"\n  }\n]"
+}

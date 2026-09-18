@@ -1,0 +1,980 @@
+{
+  "generated_at": "2026-09-18T20:50:14.724Z",
+  "reviewer": "claude",
+  "item_count": 139,
+  "labels": [
+    {
+      "id": "vale:index.mdx:6:Google.Semicolons:67:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:6:Google.Semicolons:69:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.7,
+      "rationale": "Connects references; period or conjunction would simplify structure."
+    },
+    {
+      "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Semicolon connecting related clauses; period or conjunction clearer."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.65,
+      "rationale": "Shows contrast between behaviors; 'but' would simplify structure."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.65,
+      "rationale": "Connects similar ideas; period or comma works better."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Explains consequence; period or comma expresses relationship better."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.7,
+      "rationale": "Parallel alternatives; dash or 'or' would be clearer."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Parallel scenarios; period or dash better than semicolon."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:49:Google.Passive:164:be written",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Passive 'be written'; rewrite as active voice."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be installed'; rewrite as 'you can install.'"
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:119:Google.Passive:60:are shared",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'are shared'; rewrite active 'contain content.'"
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:99:Google.Passive:88:be established",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be established'; rewrite active 'establish trust.'"
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be installed'; rewrite as active voice."
+    },
+    {
+      "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'is accompanied'; rewrite as 'emits label.'"
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:52:Google.Passive:202:is preserved",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Passive 'is preserved'; rewrite as active voice."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be satisfied'; rewrite as active voice."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:46:Google.Passive:263:be preserved",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'can't preserve'; rewrite as 'you can't.'"
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Passive 'is captured'; cite ADR for protocol details."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:39:Google.Passive:44:was acquired",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.6,
+      "rationale": "Passive in table field; context permits some passive usage."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'is installed'; rewrite as 'you don't install.'"
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:13:Google.ExcessiveClaims:28:Best",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "'Best for' is category header, not quality claim."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:17:Google.ExcessiveClaims:3:Best",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "'Best for' is category header, not quality claim."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'Best content' unverifiable claim; qualify or remove."
+    },
+    {
+      "id": "vale:using-syllago/content-types/agents.mdx:8:Google.Colons:30:Claude",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "'Claude Code' official product name; preserve form."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:24:Google.Colons:1:Copy",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Sentence capitalization standard rule overrides preference."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:67:Google.WordList:10:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product name; unclear if rule applies to product names."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:68:Google.WordList:11:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product name; unclear if rule applies to product names."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:75:Google.WordList:36:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product names in table; unclear rule application."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:46:Google.WordList:129:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.55,
+      "rationale": "Product names; unclear if rule applies to official names."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.7,
+      "rationale": "'CLI reference' rewritable as 'command-line reference.'"
+    },
+    {
+      "id": "vale:using-syllago/content-types/skills.mdx:116:Google.WordList:18:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.55,
+      "rationale": "Format reference; unclear if rule applies here."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.72,
+      "rationale": "'JSON CLI format' rewritable as 'command-line agent format.'"
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:21:Google.WordList:26:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product terminology; unclear if rule applies here."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'CLI output' rewritable as 'command-line output.'"
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'CLI' noun; rewrite as 'command-line interface.'"
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'CLI tools' rewritable as 'command-line tools.'"
+    },
+    {
+      "id": "vale:advanced/sandbox.mdx:6:Google.WordList:21:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Established abbreviation, but Google style prefers spelled-out command-line terms."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:29:Google.Contractions:79:Do not",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Auto-generated code comment with functional intent; literal text preservation takes priority."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Contractions:13:do not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'don't' is preferred per Google style guide."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:116:Google.Contractions:81:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Table entry prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:53:Google.Contractions:42:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'doesn't' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:122:Google.Contractions:159:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:133:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'what's' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:3:Google.Contractions:118:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Metadata description prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:85:Google.Contractions:62:It is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'it's' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:103:Google.Contractions:84:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Table entry prose; contraction 'doesn't' preferred per Google style."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:47:Google.Contractions:12:are not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'aren't' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:35:Google.Contractions:139:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:92:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'what's' preferred per Google style."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:33:Google.Timeless:27:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in timeless docs."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in product docs."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:20:Google.Timeless:44:Currently",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Explicitly time-dependent; should be rephrased to 'Defaults to' or similar."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:110:Google.Timeless:16:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Timeless:81:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:43:Google.Timeless:10:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:18:Google.Timeless:15:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:68:Google.Timeless:24:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:61:Google.LyHyphens:96:apply-as",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Compound modifier hyphenation; first hyphen not needed per Google rule."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:12:Google.LyHyphens:240:apply-as",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Compound modifier hyphenation; first hyphen not needed per Google rule."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:63:Google.LyHyphens:30:widely-reusable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "-ly adverb + adjective should not be hyphenated per standard grammar."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:78:Google.WordListCase:119:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:16:Google.WordListCase:6:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:129:Google.WordListCase:3:Content Type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:31:Google.WordListCase:77:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:56:Google.WordListCase:91:disabled",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Google style prefers 'turn off' or 'off' instead of 'disabled'."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:12:Google.WordListCase:98:above",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Google style prefers 'preceding' for earlier text references."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:101:Google.WordListCase:104:regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Established abbreviation but Google style prefers 'regular expression'."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:73:Google.WordListCase:3:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:186:Google.WordListCase:62:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:14:Google.WordListCase:18:Disable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Google style prefers 'turn off' or 'off' instead of 'Disable'."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:164:Google.WordListCase:45:regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Established abbreviation but Google style prefers 'regular expression'."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:49:Google.WordListCase:23:Regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Established abbreviation but Google style prefers 'regular expression'."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:41:Google.Will:38:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:30:Google.Will:11:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:51:Google.Will:195:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:31:Google.Will:158:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:107:Google.Will:264:will",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.5,
+      "rationale": "Passage excerpt doesn't show 'will' clearly; if used, context determines whether future tense is necessary for technical clarity."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:55:Google.Will:487:will",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "'translation will degrade' uses unnecessary future tense; present tense 'degrades' better describes tool behavior in documentation."
+    },
+    {
+      "id": "vale:getting-started/choose-your-path.mdx:26:Google.Will:80:will",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.85,
+      "rationale": "'team will share' is unnecessary future tense for describing file purpose; present tense 'team shares' is more direct."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:128:Google.FirstPerson:9:I",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "FAQ question 'Can I...' uses first-person from reader perspective, which is conventional and acceptable in FAQ sections."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:89:Google.FirstPerson:111:my",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "'my Python stack' is quoted example text explaining a concept to readers; first-person in examples is standard practice."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:29:Google.OxfordComma:1:, space toggles a selection and enter confirms.",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Oxford comma applies to three+ items; this lists only two actions, so no comma is needed or applicable."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:59:Google.Anthropomorphism:192:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "'user sees' describes perception of UI output, not human qualities attributed to software; standard documentation language."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:10:Google.Anthropomorphism:76:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "'operator sees' describes what displays on screen; idiomatic for user-visible behavior, not software anthropomorphism."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:43:Google.Anthropomorphism:120:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "'operator sees' is standard phrasing for UI visibility; describes what appears to the user, not software capabilities."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:55:Google.Anthropomorphism:459:tells",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.6,
+      "rationale": "'tool tells you' is borderline; idiomatic but borderline personification. Could be 'shows' or 'outputs' instead."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:15:Google.Anthropomorphism:7:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "'Who sees it' is idiomatic technical language for access/visibility; not misleading anthropomorphism."
+    },
+    {
+      "id": "vale:using-syllago/content-types/agents.mdx:72:Google.Headings:5:Codex (TOML)",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.7,
+      "rationale": "Heading should use sentence-case: 'Codex (toml)'. Product name and acronym capitalization complicates but rule applies."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:156:Google.Headings:5:OpenCode",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "'OpenCode' is a proper product name; retaining product capitalization overrides sentence-case convention."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:118:Google.Headings:4:FAQ",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.65,
+      "rationale": "Acronym 'FAQ' conventionally all-caps in documentation, but strict sentence-case rule would require 'Faq' or alternate phrasing."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:43:Google.Headings:4:4. Install it into Claude Code",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Heading already uses sentence-case: number, lowercase action verb, product name capitalized appropriately."
+    },
+    {
+      "id": "vale:using-syllago/how-to/claude-code-rules-to-cursor.mdx:13:Google.Headings:4:1. See what Claude Code has",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Heading uses proper sentence-case with product name correctly capitalized; compliant with Google style."
+    },
+    {
+      "id": "vale:using-syllago/how-to/claude-code-rules-to-cursor.mdx:41:Google.Headings:4:4. Install to Cursor",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Heading uses sentence-case format with product name capitalized correctly; compliant."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:74:Google.Headings:4:Revocation: Two-tier contract",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "After colon, 'Two-tier' should be lowercase: 'two-tier' to comply with sentence-case capitalization rules."
+    },
+    {
+      "id": "vale:moat/index.mdx:12:Google.Headings:4:Why Syllago uses MOAT",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Heading uses sentence-case with proper nouns correctly capitalized; product and acronym capitalization is appropriate."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:12:Google.Headings:4:The three MOAT tiers",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Heading is in proper sentence-case format with acronym correctly capitalized; compliant with style guide."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:113:Google.Latin:91:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires 'for example' over abbreviation; straightforward style substitution improves readability."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:119:Google.Latin:29:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires 'for example' over abbreviation; direct style improvement."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:48:Google.Latin:44:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires spelled-out 'for example' instead of abbreviation; consistent style convention."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:89:Google.Latin:73:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires 'for example' instead of 'e.g.' abbreviation; straightforward compliance."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:68:Google.Latin:54:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style prefers spelled-out 'for example' over Latin abbreviation; consistency and readability."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:38:Google.Latin:52:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires 'for example' instead of abbreviation; clear style guide application."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:92:Google.Latin:27:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires 'for example' over abbreviation; standard documentation convention."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:93:Google.Latin:30:e.g.",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.95,
+      "rationale": "Google style requires spelled-out 'for example' instead of abbreviation; consistent improvement."
+    },
+    {
+      "id": "semantic:for-ai-assistants.mdx:ambiguous-pronoun:11",
+      "verdict": "not_violation",
+      "vale_fit": "uncertain",
+      "confidence": 0.75,
+      "rationale": "Pronouns 'these files' and 'this documentation site' have reasonably clear referents from context."
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+      "verdict": "not_violation",
+      "vale_fit": "uncertain",
+      "confidence": 0.8,
+      "rationale": "'Can see' and 'hidden' are idiomatic technical language for filesystem access restrictions, not misleading anthropomorphism."
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.65,
+      "rationale": "Passage mixes indirect and direct address; includes 'you've allowed' but opens with passive 'This starts'; mixed approach."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:57",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.7,
+      "rationale": "Claim 'the best content gets published' lacks explanation of quality gates or review process; unsubstantiated."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+      "verdict": "not_violation",
+      "vale_fit": "uncertain",
+      "confidence": 0.7,
+      "rationale": "Pronouns 'this' and 'the best content' have reasonably clear referents despite density; contextually interpretable."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.55,
+      "rationale": "Architectural claims about registry, loadouts, and CI sync are design assertions; acceptable for architecture documentation but lack supporting evidence."
+    },
+    {
+      "id": "semantic:getting-started/choose-your-path.mdx:imperative-step:14",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Text is a section heading/label, not a procedural step; rule applies to step descriptions, not headings."
+    },
+    {
+      "id": "semantic:getting-started/choose-your-path.mdx:unnecessary-future-tense:26",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.85,
+      "rationale": "'will share' is unnecessary future tense; should be present: 'the file your team shares' describes current function."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:anthropomorphism:6",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'tools want' attributes human desire to software; should be 'tools require' to avoid misleading personification."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+      "verdict": "not_violation",
+      "vale_fit": "uncertain",
+      "confidence": 0.7,
+      "rationale": "Sentence immediately lists the four concepts; not pre-announcing but providing a roadmap, which aids readability."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:unnecessary-future-tense:51",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.8,
+      "rationale": "'what will work' uses unnecessary future tense; should be present: 'what works where' describes tool behavior."
+    },
+    {
+      "id": "semantic:getting-started/mental-models.mdx:ambiguous-pronoun:30",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.65,
+      "rationale": "Pronoun 'this' referent unclear from passage alone; likely refers to code/tool mentioned before, but context insufficient."
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:overloaded-jargon:16",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.8,
+      "rationale": "Product-specific terminology (rules, skills, context) within domain documentation, not overloaded jargon."
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.6,
+      "rationale": "Mild anthropomorphism in 'asks'; common but stylistic preference varies. Recoverable from context."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:excessive-claim:6",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.65,
+      "rationale": "Framed as relatable observation, not unsubstantiated fact. Contextual claim about user experience."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:6",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Tools don't 'want'; use 'require' or 'store' for precision. Clear anthropomorphism violation."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.85,
+      "rationale": "Pronouns 'them' and 'others' have clear antecedents (tools). No genuine ambiguity."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.55,
+      "rationale": "Pronoun 'its' slightly ambiguous (client vs. table) but recoverable from context."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:28",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Layers' is standard technical term, not misleading. Metaphor is helpful, not deceptive."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Will degrade' is conditional future describing current feature capability, not unnecessary."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:45",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "'Decides' is anthropomorphic. Use 'transforms' or 'converts' for technical precision."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Will degrade' describes conditional capability, not unnecessary future tense."
+    },
+    {
+      "id": "semantic:moat/index.mdx:preannouncement:10",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Direct description of current page content, not pre-announcing. Present tense, no anticipation."
+    },
+    {
+      "id": "semantic:moat/registry-add-signing-identity.mdx:preannouncement:10",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Describes current content and references existing ADR; no pre-announcement of future material."
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.6,
+      "rationale": "Third-person describes system behavior. Could prefer 'you'll see', but context-dependent."
+    },
+    {
+      "id": "semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.65,
+      "rationale": "'Will not expand' describes current behavior. 'Does not' preferable but both acceptable."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:excessive-claim:63",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "Descriptive characterization supported by concrete examples. Reasonable, not excessive."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Subheading; 'these patterns' clearly references preceding local vs. global discussion."
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Just a git repo' encourages simplicity, not excessive. Helpful framing, not minimizing."
+    },
+    {
+      "id": "semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Reads' and 'understand' are anthropomorphic. Use 'uses' or 'processes', 'determine'."
+    },
+    {
+      "id": "semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.8,
+      "rationale": "Standard, clear phrasing for user prompts. Not misleading anthropomorphism."
+    }
+  ]
+}

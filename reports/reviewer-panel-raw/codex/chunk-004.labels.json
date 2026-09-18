@@ -1,0 +1,137 @@
+{
+  "labels": [
+    {
+      "id": "semantic:getting-started/quick-start.mdx:overloaded-jargon:16",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.84,
+      "rationale": "The terms identify product concepts and are understandable in this audience-specific quick-start context."
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.95,
+      "rationale": "“Detects” and “asks” clearly describe automated behavior and a displayed confirmation prompt."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:excessive-claim:6",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.92,
+      "rationale": "The passage presumes every reader’s experience and makes broad, unsupported claims about all competing tools."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:6",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.91,
+      "rationale": "Saying tools “want” configuration and “know” about peers misleadingly attributes human intentions and awareness."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.93,
+      "rationale": "“Each one,” “them,” and “others” clearly refer to the previously introduced AI coding tools."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.86,
+      "rationale": "In “compound it,” the pronoun vaguely refers to complexity inferred from earlier discussion, not a clear noun."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:28",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.96,
+      "rationale": "“Layers three things” is a conventional description of product functionality, not misleading human attribution."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.96,
+      "rationale": "“Will degrade” describes a predicted consequence of a later translation, making future tense meaningful."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:45",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.87,
+      "rationale": "“Decides what to do” vaguely attributes judgment to software instead of describing its deterministic provider handling."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.96,
+      "rationale": "The compatibility command predicts degradation that would occur during translation, so future tense is justified."
+    },
+    {
+      "id": "semantic:moat/index.mdx:preannouncement:10",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.99,
+      "rationale": "“This page describes” pre-announces the page’s contents instead of stating the information directly."
+    },
+    {
+      "id": "semantic:moat/registry-add-signing-identity.mdx:preannouncement:10",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.99,
+      "rationale": "“This page covers” is explicit navigational preannouncement that can be removed without losing technical meaning."
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.94,
+      "rationale": "“The user” refers to the reader indirectly; second-person “you” would be clearer and more direct."
+    },
+    {
+      "id": "semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.97,
+      "rationale": "This states current provider behavior, so “does not expand” is more direct than “will not expand.”"
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:excessive-claim:63",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.94,
+      "rationale": "“Widely reusable” describes the intended scope of global content and is supported by concrete examples."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.74,
+      "rationale": "Whether “these patterns” has a clear referent depends on preceding content that the supplied passage omits."
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.96,
+      "rationale": "“Just” minimizes registry requirements, even though the required content structure makes the qualification important."
+    },
+    {
+      "id": "semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.95,
+      "rationale": "Claiming the AI “understands” attributes cognition where processing or using metadata would be technically clearer."
+    },
+    {
+      "id": "semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.96,
+      "rationale": "“Asks you to confirm” accurately and conventionally describes an interactive command-line prompt."
+    }
+  ]
+}

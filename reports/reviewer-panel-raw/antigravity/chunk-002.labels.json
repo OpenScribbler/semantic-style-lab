@@ -1,0 +1,284 @@
+{
+  "labels": [
+    {
+      "confidence": 0.95,
+      "id": "vale:advanced/sandbox.mdx:6:Google.WordList:21:CLI",
+      "rationale": "Google style prefers 'command-line tool' or spelling out CLI on first use.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:using-syllago/content-types/hooks.mdx:29:Google.Contractions:79:Do not",
+      "rationale": "Standard auto-generated file header comment; changing to a contraction is inappropriate.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.85,
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Contractions:13:do not",
+      "rationale": "Google style encourages contractions like 'don't' in standard expository text.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/registry-add-signing-identity.mdx:116:Google.Contractions:81:cannot",
+      "rationale": "Error table entry where concise phrasing or contraction 'can't' fits Google style.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:using-syllago/collections/registries.mdx:53:Google.Contractions:42:does not",
+      "rationale": "Google style recommends using contractions like 'doesn't' for a conversational tone.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:moat/registry-add-signing-identity.mdx:122:Google.Contractions:159:cannot",
+      "rationale": "Google style prefers 'can't' over 'cannot' in informal/conversational documentation.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:using-syllago/collections/registries.mdx:133:Google.Contractions:42:what is",
+      "rationale": "Google style recommends contractions like 'what's' in standard running prose.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:moat/registry-add-signing-identity.mdx:3:Google.Contractions:118:cannot",
+      "rationale": "Frontmatter description text where Google style encourages contractions like 'can't'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:moat/registry-add-signing-identity.mdx:85:Google.Contractions:62:It is",
+      "rationale": "Google style prefers contractions like 'It's' in standard explanatory prose.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:moat/trust-tiers.mdx:103:Google.Contractions:84:does not",
+      "rationale": "Table description text where Google style encourages contractions like 'doesn't'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:advanced/team-setup.mdx:47:Google.Contractions:12:are not",
+      "rationale": "Google style encourages standard contractions like 'aren't' in prose.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:moat/trust-tiers.mdx:35:Google.Contractions:139:cannot",
+      "rationale": "Google style recommends 'can't' over 'cannot' in documentation text.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:advanced/team-setup.mdx:92:Google.Contractions:42:what is",
+      "rationale": "Google style encourages contractions like 'what's' in standard text.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:33:Google.Timeless:27:latest",
+      "rationale": "'Latest' refers to dynamically updated content from a registry clone, not dated product claims.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "rationale": "'Latest content' refers accurately to git/registry sync, not an ephemeral time reference.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/syllago-yaml.mdx:20:Google.Timeless:44:Currently",
+      "rationale": "Google style explicitly advises avoiding 'currently'; document the present state directly without 'currently'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:getting-started/quick-start.mdx:110:Google.Timeless:16:latest",
+      "rationale": "Refers functionally to synchronizing the most recent commits/content from a remote registry.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Timeless:81:latest",
+      "rationale": "'Latest commits' describes standard git pull semantics, not an improper temporal claim.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:using-syllago/collections/registries.mdx:43:Google.Timeless:10:latest",
+      "rationale": "Refers technically to fetching recent upstream repository content during sync.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.85,
+      "id": "vale:getting-started/installation.mdx:18:Google.Timeless:15:latest",
+      "rationale": "Describes the install script functionality of downloading the latest release binary.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.85,
+      "id": "vale:getting-started/installation.mdx:68:Google.Timeless:24:latest",
+      "rationale": "Refers to the update command fetching the latest released version.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:advanced/team-setup.mdx:61:Google.LyHyphens:96:apply-as",
+      "rationale": "Part of the compound phrasal modifier 'apply-as-a-unit configuration'; rule misfires on 'apply'.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:using-syllago/collections/loadouts.mdx:12:Google.LyHyphens:240:apply-as",
+      "rationale": "Part of the phrasal adjective 'apply-as-a-unit'; rule misfires on 'apply' as an -ly adverb.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/local-vs-global.mdx:63:Google.LyHyphens:30:widely-reusable",
+      "rationale": "Google style specifies no hyphen after adverbs ending in -ly.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:getting-started/quick-start.mdx:78:Google.WordListCase:119:content type",
+      "rationale": "'Content type' refers to Syllago domain concept (rules, skills), not MIME media type.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:getting-started/mental-models.mdx:16:Google.WordListCase:6:Content type",
+      "rationale": "Refers to Syllago's domain concept of content types, not MIME media types.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:using-syllago/format-conversion.mdx:129:Google.WordListCase:3:Content Type",
+      "rationale": "Refers to Syllago artifact types in a comparison table, not MIME media types.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:using-syllago/collections/library.mdx:31:Google.WordListCase:77:content type",
+      "rationale": "Refers to the Syllago schema field/concept, not MIME media type.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:using-syllago/tui.mdx:56:Google.WordListCase:91:disabled",
+      "rationale": "Google style recommends using 'turn off' or 'off' instead of 'disabled' for features.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/syllago-yaml.mdx:12:Google.WordListCase:98:above",
+      "rationale": "Google style recommends 'preceding' instead of directional words like 'above'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/format-conversion.mdx:101:Google.WordListCase:104:regex",
+      "rationale": "Google style recommends spelling out 'regular expression' rather than using 'regex' in prose.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:advanced/troubleshooting.mdx:73:Google.WordListCase:3:Content type",
+      "rationale": "Refers to Syllago's internal content type concept, not MIME media type.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.98,
+      "id": "vale:using-syllago/format-conversion.mdx:186:Google.WordListCase:62:content type",
+      "rationale": "Refers specifically to the Syllago feature/concept 'Content Types', not MIME media type.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:advanced/troubleshooting.mdx:14:Google.WordListCase:18:Disable",
+      "rationale": "Google style recommends 'Turn off' rather than 'Disable' in UI/option descriptions.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/format-conversion.mdx:164:Google.WordListCase:45:regex",
+      "rationale": "Google style recommends using 'regular expression' instead of 'regex'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/content-types/hooks.mdx:49:Google.WordListCase:23:Regex",
+      "rationale": "Google style recommends spelling out 'Regular expression' rather than 'Regex'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/format-conversion.mdx:41:Google.Will:38:will",
+      "rationale": "Quoted explanatory string representing literal conversion output note; should not be changed.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:getting-started/mental-models.mdx:30:Google.Will:11:will",
+      "rationale": "Direct user quotation/thought ('Asking \\\"will this work...\\\"'); removing 'will' alters meaning.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:getting-started/core-concepts.mdx:51:Google.Will:195:will",
+      "rationale": "Google style recommends present tense; 'what works where' is preferred over 'what will work'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.92,
+      "id": "vale:getting-started/why-syllago.mdx:31:Google.Will:158:will",
+      "rationale": "Google style recommends present tense ('where features degrade') instead of future 'will'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    }
+  ]
+}

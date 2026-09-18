@@ -1,0 +1,284 @@
+{
+  "labels": [
+    {
+      "id": "vale:advanced/sandbox.mdx:6:Google.WordList:21:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "CLI is unexplained shorthand; “command-line tools” follows the preferred terminology."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:29:Google.Contractions:79:Do not",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "This is a directive inside an auto-generated source comment, where emphatic “Do not” is appropriate."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Contractions:13:do not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“Don't change” is natural prose and preserves the technical distinction."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:116:Google.Contractions:81:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "“Can't be loaded” is concise, clear, and consistent with Google's conversational style."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:53:Google.Contractions:42:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "“Doesn't modify” reads naturally without changing the operational guarantee."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:122:Google.Contractions:159:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“Can't respond” is conversational and retains the CI limitation exactly."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:133:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "“What's available” is natural instructional prose and preserves meaning."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:3:Google.Contractions:118:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "“Can't silently swap” remains precise and makes the description more conversational."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:85:Google.Contractions:62:It is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "“It's reserved” is clear, natural prose with no ambiguity."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:103:Google.Contractions:84:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.93,
+      "rationale": "“Doesn't match” is suitable in this reader-facing error-description table."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:47:Google.Contractions:12:are not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“Aren't read-only” improves conversational tone without weakening the warning."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:35:Google.Contractions:139:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“Can't be safely combined” preserves the security meaning and reads naturally."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:92:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "“What's active” is idiomatic and retains the intended verification step."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:33:Google.Timeless:27:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "“Latest” describes the sync operation's dynamic result, not a time-sensitive documentation claim."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Here “latest” identifies the changing remote content that synchronization retrieves."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:20:Google.Timeless:44:Currently",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The schema version can change, making “Currently 1” an easily stale statement."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:110:Google.Timeless:16:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "The command always retrieves newest registry content, so the wording remains accurate over time."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Timeless:81:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "“Latest commits” precisely describes Git synchronization behavior and doesn't become stale."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:43:Google.Timeless:10:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "“Latest” is an enduring description of what the sync command retrieves."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:18:Google.Timeless:15:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "The installer dynamically selects the newest release; “latest” expresses essential behavior rather than dated status."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:68:Google.Timeless:24:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "The update operation dynamically targets the newest release, so this statement remains timeless."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:61:Google.LyHyphens:96:apply-as",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "The match is part of the compound modifier “apply-as-a-unit”; removing one hyphen would be malformed."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:12:Google.LyHyphens:240:apply-as",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“Apply-as-a-unit” is a complete compound modifier; the isolated hyphen recommendation is contextually wrong."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:63:Google.LyHyphens:30:widely-reusable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Compound modifiers beginning with an -ly adverb aren't hyphenated: use “widely reusable.”"
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:78:Google.WordListCase:119:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "“Content type” is the product's classification concept, not an internet media type."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:16:Google.WordListCase:6:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "This names a documented product concept; replacing it with “media type” would change meaning."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:129:Google.WordListCase:3:Content Type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The table categorizes product artifacts, not MIME or internet media types."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:31:Google.WordListCase:77:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "This metadata field describes a product artifact category, so “media type” would be inaccurate."
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:56:Google.WordListCase:91:disabled",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "“Colors can be turned off” follows preferred terminology and describes the option clearly."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:12:Google.WordListCase:98:above",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "Directional references are fragile; “preceding each table” identifies the notes more reliably."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:101:Google.WordListCase:104:regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "“Regular expression pattern” is the preferred expanded term and remains technically precise."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:73:Google.WordListCase:3:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The warning concerns mismatched product artifact categories, not media types."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:186:Google.WordListCase:62:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Both the linked section and phrase use the product's established “content type” concept."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:14:Google.WordListCase:18:Disable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "“Turn off color output” is plain, direct, and matches Google's preferred terminology."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:164:Google.WordListCase:45:regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "Expanding “regex” to “regular expression” improves accessibility without changing the matcher category."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:49:Google.WordListCase:23:Regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "“Regular expression on tool name” is clearer and follows the preferred terminology."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:41:Google.Will:38:will",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "The phrase is quoted product-generated wording, so changing it could misrepresent literal output."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:30:Google.Will:11:will",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "“Will this work” is natural wording inside a representative user question."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:51:Google.Will:195:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“You know what works where” is more direct and preserves the compatibility meaning."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:31:Google.Will:158:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "“Where features degrade in translation” states the behavior directly without unnecessary future tense."
+    }
+  ]
+}

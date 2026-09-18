@@ -1,0 +1,138 @@
+{
+  "labels": [
+    {
+      "id": "semantic:getting-started/quick-start.mdx:overloaded-jargon:16",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.8,
+      "rationale": "Product-specific terminology (rules, skills, context) within domain documentation, not overloaded jargon."
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.6,
+      "rationale": "Mild anthropomorphism in 'asks'; common but stylistic preference varies. Recoverable from context."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:excessive-claim:6",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.65,
+      "rationale": "Framed as relatable observation, not unsubstantiated fact. Contextual claim about user experience."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:6",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Tools don't 'want'; use 'require' or 'store' for precision. Clear anthropomorphism violation."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.85,
+      "rationale": "Pronouns 'them' and 'others' have clear antecedents (tools). No genuine ambiguity."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.55,
+      "rationale": "Pronoun 'its' slightly ambiguous (client vs. table) but recoverable from context."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:28",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Layers' is standard technical term, not misleading. Metaphor is helpful, not deceptive."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Will degrade' is conditional future describing current feature capability, not unnecessary."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:45",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "'Decides' is anthropomorphic. Use 'transforms' or 'converts' for technical precision."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Will degrade' describes conditional capability, not unnecessary future tense."
+    },
+    {
+      "id": "semantic:moat/index.mdx:preannouncement:10",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Direct description of current page content, not pre-announcing. Present tense, no anticipation."
+    },
+    {
+      "id": "semantic:moat/registry-add-signing-identity.mdx:preannouncement:10",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Describes current content and references existing ADR; no pre-announcement of future material."
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.6,
+      "rationale": "Third-person describes system behavior. Could prefer 'you'll see', but context-dependent."
+    },
+    {
+      "id": "semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109",
+      "verdict": "uncertain",
+      "vale_fit": "deterministic",
+      "confidence": 0.65,
+      "rationale": "'Will not expand' describes current behavior. 'Does not' preferable but both acceptable."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:excessive-claim:63",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "Descriptive characterization supported by concrete examples. Reasonable, not excessive."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "Subheading; 'these patterns' clearly references preceding local vs. global discussion."
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Just a git repo' encourages simplicity, not excessive. Helpful framing, not minimizing."
+    },
+    {
+      "id": "semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "'Reads' and 'understand' are anthropomorphic. Use 'uses' or 'processes', 'determine'."
+    },
+    {
+      "id": "semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.8,
+      "rationale": "Standard, clear phrasing for user prompts. Not misleading anthropomorphism."
+    }
+  ],
+  "id_repairs": []
+}

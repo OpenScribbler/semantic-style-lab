@@ -1,0 +1,284 @@
+{
+  "labels": [
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:107:Google.Will:264:will",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The supplied passage contains no instance of “will”; “may” appropriately expresses uncertainty."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:55:Google.Will:487:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "Present tense is clearer for the command’s current behavior: translation degrades."
+    },
+    {
+      "id": "vale:getting-started/choose-your-path.mdx:26:Google.Will:80:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "The file is currently shared, so present tense improves directness."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:128:Google.FirstPerson:9:I",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "Addressing the reader as “you” would follow Google’s second-person guidance."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:89:Google.FirstPerson:111:my",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "The illustrative profile name can avoid first person without losing meaning."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:29:Google.OxfordComma:1:, space toggles a selection and enter confirms.",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "This joins two clauses, not three or more list items requiring an Oxford comma."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:59:Google.Anthropomorphism:192:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The human user, not the software, performs the seeing."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:10:Google.Anthropomorphism:76:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The operator is human, so “sees” isn't anthropomorphism."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:43:Google.Anthropomorphism:120:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The operator is the human subject of “sees.”"
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:55:Google.Anthropomorphism:459:tells",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "The command can “report” degradation more precisely than it can “tell” the reader."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:15:Google.Anthropomorphism:7:sees",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "“Anyone” and “you” are people, so the verb doesn't humanize software."
+    },
+    {
+      "id": "vale:using-syllago/content-types/agents.mdx:72:Google.Headings:5:Codex (TOML)",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Codex is a product name and TOML an acronym; both retain official capitalization."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:156:Google.Headings:5:OpenCode",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "OpenCode is a product name whose internal capitalization must remain unchanged."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:118:Google.Headings:4:FAQ",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "FAQ is a conventional initialism, so uppercase is compatible with sentence-style capitalization."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:43:Google.Headings:4:4. Install it into Claude Code",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The heading already uses sentence-style capitalization and preserves the product name."
+    },
+    {
+      "id": "vale:using-syllago/how-to/claude-code-rules-to-cursor.mdx:13:Google.Headings:4:1. See what Claude Code has",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The heading already uses sentence-style capitalization and preserves the product name."
+    },
+    {
+      "id": "vale:using-syllago/how-to/claude-code-rules-to-cursor.mdx:41:Google.Headings:4:4. Install to Cursor",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The heading already uses sentence-style capitalization and preserves the product name."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:74:Google.Headings:4:Revocation: Two-tier contract",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "Sentence-style capitalization requires lowercase “two-tier” after the colon."
+    },
+    {
+      "id": "vale:moat/index.mdx:12:Google.Headings:4:Why Syllago uses MOAT",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The heading is sentence-style; Syllago and MOAT correctly retain proper-name capitalization."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:12:Google.Headings:4:The three MOAT tiers",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The heading is sentence-style, with MOAT correctly retained as an acronym."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:113:Google.Latin:91:e.g.",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The supplied passage contains no “e.g.” occurrence."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:119:Google.Latin:29:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:48:Google.Latin:44:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:89:Google.Latin:73:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:68:Google.Latin:54:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:38:Google.Latin:52:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:92:Google.Latin:27:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:93:Google.Latin:30:e.g.",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Google style prefers “for example” over the Latin abbreviation."
+    },
+    {
+      "id": "semantic:for-ai-assistants.mdx:ambiguous-pronoun:11",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.76,
+      "rationale": "Whether “these files” has a clear referent depends on preceding content."
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.9,
+      "rationale": "“Access” states the filesystem restriction more precisely than saying the process can “see.”"
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.94,
+      "rationale": "“The user's perspective” inconsistently shifts away from the reader addressed as “you.”"
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:57",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.9,
+      "rationale": "Calling content “the best” makes an unsupported subjective claim."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.78,
+      "rationale": "The referent of “This” can only be judged from preceding context."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.92,
+      "rationale": "“Easy” is a minimizing usability claim unsupported by the passage."
+    },
+    {
+      "id": "semantic:getting-started/choose-your-path.mdx:imperative-step:14",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.94,
+      "rationale": "This appears to be a path heading, and “import” is already imperative."
+    },
+    {
+      "id": "semantic:getting-started/choose-your-path.mdx:unnecessary-future-tense:26",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.96,
+      "rationale": "Present tense better describes the file's current role for the team."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:anthropomorphism:6",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.97,
+      "rationale": "Tools have format requirements; saying they “want” them assigns human desire."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.98,
+      "rationale": "“This page covers” pre-announces the content instead of presenting it directly."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:unnecessary-future-tense:51",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.95,
+      "rationale": "The matrix describes current compatibility, so “what works where” is more direct."
+    },
+    {
+      "id": "semantic:getting-started/mental-models.mdx:ambiguous-pronoun:30",
+      "verdict": "uncertain",
+      "vale_fit": "semantic",
+      "confidence": 0.76,
+      "rationale": "Whether “this” identifies specific content depends on surrounding context."
+    }
+  ]
+}

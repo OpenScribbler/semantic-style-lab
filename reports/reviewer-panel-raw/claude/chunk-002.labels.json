@@ -1,0 +1,285 @@
+{
+  "labels": [
+    {
+      "id": "vale:advanced/sandbox.mdx:6:Google.WordList:21:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Established abbreviation, but Google style prefers spelled-out command-line terms."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:29:Google.Contractions:79:Do not",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Auto-generated code comment with functional intent; literal text preservation takes priority."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Contractions:13:do not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'don't' is preferred per Google style guide."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:116:Google.Contractions:81:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Table entry prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:53:Google.Contractions:42:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'doesn't' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:122:Google.Contractions:159:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:133:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'what's' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:3:Google.Contractions:118:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Metadata description prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:85:Google.Contractions:62:It is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'it's' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:103:Google.Contractions:84:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Table entry prose; contraction 'doesn't' preferred per Google style."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:47:Google.Contractions:12:are not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'aren't' preferred per Google style."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:35:Google.Contractions:139:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'can't' preferred per Google style."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:92:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Regular prose; contraction 'what's' preferred per Google style."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:33:Google.Timeless:27:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in timeless docs."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in product docs."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:20:Google.Timeless:44:Currently",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Explicitly time-dependent; should be rephrased to 'Defaults to' or similar."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:110:Google.Timeless:16:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Timeless:81:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:43:Google.Timeless:10:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:18:Google.Timeless:15:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:68:Google.Timeless:24:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Time-based word; Google style avoids temporal language in docs."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:61:Google.LyHyphens:96:apply-as",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Compound modifier hyphenation; first hyphen not needed per Google rule."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:12:Google.LyHyphens:240:apply-as",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Compound modifier hyphenation; first hyphen not needed per Google rule."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:63:Google.LyHyphens:30:widely-reusable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "-ly adverb + adjective should not be hyphenated per standard grammar."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:78:Google.WordListCase:119:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:16:Google.WordListCase:6:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:129:Google.WordListCase:3:Content Type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:31:Google.WordListCase:77:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:56:Google.WordListCase:91:disabled",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Google style prefers 'turn off' or 'off' instead of 'disabled'."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:12:Google.WordListCase:98:above",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Google style prefers 'preceding' for earlier text references."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:101:Google.WordListCase:104:regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Established abbreviation but Google style prefers 'regular expression'."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:73:Google.WordListCase:3:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:186:Google.WordListCase:62:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "System-specific terminology; 'content type' is defined in this codebase."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:14:Google.WordListCase:18:Disable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Google style prefers 'turn off' or 'off' instead of 'Disable'."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:164:Google.WordListCase:45:regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Established abbreviation but Google style prefers 'regular expression'."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:49:Google.WordListCase:23:Regex",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Established abbreviation but Google style prefers 'regular expression'."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:41:Google.Will:38:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:30:Google.Will:11:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:51:Google.Will:195:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:31:Google.Will:158:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Future tense; Google style avoids 'will' in documentation."
+    }
+  ],
+  "id_repairs": []
+}

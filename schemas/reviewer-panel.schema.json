@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["labels"],
+  "properties": {
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "verdict", "vale_fit", "confidence", "rationale"],
+        "properties": {
+          "id": {"type": "string"},
+          "verdict": {"type": "string", "enum": ["violation", "not_violation", "uncertain"]},
+          "vale_fit": {"type": "string", "enum": ["deterministic", "semantic", "uncertain", "not_applicable"]},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "rationale": {"type": "string"}
+        }
+      }
+    }
+  }
+}

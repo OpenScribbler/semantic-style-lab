@@ -57,6 +57,30 @@ uncertain before revealing Jev's judgment. Once labels exist, the report compute
 This experiment cannot measure violations Vale never nominated. The redesigned
 Google semantic evidence report addresses that separate gap question.
 
+## Model-panel triage
+
+Manual review of 108 Vale alerts plus 31 semantic findings was too expensive for
+the project owner. Four independent CLI reviewers—Claude, GitHub Copilot, Codex,
+and Antigravity—therefore labeled the same 139 items without seeing Jev's answer.
+They produced:
+
+- 64 unanimous verdicts
+- 47 three-of-four majority verdicts
+- 28 split verdicts
+
+A high-effort reasoning reviewer adjudicated only the 28 splits using the four
+verdicts and rationales as evidence. These are pseudo-labels for triage, not a
+replacement for human ground truth.
+
+The focused human report requests 13 decisions: five project-policy choices that
+affect high-volume rule families and eight spot checks. If the spot checks reveal
+systematic disagreement, review expands only for the affected rule family.
+
+Every model call is reproducible. For each chunk, the repository retains the
+exact prompt, raw stdout/stderr response envelope, and normalized labels under
+`reports/reviewer-panel-raw/`. The complete panel labels, adjudication, and merged
+consensus are stored as separate JSON reports.
+
 ## Reproduce
 
 ```bash
@@ -67,4 +91,11 @@ bun run experiment:vale-jev -- \
   --output reports/vale-jev-experiment.json
 
 bun run report:vale-jev
+
+bun run experiment:reviewer-panel -- --reviewer antigravity
+bun run experiment:reviewer-panel -- --reviewer claude
+bun run experiment:reviewer-panel -- --reviewer copilot
+bun run experiment:reviewer-panel -- --reviewer codex
+bun run experiment:adjudicate-panel
+bun run report:human-escalation
 ```

@@ -105,6 +105,14 @@ Its 108-item review set hides Jev's judgment until after each human label and
 computes precision, true-finding retention, and false-positive removal from the
 saved labels. See the [Vale + Jev experiment notes](docs/vale-jev-experiment.md).
 
+For a much shorter review, open the
+[focused human escalation](reports/human-escalation.html). Four independent CLI
+reviewers labeled the 108-alert sample and 31 semantic findings; a stronger
+reasoning pass adjudicated their 28 splits. The focused report asks for only five
+high-impact policy choices and eight calibration spot checks. Exact prompts, raw
+responses, normalized labels, and consensus records are retained under
+[`reports/reviewer-panel-raw/`](reports/reviewer-panel-raw/).
+
 ## Design boundary
 
 Use an ordinary Vale vocabulary or substitution when one form is always right.

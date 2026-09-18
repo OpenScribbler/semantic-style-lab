@@ -1,0 +1,284 @@
+{
+  "labels": [
+    {
+      "id": "vale:advanced/sandbox.mdx:6:Google.WordList:21:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "Use “command-line tool” in explanatory prose; “CLI” is not necessary terminology here."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:29:Google.Contractions:79:Do not",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "This is an auto-generated source comment, not reader-facing documentation prose."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Contractions:13:do not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "This is explanatory prose, and “don't” preserves the meaning while following the stated contraction rule."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:116:Google.Contractions:81:cannot",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "The wording appears inside a table describing a command-line path-loading failure."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:53:Google.Contractions:42:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This is ordinary explanatory prose; “doesn't” improves adherence without changing meaning."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:122:Google.Contractions:159:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "This is explanatory prose, and “can't” is clear and technically equivalent."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:133:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This is ordinary explanatory prose; “what's available” is natural and preserves the meaning."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:3:Google.Contractions:118:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "The frontmatter description is reader-facing prose, so “can't” would conform without harming meaning."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:85:Google.Contractions:62:It is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This is explanatory prose; “It's reserved” is clear and follows the stated contraction rule."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:103:Google.Contractions:84:does not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "The table describes behavior rather than quoting a literal error message, so “doesn't” is appropriate."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:47:Google.Contractions:12:are not",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This is reader-facing prose; “aren't read-only” preserves meaning and matches the contraction guidance."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:35:Google.Contractions:139:cannot",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "This explanatory sentence can use “can't” without reducing technical precision."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:92:Google.Contractions:42:what is",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This is ordinary prose; “what's active” is concise and equally clear."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:33:Google.Timeless:27:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "The command intentionally retrieves the registry's newest available content; replacing “latest” could obscure behavior."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.93,
+      "rationale": "This generic instruction can avoid time-dependent wording by describing synchronization without “latest.”"
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:20:Google.Timeless:44:Currently",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "“Currently” makes a stable schema statement unnecessarily time-dependent."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:110:Google.Timeless:16:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "The command's behavior specifically means retrieving the newest content from registries."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Timeless:81:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "“Latest commits” accurately describes synchronization with the repository's current revision."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:43:Google.Timeless:10:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "The instruction describes pulling the newest available registry content, which is the operation's intended meaning."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:18:Google.Timeless:15:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "The installer intentionally downloads the newest release binary, so “latest” conveys required behavior."
+    },
+    {
+      "id": "vale:getting-started/installation.mdx:68:Google.Timeless:24:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Updating to the newest release is the documented command's intended behavior."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:61:Google.LyHyphens:96:apply-as",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.86,
+      "rationale": "“Apply-as-a-unit configuration” is a deliberate compound modifier whose hyphenation clarifies grouping."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:12:Google.LyHyphens:240:apply-as",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.86,
+      "rationale": "The compound modifier clearly communicates that configurations are applied as one unit."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:63:Google.LyHyphens:30:widely-reusable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The adverb “widely” should not be hyphenated with the following adjective."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:78:Google.WordListCase:119:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "“Content type” is the product's established domain term and differs technically from “media type.”"
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:16:Google.WordListCase:6:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "This is a linked product taxonomy label; changing it would alter established terminology."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:129:Google.WordListCase:3:Content Type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "This table names the product's content-type category, not a generic media type."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:31:Google.WordListCase:77:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "The phrase identifies product metadata and should not be replaced with the technically different “media type.”"
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:56:Google.WordListCase:91:disabled",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This is user-facing prose; “turned off” or “off” is clearer under the stated rule."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:12:Google.WordListCase:98:above",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "“Preceding each table” is more precise and remains clear if the layout changes."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:101:Google.WordListCase:104:regex",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "The passage discusses an actual regex pattern and function behavior; the technical term is appropriate."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:73:Google.WordListCase:3:Content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "This identifies a product-specific mismatch category, not a generic media type."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:186:Google.WordListCase:62:content type",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "The link refers to the product's established Content Types documentation category."
+    },
+    {
+      "id": "vale:advanced/troubleshooting.mdx:14:Google.WordListCase:18:Disable",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "This table description is reader-facing prose; “Turn off color output” is clearer."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:164:Google.WordListCase:45:regex",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.98,
+      "rationale": "“Regex” is standard technical terminology for the matcher conversion described."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:49:Google.WordListCase:23:Regex",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The text describes a pattern object using an actual regular-expression pattern."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:41:Google.Will:38:will",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The wording is quoted product-specific text and should remain exact."
+    },
+    {
+      "id": "vale:getting-started/mental-models.mdx:30:Google.Will:11:will",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The phrase is a quoted user question, so changing it would alter the example."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:51:Google.Will:195:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "The sentence can say “which combinations work” instead of using unnecessary future-oriented wording."
+    },
+    {
+      "id": "vale:getting-started/why-syllago.mdx:31:Google.Will:158:will",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "“Where features degrade” communicates the compatibility result without unnecessary future tense."
+    }
+  ]
+}

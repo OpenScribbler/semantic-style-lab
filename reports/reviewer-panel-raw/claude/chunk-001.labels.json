@@ -1,0 +1,285 @@
+{
+  "labels": [
+    {
+      "id": "vale:index.mdx:6:Google.Semicolons:67:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:6:Google.Semicolons:69:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Code import syntax; style rules don't apply to literal code."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.7,
+      "rationale": "Connects references; period or conjunction would simplify structure."
+    },
+    {
+      "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Semicolon connecting related clauses; period or conjunction clearer."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.65,
+      "rationale": "Shows contrast between behaviors; 'but' would simplify structure."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.65,
+      "rationale": "Connects similar ideas; period or comma works better."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Explains consequence; period or comma expresses relationship better."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.7,
+      "rationale": "Parallel alternatives; dash or 'or' would be clearer."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Parallel scenarios; period or dash better than semicolon."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:49:Google.Passive:164:be written",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Passive 'be written'; rewrite as active voice."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be installed'; rewrite as 'you can install.'"
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:119:Google.Passive:60:are shared",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'are shared'; rewrite active 'contain content.'"
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:99:Google.Passive:88:be established",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be established'; rewrite active 'establish trust.'"
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be installed'; rewrite as active voice."
+    },
+    {
+      "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'is accompanied'; rewrite as 'emits label.'"
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:52:Google.Passive:202:is preserved",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Passive 'is preserved'; rewrite as active voice."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'be satisfied'; rewrite as active voice."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:46:Google.Passive:263:be preserved",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'can't preserve'; rewrite as 'you can't.'"
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Passive 'is captured'; cite ADR for protocol details."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:39:Google.Passive:44:was acquired",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.6,
+      "rationale": "Passive in table field; context permits some passive usage."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Passive 'is installed'; rewrite as 'you don't install.'"
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:13:Google.ExcessiveClaims:28:Best",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "'Best for' is category header, not quality claim."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:17:Google.ExcessiveClaims:3:Best",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "'Best for' is category header, not quality claim."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'Best content' unverifiable claim; qualify or remove."
+    },
+    {
+      "id": "vale:using-syllago/content-types/agents.mdx:8:Google.Colons:30:Claude",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "'Claude Code' official product name; preserve form."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:24:Google.Colons:1:Copy",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "Sentence capitalization standard rule overrides preference."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:67:Google.WordList:10:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product name; unclear if rule applies to product names."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:68:Google.WordList:11:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product name; unclear if rule applies to product names."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:75:Google.WordList:36:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product names in table; unclear rule application."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:46:Google.WordList:129:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.55,
+      "rationale": "Product names; unclear if rule applies to official names."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.7,
+      "rationale": "'CLI reference' rewritable as 'command-line reference.'"
+    },
+    {
+      "id": "vale:using-syllago/content-types/skills.mdx:116:Google.WordList:18:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.55,
+      "rationale": "Format reference; unclear if rule applies here."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.72,
+      "rationale": "'JSON CLI format' rewritable as 'command-line agent format.'"
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:21:Google.WordList:26:CLI",
+      "verdict": "uncertain",
+      "vale_fit": "not_applicable",
+      "confidence": 0.5,
+      "rationale": "Product terminology; unclear if rule applies here."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'CLI output' rewritable as 'command-line output.'"
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'CLI' noun; rewrite as 'command-line interface.'"
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.8,
+      "rationale": "'CLI tools' rewritable as 'command-line tools.'"
+    }
+  ],
+  "id_repairs": []
+}

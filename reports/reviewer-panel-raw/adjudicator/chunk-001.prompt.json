@@ -1,0 +1,621 @@
+{
+  "items": [
+    {
+      "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+      "kind": "vale_alert",
+      "path": "moat/index.mdx",
+      "line": 80,
+      "rule": "Google.Semicolons",
+      "rule_summary": "Use semicolons judiciously.",
+      "matched_text": ";",
+      "passage": "79 | \n80 | The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field.\n81 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+          "rationale": "Google style discourages semicolons; separating into two independent sentences is preferred.",
+          "vale_fit": "not_applicable",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.68,
+          "rationale": "Semicolon connecting related clauses; period or conjunction clearer."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "Semicolon brackets two related clauses in a technical sentence."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.91,
+          "rationale": "The semicolon appropriately connects a default with its closely related exception."
+        }
+      ]
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "kind": "vale_alert",
+      "path": "moat/registry-add-signing-identity.mdx",
+      "line": 126,
+      "rule": "Google.Semicolons",
+      "rule_summary": "Use semicolons judiciously.",
+      "matched_text": ";",
+      "passage": "125 | \n126 | Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.\n127 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+          "rationale": "Google style advises avoiding semicolons; split into two sentences instead.",
+          "vale_fit": "not_applicable",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.65,
+          "rationale": "Shows contrast between behaviors; 'but' would simplify structure."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "Semicolon joins clauses and does not reduce clarity."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.96,
+          "rationale": "The semicolon clearly emphasizes the contrast between rename and transfer behavior."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "kind": "vale_alert",
+      "path": "using-syllago/how-to/install-community-skill.mdx",
+      "line": 41,
+      "rule": "Google.Semicolons",
+      "rule_summary": "Use semicolons judiciously.",
+      "matched_text": ";",
+      "passage": "40 | \n41 | This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose.\n42 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+          "rationale": "Google style discourages semicolons; replace with a period or separate clause.",
+          "vale_fit": "not_applicable",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.65,
+          "rationale": "Connects similar ideas; period or comma works better."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.93,
+          "rationale": "Semicolon adds clarity between related clauses and remains sparse."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.91,
+          "rationale": "The semicolon cleanly separates closely related instructions without obscuring meaning."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "kind": "vale_alert",
+      "path": "using-syllago/collections/registries.mdx",
+      "line": 100,
+      "rule": "Google.Semicolons",
+      "rule_summary": "Use semicolons judiciously.",
+      "matched_text": ";",
+      "passage": "99 | \n100 | `syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry; omit it to share into a default team repo.\n101 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+          "rationale": "Google style discourages semicolons; split into two sentences or use 'and'.",
+          "vale_fit": "not_applicable",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.7,
+          "rationale": "Parallel alternatives; dash or 'or' would be clearer."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "Semicolon is a precise but restrained clause separator."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.95,
+          "rationale": "The semicolon effectively separates parallel instructions for supplying or omitting the option."
+        }
+      ]
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "kind": "vale_alert",
+      "path": "moat/trust-tiers.mdx",
+      "line": 85,
+      "rule": "Google.Semicolons",
+      "rule_summary": "Use semicolons judiciously.",
+      "matched_text": ";",
+      "passage": "84 | \n85 | A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`; pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.\n86 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+          "rationale": "Google style discourages semicolons; split into two sentences or use a coordinating conjunction.",
+          "vale_fit": "not_applicable",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.68,
+          "rationale": "Parallel scenarios; period or dash better than semicolon."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "Semicolon is used sparingly and helps link related clauses."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "The semicolon appropriately contrasts interactive and noninteractive outcomes."
+        }
+      ]
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+      "kind": "vale_alert",
+      "path": "getting-started/core-concepts.mdx",
+      "line": 118,
+      "rule": "Google.Passive",
+      "rule_summary": "In general, use active voice instead of passive voice ('be installed').",
+      "matched_text": "be installed",
+      "passage": "117 | \n118 | This hub-and-spoke design means you add content once and install it anywhere. A rule written for Claude Code can be installed into Cursor, Windsurf, or any other supported provider — syllago handles the format translation automatically.\n119 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+          "rationale": "Passive voice appropriately focuses on the rule/capability rather than the user.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "Passive 'be installed'; rewrite as 'you can install.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.92,
+          "rationale": "Reduced participle is adjectival, not a passive sentence."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.87,
+          "rationale": "Addressing the reader directly as the installer would make the action clearer and more concise."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+      "kind": "vale_alert",
+      "path": "using-syllago/collections/library.mdx",
+      "line": 58,
+      "rule": "Google.Passive",
+      "rule_summary": "In general, use active voice instead of passive voice ('be installed').",
+      "matched_text": "be installed",
+      "passage": "57 | \n58 | Syllago handles format conversion automatically. A Cursor rule becomes a universal syllago item that can later be installed to Claude Code, Kiro, or any other supported provider.\n59 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+          "rationale": "Legitimate passive voice focusing on the object's capability across providers.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "Passive 'be installed'; rewrite as active voice."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.87,
+          "rationale": "Passive voice is standard for installation outcomes in technical docs."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.85,
+          "rationale": "“You can later install” would identify the actor and produce a more direct instruction."
+        }
+      ]
+    },
+    {
+      "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+      "kind": "vale_alert",
+      "path": "moat/index.mdx",
+      "line": 78,
+      "rule": "Google.Passive",
+      "rule_summary": "In general, use active voice instead of passive voice ('is accompanied').",
+      "matched_text": "is accompanied",
+      "passage": "77 | \n78 | Each exit is accompanied by a kebab-case label on stderr (`tofu-acceptance`, `signing-profile-change`, `publisher-revocation`, `manifest-stale`) so pipelines can grep the failure class without parsing the exit code.\n79 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+          "rationale": "Stative/descriptive expression describing relationship between exit and label, not an undesirable passive.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "Passive 'is accompanied'; rewrite as 'emits label.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.88,
+          "rationale": "This is a conventional passive description of a metadata fact."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "Making the label the subject yields a shorter, clearer active construction."
+        }
+      ]
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+      "kind": "vale_alert",
+      "path": "moat/registry-add-signing-identity.mdx",
+      "line": 106,
+      "rule": "Google.Passive",
+      "rule_summary": "In general, use active voice instead of passive voice ('be satisfied').",
+      "matched_text": "be satisfied",
+      "passage": "105 | \n106 | If any `--signing-*` flag is passed but verification cannot be satisfied, syllago returns a structured `MOAT_*` error and refuses to add content. No silent fall-back to unsigned mode — a pinned profile means the operator has opted into cryptographic gating.\n107 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+          "rationale": "Standard technical condition where the verifier/actor is implied and systemic.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "Passive 'be satisfied'; rewrite as active voice."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.82,
+          "rationale": "The condition is valid passive phrasing in a technical gate."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.89,
+          "rationale": "The passive phrase is abstract and awkward; directly stating that verification fails would be clearer."
+        }
+      ]
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+      "kind": "vale_alert",
+      "path": "moat/registry-add-signing-identity.mdx",
+      "line": 10,
+      "rule": "Google.Passive",
+      "rule_summary": "In general, use active voice instead of passive voice ('is captured').",
+      "matched_text": "is captured",
+      "passage": "9 | \n10 | This page covers the operator workflow for `syllago registry add` and the three ways to pin an identity. The protocol detail is captured in an Architecture Decision Record (ADR) — see [ADR 0007 in the syllago repo](https://github.com/OpenScribbler/syllago/blob/main/docs/adr/0007-moat-slice-1.md).\n11 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+          "rationale": "Could be actively phrased ('ADR 0007 captures the protocol detail'), but acceptable descriptive passive.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.75,
+          "rationale": "Passive 'is captured'; cite ADR for protocol details."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.85,
+          "rationale": "ADR reference is a standard passive statement of event capture."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.93,
+          "rationale": "Making the ADR the subject would clearly identify where readers can find the protocol details."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+      "kind": "vale_alert",
+      "path": "using-syllago/collections/registries.mdx",
+      "line": 10,
+      "rule": "Google.Passive",
+      "rule_summary": "In general, use active voice instead of passive voice ('is installed').",
+      "matched_text": "is installed",
+      "passage": "9 | \n10 | When you add a registry, syllago clones the git repo locally. Syncing pulls the latest commits. Browsing lists the content available in the clone. Nothing is installed into your [library](/using-syllago/collections/library/) until you explicitly install an item.\n11 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+          "rationale": "Passive voice emphasizes system state and safety guarantee ('Nothing is installed').",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "Passive 'is installed'; rewrite as 'you don't install.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.77,
+          "rationale": "Passive phrasing is clear and active rewrite is straightforward."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.95,
+          "rationale": "Passive voice effectively emphasizes that registry content remains uninstalled until the reader acts."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+      "kind": "vale_alert",
+      "path": "using-syllago/collections/loadouts.mdx",
+      "line": 83,
+      "rule": "Google.WordList",
+      "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+      "matched_text": "CLI",
+      "passage": "82 | - [Registries](/using-syllago/collections/registries/) — shared team and community content\n83 | - [CLI reference: loadout commands](/using-syllago/cli-reference/loadout-apply/) — full flag and option details\n84 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+          "rationale": "Standard accepted industry abbreviation in reference link title for CLI reference.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.7,
+          "rationale": "'CLI reference' rewritable as 'command-line reference.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.91,
+          "rationale": "This is a documentation title, not a forbidden plain noun."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.9,
+          "rationale": "Here CLI is generic terminology; “command-line reference” would follow the stated word-choice guidance."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+      "kind": "vale_alert",
+      "path": "using-syllago/format-conversion.mdx",
+      "line": 148,
+      "rule": "Google.WordList",
+      "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+      "matched_text": "CLI",
+      "passage": "147 | ### Kiro\n148 | Agent definitions use Markdown with YAML frontmatter (14 fields). Also supports a JSON CLI agent format with embedded MCP servers and lifecycle hooks. Rules and skills are Markdown steering files.\n149 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+          "rationale": "Standard modifier describing format type ('CLI agent format') where abbreviation is appropriate.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.72,
+          "rationale": "'JSON CLI format' rewritable as 'command-line agent format.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.96,
+          "rationale": "Provider names are product labels, not prohibited 'CLI' prose."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.87,
+          "rationale": "CLI modifies a generic agent format here, so “command-line agent format” is clearer."
+        }
+      ]
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+      "kind": "vale_alert",
+      "path": "using-syllago/syllago-yaml.mdx",
+      "line": 22,
+      "rule": "Google.WordList",
+      "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+      "matched_text": "CLI",
+      "passage": "21 | | `id` | string (UUID) | Unique identifier for this content item. |\n22 | | `name` | string | Human-readable name. Used in CLI output and as the directory name. |\n23 | | `type` | string | Content type. One of: `rules`, `skills`, `agents`, `hooks`, `commands`, `mcp`, `loadouts`. |",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+          "rationale": "Standard concise technical noun adjunct ('CLI output') in reference table.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "'CLI output' rewritable as 'command-line output.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "This describes the tool category, not a banned plain phrase."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "This describes generic program output, where “command-line output” is clearer and guide-conformant."
+        }
+      ]
+    }
+  ],
+  "prompt": "Act as the final adjudicator for documentation-style cases on which four independent reviewers split. Apply the Google developer documentation style rule stated in each item to the exact passage.\n\nChoose violation, not_violation, or uncertain. Resolve reviewer mistakes rather than voting mechanically. Use uncertain only for a genuine policy choice or insufficient context. For semantic_gap items, also decide whether ordinary deterministic Vale/regex logic can reliably make the decision. Keep each rationale under 24 words. Return every id exactly once.\n\nDisputed items and reviewer evidence:\n[\n  {\n    \"id\": \"vale:moat/index.mdx:80:Google.Semicolons:52:;\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"moat/index.mdx\",\n    \"line\": 80,\n    \"rule\": \"Google.Semicolons\",\n    \"rule_summary\": \"Use semicolons judiciously.\",\n    \"matched_text\": \";\",\n    \"passage\": \"79 | \\n80 | The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field.\\n81 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:moat/index.mdx:80:Google.Semicolons:52:;\",\n        \"rationale\": \"Google style discourages semicolons; separating into two independent sentences is preferred.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:moat/index.mdx:80:Google.Semicolons:52:;\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Semicolon connecting related clauses; period or conjunction clearer.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:moat/index.mdx:80:Google.Semicolons:52:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Semicolon brackets two related clauses in a technical sentence.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:moat/index.mdx:80:Google.Semicolons:52:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.91,\n        \"rationale\": \"The semicolon appropriately connects a default with its closely related exception.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"moat/registry-add-signing-identity.mdx\",\n    \"line\": 126,\n    \"rule\": \"Google.Semicolons\",\n    \"rule_summary\": \"Use semicolons judiciously.\",\n    \"matched_text\": \";\",\n    \"passage\": \"125 | \\n126 | Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.\\n127 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;\",\n        \"rationale\": \"Google style advises avoiding semicolons; split into two sentences instead.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Shows contrast between behaviors; 'but' would simplify structure.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Semicolon joins clauses and does not reduce clarity.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.96,\n        \"rationale\": \"The semicolon clearly emphasizes the contrast between rename and transfer behavior.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/how-to/install-community-skill.mdx\",\n    \"line\": 41,\n    \"rule\": \"Google.Semicolons\",\n    \"rule_summary\": \"Use semicolons judiciously.\",\n    \"matched_text\": \";\",\n    \"passage\": \"40 | \\n41 | This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose.\\n42 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;\",\n        \"rationale\": \"Google style discourages semicolons; replace with a period or separate clause.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Connects similar ideas; period or comma works better.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Semicolon adds clarity between related clauses and remains sparse.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.91,\n        \"rationale\": \"The semicolon cleanly separates closely related instructions without obscuring meaning.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/collections/registries.mdx\",\n    \"line\": 100,\n    \"rule\": \"Google.Semicolons\",\n    \"rule_summary\": \"Use semicolons judiciously.\",\n    \"matched_text\": \";\",\n    \"passage\": \"99 | \\n100 | `syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry; omit it to share into a default team repo.\\n101 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;\",\n        \"rationale\": \"Google style discourages semicolons; split into two sentences or use 'and'.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.7,\n        \"rationale\": \"Parallel alternatives; dash or 'or' would be clearer.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Semicolon is a precise but restrained clause separator.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.95,\n        \"rationale\": \"The semicolon effectively separates parallel instructions for supplying or omitting the option.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"moat/trust-tiers.mdx\",\n    \"line\": 85,\n    \"rule\": \"Google.Semicolons\",\n    \"rule_summary\": \"Use semicolons judiciously.\",\n    \"matched_text\": \";\",\n    \"passage\": \"84 | \\n85 | A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`; pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.\\n86 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;\",\n        \"rationale\": \"Google style discourages semicolons; split into two sentences or use a coordinating conjunction.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Parallel scenarios; period or dash better than semicolon.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Semicolon is used sparingly and helps link related clauses.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"The semicolon appropriately contrasts interactive and noninteractive outcomes.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"getting-started/core-concepts.mdx\",\n    \"line\": 118,\n    \"rule\": \"Google.Passive\",\n    \"rule_summary\": \"In general, use active voice instead of passive voice ('be installed').\",\n    \"matched_text\": \"be installed\",\n    \"passage\": \"117 | \\n118 | This hub-and-spoke design means you add content once and install it anywhere. A rule written for Claude Code can be installed into Cursor, Windsurf, or any other supported provider — syllago handles the format translation automatically.\\n119 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed\",\n        \"rationale\": \"Passive voice appropriately focuses on the rule/capability rather than the user.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"Passive 'be installed'; rewrite as 'you can install.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Reduced participle is adjectival, not a passive sentence.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.87,\n        \"rationale\": \"Addressing the reader directly as the installer would make the action clearer and more concise.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/collections/library.mdx\",\n    \"line\": 58,\n    \"rule\": \"Google.Passive\",\n    \"rule_summary\": \"In general, use active voice instead of passive voice ('be installed').\",\n    \"matched_text\": \"be installed\",\n    \"passage\": \"57 | \\n58 | Syllago handles format conversion automatically. A Cursor rule becomes a universal syllago item that can later be installed to Claude Code, Kiro, or any other supported provider.\\n59 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed\",\n        \"rationale\": \"Legitimate passive voice focusing on the object's capability across providers.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"Passive 'be installed'; rewrite as active voice.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.87,\n        \"rationale\": \"Passive voice is standard for installation outcomes in technical docs.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.85,\n        \"rationale\": \"“You can later install” would identify the actor and produce a more direct instruction.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:moat/index.mdx:78:Google.Passive:11:is accompanied\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"moat/index.mdx\",\n    \"line\": 78,\n    \"rule\": \"Google.Passive\",\n    \"rule_summary\": \"In general, use active voice instead of passive voice ('is accompanied').\",\n    \"matched_text\": \"is accompanied\",\n    \"passage\": \"77 | \\n78 | Each exit is accompanied by a kebab-case label on stderr (`tofu-acceptance`, `signing-profile-change`, `publisher-revocation`, `manifest-stale`) so pipelines can grep the failure class without parsing the exit code.\\n79 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"vale:moat/index.mdx:78:Google.Passive:11:is accompanied\",\n        \"rationale\": \"Stative/descriptive expression describing relationship between exit and label, not an undesirable passive.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:moat/index.mdx:78:Google.Passive:11:is accompanied\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"Passive 'is accompanied'; rewrite as 'emits label.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:moat/index.mdx:78:Google.Passive:11:is accompanied\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.88,\n        \"rationale\": \"This is a conventional passive description of a metadata fact.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:moat/index.mdx:78:Google.Passive:11:is accompanied\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Making the label the subject yields a shorter, clearer active construction.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"moat/registry-add-signing-identity.mdx\",\n    \"line\": 106,\n    \"rule\": \"Google.Passive\",\n    \"rule_summary\": \"In general, use active voice instead of passive voice ('be satisfied').\",\n    \"matched_text\": \"be satisfied\",\n    \"passage\": \"105 | \\n106 | If any `--signing-*` flag is passed but verification cannot be satisfied, syllago returns a structured `MOAT_*` error and refuses to add content. No silent fall-back to unsigned mode — a pinned profile means the operator has opted into cryptographic gating.\\n107 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied\",\n        \"rationale\": \"Standard technical condition where the verifier/actor is implied and systemic.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"Passive 'be satisfied'; rewrite as active voice.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.82,\n        \"rationale\": \"The condition is valid passive phrasing in a technical gate.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.89,\n        \"rationale\": \"The passive phrase is abstract and awkward; directly stating that verification fails would be clearer.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"moat/registry-add-signing-identity.mdx\",\n    \"line\": 10,\n    \"rule\": \"Google.Passive\",\n    \"rule_summary\": \"In general, use active voice instead of passive voice ('is captured').\",\n    \"matched_text\": \"is captured\",\n    \"passage\": \"9 | \\n10 | This page covers the operator workflow for `syllago registry add` and the three ways to pin an identity. The protocol detail is captured in an Architecture Decision Record (ADR) — see [ADR 0007 in the syllago repo](https://github.com/OpenScribbler/syllago/blob/main/docs/adr/0007-moat-slice-1.md).\\n11 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured\",\n        \"rationale\": \"Could be actively phrased ('ADR 0007 captures the protocol detail'), but acceptable descriptive passive.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Passive 'is captured'; cite ADR for protocol details.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.85,\n        \"rationale\": \"ADR reference is a standard passive statement of event capture.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Making the ADR the subject would clearly identify where readers can find the protocol details.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/collections/registries.mdx\",\n    \"line\": 10,\n    \"rule\": \"Google.Passive\",\n    \"rule_summary\": \"In general, use active voice instead of passive voice ('is installed').\",\n    \"matched_text\": \"is installed\",\n    \"passage\": \"9 | \\n10 | When you add a registry, syllago clones the git repo locally. Syncing pulls the latest commits. Browsing lists the content available in the clone. Nothing is installed into your [library](/using-syllago/collections/library/) until you explicitly install an item.\\n11 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed\",\n        \"rationale\": \"Passive voice emphasizes system state and safety guarantee ('Nothing is installed').\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"Passive 'is installed'; rewrite as 'you don't install.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.77,\n        \"rationale\": \"Passive phrasing is clear and active rewrite is straightforward.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Passive voice effectively emphasizes that registry content remains uninstalled until the reader acts.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/collections/loadouts.mdx\",\n    \"line\": 83,\n    \"rule\": \"Google.WordList\",\n    \"rule_summary\": \"Use 'command-line tool' instead of 'CLI'.\",\n    \"matched_text\": \"CLI\",\n    \"passage\": \"82 | - [Registries](/using-syllago/collections/registries/) — shared team and community content\\n83 | - [CLI reference: loadout commands](/using-syllago/cli-reference/loadout-apply/) — full flag and option details\\n84 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI\",\n        \"rationale\": \"Standard accepted industry abbreviation in reference link title for CLI reference.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.7,\n        \"rationale\": \"'CLI reference' rewritable as 'command-line reference.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.91,\n        \"rationale\": \"This is a documentation title, not a forbidden plain noun.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Here CLI is generic terminology; “command-line reference” would follow the stated word-choice guidance.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/format-conversion.mdx\",\n    \"line\": 148,\n    \"rule\": \"Google.WordList\",\n    \"rule_summary\": \"Use 'command-line tool' instead of 'CLI'.\",\n    \"matched_text\": \"CLI\",\n    \"passage\": \"147 | ### Kiro\\n148 | Agent definitions use Markdown with YAML frontmatter (14 fields). Also supports a JSON CLI agent format with embedded MCP servers and lifecycle hooks. Rules and skills are Markdown steering files.\\n149 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI\",\n        \"rationale\": \"Standard modifier describing format type ('CLI agent format') where abbreviation is appropriate.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.72,\n        \"rationale\": \"'JSON CLI format' rewritable as 'command-line agent format.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Provider names are product labels, not prohibited 'CLI' prose.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.87,\n        \"rationale\": \"CLI modifies a generic agent format here, so “command-line agent format” is clearer.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/syllago-yaml.mdx\",\n    \"line\": 22,\n    \"rule\": \"Google.WordList\",\n    \"rule_summary\": \"Use 'command-line tool' instead of 'CLI'.\",\n    \"matched_text\": \"CLI\",\n    \"passage\": \"21 | | `id` | string (UUID) | Unique identifier for this content item. |\\n22 | | `name` | string | Human-readable name. Used in CLI output and as the directory name. |\\n23 | | `type` | string | Content type. One of: `rules`, `skills`, `agents`, `hooks`, `commands`, `mcp`, `loadouts`. |\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI\",\n        \"rationale\": \"Standard concise technical noun adjunct ('CLI output') in reference table.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"'CLI output' rewritable as 'command-line output.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"This describes the tool category, not a banned plain phrase.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"This describes generic program output, where “command-line output” is clearer and guide-conformant.\"\n      }\n    ]\n  }\n]"
+}

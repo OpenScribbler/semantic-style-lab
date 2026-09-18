@@ -1,0 +1,610 @@
+{
+  "items": [
+    {
+      "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+      "kind": "vale_alert",
+      "path": "using-syllago/tui.mdx",
+      "line": 52,
+      "rule": "Google.WordList",
+      "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+      "matched_text": "CLI",
+      "passage": "51 | \n52 | The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands).\n53 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+          "rationale": "'CLI' contrasted with 'TUI' is standard technical terminology in developer documentation.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "'CLI' noun; rewrite as 'command-line interface.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "This is a product category label, not forbidden wording."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "CLI is used generically throughout; “command-line interface” or “command-line tool” would be clearer."
+        }
+      ]
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+      "kind": "vale_alert",
+      "path": "for-ai-assistants.mdx",
+      "line": 26,
+      "rule": "Google.WordList",
+      "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+      "matched_text": "CLI",
+      "passage": "25 | \n26 | **Use with CLI tools:**\n27 | ```bash",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+          "rationale": "Standard concise technical heading ('Use with CLI tools:').",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.8,
+          "rationale": "'CLI tools' rewritable as 'command-line tools.'"
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.94,
+          "rationale": "This is a product category label, not forbidden wording."
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.96,
+          "rationale": "“CLI tools” is generic jargon; “command-line tools” follows the prescribed terminology."
+        }
+      ]
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "kind": "vale_alert",
+      "path": "advanced/team-setup.mdx",
+      "line": 37,
+      "rule": "Google.Timeless",
+      "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+      "matched_text": "latest",
+      "passage": "36 | \n37 | Sync periodically to pull the latest content:\n38 | ",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+          "rationale": "'Latest content' refers accurately to git/registry sync, not an ephemeral time reference.",
+          "vale_fit": "not_applicable",
+          "verdict": "not_violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.85,
+          "rationale": "Time-based word; Google style avoids temporal language in product docs."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+          "verdict": "violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.93,
+          "rationale": "This generic instruction can avoid time-dependent wording by describing synchronization without “latest.”"
+        },
+        {
+          "reviewer": "codex",
+          "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+          "verdict": "not_violation",
+          "vale_fit": "not_applicable",
+          "confidence": 0.9,
+          "rationale": "Here “latest” identifies the changing remote content that synchronization retrieves."
+        }
+      ]
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+      "kind": "semantic_gap",
+      "path": "advanced/sandbox.mdx",
+      "line": 14,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "Filesystem. The sandboxed process can only see your current working directory. The rest of the filesystem is hidden. This prevents AI-generated code from reading or modifying files outside the project.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+          "rationale": "Describing a process as able to 'see' files attributes human senses to software.",
+          "vale_fit": "semantic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+          "verdict": "not_violation",
+          "vale_fit": "uncertain",
+          "confidence": 0.8,
+          "rationale": "'Can see' and 'hidden' are idiomatic technical language for filesystem access restrictions, not misleading anthropomorphism."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+          "verdict": "uncertain",
+          "vale_fit": "semantic",
+          "confidence": 0.72,
+          "rationale": "Software 'seeing' is conventional in sandbox contexts; this is borderline."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+          "verdict": "violation",
+          "vale_fit": "semantic",
+          "confidence": 0.9,
+          "rationale": "“Access” states the filesystem restriction more precisely than saying the process can “see.”"
+        }
+      ]
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+      "kind": "semantic_gap",
+      "path": "advanced/sandbox.mdx",
+      "line": 60,
+      "rule": "reader-address",
+      "rule_summary": "Address the reader directly",
+      "passage": "This starts the provider with filesystem, network, and env var restrictions active. The provider works normally from the user's perspective, but its access is constrained to what you've allowed.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+          "rationale": "Refers to the reader inconsistently as 'the user' alongside second-person 'you'.",
+          "vale_fit": "semantic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+          "verdict": "uncertain",
+          "vale_fit": "semantic",
+          "confidence": 0.65,
+          "rationale": "Passage mixes indirect and direct address; includes 'you've allowed' but opens with passive 'This starts'; mixed approach."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.94,
+          "rationale": "The reader is directly addressed and the sentence is compliant."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+          "verdict": "violation",
+          "vale_fit": "semantic",
+          "confidence": 0.94,
+          "rationale": "“The user's perspective” inconsistently shifts away from the reader addressed as “you.”"
+        }
+      ]
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+      "kind": "semantic_gap",
+      "path": "advanced/team-setup.mdx",
+      "line": 57,
+      "rule": "ambiguous-pronoun",
+      "rule_summary": "Give pronouns clear referents",
+      "passage": "This means team standards can evolve from the bottom up. Individual developers experiment locally, and the best content gets published to the shared registry for everyone.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+          "rationale": "Avoid standalone 'This' as a pronoun without a clarifying noun referent.",
+          "vale_fit": "deterministic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+          "verdict": "not_violation",
+          "vale_fit": "uncertain",
+          "confidence": 0.7,
+          "rationale": "Pronouns 'this' and 'the best content' have reasonably clear referents despite density; contextually interpretable."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.9,
+          "rationale": "The antecedent is clear and the sentence doesn't mislead."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+          "verdict": "uncertain",
+          "vale_fit": "semantic",
+          "confidence": 0.78,
+          "rationale": "The referent of “This” can only be judged from preceding context."
+        }
+      ]
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+      "kind": "semantic_gap",
+      "path": "advanced/team-setup.mdx",
+      "line": 156,
+      "rule": "excessive-claim",
+      "rule_summary": "Avoid unsubstantiated or minimizing claims",
+      "passage": "The registry is the source of truth. Loadouts make it easy to apply. Project config ties it to specific repos. CI keeps everything in sync automatically.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+          "rationale": "'Make it easy' is a minimizing claim; Google style discourages using 'easy'.",
+          "vale_fit": "deterministic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+          "verdict": "uncertain",
+          "vale_fit": "semantic",
+          "confidence": 0.55,
+          "rationale": "Architectural claims about registry, loadouts, and CI sync are design assertions; acceptable for architecture documentation but lack supporting evidence."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.74,
+          "rationale": "This is a strong product summary, but it remains supported."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+          "verdict": "violation",
+          "vale_fit": "semantic",
+          "confidence": 0.92,
+          "rationale": "“Easy” is a minimizing usability claim unsupported by the passage."
+        }
+      ]
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+      "kind": "semantic_gap",
+      "path": "getting-started/core-concepts.mdx",
+      "line": 8,
+      "rule": "preannouncement",
+      "rule_summary": "Avoid pre-announcing content",
+      "passage": "This page covers the four concepts that make the rest of the docs make sense: providers, content types, collections, and format conversion.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+          "rationale": "Google style discourages meta-openings like 'This page covers'; start topics directly with core information.",
+          "vale_fit": "deterministic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+          "verdict": "not_violation",
+          "vale_fit": "uncertain",
+          "confidence": 0.7,
+          "rationale": "Sentence immediately lists the four concepts; not pre-announcing but providing a roadmap, which aids readability."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.93,
+          "rationale": "This page overview is ordinary framing, not a pre-announcement problem."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+          "verdict": "violation",
+          "vale_fit": "deterministic",
+          "confidence": 0.98,
+          "rationale": "“This page covers” pre-announces the content instead of presenting it directly."
+        }
+      ]
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "kind": "semantic_gap",
+      "path": "getting-started/quick-start.mdx",
+      "line": 29,
+      "rule": "anthropomorphism",
+      "rule_summary": "Avoid misleading anthropomorphism",
+      "passage": "Follow the terminal prompts: [code] detects the AI coding tools (providers) on your machine and asks you to confirm which ones to manage. In the provider picker, space toggles a selection and enter confirms. When it finishes, your config exists at [code]. To skip the prompts and accept defaults, pass [code].",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.85,
+          "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+          "rationale": "Google style discourages software 'asking'; rewriting to 'prompts you to confirm' improves style.",
+          "vale_fit": "semantic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+          "verdict": "uncertain",
+          "vale_fit": "deterministic",
+          "confidence": 0.6,
+          "rationale": "Mild anthropomorphism in 'asks'; common but stylistic preference varies. Recoverable from context."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.82,
+          "rationale": "CLI prompts routinely use agent-like descriptions without misleading personification."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.95,
+          "rationale": "“Detects” and “asks” clearly describe automated behavior and a displayed confirmation prompt."
+        }
+      ]
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 22,
+      "rule": "ambiguous-pronoun",
+      "rule_summary": "Give pronouns clear referents",
+      "passage": "Add Roo Code, Cline, Amp, Gemini CLI, Codex, OpenCode, Zed, Factory Droid, Crush, and Pi, and the table grows in every dimension. MCP servers compound it — each client wires them up its own way.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+          "rationale": "'It' lacks a clear singular antecedent, referring vaguely to the overall complexity or table growth.",
+          "vale_fit": "semantic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+          "verdict": "uncertain",
+          "vale_fit": "semantic",
+          "confidence": 0.55,
+          "rationale": "Pronoun 'its' slightly ambiguous (client vs. table) but recoverable from context."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.88,
+          "rationale": "The antecedents are clear: 'it' is complexity; 'them' are MCP servers."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+          "verdict": "violation",
+          "vale_fit": "semantic",
+          "confidence": 0.86,
+          "rationale": "In “compound it,” the pronoun vaguely refers to complexity inferred from earlier discussion, not a clear noun."
+        }
+      ]
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 31,
+      "rule": "unnecessary-future-tense",
+      "rule_summary": "Use present tense for current behavior",
+      "passage": "Compatibility checking. [[code]](/using-syllago/cli-reference/compat/) reports which providers can fully consume an item and where features will degrade in translation, so you know before you publish.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+          "rationale": "'Will degrade' should be present tense ('degrade') to describe ongoing tool behavior.",
+          "vale_fit": "deterministic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.75,
+          "rationale": "'Will degrade' is conditional future describing current feature capability, not unnecessary."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+          "verdict": "violation",
+          "vale_fit": "deterministic",
+          "confidence": 0.76,
+          "rationale": "'Will degrade' describes a translation outcome; present tense is less precise here."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.96,
+          "rationale": "“Will degrade” describes a predicted consequence of a later translation, making future tense meaningful."
+        }
+      ]
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "kind": "semantic_gap",
+      "path": "getting-started/why-syllago.mdx",
+      "line": 55,
+      "rule": "unnecessary-future-tense",
+      "rule_summary": "Use present tense for current behavior",
+      "passage": "The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \"share\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [[code]](/using-syllago/cli-reference/compat/) tells you where translation will degrade.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+          "rationale": "'Will degrade' is unnecessary future tense; present tense 'degrades' should be used.",
+          "vale_fit": "deterministic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.75,
+          "rationale": "'Will degrade' describes conditional capability, not unnecessary future tense."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+          "verdict": "violation",
+          "vale_fit": "deterministic",
+          "confidence": 0.8,
+          "rationale": "The future tense refers to translation consequences and reads as a product capability."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.96,
+          "rationale": "The compatibility command predicts degradation that would occur during translation, so future tense is justified."
+        }
+      ]
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "kind": "semantic_gap",
+      "path": "moat/trust-tiers.mdx",
+      "line": 59,
+      "rule": "reader-address",
+      "rule_summary": "Address the reader directly",
+      "passage": "The syllago TUI interface exposes a reusable Trust Inspector modal that renders the full trust story for either an item or a whole registry. The same modal serves both scopes so the user sees a consistent shape regardless of where they opened it from.",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.95,
+          "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+          "rationale": "Refers to 'the user' and 'they' instead of addressing the reader directly as 'you'.",
+          "vale_fit": "semantic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+          "verdict": "uncertain",
+          "vale_fit": "deterministic",
+          "confidence": 0.6,
+          "rationale": "Third-person describes system behavior. Could prefer 'you'll see', but context-dependent."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.96,
+          "rationale": "The sentence stays objective and avoids second-person address."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+          "verdict": "violation",
+          "vale_fit": "semantic",
+          "confidence": 0.94,
+          "rationale": "“The user” refers to the reader indirectly; second-person “you” would be clearer and more direct."
+        }
+      ]
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "kind": "semantic_gap",
+      "path": "using-syllago/collections/registries.mdx",
+      "line": 118,
+      "rule": "excessive-claim",
+      "rule_summary": "Avoid unsubstantiated or minimizing claims",
+      "passage": "Or create one manually — a registry is just a git repo with syllago's content structure:",
+      "reviews": [
+        {
+          "reviewer": "antigravity",
+          "confidence": 0.9,
+          "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+          "rationale": "'Just' is a minimizing word that should be avoided per Google style guidelines.",
+          "vale_fit": "deterministic",
+          "verdict": "violation"
+        },
+        {
+          "reviewer": "claude",
+          "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.75,
+          "rationale": "'Just a git repo' encourages simplicity, not excessive. Helpful framing, not minimizing."
+        },
+        {
+          "reviewer": "copilot",
+          "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+          "verdict": "not_violation",
+          "vale_fit": "semantic",
+          "confidence": 0.88,
+          "rationale": "'Just' is explanatory, not a minimizing or unsupported claim."
+        },
+        {
+          "reviewer": "codex",
+          "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+          "verdict": "violation",
+          "vale_fit": "deterministic",
+          "confidence": 0.96,
+          "rationale": "“Just” minimizes registry requirements, even though the required content structure makes the qualification important."
+        }
+      ]
+    }
+  ],
+  "prompt": "Act as the final adjudicator for documentation-style cases on which four independent reviewers split. Apply the Google developer documentation style rule stated in each item to the exact passage.\n\nChoose violation, not_violation, or uncertain. Resolve reviewer mistakes rather than voting mechanically. Use uncertain only for a genuine policy choice or insufficient context. For semantic_gap items, also decide whether ordinary deterministic Vale/regex logic can reliably make the decision. Keep each rationale under 24 words. Return every id exactly once.\n\nDisputed items and reviewer evidence:\n[\n  {\n    \"id\": \"vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"using-syllago/tui.mdx\",\n    \"line\": 52,\n    \"rule\": \"Google.WordList\",\n    \"rule_summary\": \"Use 'command-line tool' instead of 'CLI'.\",\n    \"matched_text\": \"CLI\",\n    \"passage\": \"51 | \\n52 | The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands).\\n53 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI\",\n        \"rationale\": \"'CLI' contrasted with 'TUI' is standard technical terminology in developer documentation.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"'CLI' noun; rewrite as 'command-line interface.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"This is a product category label, not forbidden wording.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"CLI is used generically throughout; “command-line interface” or “command-line tool” would be clearer.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"for-ai-assistants.mdx\",\n    \"line\": 26,\n    \"rule\": \"Google.WordList\",\n    \"rule_summary\": \"Use 'command-line tool' instead of 'CLI'.\",\n    \"matched_text\": \"CLI\",\n    \"passage\": \"25 | \\n26 | **Use with CLI tools:**\\n27 | ```bash\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI\",\n        \"rationale\": \"Standard concise technical heading ('Use with CLI tools:').\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.8,\n        \"rationale\": \"'CLI tools' rewritable as 'command-line tools.'\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.94,\n        \"rationale\": \"This is a product category label, not forbidden wording.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.96,\n        \"rationale\": \"“CLI tools” is generic jargon; “command-line tools” follows the prescribed terminology.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest\",\n    \"kind\": \"vale_alert\",\n    \"path\": \"advanced/team-setup.mdx\",\n    \"line\": 37,\n    \"rule\": \"Google.Timeless\",\n    \"rule_summary\": \"Avoid time-based words like 'latest' in product documentation.\",\n    \"matched_text\": \"latest\",\n    \"passage\": \"36 | \\n37 | Sync periodically to pull the latest content:\\n38 | \",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest\",\n        \"rationale\": \"'Latest content' refers accurately to git/registry sync, not an ephemeral time reference.\",\n        \"vale_fit\": \"not_applicable\",\n        \"verdict\": \"not_violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Time-based word; Google style avoids temporal language in product docs.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.93,\n        \"rationale\": \"This generic instruction can avoid time-dependent wording by describing synchronization without “latest.”\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"not_applicable\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Here “latest” identifies the changing remote content that synchronization retrieves.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:advanced/sandbox.mdx:anthropomorphism:14\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"advanced/sandbox.mdx\",\n    \"line\": 14,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"Filesystem. The sandboxed process can only see your current working directory. The rest of the filesystem is hidden. This prevents AI-generated code from reading or modifying files outside the project.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:advanced/sandbox.mdx:anthropomorphism:14\",\n        \"rationale\": \"Describing a process as able to 'see' files attributes human senses to software.\",\n        \"vale_fit\": \"semantic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:advanced/sandbox.mdx:anthropomorphism:14\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"uncertain\",\n        \"confidence\": 0.8,\n        \"rationale\": \"'Can see' and 'hidden' are idiomatic technical language for filesystem access restrictions, not misleading anthropomorphism.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:advanced/sandbox.mdx:anthropomorphism:14\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Software 'seeing' is conventional in sandbox contexts; this is borderline.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:advanced/sandbox.mdx:anthropomorphism:14\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.9,\n        \"rationale\": \"“Access” states the filesystem restriction more precisely than saying the process can “see.”\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:advanced/sandbox.mdx:reader-address:60\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"advanced/sandbox.mdx\",\n    \"line\": 60,\n    \"rule\": \"reader-address\",\n    \"rule_summary\": \"Address the reader directly\",\n    \"passage\": \"This starts the provider with filesystem, network, and env var restrictions active. The provider works normally from the user's perspective, but its access is constrained to what you've allowed.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:advanced/sandbox.mdx:reader-address:60\",\n        \"rationale\": \"Refers to the reader inconsistently as 'the user' alongside second-person 'you'.\",\n        \"vale_fit\": \"semantic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:advanced/sandbox.mdx:reader-address:60\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Passage mixes indirect and direct address; includes 'you've allowed' but opens with passive 'This starts'; mixed approach.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:advanced/sandbox.mdx:reader-address:60\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.94,\n        \"rationale\": \"The reader is directly addressed and the sentence is compliant.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:advanced/sandbox.mdx:reader-address:60\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.94,\n        \"rationale\": \"“The user's perspective” inconsistently shifts away from the reader addressed as “you.”\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:advanced/team-setup.mdx:ambiguous-pronoun:57\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"advanced/team-setup.mdx\",\n    \"line\": 57,\n    \"rule\": \"ambiguous-pronoun\",\n    \"rule_summary\": \"Give pronouns clear referents\",\n    \"passage\": \"This means team standards can evolve from the bottom up. Individual developers experiment locally, and the best content gets published to the shared registry for everyone.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"semantic:advanced/team-setup.mdx:ambiguous-pronoun:57\",\n        \"rationale\": \"Avoid standalone 'This' as a pronoun without a clarifying noun referent.\",\n        \"vale_fit\": \"deterministic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:advanced/team-setup.mdx:ambiguous-pronoun:57\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"uncertain\",\n        \"confidence\": 0.7,\n        \"rationale\": \"Pronouns 'this' and 'the best content' have reasonably clear referents despite density; contextually interpretable.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:advanced/team-setup.mdx:ambiguous-pronoun:57\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.9,\n        \"rationale\": \"The antecedent is clear and the sentence doesn't mislead.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:advanced/team-setup.mdx:ambiguous-pronoun:57\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.78,\n        \"rationale\": \"The referent of “This” can only be judged from preceding context.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:advanced/team-setup.mdx:excessive-claim:156\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"advanced/team-setup.mdx\",\n    \"line\": 156,\n    \"rule\": \"excessive-claim\",\n    \"rule_summary\": \"Avoid unsubstantiated or minimizing claims\",\n    \"passage\": \"The registry is the source of truth. Loadouts make it easy to apply. Project config ties it to specific repos. CI keeps everything in sync automatically.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"semantic:advanced/team-setup.mdx:excessive-claim:156\",\n        \"rationale\": \"'Make it easy' is a minimizing claim; Google style discourages using 'easy'.\",\n        \"vale_fit\": \"deterministic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:advanced/team-setup.mdx:excessive-claim:156\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.55,\n        \"rationale\": \"Architectural claims about registry, loadouts, and CI sync are design assertions; acceptable for architecture documentation but lack supporting evidence.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:advanced/team-setup.mdx:excessive-claim:156\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.74,\n        \"rationale\": \"This is a strong product summary, but it remains supported.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:advanced/team-setup.mdx:excessive-claim:156\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.92,\n        \"rationale\": \"“Easy” is a minimizing usability claim unsupported by the passage.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:getting-started/core-concepts.mdx:preannouncement:8\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/core-concepts.mdx\",\n    \"line\": 8,\n    \"rule\": \"preannouncement\",\n    \"rule_summary\": \"Avoid pre-announcing content\",\n    \"passage\": \"This page covers the four concepts that make the rest of the docs make sense: providers, content types, collections, and format conversion.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:getting-started/core-concepts.mdx:preannouncement:8\",\n        \"rationale\": \"Google style discourages meta-openings like 'This page covers'; start topics directly with core information.\",\n        \"vale_fit\": \"deterministic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:getting-started/core-concepts.mdx:preannouncement:8\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"uncertain\",\n        \"confidence\": 0.7,\n        \"rationale\": \"Sentence immediately lists the four concepts; not pre-announcing but providing a roadmap, which aids readability.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:getting-started/core-concepts.mdx:preannouncement:8\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.93,\n        \"rationale\": \"This page overview is ordinary framing, not a pre-announcement problem.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:getting-started/core-concepts.mdx:preannouncement:8\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"deterministic\",\n        \"confidence\": 0.98,\n        \"rationale\": \"“This page covers” pre-announces the content instead of presenting it directly.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:getting-started/quick-start.mdx:anthropomorphism:29\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/quick-start.mdx\",\n    \"line\": 29,\n    \"rule\": \"anthropomorphism\",\n    \"rule_summary\": \"Avoid misleading anthropomorphism\",\n    \"passage\": \"Follow the terminal prompts: [code] detects the AI coding tools (providers) on your machine and asks you to confirm which ones to manage. In the provider picker, space toggles a selection and enter confirms. When it finishes, your config exists at [code]. To skip the prompts and accept defaults, pass [code].\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.85,\n        \"id\": \"semantic:getting-started/quick-start.mdx:anthropomorphism:29\",\n        \"rationale\": \"Google style discourages software 'asking'; rewriting to 'prompts you to confirm' improves style.\",\n        \"vale_fit\": \"semantic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:getting-started/quick-start.mdx:anthropomorphism:29\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"deterministic\",\n        \"confidence\": 0.6,\n        \"rationale\": \"Mild anthropomorphism in 'asks'; common but stylistic preference varies. Recoverable from context.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:getting-started/quick-start.mdx:anthropomorphism:29\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.82,\n        \"rationale\": \"CLI prompts routinely use agent-like descriptions without misleading personification.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:getting-started/quick-start.mdx:anthropomorphism:29\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.95,\n        \"rationale\": \"“Detects” and “asks” clearly describe automated behavior and a displayed confirmation prompt.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 22,\n    \"rule\": \"ambiguous-pronoun\",\n    \"rule_summary\": \"Give pronouns clear referents\",\n    \"passage\": \"Add Roo Code, Cline, Amp, Gemini CLI, Codex, OpenCode, Zed, Factory Droid, Crush, and Pi, and the table grows in every dimension. MCP servers compound it — each client wires them up its own way.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22\",\n        \"rationale\": \"'It' lacks a clear singular antecedent, referring vaguely to the overall complexity or table growth.\",\n        \"vale_fit\": \"semantic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.55,\n        \"rationale\": \"Pronoun 'its' slightly ambiguous (client vs. table) but recoverable from context.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.88,\n        \"rationale\": \"The antecedents are clear: 'it' is complexity; 'them' are MCP servers.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.86,\n        \"rationale\": \"In “compound it,” the pronoun vaguely refers to complexity inferred from earlier discussion, not a clear noun.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 31,\n    \"rule\": \"unnecessary-future-tense\",\n    \"rule_summary\": \"Use present tense for current behavior\",\n    \"passage\": \"Compatibility checking. [[code]](/using-syllago/cli-reference/compat/) reports which providers can fully consume an item and where features will degrade in translation, so you know before you publish.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31\",\n        \"rationale\": \"'Will degrade' should be present tense ('degrade') to describe ongoing tool behavior.\",\n        \"vale_fit\": \"deterministic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.75,\n        \"rationale\": \"'Will degrade' is conditional future describing current feature capability, not unnecessary.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"deterministic\",\n        \"confidence\": 0.76,\n        \"rationale\": \"'Will degrade' describes a translation outcome; present tense is less precise here.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.96,\n        \"rationale\": \"“Will degrade” describes a predicted consequence of a later translation, making future tense meaningful.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"getting-started/why-syllago.mdx\",\n    \"line\": 55,\n    \"rule\": \"unnecessary-future-tense\",\n    \"rule_summary\": \"Use present tense for current behavior\",\n    \"passage\": \"The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \\\"share\\\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [[code]](/using-syllago/cli-reference/compat/) tells you where translation will degrade.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55\",\n        \"rationale\": \"'Will degrade' is unnecessary future tense; present tense 'degrades' should be used.\",\n        \"vale_fit\": \"deterministic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.75,\n        \"rationale\": \"'Will degrade' describes conditional capability, not unnecessary future tense.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"deterministic\",\n        \"confidence\": 0.8,\n        \"rationale\": \"The future tense refers to translation consequences and reads as a product capability.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.96,\n        \"rationale\": \"The compatibility command predicts degradation that would occur during translation, so future tense is justified.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:moat/trust-tiers.mdx:reader-address:59\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"moat/trust-tiers.mdx\",\n    \"line\": 59,\n    \"rule\": \"reader-address\",\n    \"rule_summary\": \"Address the reader directly\",\n    \"passage\": \"The syllago TUI interface exposes a reusable Trust Inspector modal that renders the full trust story for either an item or a whole registry. The same modal serves both scopes so the user sees a consistent shape regardless of where they opened it from.\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.95,\n        \"id\": \"semantic:moat/trust-tiers.mdx:reader-address:59\",\n        \"rationale\": \"Refers to 'the user' and 'they' instead of addressing the reader directly as 'you'.\",\n        \"vale_fit\": \"semantic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:moat/trust-tiers.mdx:reader-address:59\",\n        \"verdict\": \"uncertain\",\n        \"vale_fit\": \"deterministic\",\n        \"confidence\": 0.6,\n        \"rationale\": \"Third-person describes system behavior. Could prefer 'you'll see', but context-dependent.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:moat/trust-tiers.mdx:reader-address:59\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.96,\n        \"rationale\": \"The sentence stays objective and avoids second-person address.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:moat/trust-tiers.mdx:reader-address:59\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.94,\n        \"rationale\": \"“The user” refers to the reader indirectly; second-person “you” would be clearer and more direct.\"\n      }\n    ]\n  },\n  {\n    \"id\": \"semantic:using-syllago/collections/registries.mdx:excessive-claim:118\",\n    \"kind\": \"semantic_gap\",\n    \"path\": \"using-syllago/collections/registries.mdx\",\n    \"line\": 118,\n    \"rule\": \"excessive-claim\",\n    \"rule_summary\": \"Avoid unsubstantiated or minimizing claims\",\n    \"passage\": \"Or create one manually — a registry is just a git repo with syllago's content structure:\",\n    \"reviews\": [\n      {\n        \"reviewer\": \"antigravity\",\n        \"confidence\": 0.9,\n        \"id\": \"semantic:using-syllago/collections/registries.mdx:excessive-claim:118\",\n        \"rationale\": \"'Just' is a minimizing word that should be avoided per Google style guidelines.\",\n        \"vale_fit\": \"deterministic\",\n        \"verdict\": \"violation\"\n      },\n      {\n        \"reviewer\": \"claude\",\n        \"id\": \"semantic:using-syllago/collections/registries.mdx:excessive-claim:118\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.75,\n        \"rationale\": \"'Just a git repo' encourages simplicity, not excessive. Helpful framing, not minimizing.\"\n      },\n      {\n        \"reviewer\": \"copilot\",\n        \"id\": \"semantic:using-syllago/collections/registries.mdx:excessive-claim:118\",\n        \"verdict\": \"not_violation\",\n        \"vale_fit\": \"semantic\",\n        \"confidence\": 0.88,\n        \"rationale\": \"'Just' is explanatory, not a minimizing or unsupported claim.\"\n      },\n      {\n        \"reviewer\": \"codex\",\n        \"id\": \"semantic:using-syllago/collections/registries.mdx:excessive-claim:118\",\n        \"verdict\": \"violation\",\n        \"vale_fit\": \"deterministic\",\n        \"confidence\": 0.96,\n        \"rationale\": \"“Just” minimizes registry requirements, even though the required content structure makes the qualification important.\"\n      }\n    ]\n  }\n]"
+}

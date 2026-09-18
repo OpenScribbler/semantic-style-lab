@@ -1,0 +1,284 @@
+{
+  "labels": [
+    {
+      "id": "vale:index.mdx:6:Google.Semicolons:67:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "The semicolon is JavaScript syntax in an MDX import, not documentation prose."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:6:Google.Semicolons:69:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "The semicolon is required code punctuation in an MDX import statement."
+    },
+    {
+      "id": "vale:getting-started/quick-start.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "The semicolon belongs to an MDX import statement, so the prose guidance doesn't apply."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "This is JavaScript import syntax rather than prose punctuation."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:6:Google.Semicolons:54:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "This semicolon terminates an MDX import and should remain unchanged."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.88,
+      "rationale": "Two separate cross-reference recommendations would be clearer as separate sentences."
+    },
+    {
+      "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "The semicolon appropriately connects a default with its closely related exception."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "The semicolon clearly emphasizes the contrast between rename and transfer behavior."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "The semicolon cleanly separates closely related instructions without obscuring meaning."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.84,
+      "rationale": "Splitting this long sentence would improve readability while preserving the explanatory relationship."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "The semicolon effectively separates parallel instructions for supplying or omitting the option."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "The semicolon appropriately contrasts interactive and noninteractive outcomes."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:49:Google.Passive:164:be written",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "The passive wording appropriately focuses on proposed output, whose writer is already clear."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.87,
+      "rationale": "Addressing the reader directly as the installer would make the action clearer and more concise."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:119:Google.Passive:60:are shared",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "“Shared” is adjectival here, describing the content rather than forming a passive construction."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:99:Google.Passive:88:be established",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.93,
+      "rationale": "The sentence appropriately emphasizes the failed trust state; no meaningful actor is omitted."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "“You can later install” would identify the actor and produce a more direct instruction."
+    },
+    {
+      "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "Making the label the subject yields a shorter, clearer active construction."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:52:Google.Passive:202:is preserved",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.91,
+      "rationale": "The passive construction appropriately emphasizes semantic value amid transformations, not the converter performing them."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.89,
+      "rationale": "The passive phrase is abstract and awkward; directly stating that verification fails would be clearer."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:46:Google.Passive:263:be preserved",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.92,
+      "rationale": "The construction appropriately centers the data that cannot survive conversion; the responsible actor is unimportant."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.93,
+      "rationale": "Making the ADR the subject would clearly identify where readers can find the protocol details."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:39:Google.Passive:44:was acquired",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "This schema description appropriately focuses on the content and doesn't require an acquisition actor."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.95,
+      "rationale": "Passive voice effectively emphasizes that registry content remains uninstalled until the reader acts."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:13:Google.ExcessiveClaims:28:Best",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.97,
+      "rationale": "“Best for” is a comparative category heading, not an unsupported superiority claim."
+    },
+    {
+      "id": "vale:using-syllago/local-vs-global.mdx:17:Google.ExcessiveClaims:3:Best",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "The table contrasts appropriate use cases; “Best for” doesn't claim overall product superiority."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "“Best content” asserts subjective superiority without defining selection criteria."
+    },
+    {
+      "id": "vale:using-syllago/content-types/agents.mdx:8:Google.Colons:30:Claude",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "Claude Code is a proper product name and must retain its capitalization."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:24:Google.Colons:1:Copy",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "“Copy” begins a new imperative sentence and therefore requires capitalization."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:67:Google.WordList:10:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "Gemini CLI is the official product name and shouldn't be rewritten generically."
+    },
+    {
+      "id": "vale:using-syllago/content-types/hooks.mdx:68:Google.WordList:11:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "Copilot CLI is a product name, so replacing part of it would be inaccurate."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:75:Google.WordList:36:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "Gemini CLI is literal product terminology that must remain unchanged."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:46:Google.WordList:129:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 1,
+      "rationale": "The occurrences are within official product names, including Gemini CLI and Copilot CLI."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.9,
+      "rationale": "Here CLI is generic terminology; “command-line reference” would follow the stated word-choice guidance."
+    },
+    {
+      "id": "vale:using-syllago/content-types/skills.mdx:116:Google.WordList:18:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "Gemini CLI is the provider's proper name, not a generic reference to command-line tools."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.87,
+      "rationale": "CLI modifies a generic agent format here, so “command-line agent format” is clearer."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:21:Google.WordList:26:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.99,
+      "rationale": "The matched occurrence is part of the official Copilot CLI product name."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "This describes generic program output, where “command-line output” is clearer and guide-conformant."
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.94,
+      "rationale": "CLI is used generically throughout; “command-line interface” or “command-line tool” would be clearer."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.96,
+      "rationale": "“CLI tools” is generic jargon; “command-line tools” follows the prescribed terminology."
+    }
+  ]
+}

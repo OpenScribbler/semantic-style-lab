@@ -1,0 +1,284 @@
+{
+  "labels": [
+    {
+      "confidence": 1,
+      "id": "vale:index.mdx:6:Google.Semicolons:67:;",
+      "rationale": "Semicolon is part of JavaScript/MDX import syntax, not prose punctuation.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:moat/registry-add-signing-identity.mdx:6:Google.Semicolons:69:;",
+      "rationale": "Semicolon is part of standard MDX/JS component import syntax.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:getting-started/quick-start.mdx:6:Google.Semicolons:54:;",
+      "rationale": "Semicolon is part of standard MDX/JS import syntax.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:6:Google.Semicolons:54:;",
+      "rationale": "Semicolon is part of standard MDX/JS import syntax.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:moat/trust-tiers.mdx:6:Google.Semicolons:54:;",
+      "rationale": "Semicolon is part of standard MDX/JS import syntax.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "rationale": "Google style discourages semicolons; replace with a period or comma conjunction.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+      "rationale": "Google style discourages semicolons; separating into two independent sentences is preferred.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "rationale": "Google style advises avoiding semicolons; split into two sentences instead.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "rationale": "Google style discourages semicolons; replace with a period or separate clause.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+      "rationale": "Google style advises against semicolons; split into two sentences.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "rationale": "Google style discourages semicolons; split into two sentences or use 'and'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "rationale": "Google style discourages semicolons; split into two sentences or use a coordinating conjunction.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:49:Google.Passive:164:be written",
+      "rationale": "Appropriate passive construction focusing on the action/outcome rather than the unspecified actor.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+      "rationale": "Passive voice appropriately focuses on the rule/capability rather than the user.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/collections/library.mdx:119:Google.Passive:60:are shared",
+      "rationale": "'Shared' functions as a participial adjective modifying 'content', not passive voice.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/trust-tiers.mdx:99:Google.Passive:88:be established",
+      "rationale": "Standard, natural phrasing where the actor is unknown, systemic, or irrelevant.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+      "rationale": "Legitimate passive voice focusing on the object's capability across providers.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+      "rationale": "Stative/descriptive expression describing relationship between exit and label, not an undesirable passive.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/format-conversion.mdx:52:Google.Passive:202:is preserved",
+      "rationale": "Legitimate passive voice emphasizing the resulting state and property of conversion.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+      "rationale": "Standard technical condition where the verifier/actor is implied and systemic.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/format-conversion.mdx:46:Google.Passive:263:be preserved",
+      "rationale": "Acceptable passive voice focusing on data retention rather than the agent.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+      "rationale": "Could be actively phrased ('ADR 0007 captures the protocol detail'), but acceptable descriptive passive.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/syllago-yaml.mdx:39:Google.Passive:44:was acquired",
+      "rationale": "Concise tabular field description where passive voice is natural and appropriate.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+      "rationale": "Passive voice emphasizes system state and safety guarantee ('Nothing is installed').",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:for-ai-assistants.mdx:13:Google.ExcessiveClaims:28:Best",
+      "rationale": "'Best for' is a standard, descriptive table header indicating intended use cases.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/local-vs-global.mdx:17:Google.ExcessiveClaims:3:Best",
+      "rationale": "'Best for' is a standard comparison table header indicating recommended use cases.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.9,
+      "id": "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best",
+      "rationale": "'Best' here is subjective puffery/claim; could use 'most useful' or 'curated'.",
+      "vale_fit": "not_applicable",
+      "verdict": "violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/content-types/agents.mdx:8:Google.Colons:30:Claude",
+      "rationale": "'Claude Code' is a proper product name that must remain capitalized.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:for-ai-assistants.mdx:24:Google.Colons:1:Copy",
+      "rationale": "First word of a full sentence starting after a paragraph heading.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/content-types/hooks.mdx:67:Google.WordList:10:CLI",
+      "rationale": "Part of official product name 'Gemini CLI'.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/content-types/hooks.mdx:68:Google.WordList:11:CLI",
+      "rationale": "Part of official product name 'Copilot CLI'.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/format-conversion.mdx:75:Google.WordList:36:CLI",
+      "rationale": "Part of proper product name 'Gemini CLI' in table header.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:for-ai-assistants.mdx:46:Google.WordList:129:CLI",
+      "rationale": "Part of official product names ('Gemini CLI', 'Copilot CLI').",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+      "rationale": "Standard accepted industry abbreviation in reference link title for CLI reference.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:using-syllago/content-types/skills.mdx:116:Google.WordList:18:CLI",
+      "rationale": "Part of official product name 'Gemini CLI'.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+      "rationale": "Standard modifier describing format type ('CLI agent format') where abbreviation is appropriate.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 1,
+      "id": "vale:getting-started/core-concepts.mdx:21:Google.WordList:26:CLI",
+      "rationale": "Part of proper product name 'Copilot CLI'.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+      "rationale": "Standard concise technical noun adjunct ('CLI output') in reference table.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+      "rationale": "'CLI' contrasted with 'TUI' is standard technical terminology in developer documentation.",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    },
+    {
+      "confidence": 0.95,
+      "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+      "rationale": "Standard concise technical heading ('Use with CLI tools:').",
+      "vale_fit": "not_applicable",
+      "verdict": "not_violation"
+    }
+  ]
+}

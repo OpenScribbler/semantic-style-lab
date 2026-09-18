@@ -1,0 +1,137 @@
+{
+  "labels": [
+    {
+      "id": "semantic:getting-started/quick-start.mdx:overloaded-jargon:16",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.87,
+      "rationale": "Common product wording; no overloaded jargon or unclear technical meaning."
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.82,
+      "rationale": "CLI prompts routinely use agent-like descriptions without misleading personification."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:excessive-claim:6",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.79,
+      "rationale": "This is an illustrative, experience-based statement, not unsubstantiated product claim."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:6",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.74,
+      "rationale": "The metaphor is brief and clearly refers to disconnected tooling, not personhood."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.9,
+      "rationale": "Pronouns clearly point to multiple AI tools and their shared context."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.88,
+      "rationale": "The antecedents are clear: 'it' is complexity; 'them' are MCP servers."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:28",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.91,
+      "rationale": "This is a metaphor for layering features, not a personified system action."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.76,
+      "rationale": "'Will degrade' describes a translation outcome; present tense is less precise here."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:45",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.86,
+      "rationale": "Syllago deciding behavior is standard product phrasing, not misleading personification."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.8,
+      "rationale": "The future tense refers to translation consequences and reads as a product capability."
+    },
+    {
+      "id": "semantic:moat/index.mdx:preannouncement:10",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.94,
+      "rationale": "This describes current implementation clearly; no pre-announcement or future promise."
+    },
+    {
+      "id": "semantic:moat/registry-add-signing-identity.mdx:preannouncement:10",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.92,
+      "rationale": "It points to existing ADR detail rather than promising future work."
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.96,
+      "rationale": "The sentence stays objective and avoids second-person address."
+    },
+    {
+      "id": "semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.83,
+      "rationale": "The provider behavior is a present fact; 'will not' is unnecessarily future-tense."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:excessive-claim:63",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.9,
+      "rationale": "It describes a general category without unsupported superiority or minimization."
+    },
+    {
+      "id": "semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81",
+      "verdict": "not_violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.97,
+      "rationale": "A heading has no pronoun ambiguity to resolve."
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.88,
+      "rationale": "'Just' is explanatory, not a minimizing or unsupported claim."
+    },
+    {
+      "id": "semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.81,
+      "rationale": "The AI is described in a conventional metadata-processing way, not a human-like agent."
+    },
+    {
+      "id": "semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.9,
+      "rationale": "CLI prompts naturally describe software asking the user for confirmation."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-09-18T20:55:33.012Z",
+  "reviewer": "claude-sonnet-high-adjudicator",
+  "item_count": 28,
+  "labels": [
+    {
+      "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.85,
+      "rationale": "Judicious semicolon joins a closely related default/override pair; textbook acceptable use, not a ban."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.87,
+      "rationale": "Parallel contrastive clauses (rename vs. transfer) are exactly the judicious semicolon use Google allows."
+    },
+    {
+      "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "Two closely related instructional clauses; semicolon is judicious, not a rule breach."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.88,
+      "rationale": "Parallel do-X/do-Y instructions; a model case of correctly judicious semicolon use."
+    },
+    {
+      "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.86,
+      "rationale": "Contrasts interactive vs. non-TTY behavior; closely related independent clauses, judicious usage."
+    },
+    {
+      "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.62,
+      "rationale": "Actor (installer) is obvious/generic; passive necessarily keeps 'a rule' as topic subject."
+    },
+    {
+      "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.62,
+      "rationale": "Same pattern: passive keeps the portable item as subject; actor is generic/obvious."
+    },
+    {
+      "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.62,
+      "rationale": "Active stative verb ('includes/carries') keeps 'each exit' as subject and is clearer."
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.65,
+      "rationale": "'Verification fails' is active, same subject, shorter, and clearer than 'cannot be satisfied.'"
+    },
+    {
+      "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.6,
+      "rationale": "Named actor (the ADR) is right there; an active rewrite is easy and clearer."
+    },
+    {
+      "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "'Nothing is installed' rhetorically emphasizes the safety guarantee; passive needed to keep that subject."
+    },
+    {
+      "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.6,
+      "rationale": "'CLI reference' is a fixed cross-reference title convention, not incidental prose word choice."
+    },
+    {
+      "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.58,
+      "rationale": "'CLI agent format' reads as Kiro's own product terminology, not generic author prose."
+    },
+    {
+      "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+      "verdict": "violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.72,
+      "rationale": "Plain generic prose; 'command-line output' substitutes cleanly with no meaning loss."
+    },
+    {
+      "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.72,
+      "rationale": "CLI is used as a defined contrast term with TUI, standard acronym pairing in this doc's domain."
+    },
+    {
+      "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.68,
+      "rationale": "Heading uses CLI consistently with the doc's established TUI/CLI terminology pair."
+    },
+    {
+      "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+      "verdict": "not_violation",
+      "vale_fit": "not_applicable",
+      "confidence": 0.75,
+      "rationale": "\"Latest content\" accurately names dynamic sync target, not a stale-prone product claim."
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.72,
+      "rationale": "\"Can see\"/\"hidden\" are conventional, unambiguous technical idioms for filesystem visibility."
+    },
+    {
+      "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.68,
+      "rationale": "Same sentence mixes \"you\" and \"the user\" for the same referent, inconsistent reader address."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.65,
+      "rationale": "\"This\" summarizes the prior sentence's idea, a standard, recoverable usage, not ambiguous."
+    },
+    {
+      "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.75,
+      "rationale": "\"Easy\" is a flagged minimizing usability word per Google style word list; regex reliably catches it."
+    },
+    {
+      "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+      "verdict": "violation",
+      "vale_fit": "deterministic",
+      "confidence": 0.78,
+      "rationale": "\"This page covers\" matches the canonical preannouncement pattern Google style bans."
+    },
+    {
+      "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.75,
+      "rationale": "\"Detects\"/\"asks\" plainly describe automated prompts, not misleading personification."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+      "verdict": "violation",
+      "vale_fit": "semantic",
+      "confidence": 0.6,
+      "rationale": "\"It\" in \"compound it\" has no explicit noun antecedent, only an implied complexity concept."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.72,
+      "rationale": "\"Will degrade\" predicts an outcome of a later translation step, a valid future-tense use."
+    },
+    {
+      "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.72,
+      "rationale": "Same pattern: predicts a translation-time consequence, not current tool behavior."
+    },
+    {
+      "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.6,
+      "rationale": "Consistently third-person description of general modal behavior, not mixed with \"you.\""
+    },
+    {
+      "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+      "verdict": "not_violation",
+      "vale_fit": "semantic",
+      "confidence": 0.68,
+      "rationale": "\"Just\" accurately describes what a registry literally is, not a minimizing usability claim."
+    }
+  ]
+}

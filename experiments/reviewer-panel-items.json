@@ -1,0 +1,1361 @@
+[
+  {
+    "id": "vale:index.mdx:6:Google.Semicolons:67:;",
+    "kind": "vale_alert",
+    "path": "index.mdx",
+    "line": 6,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "5 | \n6 | import { CardGrid, LinkCard } from '@astrojs/starlight/components';\n7 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:6:Google.Semicolons:69:;",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 6,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "5 | \n6 | import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';\n7 | "
+  },
+  {
+    "id": "vale:getting-started/quick-start.mdx:6:Google.Semicolons:54:;",
+    "kind": "vale_alert",
+    "path": "getting-started/quick-start.mdx",
+    "line": 6,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "5 | \n6 | import { Aside } from '@astrojs/starlight/components';\n7 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/install-community-skill.mdx:6:Google.Semicolons:54:;",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/install-community-skill.mdx",
+    "line": 6,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "5 | \n6 | import { Aside } from '@astrojs/starlight/components';\n7 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:6:Google.Semicolons:54:;",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 6,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "5 | \n6 | import { Aside } from '@astrojs/starlight/components';\n7 | "
+  },
+  {
+    "id": "vale:getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+    "kind": "vale_alert",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 6,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "5 | \n6 | Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/); for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).\n7 | "
+  },
+  {
+    "id": "vale:moat/index.mdx:80:Google.Semicolons:52:;",
+    "kind": "vale_alert",
+    "path": "moat/index.mdx",
+    "line": 80,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "79 | \n80 | The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field.\n81 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Semicolons:36:;",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 126,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "125 | \n126 | Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.\n127 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/install-community-skill.mdx",
+    "line": 41,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "40 | \n41 | This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose.\n42 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:39:Google.Semicolons:325:;",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 39,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "38 | \n39 | Syllago's catalog layer adds one additional label — `Unknown` — that is **not** a MOAT tier. It marks content that was never sourced from a MOAT manifest in the first place (git registries, local content, legacy installs). It exists only so the catalog never has to guess a tier for content the protocol has no opinion about; the drill-down simply shows no trust claim rather than fabricating one.\n40 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/registries.mdx:100:Google.Semicolons:123:;",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 100,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "99 | \n100 | `syllago share` works for both registries and arbitrary team repos. Pass `--to <registry>` to target a registered registry; omit it to share into a default team repo.\n101 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:85:Google.Semicolons:142:;",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 85,
+    "rule": "Google.Semicolons",
+    "rule_summary": "Use semicolons judiciously.",
+    "matched_text": ";",
+    "passage": "84 | \n85 | A publisher-source revocation is the publisher's own advisory. Operators running an interactive install see the reason and confirm with `Y/n`; pipelines without a TTY exit with code `12` so the failure is unambiguous in CI.\n86 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/install-community-skill.mdx:49:Google.Passive:164:be written",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/install-community-skill.mdx",
+    "line": 49,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('be written').",
+    "matched_text": "be written",
+    "passage": "48 | \n49 | syllago resolves the skill from the registry, converts it to Claude Code's format, and symlinks it into place. Add `--dry-run` first if you want to see what would be written before committing.\n50 | "
+  },
+  {
+    "id": "vale:getting-started/core-concepts.mdx:118:Google.Passive:114:be installed",
+    "kind": "vale_alert",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 118,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('be installed').",
+    "matched_text": "be installed",
+    "passage": "117 | \n118 | This hub-and-spoke design means you add content once and install it anywhere. A rule written for Claude Code can be installed into Cursor, Windsurf, or any other supported provider — syllago handles the format translation automatically.\n119 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/library.mdx:119:Google.Passive:60:are shared",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/library.mdx",
+    "line": 119,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('are shared').",
+    "matched_text": "are shared",
+    "passage": "118 | - **Providers** are the source and destination. Import from one, export to many.\n119 | - **[Registries](/using-syllago/collections/registries/)** are shared content you consume. Registry items appear alongside library items when you run `syllago list --source all`, but they live in separate cloned repos.\n120 | - **[Loadouts](/using-syllago/collections/loadouts/)** bundle library content into named configurations that can be applied or reverted as a unit."
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:99:Google.Passive:88:be established",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 99,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('be established').",
+    "matched_text": "be established",
+    "passage": "98 | \n99 | The install gate and manifest verification surface these MOAT errors when trust cannot be established:\n100 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/library.mdx:58:Google.Passive:112:be installed",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/library.mdx",
+    "line": 58,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('be installed').",
+    "matched_text": "be installed",
+    "passage": "57 | \n58 | Syllago handles format conversion automatically. A Cursor rule becomes a universal syllago item that can later be installed to Claude Code, Kiro, or any other supported provider.\n59 | "
+  },
+  {
+    "id": "vale:moat/index.mdx:78:Google.Passive:11:is accompanied",
+    "kind": "vale_alert",
+    "path": "moat/index.mdx",
+    "line": 78,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('is accompanied').",
+    "matched_text": "is accompanied",
+    "passage": "77 | \n78 | Each exit is accompanied by a kebab-case label on stderr (`tofu-acceptance`, `signing-profile-change`, `publisher-revocation`, `manifest-stale`) so pipelines can grep the failure class without parsing the exit code.\n79 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:52:Google.Passive:202:is preserved",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 52,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('is preserved').",
+    "matched_text": "is preserved",
+    "passage": "51 | \n52 | Frontmatter fields, metadata keys, and structural properties are mapped through syllago's canonical schema. Field names may change, data types may adapt, and polarity may flip — but the semantic value is preserved.\n53 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:106:Google.Passive:61:be satisfied",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 106,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('be satisfied').",
+    "matched_text": "be satisfied",
+    "passage": "105 | \n106 | If any `--signing-*` flag is passed but verification cannot be satisfied, syllago returns a structured `MOAT_*` error and refuses to add content. No silent fall-back to unsigned mode — a pinned profile means the operator has opted into cryptographic gating.\n107 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:46:Google.Passive:263:be preserved",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 46,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('be preserved').",
+    "matched_text": "be preserved",
+    "passage": "45 | \n46 | **No silent data loss:** every field either maps to canonical, embeds as prose, or generates a warning. All converters return a result containing `Content`, `Filename`, `Warnings`, and `ExtraFiles` — the `Warnings` array is always populated when something can't be preserved.\n47 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:10:Google.Passive:126:is captured",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 10,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('is captured').",
+    "matched_text": "is captured",
+    "passage": "9 | \n10 | This page covers the operator workflow for `syllago registry add` and the three ways to pin an identity. The protocol detail is captured in an Architecture Decision Record (ADR) — see [ADR 0007 in the syllago repo](https://github.com/OpenScribbler/syllago/blob/main/docs/adr/0007-moat-slice-1.md).\n11 | "
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:39:Google.Passive:44:was acquired",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 39,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('was acquired').",
+    "matched_text": "was acquired",
+    "passage": "38 | | `source_format` | string | Original file format (e.g. `md`, `mdc`, `json`, `toml`). |\n39 | | `source_type` | string | How the content was acquired. One of: `git`, `filesystem`, `registry`, `provider`. |\n40 | | `source_url` | string | URL the content was fetched from. Reserved for future `syllago update` capability. |"
+  },
+  {
+    "id": "vale:using-syllago/collections/registries.mdx:10:Google.Passive:156:is installed",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 10,
+    "rule": "Google.Passive",
+    "rule_summary": "In general, use active voice instead of passive voice ('is installed').",
+    "matched_text": "is installed",
+    "passage": "9 | \n10 | When you add a registry, syllago clones the git repo locally. Syncing pulls the latest commits. Browsing lists the content available in the clone. Nothing is installed into your [library](/using-syllago/collections/library/) until you explicitly install an item.\n11 | "
+  },
+  {
+    "id": "vale:for-ai-assistants.mdx:13:Google.ExcessiveClaims:28:Best",
+    "kind": "vale_alert",
+    "path": "for-ai-assistants.mdx",
+    "line": 13,
+    "rule": "Google.ExcessiveClaims",
+    "rule_summary": "Avoid the unverifiable claim 'Best'.",
+    "matched_text": "Best",
+    "passage": "12 | \n13 | | Resource | Description | Best for |\n14 | |----------|-------------|----------|"
+  },
+  {
+    "id": "vale:using-syllago/local-vs-global.mdx:17:Google.ExcessiveClaims:3:Best",
+    "kind": "vale_alert",
+    "path": "using-syllago/local-vs-global.mdx",
+    "line": 17,
+    "rule": "Google.ExcessiveClaims",
+    "rule_summary": "Avoid the unverifiable claim 'Best'.",
+    "matched_text": "Best",
+    "passage": "16 | | Survives a fresh checkout? | Yes | No (re-acquire from a registry) |\n17 | | Best for | Project-specific rules, team standards, CI gates | Personal preferences, cross-project skills |\n18 | | Created by | `syllago init` in the repo root | First `syllago add` from any provider |"
+  },
+  {
+    "id": "vale:advanced/team-setup.mdx:57:Google.ExcessiveClaims:108:best",
+    "kind": "vale_alert",
+    "path": "advanced/team-setup.mdx",
+    "line": 57,
+    "rule": "Google.ExcessiveClaims",
+    "rule_summary": "Avoid the unverifiable claim 'best'.",
+    "matched_text": "best",
+    "passage": "56 | \n57 | This means team standards can evolve from the bottom up. Individual developers experiment locally, and the best content gets published to the shared registry for everyone.\n58 | "
+  },
+  {
+    "id": "vale:using-syllago/content-types/agents.mdx:8:Google.Colons:30:Claude",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/agents.mdx",
+    "line": 8,
+    "rule": "Google.Colons",
+    "rule_summary": "'Claude' should be in lowercase.",
+    "matched_text": "Claude",
+    "passage": "7 | \n8 | Supported by most providers: Claude Code, Gemini CLI, Cursor, Copilot CLI, Codex, Roo Code, OpenCode, and Kiro.\n9 | "
+  },
+  {
+    "id": "vale:for-ai-assistants.mdx:24:Google.Colons:1:Copy",
+    "kind": "vale_alert",
+    "path": "for-ai-assistants.mdx",
+    "line": 24,
+    "rule": "Google.Colons",
+    "rule_summary": "'Copy' should be in lowercase.",
+    "matched_text": "Copy",
+    "passage": "23 | **Paste into a chat:**\n24 | Copy the content of `llms-full.txt` into Claude, ChatGPT, or any LLM chat, then ask your question.\n25 | "
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:67:Google.WordList:10:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 67,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "66 | | Claude Code | Full | Richest output contract, all event types |\n67 | | Gemini CLI | Full | Unique events: `before_model`, `after_model`, `before_tool_selection` |\n68 | | Copilot CLI | Full | Conservative safety design |"
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:68:Google.WordList:11:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 68,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "67 | | Gemini CLI | Full | Unique events: `before_model`, `after_model`, `before_tool_selection` |\n68 | | Copilot CLI | Full | Conservative safety design |\n69 | | Cursor | Yes | JSON merge into `.cursor/settings.json` |"
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:75:Google.WordList:36:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 75,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "74 | \n75 | | Canonical (Claude Code) | Gemini CLI | VS Code Copilot | Cursor |\n76 | |---|---|---|---|"
+  },
+  {
+    "id": "vale:for-ai-assistants.mdx:46:Google.WordList:129:CLI",
+    "kind": "vale_alert",
+    "path": "for-ai-assistants.mdx",
+    "line": 46,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "45 | \n46 | The answer should list the providers from the [provider support matrix](/using-syllago/providers/) (Claude Code, Cursor, Gemini CLI, Windsurf, Codex, Copilot CLI, Zed, Cline, Roo Code, OpenCode, Kiro, Amp, Factory Droid, Pi, Crush) rather than guessing or telling you to run a command. If the assistant can't answer, it likely didn't receive the full file — try `llms-full.txt` rather than `llms-small.txt`, or paste the provider matrix page directly using its **Copy page** button.\n47 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/loadouts.mdx:83:Google.WordList:4:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/loadouts.mdx",
+    "line": 83,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "82 | - [Registries](/using-syllago/collections/registries/) — shared team and community content\n83 | - [CLI reference: loadout commands](/using-syllago/cli-reference/loadout-apply/) — full flag and option details\n84 | "
+  },
+  {
+    "id": "vale:using-syllago/content-types/skills.mdx:116:Google.WordList:18:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/skills.mdx",
+    "line": 116,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "115 | \n116 | Becomes a Gemini CLI file without frontmatter, with metadata folded into the body:\n117 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:148:Google.WordList:88:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 148,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "147 | ### Kiro\n148 | Agent definitions use Markdown with YAML frontmatter (14 fields). Also supports a JSON CLI agent format with embedded MCP servers and lifecycle hooks. Rules and skills are Markdown steering files.\n149 | "
+  },
+  {
+    "id": "vale:getting-started/core-concepts.mdx:21:Google.WordList:26:CLI",
+    "kind": "vale_alert",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 21,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "20 | | Cursor | AI-powered code editor |\n21 | | Copilot CLI | GitHub's CLI agent |\n22 | | Codex | OpenAI's CLI agent |"
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:22:Google.WordList:50:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 22,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "21 | | `id` | string (UUID) | Unique identifier for this content item. |\n22 | | `name` | string | Human-readable name. Used in CLI output and as the directory name. |\n23 | | `type` | string | Content type. One of: `rules`, `skills`, `agents`, `hooks`, `commands`, `mcp`, `loadouts`. |"
+  },
+  {
+    "id": "vale:using-syllago/tui.mdx:52:Google.WordList:83:CLI",
+    "kind": "vale_alert",
+    "path": "using-syllago/tui.mdx",
+    "line": 52,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "51 | \n52 | The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands).\n53 | "
+  },
+  {
+    "id": "vale:for-ai-assistants.mdx:26:Google.WordList:12:CLI",
+    "kind": "vale_alert",
+    "path": "for-ai-assistants.mdx",
+    "line": 26,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "25 | \n26 | **Use with CLI tools:**\n27 | ```bash"
+  },
+  {
+    "id": "vale:advanced/sandbox.mdx:6:Google.WordList:21:CLI",
+    "kind": "vale_alert",
+    "path": "advanced/sandbox.mdx",
+    "line": 6,
+    "rule": "Google.WordList",
+    "rule_summary": "Use 'command-line tool' instead of 'CLI'.",
+    "matched_text": "CLI",
+    "passage": "5 | \n6 | The sandbox runs AI CLI tools inside a [bubblewrap](https://github.com/containers/bubblewrap) (bwrap) container that restricts filesystem access, network egress, and environment variables. When an AI tool executes code — installing packages, running scripts, making API calls — the sandbox limits what that code can reach.\n7 | "
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:29:Google.Contractions:79:Do not",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 29,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'don't' instead of 'Do not'.",
+    "matched_text": "Do not",
+    "passage": "28 | \n29 | {/* AUTO-GENERATED:HOOKS-EVENTS START — managed by scripts/sync-providers.ts. Do not edit by hand. */}\n30 | | Canonical Event | Claude Code | Gemini CLI |"
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:126:Google.Contractions:13:do not",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 126,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'don't' instead of 'do not'.",
+    "matched_text": "do not",
+    "passage": "125 | \n126 | Numeric IDs do not change on rename; they change on **transfer** to a new owner. After a rename, verification continues to succeed. After a transfer to a different owner, verification fails with `MOAT_003` and the operator must re-add against the new numeric IDs out-of-band.\n127 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:116:Google.Contractions:81:cannot",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 116,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'can't' instead of 'cannot'.",
+    "matched_text": "cannot",
+    "passage": "115 | | [`MOAT_006`](/errors/moat-006/) | Pinned profile but no manifest/bundle in the checkout.              |\n116 | | [`MOAT_007`](/errors/moat-007/) | `--trusted-root` or `reg.trusted_root` path cannot be loaded.       |\n117 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/registries.mdx:53:Google.Contractions:42:does not",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 53,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'doesn't' instead of 'does not'.",
+    "matched_text": "does not",
+    "passage": "52 | \n53 | Syncing only updates the local clone. It does not modify your library or any installed content. This keeps your workflow predictable — you choose when to pull updates into your library.\n54 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:122:Google.Contractions:159:cannot",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 122,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'can't' instead of 'cannot'.",
+    "matched_text": "cannot",
+    "passage": "121 | \n122 | Hard-fail is defense-in-depth. An interactive prompt trains operators to mash `y` without actually confirming the numeric IDs out-of-band. A CI pipeline also cannot respond to a prompt — the only way to pass `--signing-*` flags is to hard-code the identity somewhere, which is exactly what you want. The failure is also CI-safe: the exit code is non-zero, so pipelines fail loudly rather than silently proceeding unsigned.\n123 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/registries.mdx:133:Google.Contractions:42:what is",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 133,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'what's' instead of 'what is'.",
+    "matched_text": "what is",
+    "passage": "132 | \n133 | Registries feed your library. You browse what is available, install what you need, and the installed content becomes part of your library. Loadouts can then bundle library content into switchable configurations.\n134 | "
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:3:Google.Contractions:118:cannot",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 3,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'can't' instead of 'cannot'.",
+    "matched_text": "cannot",
+    "passage": "2 | title: Registry Signing Identity\n3 | description: How syllago pins cryptographic identities to registries at add-time so repository renames and forgeries cannot silently swap the source of your content.\n4 | ---"
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:85:Google.Contractions:62:It is",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 85,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'it's' instead of 'It is'.",
+    "matched_text": "It is",
+    "passage": "84 | \n85 | The word `verified` is deliberately **not** used at slice 2. It is reserved for when revocation checking lands in a later slice.\n86 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:103:Google.Contractions:84:does not",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 103,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'doesn't' instead of 'does not'.",
+    "matched_text": "does not",
+    "passage": "102 | |-----------------------------------------------------------|--------------------------------------------------------------------------|\n103 | | [`MOAT_003`](/errors/moat-003/)                           | Manifest certificate does not match the pinned signing profile.          |\n104 | | [`MOAT_004`](/errors/moat-004/)                           | Manifest or bundle is malformed, missing, or unreadable.                 |"
+  },
+  {
+    "id": "vale:advanced/team-setup.mdx:47:Google.Contractions:12:are not",
+    "kind": "vale_alert",
+    "path": "advanced/team-setup.mdx",
+    "line": 47,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'aren't' instead of 'are not'.",
+    "matched_text": "are not",
+    "passage": "46 | \n47 | Registries are not read-only. When a team member creates content that belongs in the shared registry, they contribute it via PR:\n48 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:35:Google.Contractions:139:cannot",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 35,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'can't' instead of 'cannot'.",
+    "matched_text": "cannot",
+    "passage": "34 | \n35 | The `attestation_hash_mismatch` downgrade exists because a publisher profile paired with a hash mismatch means the registry's attestation cannot be safely combined with the publisher's — the two signatures disagree on what was signed. Rather than reject outright, the registry's own attestation is preserved as the weaker `Signed` claim.\n36 | "
+  },
+  {
+    "id": "vale:advanced/team-setup.mdx:92:Google.Contractions:42:what is",
+    "kind": "vale_alert",
+    "path": "advanced/team-setup.mdx",
+    "line": 92,
+    "rule": "Google.Contractions",
+    "rule_summary": "Use 'what's' instead of 'what is'.",
+    "matched_text": "what is",
+    "passage": "91 | \n92 | After applying, team members can confirm what is active:\n93 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/install-community-skill.mdx:33:Google.Timeless:27:latest",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/install-community-skill.mdx",
+    "line": 33,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "32 | \n33 | This pulls the registry's latest content into a local clone. Syncing never modifies your library or your providers — it only updates what's available to browse.\n34 | "
+  },
+  {
+    "id": "vale:advanced/team-setup.mdx:37:Google.Timeless:31:latest",
+    "kind": "vale_alert",
+    "path": "advanced/team-setup.mdx",
+    "line": 37,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "36 | \n37 | Sync periodically to pull the latest content:\n38 | "
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:20:Google.Timeless:44:Currently",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 20,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'Currently' in product documentation.",
+    "matched_text": "Currently",
+    "passage": "19 | |-------|------|-------------|\n20 | | `format_version` | int | Schema version. Currently `1`. Bumped when the schema changes incompatibly. |\n21 | | `id` | string (UUID) | Unique identifier for this content item. |"
+  },
+  {
+    "id": "vale:getting-started/quick-start.mdx:110:Google.Timeless:16:latest",
+    "kind": "vale_alert",
+    "path": "getting-started/quick-start.mdx",
+    "line": 110,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "109 | \n110 | This pulls the latest content from all registered registries. To sync a specific one, pass its name: `syllago registry sync my-registry`.\n111 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/registries.mdx:10:Google.Timeless:81:latest",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 10,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "9 | \n10 | When you add a registry, syllago clones the git repo locally. Syncing pulls the latest commits. Browsing lists the content available in the clone. Nothing is installed into your [library](/using-syllago/collections/library/) until you explicitly install an item.\n11 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/registries.mdx:43:Google.Timeless:10:latest",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 43,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "42 | \n43 | Pull the latest content from one or all registries:\n44 | "
+  },
+  {
+    "id": "vale:getting-started/installation.mdx:18:Google.Timeless:15:latest",
+    "kind": "vale_alert",
+    "path": "getting-started/installation.mdx",
+    "line": 18,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "17 | \n18 | Downloads the latest release binary and verifies its SHA-256 checksum. Works on Linux, macOS, and Windows.\n19 | "
+  },
+  {
+    "id": "vale:getting-started/installation.mdx:68:Google.Timeless:24:latest",
+    "kind": "vale_alert",
+    "path": "getting-started/installation.mdx",
+    "line": 68,
+    "rule": "Google.Timeless",
+    "rule_summary": "Avoid time-based words like 'latest' in product documentation.",
+    "matched_text": "latest",
+    "passage": "67 | \n68 | Updates syllago to the latest release.\n69 | "
+  },
+  {
+    "id": "vale:advanced/team-setup.mdx:61:Google.LyHyphens:96:apply-as",
+    "kind": "vale_alert",
+    "path": "advanced/team-setup.mdx",
+    "line": 61,
+    "rule": "Google.LyHyphens",
+    "rule_summary": "'apply-as' doesn't need a hyphen.",
+    "matched_text": "apply-as",
+    "passage": "60 | \n61 | A [loadout](/using-syllago/collections/loadouts/) bundles multiple content items into a single apply-as-a-unit configuration. For team onboarding, this turns a multi-step manual setup into one command.\n62 | "
+  },
+  {
+    "id": "vale:using-syllago/collections/loadouts.mdx:12:Google.LyHyphens:240:apply-as",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/loadouts.mdx",
+    "line": 12,
+    "rule": "Google.LyHyphens",
+    "rule_summary": "'apply-as' doesn't need a hyphen.",
+    "matched_text": "apply-as",
+    "passage": "11 | \n12 | Your [library](/using-syllago/collections/library/) stores individual content items. [Registries](/using-syllago/collections/registries/) share content across teams. Loadouts sit on top of both — they bundle content from your library into apply-as-a-unit configurations.\n13 | "
+  },
+  {
+    "id": "vale:using-syllago/local-vs-global.mdx:63:Google.LyHyphens:30:widely-reusable",
+    "kind": "vale_alert",
+    "path": "using-syllago/local-vs-global.mdx",
+    "line": 63,
+    "rule": "Google.LyHyphens",
+    "rule_summary": "'widely-reusable' doesn't need a hyphen.",
+    "matched_text": "widely-reusable",
+    "passage": "62 | - **Repo-local `.syllago/`** holds rules and hooks specific to *this* codebase — style guides, build commands, file-layout conventions.\n63 | - **Global registries** hold widely-reusable content — generic skills, security checklists, language-specific best practices.\n64 | "
+  },
+  {
+    "id": "vale:getting-started/quick-start.mdx:78:Google.WordListCase:119:content type",
+    "kind": "vale_alert",
+    "path": "getting-started/quick-start.mdx",
+    "line": 78,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'media type' instead of 'content type'.",
+    "matched_text": "content type",
+    "passage": "77 | \n78 | Output is grouped by type (rules, skills, agents, etc.). Use `--source` to filter by origin and `--type` to filter by content type.\n79 | "
+  },
+  {
+    "id": "vale:getting-started/mental-models.mdx:16:Google.WordListCase:6:Content type",
+    "kind": "vale_alert",
+    "path": "getting-started/mental-models.mdx",
+    "line": 16,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'media type' instead of 'Content type'.",
+    "matched_text": "Content type",
+    "passage": "15 | | **[Provider](/using-syllago/providers/)** | A deploy target (Vercel, Netlify, Heroku) | The thing your content ships to — `--to <provider>` is the destination. |\n16 | | **[Content type](/using-syllago/content-types/)** | A package or artifact format | The kind of thing (rule, skill, agent, hook…). Each type has its own conventions. |\n17 | | **[Canonical key](/reference/canonical-keys/)** | An interface, or a portable IR | The tool-neutral name for a capability (e.g. `hierarchical_loading`) that providers implement differently. |"
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:129:Google.WordListCase:3:Content Type",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 129,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'media type' instead of 'Content Type'.",
+    "matched_text": "Content Type",
+    "passage": "128 | \n129 | | Content Type | Coverage | Notes |\n130 | |---|---|---|"
+  },
+  {
+    "id": "vale:using-syllago/collections/library.mdx:31:Google.WordListCase:77:content type",
+    "kind": "vale_alert",
+    "path": "using-syllago/collections/library.mdx",
+    "line": 31,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'media type' instead of 'content type'.",
+    "matched_text": "content type",
+    "passage": "30 | \n31 | The `.syllago.yaml` file stores metadata like the item's name, description, content type, and provider compatibility. The accompanying files hold the actual content that gets exported to providers.\n32 | "
+  },
+  {
+    "id": "vale:using-syllago/tui.mdx:56:Google.WordListCase:91:disabled",
+    "kind": "vale_alert",
+    "path": "using-syllago/tui.mdx",
+    "line": 56,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'turn off' or 'off' instead of 'disabled'.",
+    "matched_text": "disabled",
+    "passage": "55 | \n56 | For screen reader users, CLI commands with `--json` output are recommended. Colors can be disabled with `NO_COLOR=1` or `--no-color`.\n57 | "
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:12:Google.WordListCase:98:above",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 12,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'preceding' instead of 'above'.",
+    "matched_text": "above",
+    "passage": "11 | \n12 | Fields are grouped by purpose. Most fields are optional in YAML (omitted when empty) — the notes above each table call out what's always present.\n13 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:101:Google.WordListCase:104:regex",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 101,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'regular expression' instead of 'regex'.",
+    "matched_text": "regex",
+    "passage": "100 | - Written as natural language descriptions of the original fields\n101 | - **Stripped automatically** during re-conversion (`StripConversionNotes()`) to prevent layering — the regex pattern matches `\\n---\\n<!-- syllago:converted[^>]*-->\\n.*$`\n102 | "
+  },
+  {
+    "id": "vale:advanced/troubleshooting.mdx:73:Google.WordListCase:3:Content type",
+    "kind": "vale_alert",
+    "path": "advanced/troubleshooting.mdx",
+    "line": 73,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'media type' instead of 'Content type'.",
+    "matched_text": "Content type",
+    "passage": "72 | - Error during `syllago add`, `syllago install`, or `syllago convert`\n73 | - Content type mismatch warnings\n74 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:186:Google.WordListCase:62:content type",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 186,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'media type' instead of 'content type'.",
+    "matched_text": "content type",
+    "passage": "185 | \n186 | - [Content Types](/using-syllago/content-types/) — what each content type supports\n187 | - [Hook Interchange Format](/reference/hooks-v1/) — full hook conversion specification"
+  },
+  {
+    "id": "vale:advanced/troubleshooting.mdx:14:Google.WordListCase:18:Disable",
+    "kind": "vale_alert",
+    "path": "advanced/troubleshooting.mdx",
+    "line": 14,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'turn off' or 'off' instead of 'Disable'.",
+    "matched_text": "Disable",
+    "passage": "13 | | `--json` | Machine-readable JSON output for all commands |\n14 | | `--no-color` | Disable color output (also available via `NO_COLOR=1` env var) |\n15 | | `--dry-run` | Preview changes without writing (supported on select commands) |"
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:164:Google.WordListCase:45:regex",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 164,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'regular expression' instead of 'regex'.",
+    "matched_text": "regex",
+    "passage": "163 | - Event name translation between providers\n164 | - Matcher type conversion (tool vocabulary, regex, MCP targeting)\n165 | - Timeout unit normalization (seconds canonical, auto-converts to/from milliseconds)"
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:49:Google.WordListCase:23:Regex",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 49,
+    "rule": "Google.WordListCase",
+    "rule_summary": "Use 'regular expression' instead of 'Regex'.",
+    "matched_text": "Regex",
+    "passage": "48 | - **Bare string**: Tool vocabulary lookup (e.g., `\"shell\"`, `\"file_read\"`)\n49 | - **Pattern object**: Regex on tool name (`{\"pattern\": \"file_(read|write|edit)\"}`)\n50 | - **MCP object**: Server+tool targeting (`{\"mcp\": {\"server\": \"github\", \"tool\": \"create_issue\"}}`)"
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:41:Google.Will:38:will",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 41,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "40 | |---|---|\n41 | | Windsurf `trigger: manual` | \"rule will only activate when explicitly requested\" |\n42 | | Roo Code mode-based globs | \"Roo Code uses mode-based scoping, not glob scoping\" |"
+  },
+  {
+    "id": "vale:getting-started/mental-models.mdx:30:Google.Will:11:will",
+    "kind": "vale_alert",
+    "path": "getting-started/mental-models.mdx",
+    "line": 30,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "29 | - Targeting a tool other than the one you authored in? **Format conversion** runs automatically on install.\n30 | - Asking \"will this work in Kiro?\" Run [`syllago compat`](/using-syllago/cli-reference/compat/).\n31 | "
+  },
+  {
+    "id": "vale:getting-started/core-concepts.mdx:51:Google.Will:195:will",
+    "kind": "vale_alert",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 51,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "50 | \n51 | Not every provider supports every content type. For example, some providers have no concept of hooks, and others don't support slash commands. syllago tracks the support matrix so you know what will work where.\n52 | "
+  },
+  {
+    "id": "vale:getting-started/why-syllago.mdx:31:Google.Will:158:will",
+    "kind": "vale_alert",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 31,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "30 | 1. **Conversion.** When you install a skill to Cursor, syllago translates it into a Cursor-compatible rule. The same skill installed to Kiro becomes a steering file. Intent carries forward; format adapts. See [Format Conversion](/using-syllago/format-conversion/).\n31 | 2. **Compatibility checking.** [`syllago compat`](/using-syllago/cli-reference/compat/) reports which providers can fully consume an item and where features will degrade in translation, so you know before you publish.\n32 | 3. **Distribution.** Git-based [registries](/using-syllago/collections/registries/) let you publish org-wide standards and pull updates with one command. [Loadouts](/using-syllago/collections/loadouts/) bundle related items so you apply a whole stack as a unit and revert it cleanly."
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:107:Google.Will:264:will",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 107,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "106 | \n107 | **Shell injection syntax** — `` !`command` `` inline syntax and `` ```! `` fenced blocks survive in the content body. The target provider may not execute them. An info-level warning is generated. Gemini CLI template directives (`!{...}`, `@{...}`) are similarly preserved with a warning.\n108 | "
+  },
+  {
+    "id": "vale:getting-started/why-syllago.mdx:55:Google.Will:487:will",
+    "kind": "vale_alert",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 55,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "54 | \n55 | The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \"share\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [`syllago compat`](/using-syllago/cli-reference/compat/) tells you where translation will degrade.\n56 | "
+  },
+  {
+    "id": "vale:getting-started/choose-your-path.mdx:26:Google.Will:80:will",
+    "kind": "vale_alert",
+    "path": "getting-started/choose-your-path.mdx",
+    "line": 26,
+    "rule": "Google.Will",
+    "rule_summary": "Avoid using 'will'.",
+    "matched_text": "will",
+    "passage": "25 | 1. [Local vs. Global architecture](/using-syllago/local-vs-global/) — why and how to commit `.syllago/` to your repo\n26 | 2. [`.syllago.yaml` Format](/using-syllago/syllago-yaml/) — the file your team will share\n27 | 3. [`syllago sync-install`](/using-syllago/cli-reference/sync-install/) — one command in CI that pulls registries and installs to a provider"
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:128:Google.FirstPerson:9:I",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 128,
+    "rule": "Google.FirstPerson",
+    "rule_summary": "Avoid first-person pronouns such as 'I'.",
+    "matched_text": "I",
+    "passage": "127 | \n128 | ### Can I change the pinned identity later?\n129 | "
+  },
+  {
+    "id": "vale:getting-started/core-concepts.mdx:89:Google.FirstPerson:111:my",
+    "kind": "vale_alert",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 89,
+    "rule": "Google.FirstPerson",
+    "rule_summary": "Avoid first-person pronouns such as 'my'.",
+    "matched_text": "my",
+    "passage": "88 | \n89 | A loadout is a bundled set of content that applies as a unit. Think of it as a named configuration profile — \"my Python stack,\" \"frontend review setup,\" or \"security audit kit.\"\n90 | "
+  },
+  {
+    "id": "vale:getting-started/quick-start.mdx:29:Google.OxfordComma:1:, space toggles a selection and enter confirms.",
+    "kind": "vale_alert",
+    "path": "getting-started/quick-start.mdx",
+    "line": 29,
+    "rule": "Google.OxfordComma",
+    "rule_summary": "Use the Oxford comma in ', space toggles a selection and enter confirms.'.",
+    "matched_text": ", space toggles a selection and enter confirms.",
+    "passage": "28 | \n29 | Follow the terminal prompts: `init` detects the AI coding tools (providers) on your machine and asks you to confirm which ones to manage. In the provider picker, **space** toggles a selection and **enter** confirms. When it finishes, your config exists at `.syllago/config.json`. To skip the prompts and accept defaults, pass `--yes`.\n30 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:59:Google.Anthropomorphism:192:sees",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 59,
+    "rule": "Google.Anthropomorphism",
+    "rule_summary": "Don't attribute human qualities to software or hardware ('sees').",
+    "matched_text": "sees",
+    "passage": "58 | \n59 | The syllago TUI interface exposes a reusable **Trust Inspector** modal that renders the full trust story for either an item or a whole registry. The same modal serves both scopes so the user sees a consistent shape regardless of where they opened it from.\n60 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:10:Google.Anthropomorphism:76:sees",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 10,
+    "rule": "Google.Anthropomorphism",
+    "rule_summary": "Don't attribute human qualities to software or hardware ('sees').",
+    "matched_text": "sees",
+    "passage": "9 | \n10 | This page documents how syllago computes the tier, what badges an operator sees, and how the install gate reacts to revocation, private-repo content, and tier policy.\n11 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:43:Google.Anthropomorphism:120:sees",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 43,
+    "rule": "Google.Anthropomorphism",
+    "rule_summary": "Don't attribute human qualities to software or hardware ('sees').",
+    "matched_text": "sees",
+    "passage": "42 | \n43 | The normative three-tier classification is preserved internally and in JSON output, but the headline badge an operator sees in the library and registry tabs collapses to three user-facing states:\n44 | "
+  },
+  {
+    "id": "vale:getting-started/why-syllago.mdx:55:Google.Anthropomorphism:459:tells",
+    "kind": "vale_alert",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 55,
+    "rule": "Google.Anthropomorphism",
+    "rule_summary": "Don't attribute human qualities to software or hardware ('tells').",
+    "matched_text": "tells",
+    "passage": "54 | \n55 | The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \"share\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [`syllago compat`](/using-syllago/cli-reference/compat/) tells you where translation will degrade.\n56 | "
+  },
+  {
+    "id": "vale:using-syllago/local-vs-global.mdx:15:Google.Anthropomorphism:7:sees",
+    "kind": "vale_alert",
+    "path": "using-syllago/local-vs-global.mdx",
+    "line": 15,
+    "rule": "Google.Anthropomorphism",
+    "rule_summary": "Don't attribute human qualities to software or hardware ('sees').",
+    "matched_text": "sees",
+    "passage": "14 | | Source of truth | `.syllago/` committed to the repo | `~/.syllago/content/` on your machine |\n15 | | Who sees it | Anyone who clones the repo | Just you |\n16 | | Survives a fresh checkout? | Yes | No (re-acquire from a registry) |"
+  },
+  {
+    "id": "vale:using-syllago/content-types/agents.mdx:72:Google.Headings:5:Codex (TOML)",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/agents.mdx",
+    "line": 72,
+    "rule": "Google.Headings",
+    "rule_summary": "'Codex (TOML)' should use sentence-style capitalization.",
+    "matched_text": "Codex (TOML)",
+    "passage": "71 | \n72 | ### Codex (TOML)\n73 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:156:Google.Headings:5:OpenCode",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 156,
+    "rule": "Google.Headings",
+    "rule_summary": "'OpenCode' should use sentence-style capitalization.",
+    "matched_text": "OpenCode",
+    "passage": "155 | \n156 | ### OpenCode\n157 | Rules use YAML format. Syllago strips Markdown frontmatter and converts to OpenCode's YAML structure."
+  },
+  {
+    "id": "vale:moat/registry-add-signing-identity.mdx:118:Google.Headings:4:FAQ",
+    "kind": "vale_alert",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 118,
+    "rule": "Google.Headings",
+    "rule_summary": "'FAQ' should use sentence-style capitalization.",
+    "matched_text": "FAQ",
+    "passage": "117 | \n118 | ## FAQ\n119 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/install-community-skill.mdx:43:Google.Headings:4:4. Install it into Claude Code",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/install-community-skill.mdx",
+    "line": 43,
+    "rule": "Google.Headings",
+    "rule_summary": "'4. Install it into Claude Code' should use sentence-style capitalization.",
+    "matched_text": "4. Install it into Claude Code",
+    "passage": "42 | \n43 | ## 4. Install it into Claude Code\n44 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/claude-code-rules-to-cursor.mdx:13:Google.Headings:4:1. See what Claude Code has",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/claude-code-rules-to-cursor.mdx",
+    "line": 13,
+    "rule": "Google.Headings",
+    "rule_summary": "'1. See what Claude Code has' should use sentence-style capitalization.",
+    "matched_text": "1. See what Claude Code has",
+    "passage": "12 | \n13 | ## 1. See what Claude Code has\n14 | "
+  },
+  {
+    "id": "vale:using-syllago/how-to/claude-code-rules-to-cursor.mdx:41:Google.Headings:4:4. Install to Cursor",
+    "kind": "vale_alert",
+    "path": "using-syllago/how-to/claude-code-rules-to-cursor.mdx",
+    "line": 41,
+    "rule": "Google.Headings",
+    "rule_summary": "'4. Install to Cursor' should use sentence-style capitalization.",
+    "matched_text": "4. Install to Cursor",
+    "passage": "40 | \n41 | ## 4. Install to Cursor\n42 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:74:Google.Headings:4:Revocation: Two-tier contract",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 74,
+    "rule": "Google.Headings",
+    "rule_summary": "'Revocation: Two-tier contract' should use sentence-style capitalization.",
+    "matched_text": "Revocation: Two-tier contract",
+    "passage": "73 | \n74 | ## Revocation: Two-tier contract\n75 | "
+  },
+  {
+    "id": "vale:moat/index.mdx:12:Google.Headings:4:Why Syllago uses MOAT",
+    "kind": "vale_alert",
+    "path": "moat/index.mdx",
+    "line": 12,
+    "rule": "Google.Headings",
+    "rule_summary": "'Why Syllago uses MOAT' should use sentence-style capitalization.",
+    "matched_text": "Why Syllago uses MOAT",
+    "passage": "11 | \n12 | ## Why Syllago uses MOAT\n13 | "
+  },
+  {
+    "id": "vale:moat/trust-tiers.mdx:12:Google.Headings:4:The three MOAT tiers",
+    "kind": "vale_alert",
+    "path": "moat/trust-tiers.mdx",
+    "line": 12,
+    "rule": "Google.Headings",
+    "rule_summary": "'The three MOAT tiers' should use sentence-style capitalization.",
+    "matched_text": "The three MOAT tiers",
+    "passage": "11 | \n12 | ## The three MOAT tiers\n13 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:113:Google.Latin:91:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 113,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "112 | \n113 | Both `syllago convert` and `syllago install` surface warnings when content uses features unsupported by the target provider. Warnings appear inline in text mode and in the `warnings` array in `--json` mode.\n114 | "
+  },
+  {
+    "id": "vale:using-syllago/format-conversion.mdx:119:Google.Latin:29:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 119,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "118 | - Fields dropped during conversion (e.g., `disabledTools` on MCP servers)\n119 | - Lossy syntax translation (e.g., named variables → positional)\n120 | - Preserved-but-inert content syntax (shell injection, provider variables)"
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:48:Google.Latin:44:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 48,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "47 | \n48 | - **Bare string**: Tool vocabulary lookup (e.g., `\"shell\"`, `\"file_read\"`)\n49 | - **Pattern object**: Regex on tool name (`{\"pattern\": \"file_(read|write|edit)\"}`)"
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:89:Google.Latin:73:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 89,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "88 | | `confidence` | float | Scanner confidence score (0.0–1.0). |\n89 | | `detection_source` | string | Where the scanner detected the content (e.g. `content-signal`, `extension`). |\n90 | | `detection_method` | string | One of: `automatic`, `user-directed`. |"
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:68:Google.Latin:54:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 68,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "67 | | `added_at` | string (ISO 8601) | When the item was added to the library. |\n68 | | `added_by` | string | Who or what added the item — e.g. `syllago v0.9.0`, or a person's name. |\n69 | "
+  },
+  {
+    "id": "vale:using-syllago/syllago-yaml.mdx:38:Google.Latin:52:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/syllago-yaml.mdx",
+    "line": 38,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "37 | | `source_provider` | string | Provider slug content was imported from (e.g. `claude-code`). |\n38 | | `source_format` | string | Original file format (e.g. `md`, `mdc`, `json`, `toml`). |\n39 | | `source_type` | string | How the content was acquired. One of: `git`, `filesystem`, `registry`, `provider`. |"
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:92:Google.Latin:27:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 92,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "91 | \n92 | - **Unsupported events**: e.g., Gemini's `before_model` has no Claude Code equivalent\n93 | - **Capability mismatches**: e.g., `updated_input` (input rewriting) not supported by target"
+  },
+  {
+    "id": "vale:using-syllago/content-types/hooks.mdx:93:Google.Latin:30:e.g.",
+    "kind": "vale_alert",
+    "path": "using-syllago/content-types/hooks.mdx",
+    "line": 93,
+    "rule": "Google.Latin",
+    "rule_summary": "Use 'for example' instead of 'e.g.'.",
+    "matched_text": "e.g.",
+    "passage": "92 | - **Unsupported events**: e.g., Gemini's `before_model` has no Claude Code equivalent\n93 | - **Capability mismatches**: e.g., `updated_input` (input rewriting) not supported by target\n94 | - **Degradation applied**: hooks that use the `block`, `warn`, or `exclude` degradation strategy"
+  },
+  {
+    "id": "semantic:for-ai-assistants.mdx:ambiguous-pronoun:11",
+    "kind": "semantic_gap",
+    "path": "for-ai-assistants.mdx",
+    "line": 11,
+    "rule": "ambiguous-pronoun",
+    "rule_summary": "Give pronouns clear referents",
+    "passage": "These files are generated automatically from the same source as this documentation site."
+  },
+  {
+    "id": "semantic:advanced/sandbox.mdx:anthropomorphism:14",
+    "kind": "semantic_gap",
+    "path": "advanced/sandbox.mdx",
+    "line": 14,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "Filesystem. The sandboxed process can only see your current working directory. The rest of the filesystem is hidden. This prevents AI-generated code from reading or modifying files outside the project."
+  },
+  {
+    "id": "semantic:advanced/sandbox.mdx:reader-address:60",
+    "kind": "semantic_gap",
+    "path": "advanced/sandbox.mdx",
+    "line": 60,
+    "rule": "reader-address",
+    "rule_summary": "Address the reader directly",
+    "passage": "This starts the provider with filesystem, network, and env var restrictions active. The provider works normally from the user's perspective, but its access is constrained to what you've allowed."
+  },
+  {
+    "id": "semantic:advanced/team-setup.mdx:excessive-claim:57",
+    "kind": "semantic_gap",
+    "path": "advanced/team-setup.mdx",
+    "line": 57,
+    "rule": "excessive-claim",
+    "rule_summary": "Avoid unsubstantiated or minimizing claims",
+    "passage": "This means team standards can evolve from the bottom up. Individual developers experiment locally, and the best content gets published to the shared registry for everyone."
+  },
+  {
+    "id": "semantic:advanced/team-setup.mdx:ambiguous-pronoun:57",
+    "kind": "semantic_gap",
+    "path": "advanced/team-setup.mdx",
+    "line": 57,
+    "rule": "ambiguous-pronoun",
+    "rule_summary": "Give pronouns clear referents",
+    "passage": "This means team standards can evolve from the bottom up. Individual developers experiment locally, and the best content gets published to the shared registry for everyone."
+  },
+  {
+    "id": "semantic:advanced/team-setup.mdx:excessive-claim:156",
+    "kind": "semantic_gap",
+    "path": "advanced/team-setup.mdx",
+    "line": 156,
+    "rule": "excessive-claim",
+    "rule_summary": "Avoid unsubstantiated or minimizing claims",
+    "passage": "The registry is the source of truth. Loadouts make it easy to apply. Project config ties it to specific repos. CI keeps everything in sync automatically."
+  },
+  {
+    "id": "semantic:getting-started/choose-your-path.mdx:imperative-step:14",
+    "kind": "semantic_gap",
+    "path": "getting-started/choose-your-path.mdx",
+    "line": 14,
+    "rule": "imperative-step",
+    "rule_summary": "Start procedural steps with an imperative action",
+    "passage": "Quick Start: import from your existing tools"
+  },
+  {
+    "id": "semantic:getting-started/choose-your-path.mdx:unnecessary-future-tense:26",
+    "kind": "semantic_gap",
+    "path": "getting-started/choose-your-path.mdx",
+    "line": 26,
+    "rule": "unnecessary-future-tense",
+    "rule_summary": "Use present tense for current behavior",
+    "passage": "[[code] Format](/using-syllago/syllago-yaml/) — the file your team will share"
+  },
+  {
+    "id": "semantic:getting-started/core-concepts.mdx:anthropomorphism:6",
+    "kind": "semantic_gap",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 6,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see Why syllago; for analogies to package managers and virtualenvs, see Mental Models."
+  },
+  {
+    "id": "semantic:getting-started/core-concepts.mdx:preannouncement:8",
+    "kind": "semantic_gap",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 8,
+    "rule": "preannouncement",
+    "rule_summary": "Avoid pre-announcing content",
+    "passage": "This page covers the four concepts that make the rest of the docs make sense: providers, content types, collections, and format conversion."
+  },
+  {
+    "id": "semantic:getting-started/core-concepts.mdx:unnecessary-future-tense:51",
+    "kind": "semantic_gap",
+    "path": "getting-started/core-concepts.mdx",
+    "line": 51,
+    "rule": "unnecessary-future-tense",
+    "rule_summary": "Use present tense for current behavior",
+    "passage": "Not every provider supports every content type. For example, some providers have no concept of hooks, and others don't support slash commands. syllago tracks the support matrix so you know what will work where."
+  },
+  {
+    "id": "semantic:getting-started/mental-models.mdx:ambiguous-pronoun:30",
+    "kind": "semantic_gap",
+    "path": "getting-started/mental-models.mdx",
+    "line": 30,
+    "rule": "ambiguous-pronoun",
+    "rule_summary": "Give pronouns clear referents",
+    "passage": "Asking \"will this work in Kiro?\" Run [[code]](/using-syllago/cli-reference/compat/)."
+  },
+  {
+    "id": "semantic:getting-started/quick-start.mdx:overloaded-jargon:16",
+    "kind": "semantic_gap",
+    "path": "getting-started/quick-start.mdx",
+    "line": 16,
+    "rule": "overloaded-jargon",
+    "rule_summary": "Define or replace overloaded jargon",
+    "passage": "Import from your existing tools — pull in rules, skills, or context you already have configured in an AI coding tool"
+  },
+  {
+    "id": "semantic:getting-started/quick-start.mdx:anthropomorphism:29",
+    "kind": "semantic_gap",
+    "path": "getting-started/quick-start.mdx",
+    "line": 29,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "Follow the terminal prompts: [code] detects the AI coding tools (providers) on your machine and asks you to confirm which ones to manage. In the provider picker, space toggles a selection and enter confirms. When it finishes, your config exists at [code]. To skip the prompts and accept defaults, pass [code]."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:excessive-claim:6",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 6,
+    "rule": "excessive-claim",
+    "rule_summary": "Avoid unsubstantiated or minimizing claims",
+    "passage": "If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:6",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 6,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:6",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 6,
+    "rule": "ambiguous-pronoun",
+    "rule_summary": "Give pronouns clear referents",
+    "passage": "If you've worked with more than one AI coding tool, you've felt this: each one wants its rules, skills, and configuration in a slightly different place, in a slightly different format. None of them know about the others. Sharing context across them is manual, fragile, and easy to get wrong."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:ambiguous-pronoun:22",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 22,
+    "rule": "ambiguous-pronoun",
+    "rule_summary": "Give pronouns clear referents",
+    "passage": "Add Roo Code, Cline, Amp, Gemini CLI, Codex, OpenCode, Zed, Factory Droid, Crush, and Pi, and the table grows in every dimension. MCP servers compound it — each client wires them up its own way."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:28",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 28,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "Syllago is a content manager for AI coding tools — think [code], [code], or [code], but for AI-assistant configuration. You maintain one canonical copy of each item. Syllago layers three things on top:"
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:31",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 31,
+    "rule": "unnecessary-future-tense",
+    "rule_summary": "Use present tense for current behavior",
+    "passage": "Compatibility checking. [[code]](/using-syllago/cli-reference/compat/) reports which providers can fully consume an item and where features will degrade in translation, so you know before you publish."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:anthropomorphism:45",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 45,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "You define each item once. Syllago decides what to do with it on each provider."
+  },
+  {
+    "id": "semantic:getting-started/why-syllago.mdx:unnecessary-future-tense:55",
+    "kind": "semantic_gap",
+    "path": "getting-started/why-syllago.mdx",
+    "line": 55,
+    "rule": "unnecessary-future-tense",
+    "rule_summary": "Use present tense for current behavior",
+    "passage": "The cost curve bends as tools and teammates multiply. Every copy is a chance to drift: you fix a rule in Claude Code and forget the Cursor version, a provider renames its config directory and your shell script silently writes to the old one, two teammates \"share\" a rule that diverged three edits ago. Syllago replaces N copies with one canonical item plus conversion, so an edit lands everywhere and [[code]](/using-syllago/cli-reference/compat/) tells you where translation will degrade."
+  },
+  {
+    "id": "semantic:moat/index.mdx:preannouncement:10",
+    "kind": "semantic_gap",
+    "path": "moat/index.mdx",
+    "line": 10,
+    "rule": "preannouncement",
+    "rule_summary": "Avoid pre-announcing content",
+    "passage": "Syllago adopts MOAT as its provenance layer. This page describes the pieces of syllago that implement the protocol and the operator-facing surfaces that expose the results."
+  },
+  {
+    "id": "semantic:moat/registry-add-signing-identity.mdx:preannouncement:10",
+    "kind": "semantic_gap",
+    "path": "moat/registry-add-signing-identity.mdx",
+    "line": 10,
+    "rule": "preannouncement",
+    "rule_summary": "Avoid pre-announcing content",
+    "passage": "This page covers the operator workflow for [code] and the three ways to pin an identity. The protocol detail is captured in an Architecture Decision Record (ADR) — see ADR 0007 in the syllago repo."
+  },
+  {
+    "id": "semantic:moat/trust-tiers.mdx:reader-address:59",
+    "kind": "semantic_gap",
+    "path": "moat/trust-tiers.mdx",
+    "line": 59,
+    "rule": "reader-address",
+    "rule_summary": "Address the reader directly",
+    "passage": "The syllago TUI interface exposes a reusable Trust Inspector modal that renders the full trust story for either an item or a whole registry. The same modal serves both scopes so the user sees a consistent shape regardless of where they opened it from."
+  },
+  {
+    "id": "semantic:using-syllago/format-conversion.mdx:unnecessary-future-tense:109",
+    "kind": "semantic_gap",
+    "path": "using-syllago/format-conversion.mdx",
+    "line": 109,
+    "rule": "unnecessary-future-tense",
+    "rule_summary": "Use present tense for current behavior",
+    "passage": "Provider-specific variables — [code], [code], and similar tokens remain as literal text. The target provider will not expand them."
+  },
+  {
+    "id": "semantic:using-syllago/local-vs-global.mdx:excessive-claim:63",
+    "kind": "semantic_gap",
+    "path": "using-syllago/local-vs-global.mdx",
+    "line": 63,
+    "rule": "excessive-claim",
+    "rule_summary": "Avoid unsubstantiated or minimizing claims",
+    "passage": "Global registries hold widely-reusable content — generic skills, security checklists, language-specific best practices."
+  },
+  {
+    "id": "semantic:using-syllago/local-vs-global.mdx:ambiguous-pronoun:81",
+    "kind": "semantic_gap",
+    "path": "using-syllago/local-vs-global.mdx",
+    "line": 81,
+    "rule": "ambiguous-pronoun",
+    "rule_summary": "Give pronouns clear referents",
+    "passage": "Team setup — applying these patterns at scale"
+  },
+  {
+    "id": "semantic:using-syllago/collections/registries.mdx:excessive-claim:118",
+    "kind": "semantic_gap",
+    "path": "using-syllago/collections/registries.mdx",
+    "line": 118,
+    "rule": "excessive-claim",
+    "rule_summary": "Avoid unsubstantiated or minimizing claims",
+    "passage": "Or create one manually — a registry is just a git repo with syllago's content structure:"
+  },
+  {
+    "id": "semantic:using-syllago/content-types/skills.mdx:anthropomorphism:90",
+    "kind": "semantic_gap",
+    "path": "using-syllago/content-types/skills.mdx",
+    "line": 90,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "Claude Code stores [code] and [code] as YAML frontmatter. The AI reads these fields to understand when and how to apply the skill."
+  },
+  {
+    "id": "semantic:using-syllago/how-to/install-community-skill.mdx:anthropomorphism:24",
+    "kind": "semantic_gap",
+    "path": "using-syllago/how-to/install-community-skill.mdx",
+    "line": 24,
+    "rule": "anthropomorphism",
+    "rule_summary": "Avoid misleading anthropomorphism",
+    "passage": "If syllago asks you to confirm trust for the registry on first use, review the prompt and accept — this is MOAT's trust-on-first-use check. See Trust tiers for how registry trust works."
+  }
+]
