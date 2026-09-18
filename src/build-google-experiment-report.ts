@@ -102,7 +102,7 @@ async function main() {
 
 <h2>Blind A/B review</h2>
 <p>Reviewer A and B are assigned per page. Choose the more useful edit set before revealing which workflow produced it. Choices stay in this browser; export them when finished.</p>
-<div class="toolbar"><button id="export">Export review JSON</button><button id="clear">Clear saved review</button></div><div id="pairs"></div>
+<div class="toolbar"><button id="export">Export review JSON</button><button id="clear">Clear saved review</button></div><div id="report-error" class="callout" hidden></div><div id="pairs"></div>
 
 <h2>Review Jev findings</h2>
 <p>Mark each finding useful, false positive, or uncertain. This supplies the human labels needed to tune thresholds and rule wording.</p><div id="findings"></div>
@@ -110,15 +110,17 @@ async function main() {
 <h2>Interpretation</h2>
 <div class="card"><p><strong>What this can establish:</strong> whether a compiled checklist reduces search and over-editing while preserving useful fixes on these pages.</p><p><strong>What it cannot establish yet:</strong> complete Google-guide coverage, generalization to other repositories, or production-grade precision. The inventory is a roadmap; the live semantic slice contains 12 rules.</p><p><strong>Recommended decision gate:</strong> label the 31 findings and the 20 A/B pairs. Expand the rule catalog only if scoped edits win on usefulness and the findings reach an acceptable precision for review—not automatic rewriting.</p></div>
 </main><script>
+window.addEventListener('error',event=>{const box=document.querySelector('#report-error');box.hidden=false;box.textContent='The interactive report could not render: '+event.message});
 const DATA=${payload};
 const key='semantic-style-google-review-v1';
-let review=JSON.parse(localStorage.getItem(key)||'{"pairs":{},"findings":{}}');
-const save=()=>localStorage.setItem(key,JSON.stringify(review));
+let review={pairs:{},findings:{}};
+try{review=JSON.parse(localStorage.getItem(key)||'{"pairs":{},"findings":{}}')}catch(error){console.warn('Review storage is unavailable; use Export review JSON before closing the page.',error)}
+const save=()=>{try{localStorage.setItem(key,JSON.stringify(review))}catch(error){console.warn('Could not persist review choices.',error)}};
 const stat=(n,label)=>'<div class="stat"><strong>'+n+'</strong><span>'+label+'</span></div>';
 document.querySelector('#inventory').innerHTML=stat(DATA.metrics.guide_pages,'official guide pages inventoried')+stat(DATA.metrics.directive_candidates.toLocaleString(),'heuristic directive candidates')+stat(DATA.metrics.word_entries,'word-list entries')+stat(DATA.metrics.vale_rules,'local Google Vale rules')+stat(DATA.metrics.vale_covered_pages,'guide pages linked to Vale rules');
 document.querySelector('#audit-stats').innerHTML=stat(DATA.metrics.v2_candidates,'candidate passages')+stat(DATA.metrics.v2_questions,'atomic Jev questions')+stat(DATA.metrics.v1_findings+' → '+DATA.metrics.v2_findings,'findings after calibration')+stat(DATA.metrics.input_tokens.toLocaleString(),'Jev input tokens')+stat('$'+DATA.metrics.jev_cost.toFixed(4),'estimated Jev input cost');
 document.querySelector('#editor-stats').innerHTML=stat(DATA.metrics.baseline_suggestions,'baseline suggestions')+stat(DATA.metrics.raw_compiled_suggestions,'raw compiled-editor suggestions')+stat(DATA.metrics.scoped_compiled_suggestions,'scope-accepted suggestions')+stat(DATA.metrics.blocked_compiled_suggestions,'out-of-scope suggestions blocked');
-const byPage=Object.groupBy(DATA.editorResults,r=>r.path);
+const byPage=DATA.editorResults.reduce((groups,result)=>{(groups[result.path]||(groups[result.path]=[])).push(result);return groups},{});
 const hash=s=>[...s].reduce((n,c)=>n+c.charCodeAt(0),0);
 const suggestionHtml=s=>'<div class="suggestion"><span class="pill">line '+s.line+'</span> <strong>'+esc(s.rule)+'</strong><div class="before">− '+esc(s.original)+'</div><div class="after">+ '+esc(s.replacement)+'</div><small>'+esc(s.rationale)+'</small></div>';
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
