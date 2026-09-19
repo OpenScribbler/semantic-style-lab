@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "rule": "compiled-rules/google-semicolons.json",
+  "cases": [
+    {
+      "id": "using-syllago/tui.mdx:52:Google.Semicolons:167:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "moat/index.mdx:45:Google.Semicolons:150:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "moat/index.mdx:80:Google.Semicolons:52:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "moat/trust-tiers.mdx:83:Google.Semicolons:200:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "moat/index.mdx:99:Google.Semicolons:58:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null
+    },
+    {
+      "id": "fixture:allowed:close-clauses:centroid",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Compute the centroid; if it falls outside the polygon, reverse the vertex order.",
+      "expected": "acceptable",
+      "expected_exception": "preferred_close_clauses"
+    },
+    {
+      "id": "fixture:allowed:connector:therefore",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "The tracked node sits below the camera; therefore, only the stereo cameras respond to head movement.",
+      "expected": "acceptable",
+      "expected_exception": "conjunctive_connector"
+    },
+    {
+      "id": "fixture:allowed:connector:that-is",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Use the video's source address; that is, use the address that retrieves the media file.",
+      "expected": "acceptable",
+      "expected_exception": "conjunctive_connector"
+    },
+    {
+      "id": "fixture:allowed:complex-series:priorities",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Prioritize improvements by user impact: broken workflows, missing data, and errors; setup time, repeated steps, and delays; and implementation cost, risk, and effort.",
+      "expected": "acceptable",
+      "expected_exception": "complex_series"
+    },
+    {
+      "id": "fixture:allowed:complex-series:review",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Review the page for present tense and active voice; spelling, punctuation, and grammar; and unnecessary words or paragraphs.",
+      "expected": "acceptable",
+      "expected_exception": "complex_series"
+    }
+  ]
+}

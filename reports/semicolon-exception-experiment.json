@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-19T18:13:29.958Z",
+  "model": "jev-1.13.0",
+  "run_count": 5,
+  "rule": "compiled-rules/google-semicolons.json",
+  "benchmark": "experiments/semicolon-exception-benchmark.json",
+  "prompt_example_count": 0,
+  "composition": {
+    "suppress_if_any_exception_at_or_above": 0.75,
+    "review_if_any_exception_at_or_above": 0.4,
+    "otherwise": "flag",
+    "threshold_status": "predeclared_unvalidated"
+  },
+  "usage": {
+    "input_tokens": 37755,
+    "output_tokens": 4025
+  },
+  "estimated_input_cost_usd": 0.00158571,
+  "metrics": {
+    "violations": 7,
+    "acceptable": 5,
+    "unsafe_suppressions": 0,
+    "true_finding_retention": 1,
+    "acceptable_auto_suppressed": 4,
+    "acceptable_sent_to_review": 1,
+    "acceptable_incorrectly_flagged": 0,
+    "automatic_correct": 9,
+    "reviewed": 3
+  },
+  "results": [
+    {
+      "id": "using-syllago/tui.mdx:52:Google.Semicolons:167:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration; the CLI is for scripting and automation (`--json` output on all commands).",
+      "marked_passage": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration⟦;⟧ the CLI is for scripting and automation (`--json` output on all commands).",
+      "left": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration",
+      "right": "the CLI is for scripting and automation (`--json` output on all commands).",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.09,
+          "probabilities": [
+            0.08,
+            0.09,
+            0.1,
+            0.09,
+            0.09
+          ],
+          "range": 0.020000000000000004
+        },
+        "conjunctive_connector": {
+          "probability": 0.07200000000000001,
+          "probabilities": [
+            0.07,
+            0.07,
+            0.08,
+            0.07,
+            0.07
+          ],
+          "range": 0.009999999999999995
+        },
+        "preferred_close_clauses": {
+          "probability": 0.48,
+          "probabilities": [
+            0.5,
+            0.47,
+            0.46,
+            0.51,
+            0.46
+          ],
+          "range": 0.04999999999999999
+        }
+      },
+      "max_exception_probability": 0.48,
+      "action": "review"
+    },
+    {
+      "id": "moat/index.mdx:45:Google.Semicolons:150:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist; others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+      "marked_passage": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist⟦;⟧ others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+      "left": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist",
+      "right": "others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.1,
+          "probabilities": [
+            0.09,
+            0.1,
+            0.1,
+            0.1,
+            0.11
+          ],
+          "range": 0.020000000000000004
+        },
+        "conjunctive_connector": {
+          "probability": 0.088,
+          "probabilities": [
+            0.08,
+            0.09,
+            0.09,
+            0.09,
+            0.09
+          ],
+          "range": 0.009999999999999995
+        },
+        "preferred_close_clauses": {
+          "probability": 0.418,
+          "probabilities": [
+            0.41,
+            0.42,
+            0.42,
+            0.43,
+            0.41
+          ],
+          "range": 0.020000000000000018
+        }
+      },
+      "max_exception_probability": 0.418,
+      "action": "review"
+    },
+    {
+      "id": "moat/index.mdx:80:Google.Semicolons:52:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "The 72-hour staleness threshold is the MOAT default; a registry's manifest can override it with an explicit `expires` field.",
+      "marked_passage": "The 72-hour staleness threshold is the MOAT default⟦;⟧ a registry's manifest can override it with an explicit `expires` field.",
+      "left": "The 72-hour staleness threshold is the MOAT default",
+      "right": "a registry's manifest can override it with an explicit `expires` field.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.052000000000000005,
+          "probabilities": [
+            0.05,
+            0.05,
+            0.05,
+            0.06,
+            0.05
+          ],
+          "range": 0.009999999999999995
+        },
+        "conjunctive_connector": {
+          "probability": 0.08,
+          "probabilities": [
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08
+          ],
+          "range": 0
+        },
+        "preferred_close_clauses": {
+          "probability": 0.386,
+          "probabilities": [
+            0.4,
+            0.39,
+            0.38,
+            0.39,
+            0.37
+          ],
+          "range": 0.030000000000000027
+        }
+      },
+      "max_exception_probability": 0.386,
+      "action": "flag"
+    },
+    {
+      "id": "moat/trust-tiers.mdx:83:Google.Semicolons:200:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright; there is no prompt.",
+      "marked_passage": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright⟦;⟧ there is no prompt.",
+      "left": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright",
+      "right": "there is no prompt.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.06,
+          "probabilities": [
+            0.06,
+            0.06,
+            0.06,
+            0.06,
+            0.06
+          ],
+          "range": 0
+        },
+        "conjunctive_connector": {
+          "probability": 0.08399999999999999,
+          "probabilities": [
+            0.09,
+            0.08,
+            0.08,
+            0.09,
+            0.08
+          ],
+          "range": 0.009999999999999995
+        },
+        "preferred_close_clauses": {
+          "probability": 0.354,
+          "probabilities": [
+            0.36,
+            0.35,
+            0.36,
+            0.35,
+            0.35
+          ],
+          "range": 0.010000000000000009
+        }
+      },
+      "max_exception_probability": 0.354,
+      "action": "flag"
+    },
+    {
+      "id": "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`; substitute the name you actually chose.",
+      "marked_passage": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`⟦;⟧ substitute the name you actually chose.",
+      "left": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`",
+      "right": "substitute the name you actually chose.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.07200000000000001,
+          "probabilities": [
+            0.08,
+            0.07,
+            0.07,
+            0.07,
+            0.07
+          ],
+          "range": 0.009999999999999995
+        },
+        "conjunctive_connector": {
+          "probability": 0.09,
+          "probabilities": [
+            0.09,
+            0.09,
+            0.09,
+            0.09,
+            0.09
+          ],
+          "range": 0
+        },
+        "preferred_close_clauses": {
+          "probability": 0.244,
+          "probabilities": [
+            0.24,
+            0.25,
+            0.24,
+            0.25,
+            0.24
+          ],
+          "range": 0.010000000000000009
+        }
+      },
+      "max_exception_probability": 0.244,
+      "action": "flag"
+    },
+    {
+      "id": "moat/index.mdx:99:Google.Semicolons:58:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0; syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+      "marked_passage": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0⟦;⟧ syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+      "left": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0",
+      "right": "syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.062,
+          "probabilities": [
+            0.06,
+            0.06,
+            0.06,
+            0.07,
+            0.06
+          ],
+          "range": 0.010000000000000009
+        },
+        "conjunctive_connector": {
+          "probability": 0.092,
+          "probabilities": [
+            0.09,
+            0.09,
+            0.1,
+            0.09,
+            0.09
+          ],
+          "range": 0.010000000000000009
+        },
+        "preferred_close_clauses": {
+          "probability": 0.356,
+          "probabilities": [
+            0.36,
+            0.36,
+            0.34,
+            0.36,
+            0.36
+          ],
+          "range": 0.019999999999999962
+        }
+      },
+      "max_exception_probability": 0.356,
+      "action": "flag"
+    },
+    {
+      "id": "getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+      "origin": "syllago_human_label",
+      "expected": "violation",
+      "expected_exception": null,
+      "passage": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/); for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+      "marked_passage": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/)⟦;⟧ for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+      "left": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/)",
+      "right": "for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.324,
+          "probabilities": [
+            0.37,
+            0.36,
+            0.3,
+            0.31,
+            0.28
+          ],
+          "range": 0.08999999999999997
+        },
+        "conjunctive_connector": {
+          "probability": 0.166,
+          "probabilities": [
+            0.17,
+            0.15,
+            0.18,
+            0.16,
+            0.17
+          ],
+          "range": 0.03
+        },
+        "preferred_close_clauses": {
+          "probability": 0.296,
+          "probabilities": [
+            0.3,
+            0.31,
+            0.3,
+            0.29,
+            0.28
+          ],
+          "range": 0.02999999999999997
+        }
+      },
+      "max_exception_probability": 0.324,
+      "action": "flag"
+    },
+    {
+      "id": "fixture:allowed:close-clauses:centroid",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Compute the centroid; if it falls outside the polygon, reverse the vertex order.",
+      "expected": "acceptable",
+      "expected_exception": "preferred_close_clauses",
+      "marked_passage": "Compute the centroid⟦;⟧ if it falls outside the polygon, reverse the vertex order.",
+      "left": "Compute the centroid",
+      "right": "if it falls outside the polygon, reverse the vertex order.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.064,
+          "probabilities": [
+            0.06,
+            0.06,
+            0.07,
+            0.06,
+            0.07
+          ],
+          "range": 0.010000000000000009
+        },
+        "conjunctive_connector": {
+          "probability": 0.1,
+          "probabilities": [
+            0.1,
+            0.09,
+            0.1,
+            0.1,
+            0.11
+          ],
+          "range": 0.020000000000000004
+        },
+        "preferred_close_clauses": {
+          "probability": 0.466,
+          "probabilities": [
+            0.49,
+            0.46,
+            0.48,
+            0.45,
+            0.45
+          ],
+          "range": 0.03999999999999998
+        }
+      },
+      "max_exception_probability": 0.466,
+      "action": "review"
+    },
+    {
+      "id": "fixture:allowed:connector:therefore",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "The tracked node sits below the camera; therefore, only the stereo cameras respond to head movement.",
+      "expected": "acceptable",
+      "expected_exception": "conjunctive_connector",
+      "marked_passage": "The tracked node sits below the camera⟦;⟧ therefore, only the stereo cameras respond to head movement.",
+      "left": "The tracked node sits below the camera",
+      "right": "therefore, only the stereo cameras respond to head movement.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.057999999999999996,
+          "probabilities": [
+            0.06,
+            0.05,
+            0.06,
+            0.06,
+            0.06
+          ],
+          "range": 0.009999999999999995
+        },
+        "conjunctive_connector": {
+          "probability": 0.97,
+          "probabilities": [
+            0.97,
+            0.97,
+            0.97,
+            0.97,
+            0.97
+          ],
+          "range": 0
+        },
+        "preferred_close_clauses": {
+          "probability": 0.378,
+          "probabilities": [
+            0.37,
+            0.39,
+            0.38,
+            0.37,
+            0.38
+          ],
+          "range": 0.020000000000000018
+        }
+      },
+      "max_exception_probability": 0.97,
+      "action": "suppress"
+    },
+    {
+      "id": "fixture:allowed:connector:that-is",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Use the video's source address; that is, use the address that retrieves the media file.",
+      "expected": "acceptable",
+      "expected_exception": "conjunctive_connector",
+      "marked_passage": "Use the video's source address⟦;⟧ that is, use the address that retrieves the media file.",
+      "left": "Use the video's source address",
+      "right": "that is, use the address that retrieves the media file.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.092,
+          "probabilities": [
+            0.09,
+            0.09,
+            0.09,
+            0.09,
+            0.1
+          ],
+          "range": 0.010000000000000009
+        },
+        "conjunctive_connector": {
+          "probability": 0.89,
+          "probabilities": [
+            0.91,
+            0.88,
+            0.88,
+            0.89,
+            0.89
+          ],
+          "range": 0.030000000000000027
+        },
+        "preferred_close_clauses": {
+          "probability": 0.23199999999999998,
+          "probabilities": [
+            0.23,
+            0.24,
+            0.23,
+            0.24,
+            0.22
+          ],
+          "range": 0.01999999999999999
+        }
+      },
+      "max_exception_probability": 0.89,
+      "action": "suppress"
+    },
+    {
+      "id": "fixture:allowed:complex-series:priorities",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Prioritize improvements by user impact: broken workflows, missing data, and errors; setup time, repeated steps, and delays; and implementation cost, risk, and effort.",
+      "expected": "acceptable",
+      "expected_exception": "complex_series",
+      "marked_passage": "Prioritize improvements by user impact: broken workflows, missing data, and errors⟦;⟧ setup time, repeated steps, and delays; and implementation cost, risk, and effort.",
+      "left": "Prioritize improvements by user impact: broken workflows, missing data, and errors",
+      "right": "setup time, repeated steps, and delays; and implementation cost, risk, and effort.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.9099999999999999,
+          "probabilities": [
+            0.91,
+            0.91,
+            0.91,
+            0.91,
+            0.91
+          ],
+          "range": 0
+        },
+        "conjunctive_connector": {
+          "probability": 0.11399999999999999,
+          "probabilities": [
+            0.12,
+            0.11,
+            0.11,
+            0.11,
+            0.12
+          ],
+          "range": 0.009999999999999995
+        },
+        "preferred_close_clauses": {
+          "probability": 0.388,
+          "probabilities": [
+            0.39,
+            0.4,
+            0.38,
+            0.4,
+            0.37
+          ],
+          "range": 0.030000000000000027
+        }
+      },
+      "max_exception_probability": 0.9099999999999999,
+      "action": "suppress"
+    },
+    {
+      "id": "fixture:allowed:complex-series:review",
+      "origin": "policy_derived_fixture",
+      "source_url": "https://developers.google.com/style/semicolons",
+      "passage": "Review the page for present tense and active voice; spelling, punctuation, and grammar; and unnecessary words or paragraphs.",
+      "expected": "acceptable",
+      "expected_exception": "complex_series",
+      "marked_passage": "Review the page for present tense and active voice⟦;⟧ spelling, punctuation, and grammar; and unnecessary words or paragraphs.",
+      "left": "Review the page for present tense and active voice",
+      "right": "spelling, punctuation, and grammar; and unnecessary words or paragraphs.",
+      "exceptions": {
+        "complex_series": {
+          "probability": 0.8699999999999999,
+          "probabilities": [
+            0.87,
+            0.86,
+            0.88,
+            0.88,
+            0.86
+          ],
+          "range": 0.020000000000000018
+        },
+        "conjunctive_connector": {
+          "probability": 0.118,
+          "probabilities": [
+            0.13,
+            0.11,
+            0.13,
+            0.11,
+            0.11
+          ],
+          "range": 0.020000000000000004
+        },
+        "preferred_close_clauses": {
+          "probability": 0.316,
+          "probabilities": [
+            0.32,
+            0.3,
+            0.31,
+            0.33,
+            0.32
+          ],
+          "range": 0.030000000000000027
+        }
+      },
+      "max_exception_probability": 0.8699999999999999,
+      "action": "suppress"
+    }
+  ]
+}

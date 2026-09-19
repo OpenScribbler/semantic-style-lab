@@ -1,0 +1,153 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "c1__complex_series": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "c1__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.08
+    },
+    "c1__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.46
+    },
+    "c2__complex_series": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "c2__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.09
+    },
+    "c2__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.42
+    },
+    "c3__complex_series": {
+      "type": "noul",
+      "noul": 0.05
+    },
+    "c3__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.08
+    },
+    "c3__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.38
+    },
+    "c4__complex_series": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "c4__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.08
+    },
+    "c4__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.36
+    },
+    "c5__complex_series": {
+      "type": "noul",
+      "noul": 0.07
+    },
+    "c5__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.09
+    },
+    "c5__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.24
+    },
+    "c6__complex_series": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "c6__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "c6__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.34
+    },
+    "c7__complex_series": {
+      "type": "noul",
+      "noul": 0.3
+    },
+    "c7__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.18
+    },
+    "c7__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.3
+    },
+    "c8__complex_series": {
+      "type": "noul",
+      "noul": 0.07
+    },
+    "c8__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.1
+    },
+    "c8__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.48
+    },
+    "c9__complex_series": {
+      "type": "noul",
+      "noul": 0.06
+    },
+    "c9__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "c9__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.38
+    },
+    "c10__complex_series": {
+      "type": "noul",
+      "noul": 0.09
+    },
+    "c10__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.88
+    },
+    "c10__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.23
+    },
+    "c11__complex_series": {
+      "type": "noul",
+      "noul": 0.91
+    },
+    "c11__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.11
+    },
+    "c11__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.38
+    },
+    "c12__complex_series": {
+      "type": "noul",
+      "noul": 0.88
+    },
+    "c12__conjunctive_connector": {
+      "type": "noul",
+      "noul": 0.13
+    },
+    "c12__preferred_close_clauses": {
+      "type": "noul",
+      "noul": 0.31
+    }
+  },
+  "usage": {
+    "input_tokens": 7551,
+    "output_tokens": 805
+  }
+}

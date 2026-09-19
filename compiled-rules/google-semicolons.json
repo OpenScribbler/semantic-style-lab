@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "google-semicolons",
+  "label": "Avoid semicolons unless a documented exception applies",
+  "source": {
+    "guide": "Google developer documentation style guide",
+    "url": "https://developers.google.com/style/semicolons",
+    "last_updated": "2024-10-15",
+    "default": "If possible, avoid semicolons."
+  },
+  "candidate_generator": {
+    "kind": "vale",
+    "check": "Google.Semicolons",
+    "token": ";"
+  },
+  "scope": {
+    "include": ["prose"],
+    "exclude": [
+      "frontmatter",
+      "fenced_or_indented_code",
+      "inline_code",
+      "mdx_module_syntax",
+      "mdx_expression",
+      "jsx_or_html_tag",
+      "code_or_pre_block",
+      "link_destination_or_entity",
+      "unparseable_mdx"
+    ]
+  },
+  "default_action": "flag",
+  "semantic_exceptions": [
+    {
+      "id": "complex_series",
+      "instructions": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+      "true_criteria": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+      "false_criteria": "The semicolon joins clauses or separates material that is not a complex series."
+    },
+    {
+      "id": "conjunctive_connector",
+      "instructions": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+      "true_criteria": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+      "false_criteria": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+    },
+    {
+      "id": "preferred_close_clauses",
+      "instructions": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+      "true_criteria": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+      "false_criteria": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+    }
+  ],
+  "composition": {
+    "suppress_if_any_exception_at_or_above": 0.75,
+    "review_if_any_exception_at_or_above": 0.4,
+    "otherwise": "flag",
+    "threshold_status": "predeclared_unvalidated"
+  },
+  "prompt_examples": [],
+  "evaluation_policy": "Labeled examples are never included in the Jev state for this baseline."
+}

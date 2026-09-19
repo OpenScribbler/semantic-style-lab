@@ -23,7 +23,7 @@ describe('human calibration artifacts', () => {
 	test('turns project preferences into explicit routing policy', async () => {
 		const policy = await Bun.file('policies/syllago-google-style.json').json();
 		expect(policy.rules['Google.WordList:CLI'].routing).toBe('deterministic_override');
-		expect(policy.rules['Google.Semicolons'].routing).toBe('deterministic_source_filter');
+		expect(policy.rules['Google.Semicolons'].routing).toBe('compiled_exception_filter');
 		expect(policy.rules['Google.Passive'].decision).toBe('hidden-actor');
 	});
 });

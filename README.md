@@ -119,14 +119,15 @@ the provisional global-threshold policy. The resulting Syllago decisions are
 captured as [code-owned policy](policies/syllago-google-style.json); rerun the
 analysis with `bun run analyze:human-calibration`.
 
-The follow-up [semicolon calibration](reports/semicolon-calibration.html) separates
-code from prose using exact MDX source spans, then applies a semicolon-specific Jev
-clarity judgment to 13 real prose occurrences. Its six-case review is documented
-in [the experiment notes](docs/semicolon-experiment.md), and every raw Jev request
-and response is retained under [`reports/semicolon-raw/`](reports/semicolon-raw/).
-The completed [calibration analysis](reports/semicolon-calibration-analysis.md)
-rejects Jev suppression for this rule: deterministic MDX filtering followed by
-retaining prose alerts preserves all seven labeled true findings.
+The follow-up [semicolon experiment](docs/semicolon-experiment.md) first separates
+code from prose using exact MDX source spans. A broad Jev clarity question failed
+calibration, but compiling Google's three documented exceptions into independent
+questions produced a useful filter: it retained all seven human-labeled findings,
+suppressed four of five acceptable cases, and sent three ambiguous cases to review.
+See the [dark HTML result](reports/semicolon-exception-result.html), the
+[calibrated rule](compiled-rules/google-semicolons-calibrated.json), and every
+saved request and raw response under
+[`reports/semicolon-exceptions-raw/`](reports/semicolon-exceptions-raw/).
 
 ## Design boundary
 

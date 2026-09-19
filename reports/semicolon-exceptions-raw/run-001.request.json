@@ -1,0 +1,523 @@
+{
+  "run": 1,
+  "rule": "compiled-rules/google-semicolons.json",
+  "benchmark": "experiments/semicolon-exception-benchmark.json",
+  "candidate_ids": [
+    "using-syllago/tui.mdx:52:Google.Semicolons:167:;",
+    "moat/index.mdx:45:Google.Semicolons:150:;",
+    "moat/index.mdx:80:Google.Semicolons:52:;",
+    "moat/trust-tiers.mdx:83:Google.Semicolons:200:;",
+    "using-syllago/how-to/install-community-skill.mdx:41:Google.Semicolons:132:;",
+    "moat/index.mdx:99:Google.Semicolons:58:;",
+    "getting-started/core-concepts.mdx:6:Google.Semicolons:321:;",
+    "fixture:allowed:close-clauses:centroid",
+    "fixture:allowed:connector:therefore",
+    "fixture:allowed:connector:that-is",
+    "fixture:allowed:complex-series:priorities",
+    "fixture:allowed:complex-series:review"
+  ],
+  "request": {
+    "model": "jev-latest",
+    "state": {
+      "rule_default": "If possible, avoid semicolons.",
+      "rule_source": "https://developers.google.com/style/semicolons",
+      "prompt_examples": [],
+      "candidates": [
+        {
+          "marked_passage": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration⟦;⟧ the CLI is for scripting and automation (`--json` output on all commands).",
+          "left_of_semicolon": "The TUI and CLI are equivalent — anything you can do in the TUI, you can do with [CLI commands](/using-syllago/cli-reference/). The TUI is for interactive exploration",
+          "right_of_semicolon": "the CLI is for scripting and automation (`--json` output on all commands)."
+        },
+        {
+          "marked_passage": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist⟦;⟧ others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL.",
+          "left_of_semicolon": "Syllago pins a cryptographic signing identity to every MOAT registry at `registry add` time. Well-known registries are covered by a bundled allowlist",
+          "right_of_semicolon": "others require `--signing-*` flags or a non-GitHub OIDC issuer. The pinning resists rename and transfer attacks by binding to the numeric repository and owner IDs, not just the URL."
+        },
+        {
+          "marked_passage": "The 72-hour staleness threshold is the MOAT default⟦;⟧ a registry's manifest can override it with an explicit `expires` field.",
+          "left_of_semicolon": "The 72-hour staleness threshold is the MOAT default",
+          "right_of_semicolon": "a registry's manifest can override it with an explicit `expires` field."
+        },
+        {
+          "marked_passage": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright⟦;⟧ there is no prompt.",
+          "left_of_semicolon": "A registry-source revocation is the registry operator stating that the content is no longer trustworthy — malicious, compromised, deprecated, or policy-violating. Syllago refuses the install outright",
+          "right_of_semicolon": "there is no prompt."
+        },
+        {
+          "marked_passage": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`⟦;⟧ substitute the name you actually chose.",
+          "left_of_semicolon": "This lists every skill across your registries. Pick one that looks useful — the examples below use a skill named `changelog-writer`",
+          "right_of_semicolon": "substitute the name you actually chose."
+        },
+        {
+          "marked_passage": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0⟦;⟧ syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed.",
+          "left_of_semicolon": "Syllago tracks MOAT **v0.6.x Draft**. The spec is pre-1.0",
+          "right_of_semicolon": "syllago follows it as it evolves, and signing-profile changes on existing registries may trigger a re-approval prompt (exit `11`) when a registry operator rotates their identity — which is the protocol working as designed."
+        },
+        {
+          "marked_passage": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/)⟦;⟧ for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/).",
+          "left_of_semicolon": "Every AI coding tool wants its rules, skills, and configs in a different format, in a different place. Syllago is the layer that lets you maintain one canonical copy of each item and convert it on the fly to whichever tool needs it. For a longer treatment of the problem, see [Why syllago](/getting-started/why-syllago/)",
+          "right_of_semicolon": "for analogies to package managers and virtualenvs, see [Mental Models](/getting-started/mental-models/)."
+        },
+        {
+          "marked_passage": "Compute the centroid⟦;⟧ if it falls outside the polygon, reverse the vertex order.",
+          "left_of_semicolon": "Compute the centroid",
+          "right_of_semicolon": "if it falls outside the polygon, reverse the vertex order."
+        },
+        {
+          "marked_passage": "The tracked node sits below the camera⟦;⟧ therefore, only the stereo cameras respond to head movement.",
+          "left_of_semicolon": "The tracked node sits below the camera",
+          "right_of_semicolon": "therefore, only the stereo cameras respond to head movement."
+        },
+        {
+          "marked_passage": "Use the video's source address⟦;⟧ that is, use the address that retrieves the media file.",
+          "left_of_semicolon": "Use the video's source address",
+          "right_of_semicolon": "that is, use the address that retrieves the media file."
+        },
+        {
+          "marked_passage": "Prioritize improvements by user impact: broken workflows, missing data, and errors⟦;⟧ setup time, repeated steps, and delays; and implementation cost, risk, and effort.",
+          "left_of_semicolon": "Prioritize improvements by user impact: broken workflows, missing data, and errors",
+          "right_of_semicolon": "setup time, repeated steps, and delays; and implementation cost, risk, and effort."
+        },
+        {
+          "marked_passage": "Review the page for present tense and active voice⟦;⟧ spelling, punctuation, and grammar; and unnecessary words or paragraphs.",
+          "left_of_semicolon": "Review the page for present tense and active voice",
+          "right_of_semicolon": "spelling, punctuation, and grammar; and unnecessary words or paragraphs."
+        }
+      ]
+    },
+    "questions": {
+      "c1__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[0]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c1__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[0]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c1__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[0]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c2__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[1]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c2__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[1]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c2__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[1]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c3__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[2]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c3__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[2]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c3__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[2]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c4__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[3]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c4__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[3]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c4__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[3]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c5__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[4]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c5__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[4]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c5__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[4]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c6__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[5]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c6__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[5]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c6__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[5]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c7__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[6]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c7__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[6]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c7__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[6]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c8__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[7]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c8__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[7]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c8__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[7]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c9__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[8]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c9__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[8]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c9__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[8]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c10__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[9]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c10__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[9]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c10__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[9]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c11__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[10]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c11__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[10]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c11__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[10]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      },
+      "c12__complex_series": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon separate items in a long or complex series where at least one item contains internal punctuation?",
+          "inspect": "candidates[11]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The semicolon is a delimiter between series items, and one or more items contain commas or other internal punctuation that make comma-only separation unclear.",
+          "false": "The semicolon joins clauses or separates material that is not a complex series."
+        }
+      },
+      "c12__conjunctive_connector": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon immediately precede a conjunctive adverb or explanatory connecting phrase that joins two independent clauses?",
+          "inspect": "candidates[11]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The right side begins with a connector such as therefore, however, consequently, nevertheless, that is, for example, or in other words, and the connector relates two complete clauses.",
+          "false": "No such connector follows the semicolon, or the surrounding material is not two clauses joined by that connector."
+        }
+      },
+      "c12__preferred_close_clauses": {
+        "type": "noul",
+        "instructions": {
+          "question": "Does the marked semicolon join closely related clauses for which a period or comma would be less effective?",
+          "inspect": "candidates[11]",
+          "focus": "Judge only the semicolon enclosed in ⟦;⟧. Use the complete passage plus the explicitly separated left and right text. Evaluate this exception independently of the other exceptions."
+        },
+        "criteria": {
+          "true": "The clauses express one tightly coupled comparison, condition, contrast, or consequence, and replacing the semicolon with a period or comma would weaken or blur that relationship.",
+          "false": "A period, comma with conjunction, colon, or restructuring would communicate the relationship at least as clearly."
+        }
+      }
+    }
+  }
+}

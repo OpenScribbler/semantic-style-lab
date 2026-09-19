@@ -20,7 +20,9 @@
   "decision": {
     "routing": "deterministic_source_filter_then_keep_prose_alert",
     "use_jev_to_suppress": false,
-    "rationale": "All seven structurally varied, human-labeled prose semicolons are violations. The semicolon-specific Jev question would suppress six at the provisional threshold."
+    "scope": "This decision applies to the direct clarity-improvement question only.",
+    "superseded_by": "reports/semicolon-exception-experiment.json",
+    "rationale": "All seven structurally varied, human-labeled prose semicolons are violations. The direct semicolon-clarity Jev question would suppress six at the provisional threshold."
   },
   "labeled_cases": [
     {

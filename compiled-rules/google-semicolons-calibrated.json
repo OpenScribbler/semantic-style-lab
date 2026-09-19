@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "google-semicolons",
+  "label": "Avoid semicolons unless a documented exception applies",
+  "source": {
+    "guide": "Google developer documentation style guide",
+    "url": "https://developers.google.com/style/semicolons",
+    "last_updated": "2024-10-15",
+    "default": "If possible, avoid semicolons."
+  },
+  "candidate_generator": {
+    "kind": "vale",
+    "check": "Google.Semicolons",
+    "token": ";"
+  },
+  "scope_filter": "src/mdx-source-classifier.ts",
+  "default_action": "flag",
+  "exceptions": [
+    {
+      "id": "complex_series",
+      "evaluator": "jev_noul",
+      "suppress_at_or_above": 0.75,
+      "review_at_or_above": 0.4,
+      "calibration": "Two of two policy-derived acceptable fixtures exceeded 0.86; no human violation exceeded 0.33."
+    },
+    {
+      "id": "conjunctive_connector",
+      "evaluator": "jev_noul",
+      "suppress_at_or_above": 0.75,
+      "review_at_or_above": 0.4,
+      "calibration": "Two of two policy-derived acceptable fixtures exceeded 0.89; no human violation exceeded 0.17."
+    },
+    {
+      "id": "preferred_close_clauses",
+      "evaluator": "jev_noul_review_only",
+      "suppress_at_or_above": null,
+      "review_at_or_above": 0.4,
+      "calibration": "The acceptable fixture scored 0.466 while two human violations scored 0.480 and 0.418; this branch did not separate."
+    }
+  ],
+  "composition": {
+    "suppress": "Any auto-suppressible exception reaches its calibrated suppression threshold.",
+    "review": "Any exception reaches its review threshold, including preferred_close_clauses.",
+    "flag": "No exception reaches review threshold."
+  },
+  "prompt_examples": [],
+  "calibration": {
+    "report": "reports/semicolon-exception-experiment.json",
+    "benchmark": "experiments/semicolon-exception-benchmark.json",
+    "automatic_correct": 9,
+    "reviewed": 3,
+    "unsafe_suppressions": 0
+  }
+}

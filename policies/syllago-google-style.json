@@ -20,8 +20,9 @@
     },
     "Google.Semicolons": {
       "decision": "context",
-	  "routing": "deterministic_source_filter",
-	  "behavior": "Discard non-prose source spans with the MDX classifier, then retain every remaining Vale prose alert. Do not use Jev to suppress semicolon findings."
+      "routing": "compiled_exception_filter",
+      "behavior": "Discard non-prose spans deterministically. Jev may suppress strongly supported conjunctive-connector or complex-series exceptions. Closely-related-clause exceptions remain review-only; otherwise retain the Vale alert.",
+      "compiled_rule": "compiled-rules/google-semicolons-calibrated.json"
     },
     "Google.Passive": {
       "decision": "hidden-actor",

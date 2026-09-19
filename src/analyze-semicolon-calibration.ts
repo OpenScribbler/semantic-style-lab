@@ -62,7 +62,9 @@ async function main() {
 		decision: {
 			routing: 'deterministic_source_filter_then_keep_prose_alert',
 			use_jev_to_suppress: false,
-			rationale: 'All seven structurally varied, human-labeled prose semicolons are violations. The semicolon-specific Jev question would suppress six at the provisional threshold.',
+			scope: 'This decision applies to the direct clarity-improvement question only.',
+			superseded_by: 'reports/semicolon-exception-experiment.json',
+			rationale: 'All seven structurally varied, human-labeled prose semicolons are violations. The direct semicolon-clarity Jev question would suppress six at the provisional threshold.',
 		},
 		labeled_cases: labeled,
 	};
@@ -74,9 +76,9 @@ All six new real-prose cases were labeled as violations. Combined with the earli
 
 ## Decision
 
-Do not use Jev to suppress semicolon alerts. Parse the complete MDX file, discard candidates whose exact source span is non-prose, and retain every remaining Vale semicolon alert for the writer.
+Do not use the direct Jev clarity-improvement question to suppress semicolon alerts. Parse the complete MDX file, discard candidates whose exact source span is non-prose, and retain every remaining Vale semicolon alert under this formulation.
 
-This is a useful negative result: Jev is not adding value to this rule. The deterministic MDX boundary is the improvement over Vale alone.
+This is a useful negative result for the direct question, not for every possible Jev decomposition. The follow-up compiled-exception experiment is recorded separately.
 
 ## Threshold comparison
 
