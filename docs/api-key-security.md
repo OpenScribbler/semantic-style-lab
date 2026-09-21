@@ -29,17 +29,30 @@ OS-native secret store that injects environment variables is also appropriate.
 
 ## Start a test session
 
-Load the key yourself, then launch the model or coding agent from the same shell so
-it inherits the environment:
+Environment variables are copied into a process when it starts. Loading the key in
+another terminal—or after an agent is already running—cannot update that agent.
+Exit the running agent first, load the key yourself, and launch it again from the
+same shell.
+
+To resume the most recent Claude Code conversation in this checkout, run:
 
 ```bash
+cd /path/to/semantic-style-lab
 source "$HOME/.config/semantic-style-lab/env"
-test -n "$TYPESAFE_API_KEY" && echo "TypeSafe key is available"
-claude
+if test -n "$TYPESAFE_API_KEY"; then
+  echo "TypeSafe key is available"
+  claude --continue
+else
+  echo "TypeSafe key is absent; Claude was not started"
+fi
 ```
 
-Replace `claude` with another agent command when needed. For a direct run without
-an agent:
+This is fail-closed: the agent does not start if the variable is absent. Replace
+`claude --continue` with `claude`, `agy`, or another agent command when starting a
+new session. Run the command from the same working directory as the earlier Claude
+session for `--continue` to select that conversation.
+
+For a direct run without an agent:
 
 ```bash
 source "$HOME/.config/semantic-style-lab/env"
@@ -50,9 +63,9 @@ The safe presence check is `test -n "$TYPESAFE_API_KEY"`. Do not use `echo`,
 `printenv`, `env`, shell tracing (`set -x`), or file-display commands to inspect
 the value.
 
-If an already-running agent cannot see the variable, exit it, load the key in its
-parent shell, and restart it. Do not paste the key into chat and do not instruct
-the agent to search the filesystem for it.
+If an already-running agent cannot see the variable, it must be restarted as shown
+above. Do not paste the key into chat and do not instruct the agent to search the
+filesystem for it.
 
 ## Rules for agents
 

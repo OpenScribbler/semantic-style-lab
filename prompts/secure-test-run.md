@@ -1,8 +1,10 @@
 # Secure Semantic Style Lab test prompt
 
-Copy this prompt into Claude or another coding agent after you have loaded
-`TYPESAFE_API_KEY` yourself and launched the agent from that shell. Replace the two
-bracketed paths first.
+Copy this prompt into Claude or another coding agent only after you have loaded
+`TYPESAFE_API_KEY` yourself and launched the agent from that same shell. Loading a
+variable in another terminal or after the agent starts cannot update the running
+agent. Exit and resume the agent as described in `docs/api-key-security.md` first.
+Replace the two bracketed paths before sending the prompt.
 
 ---
 
