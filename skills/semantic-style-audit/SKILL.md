@@ -1,0 +1,29 @@
+---
+name: semantic-style-audit
+description: Set up, run, interpret, and carefully tune Semantic Style Lab audits for Markdown or MDX documentation repositories. Use when configuring project paths, running the fixed Vale-plus-Jev research rules, reviewing reports, collecting labels, or preparing localized findings for an editor LLM.
+---
+
+# Semantic Style Audit
+
+Use the Semantic Style Lab CLI as an instrumented shadow-mode audit. Vale enumerates a fixed candidate set; source parsing removes non-prose spans; Jev supplies narrow probabilities; code decides whether to flag, review, or suppress. Do not replace this pipeline with a prompt containing an entire style guide.
+
+## Choose the task
+
+- For first-time setup or repository selection, read [references/configuration.md](references/configuration.md).
+- For interpreting results, collecting feedback, or changing thresholds and rule questions, read [references/calibration.md](references/calibration.md).
+
+## Preserve these boundaries
+
+- Keep `TYPESAFE_API_KEY` in the user’s environment. Never request that they paste it into chat, write it into configuration, or commit it.
+- Start with `--no-jev`; confirm the intended files and Vale candidates before making live calls.
+- Treat `flag`, `review`, and `suppress` as shadow-mode recommendations. Do not edit docs, modify CI, or hide findings unless the user separately asks.
+- Preserve each run’s config snapshot, Vale output, exact Jev requests, and exact Jev responses. Do not overwrite prior runs.
+- Keep evaluation labels out of Jev state, questions, and prompt examples. Join them only after inference.
+- Prefer small, independent Noul questions. Keep deterministic syntax, thresholds, and action composition in code.
+- Ask the user only about consequential disagreements, novel cases, and decisions that could authorize suppression. Do not ask them to label the entire report.
+
+## Complete a run
+
+Report the scanned file count, candidate count, flag/review/suppress totals, input-token cost, output paths, and any errors or unparseable files. Link the HTML report and editor checklist. State whether Jev ran or the result came from `--no-jev`.
+
+When changing code or calibration, run type checking and tests. Describe evidence for each threshold change, including unsafe suppressions and retained true findings; never present a threshold learned from a tiny fixture set as universally safe.

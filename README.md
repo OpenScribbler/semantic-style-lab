@@ -28,6 +28,34 @@ export TYPESAFE_API_KEY="ts_..."
 
 Do not commit the API key. `.env` and `.env.local` are ignored.
 
+## Run the shareable CLI
+
+The portable shadow-mode command scans one or more configured documentation
+repositories with a deliberately fixed research rule set. Copy the example and
+edit repository paths and Markdown/MDX globs:
+
+```bash
+cp style-lab.config.example.json style-lab.config.json
+bun run style-lab -- --config style-lab.config.json --no-jev
+```
+
+The no-Jev pass validates file discovery and Vale candidates without requiring a
+key or spending tokens. After reviewing that result, set `TYPESAFE_API_KEY` and
+run the same command without `--no-jev`. Use `--project <name>` to select one of
+several configured repositories.
+
+Every invocation creates a timestamped directory under `output_dir` containing a
+dark HTML report, complete JSON, a page-localized editor checklist, a config
+snapshot, raw Vale output, and every exact Jev request and response. The command
+does not edit documentation or change CI.
+
+The companion [Semantic Style Audit Agent Skill](skills/semantic-style-audit/SKILL.md)
+helps an LLM configure repositories, run the CLI safely, interpret uncertainty,
+collect a small amount of high-value human feedback, and tune compiled rules as
+evidence accumulates. Keep it in the repository for project-aware agents, or copy
+the `skills/semantic-style-audit` directory into an agent's normal skills directory
+to make it available across projects.
+
 ## Enumerate candidates with Vale
 
 ```bash

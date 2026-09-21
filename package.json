@@ -2,7 +2,11 @@
   "name": "semantic-style-lab",
   "private": true,
   "type": "module",
+  "bin": {
+    "style-lab": "src/style-lab.ts"
+  },
   "scripts": {
+    "style-lab": "bun src/style-lab.ts",
     "audit": "bun src/audit.ts",
     "build:corpus": "bun src/build-real-world-fixtures.ts",
     "compile:google-guide": "bun src/compile-google-guide.ts",

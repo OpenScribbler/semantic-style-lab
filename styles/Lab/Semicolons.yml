@@ -1,0 +1,9 @@
+# Candidate pattern adapted from vale-cli/Google (MIT); see GOOGLE_VALE_LICENSE.txt.
+extends: existence
+message: "Evaluate this semicolon against the compiled Google exceptions."
+link: 'https://developers.google.com/style/semicolons'
+nonword: true
+scope: sentence
+level: suggestion
+tokens:
+  - ';'
