@@ -417,7 +417,7 @@ export async function auditProject(options: {
 			}))],
 		};
 	}
-	if (semantic.length && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. Use --no-jev to enumerate candidates without calling Jev.');
+	if (semantic.length && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. Load it in the parent shell and restart this process; never paste it into a prompt or config. Use --no-jev to enumerate candidates without calling Jev. See docs/api-key-security.md.');
 	const contextualRules = await loadRules(resolve(labRoot, 'rules/contextual-vocabulary'));
 	const semicolonRule = await Bun.file(resolve(labRoot, 'compiled-rules/google-semicolons.json')).json() as SemicolonRule;
 	const findings = [...deterministic];

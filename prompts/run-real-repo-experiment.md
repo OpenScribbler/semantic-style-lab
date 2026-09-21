@@ -7,6 +7,9 @@ unhelpful Vale candidates while preserving useful findings in this repository:
 
 Read `skills/semantic-style-audit/SKILL.md` and its relevant references before
 running anything. Do not edit the target repository, its Vale configuration, or CI.
+Follow `skills/semantic-style-audit/references/security.md` for every live call.
+The human supplies the key through the inherited environment; never request, find,
+read, display, or persist it.
 
 ## Experimental invariant
 

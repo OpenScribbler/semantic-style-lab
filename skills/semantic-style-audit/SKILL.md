@@ -9,12 +9,13 @@ Use the Semantic Style Lab CLI as an instrumented shadow-mode audit. Vale enumer
 
 ## Choose the task
 
+- Before any live Jev run or API-key troubleshooting, read [references/security.md](references/security.md).
 - For first-time setup or repository selection, read [references/configuration.md](references/configuration.md).
 - For interpreting results, collecting feedback, or changing thresholds and rule questions, read [references/calibration.md](references/calibration.md).
 
 ## Preserve these boundaries
 
-- Keep `TYPESAFE_API_KEY` in the user’s environment. Never request that they paste it into chat, write it into configuration, or commit it.
+- Keep `TYPESAFE_API_KEY` in the user's inherited environment. Check only whether it is non-empty. Never request, locate, read, print, copy, persist, or commit it.
 - Start with `--no-jev`; confirm the intended files and Vale candidates before making live calls.
 - Treat `flag`, `review`, and `suppress` as shadow-mode recommendations. Do not edit docs, modify CI, or hide findings unless the user separately asks.
 - Preserve each run’s config snapshot, Vale output, exact Jev requests, and exact Jev responses. Do not overwrite prior runs.

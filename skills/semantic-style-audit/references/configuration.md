@@ -36,12 +36,17 @@ Inspect `report.html`, `report.json`, `raw/<project>/vale.json`, and
 `raw/<project>/source-health.json`. Confirm that the files and candidates are in
 scope. Do not interpret style effectiveness until parse coverage is acceptable.
 
-For a live run, set the key in the current shell and rerun without `--no-jev`:
+For a live run, the human must follow `docs/api-key-security.md`, load the key
+before launching the agent, and rerun without `--no-jev`. Check presence without
+displaying the value:
 
 ```bash
-export TYPESAFE_API_KEY="..."
+test -n "$TYPESAFE_API_KEY"
 bun run style-lab -- --config /path/to/style-lab.config.json
 ```
+
+If the check fails, do not locate, read, or request the key. Ask the human to load
+it in the parent shell and restart the agent.
 
 Use `--project <name>` to run only one configured project. The CLI prints the timestamped result directory to stdout.
 

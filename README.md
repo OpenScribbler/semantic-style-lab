@@ -23,10 +23,13 @@ Requirements: Bun, Vale, and a TypeSafe API key for live Jev calls.
 
 ```bash
 bun install
-export TYPESAFE_API_KEY="ts_..."
 ```
 
-Do not commit the API key. `.env` and `.env.local` are ignored.
+Run the candidate-only pass without a key. Before a live run, follow the
+[secure API-key workflow](docs/api-key-security.md): keep the key outside the
+repository, load it into the shell yourself, and then launch the agent from that
+shell. Never paste a key into an agent prompt. `.env` and `.env.local` are ignored,
+but an external, permission-restricted file is safer.
 
 ## Run the shareable CLI
 
@@ -58,7 +61,9 @@ semantic review, or narrow a failed corpus and present that subset as the reques
 result.
 
 Agents should start from the checked-in
-[real-repository experiment prompt](prompts/run-real-repo-experiment.md), which
+[secure test-run prompt](prompts/secure-test-run.md), which
+combines the experimental procedure with explicit secret-handling boundaries.
+The lower-level [real-repository experiment prompt](prompts/run-real-repo-experiment.md)
 explicitly prevents an agent from doing Jev's semantic work or turning missing
 inference into favorable metrics.
 
