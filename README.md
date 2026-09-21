@@ -46,8 +46,21 @@ several configured repositories.
 
 Every invocation creates a timestamped directory under `output_dir` containing a
 dark HTML report, complete JSON, a page-localized editor checklist, a config
-snapshot, raw Vale output, and every exact Jev request and response. The command
-does not edit documentation or change CI.
+snapshot, source-parse health, raw Vale output, and every exact Jev request and
+response. Markdown and MDX use different parsers; protected lexical fallback is
+reported explicitly rather than silently blocking Jev. The command does not edit
+documentation or change CI.
+
+The [experimental protocol](docs/experimental-protocol.md) makes the measurement
+boundary explicit: an LLM agent can operate and diagnose the experiment, but it
+cannot substitute its own style judgments for Jev, count skipped candidates as
+semantic review, or narrow a failed corpus and present that subset as the requested
+result.
+
+Agents should start from the checked-in
+[real-repository experiment prompt](prompts/run-real-repo-experiment.md), which
+explicitly prevents an agent from doing Jev's semantic work or turning missing
+inference into favorable metrics.
 
 The companion [Semantic Style Audit Agent Skill](skills/semantic-style-audit/SKILL.md)
 helps an LLM configure repositories, run the CLI safely, interpret uncertainty,

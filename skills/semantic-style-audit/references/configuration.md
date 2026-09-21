@@ -14,9 +14,14 @@ Each project needs:
 - `root`: repository or documentation root
 - `include`: Markdown/MDX glob patterns relative to `root`
 - `exclude`: optional generated, vendored, build, or dependency paths
-- `max_files`: optional positive limit for a small first run
+- `max_files`: optional positive limit for a small first run; selection uses a stable path hash rather than the alphabetical head
 
 The top-level `output_dir` is also relative to the configuration file. Each invocation creates a timestamped directory instead of overwriting an earlier run.
+
+`parsing.max_unparsed_file_ratio` controls when missing source classification makes
+the command exit unsuccessfully after preserving its artifacts. The default is `0`.
+Format-specific parsing uses Markdown for `.md` and MDX for `.mdx`; an AST failure
+degrades to protected lexical ranges and is visible in parse-health output.
 
 ## Safe sequence
 
@@ -27,7 +32,9 @@ bun install
 bun run style-lab -- --config /path/to/style-lab.config.json --no-jev
 ```
 
-Inspect `report.html`, `report.json`, and `raw/<project>/vale.json`. Confirm that the files and candidates are in scope.
+Inspect `report.html`, `report.json`, `raw/<project>/vale.json`, and
+`raw/<project>/source-health.json`. Confirm that the files and candidates are in
+scope. Do not interpret style effectiveness until parse coverage is acceptable.
 
 For a live run, set the key in the current shell and rerun without `--no-jev`:
 

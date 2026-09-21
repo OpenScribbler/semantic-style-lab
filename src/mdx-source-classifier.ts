@@ -2,6 +2,9 @@ import remarkMdx from 'remark-mdx';
 import remarkParse from 'remark-parse';
 import { unified } from 'unified';
 
+export type MarkdownFormat = 'markdown' | 'mdx';
+export type SourceParser = 'markdown_ast' | 'mdx_ast' | 'lexical_fallback' | 'unparsed';
+
 export type MdxSourceClass =
 	| 'prose'
 	| 'frontmatter'
@@ -10,9 +13,11 @@ export type MdxSourceClass =
 	| 'mdx_module_syntax'
 	| 'mdx_expression'
 	| 'jsx_or_html_tag'
+	| 'html_comment'
+	| 'template_syntax'
 	| 'code_or_pre_block'
 	| 'link_destination_or_entity'
-	| 'unparseable_mdx';
+	| 'unparsed_source';
 
 interface PositionedNode {
 	type?: string;
@@ -23,7 +28,20 @@ interface PositionedNode {
 interface ProtectedRange {
 	start: number;
 	end: number;
-	kind: Exclude<MdxSourceClass, 'prose' | 'unparseable_mdx'>;
+	kind: Exclude<MdxSourceClass, 'prose' | 'unparsed_source'>;
+}
+
+interface OffsetRange {
+	start: number;
+	end: number;
+}
+
+export interface SourceClassifier {
+	format: MarkdownFormat;
+	parser: SourceParser;
+	degraded: boolean;
+	parse_error?: string;
+	classify(offset: number): MdxSourceClass;
 }
 
 const astKinds = new Map<string, ProtectedRange['kind']>([
@@ -58,14 +76,65 @@ function regexRanges(source: string, pattern: RegExp, kind: ProtectedRange['kind
 	}
 }
 
-function frontmatterRange(source: string, ranges: ProtectedRange[]) {
-	if (!source.startsWith('---\n') && !source.startsWith('---\r\n')) return;
-	const match = /^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/.exec(source);
-	if (match) addRange(ranges, 0, match[0].length, 'frontmatter');
+function frontmatterInfo(source: string) {
+	const opener = source.startsWith('---\n') || source.startsWith('---\r\n')
+		? '---'
+		: source.startsWith('+++\n') || source.startsWith('+++\r\n')
+			? '+++'
+			: null;
+	if (!opener) return null;
+	const escaped = opener.replaceAll('+', '\\+');
+	const match = new RegExp(`^${escaped}\\r?\\n[\\s\\S]*?\\r?\\n${escaped}(?:\\r?\\n|$)`).exec(source);
+	if (!match) return null;
+	return { start: 0, end: match[0].length, syntax: opener === '---' ? 'yaml' as const : 'toml' as const };
 }
 
-function lexicalRanges(source: string, ranges: ProtectedRange[]) {
-	frontmatterRange(source, ranges);
+function renderedFrontmatterRanges(source: string, frontmatter: ReturnType<typeof frontmatterInfo>) {
+	const ranges: OffsetRange[] = [];
+	if (!frontmatter) return ranges;
+	const block = source.slice(frontmatter.start, frontmatter.end);
+	const pattern = frontmatter.syntax === 'yaml'
+		? /^(title|description)[ \t]*:[ \t]*(.*)$/gmi
+		: /^(title|description)[ \t]*=[ \t]*(.*)$/gmi;
+	for (const match of block.matchAll(pattern)) {
+		const lineStart = match.index!;
+		const value = match[2] ?? '';
+		const valueStart = lineStart + match[0].length - value.length;
+		if (value && !/^[>|][-+]?\s*$/.test(value)) {
+			ranges.push({ start: valueStart, end: valueStart + value.length });
+			continue;
+		}
+		if (frontmatter.syntax !== 'yaml') continue;
+		let cursor = lineStart + match[0].length;
+		while (cursor < block.length) {
+			const newlineLength = block.startsWith('\r\n', cursor) ? 2 : block[cursor] === '\n' ? 1 : 0;
+			if (!newlineLength) break;
+			const nextStart = cursor + newlineLength;
+			const nextEndRaw = block.indexOf('\n', nextStart);
+			const nextEnd = nextEndRaw < 0 ? block.length : nextEndRaw;
+			const line = block.slice(nextStart, nextEnd).replace(/\r$/, '');
+			const content = /^(\s+)(.*)$/.exec(line);
+			if (!content) break;
+			if (content[2]) ranges.push({ start: nextStart + content[1].length, end: nextStart + line.length });
+			cursor = nextEnd;
+		}
+	}
+	return ranges;
+}
+
+function lexicalRanges(source: string, ranges: ProtectedRange[], format: MarkdownFormat) {
+	const frontmatter = frontmatterInfo(source);
+	if (frontmatter) addRange(ranges, frontmatter.start, frontmatter.end, 'frontmatter');
+	regexRanges(source, /^(?: {0,3})(?:`{3,}|~{3,})[^\n]*(?:\r?\n[\s\S]*?)?^(?: {0,3})(?:`{3,}|~{3,})[ \t]*$/gm, 'fenced_or_indented_code', ranges);
+	regexRanges(source, /^(?:(?: {4}|\t).*(?:\r?\n|$))+/gm, 'fenced_or_indented_code', ranges);
+	regexRanges(source, /(`+)(?!`)[\s\S]*?\1/g, 'inline_code', ranges);
+	regexRanges(source, /{{[<%][\s\S]*?[>%]}}/g, 'template_syntax', ranges);
+	regexRanges(source, /<!--(?:[\s\S]*?)-->/g, 'html_comment', ranges);
+	if (format === 'mdx') {
+		regexRanges(source, /^(?:import|export)\b[^;\n]*(?:;|\r?\n|$)/gm, 'mdx_module_syntax', ranges);
+		regexRanges(source, /^(?:import|export)\b[\s\S]*?^[ \t]*};?[ \t]*$/gm, 'mdx_module_syntax', ranges);
+		regexRanges(source, /\{(?:[^{}]|\{[^{}]*\})*\}/g, 'mdx_expression', ranges);
+	}
 	regexRanges(source, /<(?:script|style|pre|code)\b[^>]*>[\s\S]*?<\/(?:script|style|pre|code)\s*>/gi, 'code_or_pre_block', ranges);
 	regexRanges(source, /<\/?[A-Za-z][^>]*>|<>|<\/>/g, 'jsx_or_html_tag', ranges);
 	regexRanges(source, /&(?:#[0-9]+|#x[0-9a-f]+|[A-Za-z][A-Za-z0-9]+);/gi, 'link_destination_or_entity', ranges);
@@ -74,21 +143,53 @@ function lexicalRanges(source: string, ranges: ProtectedRange[]) {
 		return [start, match.index! + match[0].length - 1];
 	});
 	regexRanges(source, /<https?:\/\/[^>]+>/gi, 'link_destination_or_entity', ranges);
+	return renderedFrontmatterRanges(source, frontmatter);
+}
+
+function errorMessage(error: unknown) {
+	return error instanceof Error ? error.message : String(error);
+}
+
+export function createSourceClassifier(source: string, format: MarkdownFormat): SourceClassifier {
+	let parser: SourceParser = format === 'mdx' ? 'mdx_ast' : 'markdown_ast';
+	let parseError: string | undefined;
+	const ranges: ProtectedRange[] = [];
+	try {
+		const processor = format === 'mdx' ? unified().use(remarkParse).use(remarkMdx) : unified().use(remarkParse);
+		walk(processor.parse(source), ranges);
+	} catch (error) {
+		parser = 'lexical_fallback';
+		parseError = errorMessage(error);
+	}
+	let visibleFrontmatter: OffsetRange[] = [];
+	try {
+		visibleFrontmatter = lexicalRanges(source, ranges, format);
+	} catch (error) {
+		return {
+			format,
+			parser: 'unparsed',
+			degraded: true,
+			parse_error: [parseError, errorMessage(error)].filter(Boolean).join('; '),
+			classify: () => 'unparsed_source',
+		};
+	}
+	return {
+		format,
+		parser,
+		degraded: parser === 'lexical_fallback',
+		...(parseError ? { parse_error: parseError } : {}),
+		classify(offset: number) {
+			if (offset < 0 || offset >= source.length) throw new RangeError(`Offset ${offset} is outside the source.`);
+			if (visibleFrontmatter.some((range) => offset >= range.start && offset < range.end)) return 'prose';
+			const matches = ranges.filter((range) => offset >= range.start && offset < range.end);
+			if (!matches.length) return 'prose';
+			return matches.sort((left, right) => (left.end - left.start) - (right.end - right.start))[0]!.kind;
+		},
+	};
 }
 
 export function classifyMdxOffset(source: string, offset: number): MdxSourceClass {
-	if (offset < 0 || offset >= source.length) throw new RangeError(`Offset ${offset} is outside the source.`);
-	const ranges: ProtectedRange[] = [];
-	try {
-		const tree = unified().use(remarkParse).use(remarkMdx).parse(source);
-		walk(tree, ranges);
-	} catch {
-		return 'unparseable_mdx';
-	}
-	lexicalRanges(source, ranges);
-	const matches = ranges.filter((range) => offset >= range.start && offset < range.end);
-	if (!matches.length) return 'prose';
-	return matches.sort((left, right) => (left.end - left.start) - (right.end - right.start))[0]!.kind;
+	return createSourceClassifier(source, 'mdx').classify(offset);
 }
 
 export function offsetAtLineColumn(source: string, line: number, column: number) {

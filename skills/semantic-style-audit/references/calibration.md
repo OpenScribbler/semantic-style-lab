@@ -5,6 +5,7 @@
 Use `report.html` for a human overview and `editor-checklist.json` for page-localized LLM work. Treat `report.json` as the durable composed result. Raw evidence is under `raw/<project>/`:
 
 - `vale.json`
+- `source-health.json`
 - `jev-NNN.request.json`
 - `jev-NNN.response.json`
 
@@ -20,6 +21,11 @@ Prioritize:
 4. A new linguistic structure not represented in existing calibration data.
 
 Record the user’s label separately from the saved request and response. Keep the original result immutable so later experiments can be reproduced.
+
+An agent's own labels are useful only for secondary triage. Save them separately,
+name the reviewing model, and do not use them as ground truth or as a substitute
+for Jev output. If no Jev request exists for a candidate, the result is unevaluated,
+not a semantic `review` decision.
 
 ## Tune conservatively
 

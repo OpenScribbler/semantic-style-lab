@@ -5,4 +5,4 @@ node_modules/
 .tmp/
 reports/*.local.*
 style-lab.config.json
-.style-lab/
+.style-lab*/

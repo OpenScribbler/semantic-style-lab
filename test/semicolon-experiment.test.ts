@@ -21,7 +21,7 @@ describe('semicolon experiment', () => {
 		['<Widget example="first; second" />', 'jsx_or_html_tag'],
 		['Read [the docs](https://example.com/a;b).', 'link_destination_or_entity'],
 		['Copyright &copy; example.', 'link_destination_or_entity'],
-		['---\ntitle: "First; second"\n---\nBody.', 'frontmatter'],
+		['---\ntitle: "First; second"\n---\nBody.', 'prose'],
 	])('classifies the exact semicolon in %s', (source, expected) => {
 		expect(classifyMdxOffset(source, source.indexOf(';'))).toBe(expected);
 	});

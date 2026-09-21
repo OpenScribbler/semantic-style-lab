@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { stat } from 'node:fs/promises';
 import { dirname, isAbsolute, relative, resolve } from 'node:path';
 
@@ -17,6 +18,9 @@ export interface StyleLabConfig {
 		model: string;
 		batch_question_limit: number;
 	};
+	parsing: {
+		max_unparsed_file_ratio: number;
+	};
 }
 
 export interface LoadedConfig extends StyleLabConfig {
@@ -26,6 +30,13 @@ export interface LoadedConfig extends StyleLabConfig {
 function nonemptyStrings(value: unknown, field: string) {
 	if (!Array.isArray(value) || value.length === 0 || value.some((item) => typeof item !== 'string' || !item.trim())) {
 		throw new Error(`${field} must be a non-empty array of strings.`);
+	}
+	return value as string[];
+}
+
+function strings(value: unknown, field: string) {
+	if (!Array.isArray(value) || value.some((item) => typeof item !== 'string' || !item.trim())) {
+		throw new Error(`${field} must be an array of non-empty strings.`);
 	}
 	return value as string[];
 }
@@ -63,7 +74,7 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 			name: project.name,
 			root: isAbsolute(project.root) ? project.root : resolve(base, project.root),
 			include: nonemptyStrings(project.include, `projects[${index}].include`),
-			exclude: project.exclude === undefined ? [] : nonemptyStrings(project.exclude, `projects[${index}].exclude`),
+			exclude: project.exclude === undefined ? [] : strings(project.exclude, `projects[${index}].exclude`),
 			...(maxFiles === undefined ? {} : { max_files: maxFiles as number }),
 		};
 	});
@@ -76,12 +87,18 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 	}
 	const output = value.output_dir ?? '.style-lab';
 	if (typeof output !== 'string' || !output.trim()) throw new Error('output_dir must be a non-empty string.');
+	const parsing = value.parsing && typeof value.parsing === 'object' ? value.parsing as Record<string, unknown> : {};
+	const maxUnparsedFileRatio = parsing.max_unparsed_file_ratio ?? 0;
+	if (typeof maxUnparsedFileRatio !== 'number' || maxUnparsedFileRatio < 0 || maxUnparsedFileRatio > 1) {
+		throw new Error('parsing.max_unparsed_file_ratio must be a number from 0 through 1.');
+	}
 	return {
 		schema_version: 1,
 		config_path: configPath,
 		output_dir: isAbsolute(output) ? output : resolve(base, output),
 		projects,
 		jev: { model, batch_question_limit: questionLimit as number },
+		parsing: { max_unparsed_file_ratio: maxUnparsedFileRatio },
 	};
 }
 
@@ -100,5 +117,14 @@ export async function discoverProjectFiles(project: ProjectConfig) {
 		}
 	}
 	const sorted = [...paths].sort();
-	return project.max_files ? sorted.slice(0, project.max_files) : sorted;
+	if (!project.max_files) return sorted;
+	return sorted
+		.map((path) => ({
+			path,
+			hash: createHash('sha256').update(relative(project.root, path).replaceAll('\\', '/')).digest('hex'),
+		}))
+		.sort((left, right) => left.hash.localeCompare(right.hash) || left.path.localeCompare(right.path))
+		.slice(0, project.max_files)
+		.map((item) => item.path)
+		.sort();
 }

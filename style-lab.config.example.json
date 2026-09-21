@@ -20,5 +20,8 @@
   "jev": {
     "model": "jev-latest",
     "batch_question_limit": 200
+  },
+  "parsing": {
+    "max_unparsed_file_ratio": 0
   }
 }

@@ -31,6 +31,13 @@
         "model": { "type": "string", "minLength": 1, "default": "jev-latest" },
         "batch_question_limit": { "type": "integer", "minimum": 1, "maximum": 255, "default": 200 }
       }
+    },
+    "parsing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_unparsed_file_ratio": { "type": "number", "minimum": 0, "maximum": 1, "default": 0 }
+      }
     }
   }
 }

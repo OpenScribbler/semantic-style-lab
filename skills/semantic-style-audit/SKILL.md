@@ -19,11 +19,14 @@ Use the Semantic Style Lab CLI as an instrumented shadow-mode audit. Vale enumer
 - Treat `flag`, `review`, and `suppress` as shadow-mode recommendations. Do not edit docs, modify CI, or hide findings unless the user separately asks.
 - Preserve each run’s config snapshot, Vale output, exact Jev requests, and exact Jev responses. Do not overwrite prior runs.
 - Keep evaluation labels out of Jev state, questions, and prompt examples. Join them only after inference.
+- Do not perform the semantic judgments that the experiment is intended to measure Jev performing. If Jev was not called, report `unparsed` or `not evaluated`; never replace the missing result with an agent verdict.
+- Do not narrow a failed corpus to parseable or favorable files and present that subset as the requested experiment. Fix or report the coverage failure first.
+- Keep any agent-authored labels in a separate secondary diagnostic artifact and exclude them from primary effectiveness metrics unless the user explicitly adopts them as human labels.
 - Prefer small, independent Noul questions. Keep deterministic syntax, thresholds, and action composition in code.
 - Ask the user only about consequential disagreements, novel cases, and decisions that could authorize suppression. Do not ask them to label the entire report.
 
 ## Complete a run
 
-Report the scanned file count, candidate count, flag/review/suppress totals, input-token cost, output paths, and any errors or unparseable files. Link the HTML report and editor checklist. State whether Jev ran or the result came from `--no-jev`.
+Report the scanned file count, AST/fallback/unparsed coverage, candidate count, flag/review/suppress/unparsed totals, Jev call count, input-token cost, output paths, and errors. Link the HTML report and editor checklist. State whether Jev ran or the result came from `--no-jev`.
 
 When changing code or calibration, run type checking and tests. Describe evidence for each threshold change, including unsafe suppressions and retained true findings; never present a threshold learned from a tiny fixture set as universally safe.

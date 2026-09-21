@@ -1,16 +1,17 @@
 import { mkdir } from 'node:fs/promises';
-import { relative, resolve } from 'node:path';
+import { extname, relative, resolve } from 'node:path';
 
 import { noul, TypeSafeClient } from '@typesafe-ai/sdk';
 import type { NoulQuestion, NoulResponse } from '@typesafe-ai/sdk';
 
 import { decideStatus } from './jev';
 import { composeContext, followingWordForModifier } from './jev-noul';
-import { classifyMdxOffset, offsetAtLineColumn } from './mdx-source-classifier';
+import { createSourceClassifier, offsetAtLineColumn } from './mdx-source-classifier';
+import type { MarkdownFormat, MdxSourceClass, SourceParser } from './mdx-source-classifier';
 import { loadRules } from './rules';
 import type { Candidate as VocabularyCandidate, ContextualRule, ValeAlert } from './types';
 
-export type AuditAction = 'flag' | 'review' | 'suppress';
+export type AuditAction = 'flag' | 'review' | 'suppress' | 'unparsed';
 
 interface ExtendedValeAlert extends ValeAlert {
 	Action?: { Name?: string; Params?: string[] | null };
@@ -46,7 +47,26 @@ export interface StaticCandidate {
 	link?: string;
 	context: string;
 	marked_context: string;
-	source_class: ReturnType<typeof classifyMdxOffset>;
+	source_class: MdxSourceClass;
+	source_parser: SourceParser;
+}
+
+export interface SourceHealth {
+	file: string;
+	format: MarkdownFormat;
+	parser: SourceParser;
+	degraded: boolean;
+	parse_error?: string;
+	candidate_count: number;
+}
+
+export interface ParseHealthSummary {
+	files_total: number;
+	ast_parsed_files: number;
+	fallback_files: number;
+	unparsed_files: number;
+	fallback_candidates: number;
+	unparsed_candidates: number;
 }
 
 export interface AuditFinding extends Omit<StaticCandidate, 'absolute_file'> {
@@ -68,10 +88,14 @@ export interface ProjectAudit {
 	files: string[];
 	vale_alert_count: number;
 	candidate_count: number;
+	jev_call_count: number;
+	jev_candidate_count: number;
 	usage: { input_tokens: number; output_tokens: number };
 	findings: AuditFinding[];
 	raw_exchanges: RawExchange[];
 	raw_vale: Record<string, ExtendedValeAlert[]>;
+	source_health: SourceHealth[];
+	parse_health: ParseHealthSummary;
 }
 
 const checkKinds = new Map<string, Pick<StaticCandidate, 'rule_id' | 'rule_kind'>>([
@@ -125,15 +149,42 @@ function contextAt(source: string, line: number, span: [number, number]) {
 	};
 }
 
-export async function buildStaticCandidates(project: string, root: string, vale: Record<string, ExtendedValeAlert[]>) {
+function markdownFormat(path: string): MarkdownFormat {
+	return extname(path).toLocaleLowerCase() === '.mdx' ? 'mdx' : 'markdown';
+}
+
+export function summarizeParseHealth(sourceHealth: SourceHealth[]): ParseHealthSummary {
+	return {
+		files_total: sourceHealth.length,
+		ast_parsed_files: sourceHealth.filter((item) => item.parser === 'markdown_ast' || item.parser === 'mdx_ast').length,
+		fallback_files: sourceHealth.filter((item) => item.parser === 'lexical_fallback').length,
+		unparsed_files: sourceHealth.filter((item) => item.parser === 'unparsed').length,
+		fallback_candidates: sourceHealth.filter((item) => item.parser === 'lexical_fallback').reduce((sum, item) => sum + item.candidate_count, 0),
+		unparsed_candidates: sourceHealth.filter((item) => item.parser === 'unparsed').reduce((sum, item) => sum + item.candidate_count, 0),
+	};
+}
+
+export async function buildStaticCandidates(project: string, root: string, vale: Record<string, ExtendedValeAlert[]>, files = Object.keys(vale)) {
 	const candidates: StaticCandidate[] = [];
-	for (const [absoluteFile, alerts] of Object.entries(vale).sort(([left], [right]) => left.localeCompare(right))) {
+	const sourceHealth: SourceHealth[] = [];
+	for (const absoluteFile of [...files].map((file) => resolve(root, file)).sort()) {
+		const alerts = vale[absoluteFile] ?? [];
 		const source = await Bun.file(absoluteFile).text();
-		for (const alert of alerts) {
+		const classifier = createSourceClassifier(source, markdownFormat(absoluteFile));
+		const local = relative(root, absoluteFile).replaceAll('\\', '/');
+		const relevantAlerts = alerts.filter((alert) => checkKinds.has(alert.Check));
+		sourceHealth.push({
+			file: local,
+			format: classifier.format,
+			parser: classifier.parser,
+			degraded: classifier.degraded,
+			...(classifier.parse_error ? { parse_error: classifier.parse_error } : {}),
+			candidate_count: relevantAlerts.length,
+		});
+		for (const alert of relevantAlerts) {
 			const kind = checkKinds.get(alert.Check);
 			if (!kind) continue;
 			const offset = offsetAtLineColumn(source, alert.Line, alert.Span[0] - 1);
-			const local = relative(root, absoluteFile).replaceAll('\\', '/');
 			const context = contextAt(source, alert.Line, alert.Span);
 			candidates.push({
 				id: `${project}:${local}:${alert.Line}:${alert.Check}:${alert.Span[0]}`,
@@ -149,11 +200,12 @@ export async function buildStaticCandidates(project: string, root: string, vale:
 				...(alert.Link ? { link: alert.Link } : {}),
 				context: context.context,
 				marked_context: context.marked,
-				source_class: classifyMdxOffset(source, offset),
+				source_class: classifier.classify(offset),
+				source_parser: classifier.parser,
 			});
 		}
 	}
-	return candidates;
+	return { candidates, source_health: sourceHealth, parse_health: summarizeParseHealth(sourceHealth) };
 }
 
 function questionCount(candidate: StaticCandidate) {
@@ -321,8 +373,8 @@ function composePassive(candidate: StaticCandidate, key: string, response: { ans
 
 function deterministicFinding(candidate: StaticCandidate): AuditFinding | null {
 	if (candidate.source_class === 'prose') return null;
-	if (candidate.source_class === 'unparseable_mdx') return {
-		...stripPrivate(candidate), action: 'review', reason: 'The MDX source could not be parsed safely.', signals: {},
+	if (candidate.source_class === 'unparsed_source') return {
+		...stripPrivate(candidate), action: 'unparsed', reason: 'The source could not be classified. No Jev judgment was made.', signals: {},
 	};
 	return {
 		...stripPrivate(candidate), action: 'suppress', reason: `Deterministically excluded ${candidate.source_class}.`, signals: {},
@@ -343,15 +395,23 @@ export async function auditProject(options: {
 		await mkdir(options.rawDirectory, { recursive: true });
 		await Bun.write(resolve(options.rawDirectory, 'vale.json'), `${JSON.stringify(vale, null, 2)}\n`);
 	}
-	const candidates = await buildStaticCandidates(options.name, options.root, vale);
+	const built = await buildStaticCandidates(options.name, options.root, vale, options.files);
+	const { candidates } = built;
+	if (options.rawDirectory) await Bun.write(
+		resolve(options.rawDirectory, 'source-health.json'),
+		`${JSON.stringify({ summary: built.parse_health, files: built.source_health }, null, 2)}\n`,
+	);
 	const deterministic = candidates.map(deterministicFinding).filter((item): item is AuditFinding => Boolean(item));
 	const semantic = candidates.filter((candidate) => candidate.source_class === 'prose');
 	if (options.noJev) {
 		return {
 			name: options.name, root: options.root, files: options.files.map((file) => relative(options.root, file).replaceAll('\\', '/')),
 			vale_alert_count: candidates.length, candidate_count: candidates.length,
+			jev_call_count: 0, jev_candidate_count: 0,
 			usage: { input_tokens: 0, output_tokens: 0 }, raw_exchanges: [],
 			raw_vale: vale,
+			source_health: built.source_health,
+			parse_health: built.parse_health,
 			findings: [...deterministic, ...semantic.map((candidate): AuditFinding => ({
 				...stripPrivate(candidate), action: 'review', reason: 'Jev was disabled; semantic classification was not attempted.', signals: {},
 			}))],
@@ -392,10 +452,14 @@ export async function auditProject(options: {
 		files: options.files.map((file) => relative(options.root, file).replaceAll('\\', '/')),
 		vale_alert_count: candidates.length,
 		candidate_count: candidates.length,
+		jev_call_count: rawExchanges.length,
+		jev_candidate_count: semantic.length,
 		usage: { input_tokens: inputTokens, output_tokens: outputTokens },
 		findings: findings.sort((left, right) => left.file.localeCompare(right.file) || left.line - right.line),
 		raw_exchanges: rawExchanges,
 		raw_vale: vale,
+		source_health: built.source_health,
+		parse_health: built.parse_health,
 	};
 }
 
@@ -408,3 +472,4 @@ export const STATIC_RULES = [
 ] as const;
 
 export const STATIC_RULE_SET_VERSION = 'google-research-v1';
+export const PIPELINE_VERSION = 'style-lab-v2';
