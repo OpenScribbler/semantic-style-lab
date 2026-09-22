@@ -39,7 +39,7 @@ To resume the most recent Claude Code conversation in this checkout, run:
 ```bash
 cd /path/to/semantic-style-lab
 source "$HOME/.config/semantic-style-lab/env"
-if test -n "$TYPESAFE_API_KEY"; then
+if bash -c 'test -n "$TYPESAFE_API_KEY"'; then
   echo "TypeSafe key is available"
   claude --continue
 else
@@ -52,14 +52,24 @@ This is fail-closed: the agent does not start if the variable is absent. Replace
 new session. Run the command from the same working directory as the earlier Claude
 session for `--continue` to select that conversation.
 
+The check runs `test -n` in a child shell because a child process sees only
+exported variables. A plain `test -n "$TYPESAFE_API_KEY"` in the launching shell
+passes when the env file sets the key without `export`, and the agent then starts
+without it.
+
 For a direct run without an agent:
 
 ```bash
 source "$HOME/.config/semantic-style-lab/env"
-bun run style-lab -- --config style-lab.config.json
+if bash -c 'test -n "$TYPESAFE_API_KEY"'; then
+  bun run style-lab -- --config style-lab.config.json
+else
+  echo "TypeSafe key is not exported; the audit was not started"
+fi
 ```
 
-The safe presence check is `test -n "$TYPESAFE_API_KEY"`. Do not use `echo`,
+Inside an agent that inherited the key, the safe presence check is
+`test -n "$TYPESAFE_API_KEY"`. Do not use `echo`,
 `printenv`, `env`, shell tracing (`set -x`), or file-display commands to inspect
 the value.
 
