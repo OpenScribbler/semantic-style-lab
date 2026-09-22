@@ -23,7 +23,7 @@ Use the Semantic Style Lab CLI as an instrumented shadow-mode audit. Vale enumer
 - Do not perform the semantic judgments that the experiment is intended to measure Jev performing. If Jev was not called, report `unparsed` or `not evaluated`; never replace the missing result with an agent verdict.
 - Do not narrow a failed corpus to parseable or favorable files and present that subset as the requested experiment. Fix or report the coverage failure first.
 - Keep any agent-authored labels in a separate secondary diagnostic artifact and exclude them from primary effectiveness metrics unless the user explicitly adopts them as human labels.
-- Prefer small, independent Noul questions. Keep deterministic syntax, thresholds, and action composition in code.
+- Use Choice for mutually exclusive grammatical or policy categories and small independent Noul questions for exceptions that can overlap. Keep deterministic syntax, thresholds, and action composition in code.
 - Ask the user only about consequential disagreements, novel cases, and decisions that could authorize suppression. Do not ask them to label the entire report.
 
 ## Complete a run

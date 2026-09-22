@@ -122,12 +122,17 @@ function renderedFrontmatterRanges(source: string, frontmatter: ReturnType<typeo
 	return ranges;
 }
 
-function lexicalRanges(source: string, ranges: ProtectedRange[], format: MarkdownFormat) {
+function lexicalRanges(source: string, ranges: ProtectedRange[], format: MarkdownFormat, protectMarkdownCodeLexically: boolean) {
 	const frontmatter = frontmatterInfo(source);
 	if (frontmatter) addRange(ranges, frontmatter.start, frontmatter.end, 'frontmatter');
-	regexRanges(source, /^(?: {0,3})(?:`{3,}|~{3,})[^\n]*(?:\r?\n[\s\S]*?)?^(?: {0,3})(?:`{3,}|~{3,})[ \t]*$/gm, 'fenced_or_indented_code', ranges);
-	regexRanges(source, /^(?:(?: {4}|\t).*(?:\r?\n|$))+/gm, 'fenced_or_indented_code', ranges);
-	regexRanges(source, /(`+)(?!`)[\s\S]*?\1/g, 'inline_code', ranges);
+	// AST code nodes are authoritative when parsing succeeds. Markdown permits
+	// indented prose inside list items, so the lexical four-space heuristic is
+	// only safe as a degraded fallback.
+	if (protectMarkdownCodeLexically) {
+		regexRanges(source, /^(?: {0,3})(?:`{3,}|~{3,})[^\n]*(?:\r?\n[\s\S]*?)?^(?: {0,3})(?:`{3,}|~{3,})[ \t]*$/gm, 'fenced_or_indented_code', ranges);
+		regexRanges(source, /^(?:(?: {4}|\t).*(?:\r?\n|$))+/gm, 'fenced_or_indented_code', ranges);
+		regexRanges(source, /(`+)(?!`)[\s\S]*?\1/g, 'inline_code', ranges);
+	}
 	regexRanges(source, /{{[<%][\s\S]*?[>%]}}/g, 'template_syntax', ranges);
 	regexRanges(source, /<!--(?:[\s\S]*?)-->/g, 'html_comment', ranges);
 	if (format === 'mdx') {
@@ -163,7 +168,7 @@ export function createSourceClassifier(source: string, format: MarkdownFormat): 
 	}
 	let visibleFrontmatter: OffsetRange[] = [];
 	try {
-		visibleFrontmatter = lexicalRanges(source, ranges, format);
+		visibleFrontmatter = lexicalRanges(source, ranges, format, parser === 'lexical_fallback');
 	} catch (error) {
 		return {
 			format,

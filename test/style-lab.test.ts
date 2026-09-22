@@ -4,7 +4,9 @@ import { tmpdir } from 'node:os';
 
 import { afterEach, describe, expect, test } from 'vitest';
 
-import { auditProject, batchForQuestionLimit, buildStaticCandidates, buildStaticJevRequest, runStaticVale } from '../src/style-lab-audit';
+import { auditProject, batchForQuestionLimit, buildStaticCandidates, buildStaticJevRequest, composePassive, composeVocabulary, runStaticVale, selectRuleStratifiedFiles } from '../src/style-lab-audit';
+import type { StaticCandidate } from '../src/style-lab-audit';
+import { loadRules } from '../src/rules';
 import { discoverProjectFiles, loadStyleLabConfig } from '../src/style-lab-config';
 
 const temporary: string[] = [];
@@ -55,6 +57,40 @@ describe('shareable style-lab CLI', () => {
 		expect(first).not.toEqual(Array.from({ length: 5 }, (_, index) => resolve(directory, 'docs', `page-${String(index).padStart(2, '0')}.md`)));
 	});
 
+	test('selects a bounded sample with candidates from every available rule', async () => {
+		const directory = await mkdtemp(resolve(tmpdir(), 'style-lab-stratified-'));
+		temporary.push(directory);
+		const files = ['passive.md', 'command.md', 'realtime.md', 'semicolon.md', 'setup.md', 'empty.md'].map((name) => resolve(directory, name));
+		const alert = (Check: string) => ({ Check, Line: 1, Span: [1, 1] as [number, number], Match: 'x', Message: 'x', Severity: 'suggestion' });
+		const vale = {
+			[files[0]!]: Array.from({ length: 20 }, () => alert('Lab.PassiveHiddenActor')),
+			[files[1]!]: Array.from({ length: 3 }, () => alert('Lab.ContextualCommandLine')),
+			[files[2]!]: Array.from({ length: 3 }, () => alert('Lab.ContextualRealTime')),
+			[files[3]!]: Array.from({ length: 3 }, () => alert('Lab.Semicolons')),
+			[files[4]!]: Array.from({ length: 3 }, () => alert('Lab.ContextualSetup')),
+			[files[5]!]: [],
+		};
+		const selected = selectRuleStratifiedFiles(directory, files, vale, 5, 3);
+		expect(selected.files).toHaveLength(5);
+		expect(selected.files).not.toContain(files[5]);
+		expect(Object.values(selected.summary.target_met).every(Boolean)).toBe(true);
+		expect(selected.summary.selected_candidates).toMatchObject({
+			'google-passive-hidden-actor': 20,
+			'google-semicolons': 3,
+			'command-line': 3,
+			'real-time': 3,
+			setup: 3,
+		});
+	});
+
+	test('reports an unavailable stratification target without treating it as met', () => {
+		const path = resolve('/tmp/rare.md');
+		const alert = { Check: 'Lab.ContextualRealTime', Line: 1, Span: [1, 1] as [number, number], Match: 'x', Message: 'x', Severity: 'suggestion' };
+		const selected = selectRuleStratifiedFiles('/tmp', [path], { [path]: [alert] }, 5, 3);
+		expect(selected.summary.target_met['real-time']).toBe(false);
+		expect(selected.summary.all_available_selected['real-time']).toBe(true);
+	});
+
 	test('uses the fixed Vale catalog for MDX candidates', async () => {
 		const root = resolve('test/fixtures/shareable-docs');
 		const file = resolve(root, 'guide.mdx');
@@ -86,7 +122,12 @@ describe('shareable style-lab CLI', () => {
 		const serialized = JSON.stringify(request);
 		expect(serialized).not.toContain('expected_label');
 		expect(serialized).not.toContain('acceptable');
-		expect(Object.keys(request.questions).length).toBe(candidates.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : candidate.rule_kind === 'contextual-vocabulary' ? 2 : 1), 0));
+		expect(Object.keys(request.questions).length).toBe(candidates.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : 1), 0));
+		for (const [index, candidate] of candidates.entries()) {
+			const key = `c${index + 1}`;
+			if (candidate.rule_id === 'command-line' || candidate.rule_id === 'real-time') expect(request.questions[`${key}__function`]?.type).toBe('choice');
+			if (candidate.rule_kind === 'passive-hidden-actor') expect(request.questions[`${key}__responsibility`]?.type).toBe('choice');
+		}
 	});
 
 	test('respects the configured Jev question limit', async () => {
@@ -96,7 +137,7 @@ describe('shareable style-lab CLI', () => {
 		const batches = batchForQuestionLimit(candidates, 4);
 		expect(batches.length).toBeGreaterThan(1);
 		for (const batch of batches) {
-			const questions = batch.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : candidate.rule_kind === 'contextual-vocabulary' ? 2 : 1), 0);
+			const questions = batch.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : 1), 0);
 			expect(questions).toBeLessThanOrEqual(4);
 		}
 	});
@@ -112,5 +153,39 @@ describe('shareable style-lab CLI', () => {
 		expect(result.raw_exchanges).toHaveLength(0);
 		expect(result.findings.every((finding) => ['review', 'suppress'].includes(finding.action))).toBe(true);
 		expect(await Bun.file(resolve(rawDirectory, 'vale.json')).exists()).toBe(true);
+	});
+
+	test('uses exclusive Choice results for compound modifiers', async () => {
+		const candidate: StaticCandidate = {
+			id: 'fixture:guide.md:1:Lab.ContextualCommandLine:5', project: 'fixture', file: 'guide.md', absolute_file: '/tmp/guide.md',
+			line: 1, span: [5, 16], check: 'Lab.ContextualCommandLine', rule_id: 'command-line', rule_kind: 'contextual-vocabulary',
+			match: 'command line', message: 'candidate', context: 'Use a command line tool.', marked_context: 'Use a ⟦command line⟧ tool.',
+			source_class: 'prose', source_parser: 'markdown_ast',
+		};
+		const finding = composeVocabulary(candidate, 'c1', { answers: { c1__function: {
+			choice: 'before_noun', confidence: 0.93, probabilities: { before_noun: 0.94, standalone: 0.03, literal: 0.01, ambiguous: 0.02 },
+		} } }, await loadRules());
+		expect(finding.action).toBe('flag');
+		expect(finding.expected_form).toBe('command-line');
+	});
+
+	test('requires positive evidence before suppressing a passive candidate', () => {
+		const candidate: StaticCandidate = {
+			id: 'fixture:guide.md:1:Lab.PassiveHiddenActor:1', project: 'fixture', file: 'guide.md', absolute_file: '/tmp/guide.md',
+			line: 1, span: [1, 13], check: 'Lab.PassiveHiddenActor', rule_id: 'google-passive-hidden-actor', rule_kind: 'passive-hidden-actor',
+			match: 'is terminated', message: 'candidate', context: 'The Pod is terminated.', marked_context: 'The Pod ⟦is terminated⟧.',
+			source_class: 'prose', source_parser: 'markdown_ast',
+		};
+		const response = (choice: string, probability: number) => ({ answers: { c1__responsibility: {
+			choice, confidence: probability, probabilities: {
+				missing_actor_matters: choice === 'missing_actor_matters' ? probability : (1 - probability) / 3,
+				actor_clear_from_context: choice === 'actor_clear_from_context' ? probability : (1 - probability) / 3,
+				actor_not_needed: choice === 'actor_not_needed' ? probability : (1 - probability) / 3,
+				not_passive_or_unclear: choice === 'not_passive_or_unclear' ? probability : (1 - probability) / 3,
+			},
+		} } });
+		expect(composePassive(candidate, 'c1', response('actor_not_needed', 0.7)).action).toBe('review');
+		expect(composePassive(candidate, 'c1', response('actor_not_needed', 0.9)).action).toBe('suppress');
+		expect(composePassive(candidate, 'c1', response('missing_actor_matters', 0.8)).action).toBe('flag');
 	});
 });

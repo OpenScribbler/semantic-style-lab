@@ -2,7 +2,7 @@
 import { mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
-import { auditProject, PIPELINE_VERSION, STATIC_RULES, STATIC_RULE_SET_VERSION } from './style-lab-audit';
+import { auditProject, PIPELINE_VERSION, runStaticVale, selectRuleStratifiedFiles, STATIC_RULES, STATIC_RULE_SET_VERSION } from './style-lab-audit';
 import { discoverProjectFiles, loadStyleLabConfig } from './style-lab-config';
 import { buildEditorChecklist, buildHtmlReport } from './style-lab-report';
 
@@ -48,7 +48,20 @@ async function main() {
 	await mkdir(runDirectory, { recursive: true });
 	const projects = [];
 	for (const project of selected) {
-		const files = await discoverProjectFiles(project);
+		let files;
+		let vale;
+		let sampling;
+		if (project.sampling?.strategy === 'rule-stratified') {
+			const eligible = await discoverProjectFiles(project, false);
+			console.error(`${project.name}: enumerating Vale candidates across ${eligible.length} eligible files for rule-stratified sampling`);
+			const allVale = await runStaticVale(project.root, eligible);
+			const selection = selectRuleStratifiedFiles(project.root, eligible, allVale, project.max_files!, project.sampling.min_candidates_per_rule);
+			files = selection.files;
+			sampling = selection.summary;
+			vale = Object.fromEntries(files.map((file) => [resolve(file), allVale[resolve(file)] ?? []]));
+		} else {
+			files = await discoverProjectFiles(project);
+		}
 		console.error(`${project.name}: auditing ${files.length} files`);
 		const rawDirectory = resolve(runDirectory, 'raw', project.name);
 		const result = await auditProject({
@@ -59,6 +72,8 @@ async function main() {
 			batchQuestionLimit: config.jev.batch_question_limit,
 			noJev,
 			rawDirectory,
+			vale,
+			sampling,
 		});
 		projects.push(result);
 	}

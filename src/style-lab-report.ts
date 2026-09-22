@@ -58,6 +58,11 @@ export function buildHtmlReport(report: {
 	const degraded = report.projects.flatMap((project) => project.source_health
 		.filter((item) => item.parser === 'lexical_fallback' || item.parser === 'unparsed')
 		.map((item) => `<li><strong>${escapeHtml(project.name)}</strong> · ${escapeHtml(item.file)} · <code>${escapeHtml(item.parser)}</code>${item.parse_error ? `<br><span class="muted">${escapeHtml(item.parse_error)}</span>` : ''}</li>`)).join('');
+	const sampling = report.projects.filter((project) => project.sampling).map((project) => {
+		const sample = project.sampling!;
+		const rows = Object.keys(sample.available_candidates).sort().map((rule) => `<tr><td><code>${escapeHtml(rule)}</code></td><td>${sample.available_candidates[rule]}</td><td>${sample.selected_candidates[rule]}</td><td>${sample.target_met[rule] ? 'yes' : sample.all_available_selected[rule] ? 'all available; target unavailable' : 'no'}</td></tr>`).join('');
+		return `<h3>${escapeHtml(project.name)}</h3><p><strong>${sample.selected_files}</strong> of ${sample.eligible_files} eligible files selected; target ${sample.min_candidates_per_rule} candidates per available rule.</p><table><thead><tr><th>Rule</th><th>Available</th><th>Selected</th><th>Target met</th></tr></thead><tbody>${rows}</tbody></table>`;
+	}).join('');
 	return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Semantic Style Lab audit</title>
@@ -77,6 +82,7 @@ export function buildHtmlReport(report: {
 <div class="card"><div class="value">$${report.summary.estimated_input_cost_usd.toFixed(4)}</div><div class="label">estimated Jev input cost</div></div>
 </section>
 <section class="panel"><h2>Parse health</h2><p><strong>${report.summary.ast_parsed_files}</strong> AST-parsed · <strong>${report.summary.fallback_files}</strong> protected lexical fallback · <strong>${report.summary.unparsed_files}</strong> unparsed.</p>${degraded ? `<ul>${degraded}</ul>` : '<p class="muted">Every file used its format-specific AST parser.</p>'}<p class="muted">Fallback candidates may still reach Jev after code, template, link, and frontmatter ranges are protected. Unparsed candidates never count as semantic review or effectiveness evidence.</p></section>
+${sampling ? `<section class="panel"><h2>Rule-stratified sampling</h2>${sampling}<p class="muted">Selection used Vale candidates only, before any Jev response. Unavailable rules remain explicitly unmeasured.</p></section>` : ''}
 <section class="panel"><h2>Fixed rule set</h2><ul>${ruleItems}</ul><p class="muted">Suppression is a shadow-mode recommendation only. This command does not edit source files or change CI.</p></section>
 <section class="panel"><h2>Experimental boundary</h2><p>The primary judgments in this report come from Jev probabilities composed by code. An agent may configure, run, and diagnose the experiment, but must not replace skipped Jev calls with its own style judgments or count agent-authored labels as primary effectiveness evidence.</p></section>
 <section class="panel"><h2>All candidates</h2><table><thead><tr><th>Disposition</th><th>Location</th><th>Rule</th><th>Passage and reason</th></tr></thead><tbody>${rows || '<tr><td colspan="4">No candidates found.</td></tr>'}</tbody></table></section>

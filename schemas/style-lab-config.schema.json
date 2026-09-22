@@ -20,7 +20,16 @@
           "root": { "type": "string", "minLength": 1 },
           "include": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
           "exclude": { "type": "array", "items": { "type": "string", "minLength": 1 }, "default": [] },
-          "max_files": { "type": "integer", "minimum": 1 }
+          "max_files": { "type": "integer", "minimum": 1 },
+          "sampling": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["strategy"],
+            "properties": {
+              "strategy": { "const": "rule-stratified" },
+              "min_candidates_per_rule": { "type": "integer", "minimum": 1, "default": 10 }
+            }
+          }
         }
       }
     },

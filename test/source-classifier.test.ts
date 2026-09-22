@@ -46,4 +46,13 @@ describe('format-aware source classification', () => {
 		expect(classifier.classify(source.indexOf('command line'))).toBe('prose');
 		expect(classifier.classify(source.lastIndexOf('setup'))).toBe('frontmatter');
 	});
+
+	test('uses AST node types instead of indentation for prose inside lists', () => {
+		const source = '1. Perform the step.\n\n     The Pod is terminated after the grace period.\n';
+		const classifier = createSourceClassifier(source, 'markdown');
+		expect(classifier.parser).toBe('markdown_ast');
+		expect(classifier.classify(source.indexOf('is terminated'))).toBe('prose');
+		const code = '    const hidden = true;\n';
+		expect(createSourceClassifier(code, 'markdown').classify(code.indexOf('const hidden'))).toBe('fenced_or_indented_code');
+	});
 });

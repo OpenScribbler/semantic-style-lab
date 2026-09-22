@@ -8,6 +8,10 @@ export interface ProjectConfig {
 	include: string[];
 	exclude: string[];
 	max_files?: number;
+	sampling?: {
+		strategy: 'rule-stratified';
+		min_candidates_per_rule: number;
+	};
 }
 
 export interface StyleLabConfig {
@@ -70,12 +74,23 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 		if (maxFiles !== undefined && (!Number.isInteger(maxFiles) || (maxFiles as number) < 1)) {
 			throw new Error(`projects[${index}].max_files must be a positive integer.`);
 		}
+		let sampling: ProjectConfig['sampling'];
+		if (project.sampling !== undefined) {
+			if (!project.sampling || typeof project.sampling !== 'object') throw new Error(`projects[${index}].sampling must be an object.`);
+			const rawSampling = project.sampling as Record<string, unknown>;
+			if (rawSampling.strategy !== 'rule-stratified') throw new Error(`projects[${index}].sampling.strategy must be rule-stratified.`);
+			const minimum = rawSampling.min_candidates_per_rule ?? 10;
+			if (!Number.isInteger(minimum) || (minimum as number) < 1) throw new Error(`projects[${index}].sampling.min_candidates_per_rule must be a positive integer.`);
+			if (maxFiles === undefined) throw new Error(`projects[${index}].max_files is required with rule-stratified sampling.`);
+			sampling = { strategy: 'rule-stratified', min_candidates_per_rule: minimum as number };
+		}
 		return {
 			name: project.name,
 			root: isAbsolute(project.root) ? project.root : resolve(base, project.root),
 			include: nonemptyStrings(project.include, `projects[${index}].include`),
 			exclude: project.exclude === undefined ? [] : strings(project.exclude, `projects[${index}].exclude`),
 			...(maxFiles === undefined ? {} : { max_files: maxFiles as number }),
+			...(sampling ? { sampling } : {}),
 		};
 	});
 	const jev = value.jev && typeof value.jev === 'object' ? value.jev as Record<string, unknown> : {};
@@ -106,7 +121,7 @@ function matchesAny(path: string, patterns: string[]) {
 	return patterns.some((pattern) => new Bun.Glob(pattern).match(path));
 }
 
-export async function discoverProjectFiles(project: ProjectConfig) {
+export async function discoverProjectFiles(project: ProjectConfig, applyLimit = true) {
 	const rootStat = await stat(project.root).catch(() => null);
 	if (!rootStat?.isDirectory()) throw new Error(`${project.name}: root is not a directory: ${project.root}`);
 	const paths = new Set<string>();
@@ -117,7 +132,7 @@ export async function discoverProjectFiles(project: ProjectConfig) {
 		}
 	}
 	const sorted = [...paths].sort();
-	if (!project.max_files) return sorted;
+	if (!applyLimit || !project.max_files) return sorted;
 	return sorted
 		.map((path) => ({
 			path,

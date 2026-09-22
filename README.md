@@ -14,7 +14,8 @@ context:
 
 This is intentionally different from asking a model to apply an entire style
 guide. Each request contains marked passages and narrow semantic questions. The
-default strategy uses independent Noul judgments and composes them into policy
+pipeline uses Choice for exclusive grammatical categories and independent Noul
+judgments for exceptions that can overlap, then composes the results into policy
 with code.
 
 ## Setup
@@ -46,6 +47,16 @@ The no-Jev pass validates file discovery and Vale candidates without requiring a
 key or spending tokens. After reviewing that result, set `TYPESAFE_API_KEY` and
 run the same command without `--no-jev`. Use `--project <name>` to select one of
 several configured repositories.
+
+For a bounded research sample, set `max_files` and enable `rule-stratified`
+sampling. The CLI enumerates Vale candidates across the eligible corpus before
+Jev runs, selects files that cover each available fixed rule, and records both
+available and selected counts. This avoids accidentally measuring hundreds of
+passive candidates while leaving a rarer rule untested.
+
+The [v2 experiment design](docs/v2-design.md) records the Kubernetes baseline
+failures, the revised typed judgments and conservative composition policy, and
+the frozen rule-stratified dry corpus.
 
 Every invocation creates a timestamped directory under `output_dir` containing a
 dark HTML report, complete JSON, a page-localized editor checklist, a config

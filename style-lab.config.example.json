@@ -14,7 +14,12 @@
         "**/.git/**",
         "**/dist/**",
         "**/generated/**"
-      ]
+      ],
+      "max_files": 50,
+      "sampling": {
+        "strategy": "rule-stratified",
+        "min_candidates_per_rule": 10
+      }
     }
   ],
   "jev": {

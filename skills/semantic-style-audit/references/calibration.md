@@ -29,10 +29,11 @@ not a semantic `review` decision.
 
 ## Tune conservatively
 
-A static Vale rule proposes candidates. A compiled semantic rule should record its default action, exclusions, independent questions, composition, thresholds, calibration source, and version.
+A static Vale rule proposes candidates. A compiled semantic rule should record its default action, exclusions, typed questions, composition, thresholds, calibration source, and version.
 
 - Use deterministic code for syntax, file scope, exact spelling, and exclusions.
 - Use Jev for contextual meaning that regex cannot determine.
+- Use Choice when one exclusive interpretation must win; use separate Noul questions when several exceptions may independently apply.
 - Allow auto-suppression only for an exception category that separates acceptable cases from genuine violations on held-out target-domain data.
 - Keep overlapping categories review-only.
 - Re-run old labeled cases after any question, context, model, or threshold change.

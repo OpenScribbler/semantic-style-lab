@@ -1,11 +1,11 @@
 import { mkdir } from 'node:fs/promises';
 import { extname, relative, resolve } from 'node:path';
 
-import { noul, TypeSafeClient } from '@typesafe-ai/sdk';
-import type { NoulQuestion, NoulResponse } from '@typesafe-ai/sdk';
+import { choice, noul, TypeSafeClient } from '@typesafe-ai/sdk';
+import type { ChoiceResponse, NoulResponse, Question } from '@typesafe-ai/sdk';
 
 import { decideStatus } from './jev';
-import { composeContext, followingWordForModifier } from './jev-noul';
+import { composeContext, followingWord, followingWordForModifier } from './jev-noul';
 import { createSourceClassifier, offsetAtLineColumn } from './mdx-source-classifier';
 import type { MarkdownFormat, MdxSourceClass, SourceParser } from './mdx-source-classifier';
 import { loadRules } from './rules';
@@ -96,6 +96,18 @@ export interface ProjectAudit {
 	raw_vale: Record<string, ExtendedValeAlert[]>;
 	source_health: SourceHealth[];
 	parse_health: ParseHealthSummary;
+	sampling?: SamplingSummary;
+}
+
+export interface SamplingSummary {
+	strategy: 'rule-stratified';
+	eligible_files: number;
+	selected_files: number;
+	min_candidates_per_rule: number;
+	available_candidates: Record<string, number>;
+	selected_candidates: Record<string, number>;
+	target_met: Record<string, boolean>;
+	all_available_selected: Record<string, boolean>;
 }
 
 const checkKinds = new Map<string, Pick<StaticCandidate, 'rule_id' | 'rule_kind'>>([
@@ -105,6 +117,63 @@ const checkKinds = new Map<string, Pick<StaticCandidate, 'rule_id' | 'rule_kind'
 	['Lab.Semicolons', { rule_id: 'google-semicolons', rule_kind: 'semicolon' }],
 	['Lab.PassiveHiddenActor', { rule_id: 'google-passive-hidden-actor', rule_kind: 'passive-hidden-actor' }],
 ]);
+
+function stablePathHash(root: string, path: string) {
+	return new Bun.CryptoHasher('sha256').update(relative(root, path).replaceAll('\\', '/')).digest('hex');
+}
+
+function relevantCounts(alerts: ExtendedValeAlert[]) {
+	const counts: Record<string, number> = Object.fromEntries([...checkKinds.values()].map((kind) => [kind.rule_id, 0]));
+	for (const alert of alerts) {
+		const kind = checkKinds.get(alert.Check);
+		if (kind) counts[kind.rule_id] = (counts[kind.rule_id] ?? 0) + 1;
+	}
+	return counts;
+}
+
+export function selectRuleStratifiedFiles(
+	root: string,
+	files: string[],
+	vale: Record<string, ExtendedValeAlert[]>,
+	maxFiles: number,
+	minimum: number,
+) {
+	const fileRows = files.map((path) => ({ path, hash: stablePathHash(root, path), counts: relevantCounts(vale[resolve(path)] ?? []) }));
+	const ruleIds = [...new Set([...checkKinds.values()].map((kind) => kind.rule_id))];
+	const available = Object.fromEntries(ruleIds.map((rule) => [rule, fileRows.reduce((sum, row) => sum + (row.counts[rule] ?? 0), 0)]));
+	const selected = new Set<string>();
+	const selectedCounts = Object.fromEntries(ruleIds.map((rule) => [rule, 0]));
+	while (selected.size < Math.min(maxFiles, files.length)) {
+		const remaining = Object.fromEntries(ruleIds.map((rule) => [rule, Math.max(0, Math.min(minimum, available[rule] ?? 0) - (selectedCounts[rule] ?? 0))]));
+		if (Object.values(remaining).every((count) => count === 0)) break;
+		const candidates = fileRows
+			.filter((row) => !selected.has(row.path))
+			.map((row) => ({
+				...row,
+				score: ruleIds.reduce((sum, rule) => sum + Math.min(row.counts[rule] ?? 0, remaining[rule] ?? 0) / minimum, 0),
+				excess: ruleIds.reduce((sum, rule) => sum + Math.max(0, (row.counts[rule] ?? 0) - (remaining[rule] ?? 0)), 0),
+				volume: ruleIds.reduce((sum, rule) => sum + (row.counts[rule] ?? 0), 0),
+			}))
+			.filter((row) => row.score > 0)
+			.sort((left, right) => right.score - left.score || left.excess - right.excess || left.volume - right.volume || left.hash.localeCompare(right.hash) || left.path.localeCompare(right.path));
+		const next = candidates[0];
+		if (!next) break;
+		selected.add(next.path);
+		for (const rule of ruleIds) selectedCounts[rule] += next.counts[rule] ?? 0;
+	}
+	const paths = [...selected].sort();
+	const summary: SamplingSummary = {
+		strategy: 'rule-stratified',
+		eligible_files: files.length,
+		selected_files: paths.length,
+		min_candidates_per_rule: minimum,
+		available_candidates: available,
+		selected_candidates: selectedCounts,
+		target_met: Object.fromEntries(ruleIds.map((rule) => [rule, (selectedCounts[rule] ?? 0) >= minimum])),
+		all_available_selected: Object.fromEntries(ruleIds.map((rule) => [rule, (selectedCounts[rule] ?? 0) >= (available[rule] ?? 0)])),
+	};
+	return { files: paths, summary };
+}
 
 const labRoot = resolve(import.meta.dir, '..');
 const valeConfig = resolve(labRoot, '.vale.ini');
@@ -211,7 +280,7 @@ export async function buildStaticCandidates(project: string, root: string, vale:
 function questionCount(candidate: StaticCandidate) {
 	if (candidate.rule_kind === 'semicolon') return 3;
 	if (candidate.rule_kind === 'passive-hidden-actor') return 1;
-	return candidate.rule_id === 'setup' ? 3 : 2;
+	return candidate.rule_id === 'setup' ? 3 : 1;
 }
 
 export function batchForQuestionLimit(candidates: StaticCandidate[], limit: number) {
@@ -233,8 +302,24 @@ export function batchForQuestionLimit(candidates: StaticCandidate[], limit: numb
 	return batches;
 }
 
-function addVocabularyQuestions(questions: Record<string, NoulQuestion>, key: string, index: number, candidate: StaticCandidate) {
+function addVocabularyQuestions(questions: Record<string, Question>, key: string, index: number, candidate: StaticCandidate) {
 	const inspect = `candidates[${index}]`;
+	if (candidate.rule_id === 'command-line' || candidate.rule_id === 'real-time') {
+		questions[`${key}__function`] = choice(
+			{
+				question: `What grammatical function does the marked occurrence in \`${inspect}.marked_context\` perform?`,
+				inspect,
+				focus: `Classify the relationship between the marked occurrence and the explicitly supplied \`${inspect}.following_word\` and \`${inspect}.following_text\`. Judge grammar independently of the current hyphenation. A modifier names a kind of following noun, as in “command-line tool” or “real-time update.” A standalone phrase is not modifying a following noun, as in “on the command line” or “in real time.”`,
+			},
+			{
+				before_noun: 'The marked occurrence is a compound modifier describing the separate noun that immediately follows it.',
+				standalone: 'The marked occurrence is a standalone noun or adverbial phrase and does not modify a separate following noun.',
+				literal: 'The marked occurrence reproduces code, UI text, a quotation, or an official name whose spelling must be preserved.',
+				ambiguous: 'The available passage does not establish whether the marked occurrence modifies a following noun.',
+			},
+		);
+		return;
+	}
 	questions[`${key}__literal`] = noul(
 		{
 			question: `Must the marked occurrence in \`${inspect}.marked_context\` be preserved exactly because it reproduces literal text?`,
@@ -258,7 +343,7 @@ function addVocabularyQuestions(questions: Record<string, NoulQuestion>, key: st
 	);
 }
 
-function addSemicolonQuestions(questions: Record<string, NoulQuestion>, key: string, index: number, exceptions: SemanticException[]) {
+function addSemicolonQuestions(questions: Record<string, Question>, key: string, index: number, exceptions: SemanticException[]) {
 	for (const exception of exceptions) questions[`${key}__${exception.id}`] = noul(
 		{
 			question: exception.instructions,
@@ -269,21 +354,24 @@ function addSemicolonQuestions(questions: Record<string, NoulQuestion>, key: str
 	);
 }
 
-function addPassiveQuestion(questions: Record<string, NoulQuestion>, key: string, index: number) {
-	questions[`${key}__hidden_actor`] = noul(
+function addPassiveQuestion(questions: Record<string, Question>, key: string, index: number) {
+	questions[`${key}__responsibility`] = choice(
 		{
-			question: `Does the marked passive construction in \`candidates[${index}].marked_context\` hide an actor or responsibility that the reader needs in order to act, configure the system, understand a requirement, or troubleshoot?`,
-			focus: 'Judge the reported construction only. Passive voice is not automatically a violation. Do not require an actor when it is unknown, irrelevant, obvious, intentionally generalized, or when the sentence appropriately emphasizes the object or result.',
+			question: `How should the omitted actor in the marked construction in \`candidates[${index}].marked_context\` be treated?`,
+			inspect: `candidates[${index}]`,
+			focus: 'Judge the reported construction only. Passive voice is not automatically a violation. Distinguish a materially missing responsibility from an actor that is already clear nearby or genuinely unnecessary. Treat requirements, configuration steps, permissions, failures, and troubleshooting consequences as operationally important when knowing who or what acts would help the reader.',
 		},
 		{
-			true: 'Naming who or what performs the action would give the reader operationally important responsibility or troubleshooting information.',
-			false: 'The actor is irrelevant, obvious, unknown, deliberately generalized, already clear from context, or unnecessary for the reader’s task.',
+			missing_actor_matters: 'The passage omits who or what acts, and naming that actor would materially help the reader act, configure, assign responsibility, understand a requirement, or troubleshoot.',
+			actor_clear_from_context: 'The marked construction omits the actor, but the nearby passage already makes who or what acts sufficiently clear.',
+			actor_not_needed: 'The actor is irrelevant, unknown, deliberately generalized, or unnecessary because the result or affected object is appropriately emphasized.',
+			not_passive_or_unclear: 'The match is not a relevant passive construction, or the available passage is insufficient to decide among the other categories.',
 		},
 	);
 }
 
 export function buildStaticJevRequest(candidates: StaticCandidate[], model: string, semicolonRule: SemicolonRule) {
-	const questions: Record<string, NoulQuestion> = {};
+	const questions: Record<string, Question> = {};
 	for (const [index, candidate] of candidates.entries()) {
 		const key = `c${index + 1}`;
 		if (candidate.rule_kind === 'contextual-vocabulary') addVocabularyQuestions(questions, key, index, candidate);
@@ -293,14 +381,15 @@ export function buildStaticJevRequest(candidates: StaticCandidate[], model: stri
 	return {
 		model,
 		state: {
-			rule_defaults: { semicolons: semicolonRule.source.default, passive_voice: 'Flag only when passive voice hides useful responsibility.' },
+			rule_defaults: { semicolons: semicolonRule.source.default, passive_voice: 'Prefer active voice when naming the actor gives the reader useful responsibility or operational information.' },
 			candidates: candidates.map((candidate) => ({
 				file: candidate.file,
 				line: candidate.line,
 				rule_id: candidate.rule_id,
 				matched_text: candidate.match,
 				marked_context: candidate.marked_context,
-				following_word: followingWordForModifier(candidate.marked_context),
+				following_word: followingWord(candidate.marked_context),
+				following_text: (candidate.marked_context.split('⟧', 2)[1] ?? '').trim().slice(0, 120),
 			})),
 		},
 		questions,
@@ -313,14 +402,39 @@ function readNoul(response: { answers: Record<string, unknown> }, id: string) {
 	return answer.noul;
 }
 
+function readChoice(response: { answers: Record<string, unknown> }, id: string) {
+	const answer = response.answers[id] as ChoiceResponse | undefined;
+	if (!answer || typeof answer.choice !== 'string' || typeof answer.confidence !== 'number' || !answer.probabilities) {
+		throw new Error(`Jev response is missing Choice answer ${id}.`);
+	}
+	return answer;
+}
+
 function stripPrivate(candidate: StaticCandidate) {
 	const { absolute_file: _absoluteFile, ...publicCandidate } = candidate;
 	return publicCandidate;
 }
 
-function composeVocabulary(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }, rules: ContextualRule[]): AuditFinding {
+export function composeVocabulary(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }, rules: ContextualRule[]): AuditFinding {
 	const rule = rules.find((item) => item.id === candidate.rule_id);
 	if (!rule) throw new Error(`Missing contextual rule ${candidate.rule_id}.`);
+	if (candidate.rule_id === 'command-line' || candidate.rule_id === 'real-time') {
+		const answer = readChoice(response, `${key}__function`);
+		const selected = answer.choice;
+		const probability = answer.probabilities[selected] ?? 0;
+		const vocabularyCandidate: VocabularyCandidate = {
+			id: candidate.id, file: candidate.file, line: candidate.line, span: candidate.span,
+			match: candidate.match, context: candidate.marked_context, ruleId: candidate.rule_id,
+		};
+		const decision = decideStatus(vocabularyCandidate, rule, selected, probability);
+		const action: AuditAction = decision.status === 'flag' ? 'flag' : decision.status === 'review' || decision.status === 'uncertain' ? 'review' : 'suppress';
+		return {
+			...stripPrivate(candidate), action,
+			reason: `${selected} context (${probability.toFixed(3)}, confidence ${answer.confidence.toFixed(3)}); ${decision.status}`,
+			expected_form: decision.expectedForm,
+			signals: { ...answer.probabilities, choice_confidence: answer.confidence },
+		};
+	}
 	const signals = {
 		literal: readNoul(response, `${key}__literal`),
 		modifies_following_noun: readNoul(response, `${key}__modifier`),
@@ -360,15 +474,21 @@ function composeSemicolon(candidate: StaticCandidate, key: string, response: { a
 	return { ...stripPrivate(candidate), action, reason, signals };
 }
 
-function composePassive(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }): AuditFinding {
-	const probability = readNoul(response, `${key}__hidden_actor`);
-	const action: AuditAction = probability >= 0.75 ? 'flag' : probability <= 0.25 ? 'suppress' : 'review';
+export function composePassive(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }): AuditFinding {
+	const answer = readChoice(response, `${key}__responsibility`);
+	const probability = answer.probabilities[answer.choice] ?? 0;
+	const safeCategory = answer.choice === 'actor_clear_from_context' || answer.choice === 'actor_not_needed';
+	const action: AuditAction = answer.choice === 'missing_actor_matters' && probability >= 0.75
+		? 'flag'
+		: safeCategory && probability >= 0.85
+			? 'suppress'
+			: 'review';
 	const reason = action === 'flag'
-		? 'The passive construction likely hides responsibility the reader needs.'
+		? `Jev classified the omitted actor as materially useful (${probability.toFixed(3)}).`
 		: action === 'suppress'
-			? 'The omitted actor is likely unnecessary in this context.'
-			: 'Whether the omitted actor matters is uncertain.';
-	return { ...stripPrivate(candidate), action, reason, signals: { hidden_actor: probability } };
+			? `Jev classified the actor as ${answer.choice === 'actor_clear_from_context' ? 'clear from nearby context' : 'unnecessary'} (${probability.toFixed(3)}).`
+			: `${answer.choice} was not strong enough for automatic action (${probability.toFixed(3)}, confidence ${answer.confidence.toFixed(3)}).`;
+	return { ...stripPrivate(candidate), action, reason, signals: { ...answer.probabilities, choice_confidence: answer.confidence } };
 }
 
 function deterministicFinding(candidate: StaticCandidate): AuditFinding | null {
@@ -389,11 +509,14 @@ export async function auditProject(options: {
 	batchQuestionLimit: number;
 	noJev?: boolean;
 	rawDirectory?: string;
+	vale?: Record<string, ExtendedValeAlert[]>;
+	sampling?: SamplingSummary;
 }) : Promise<ProjectAudit> {
-	const vale = await runStaticVale(options.root, options.files);
+	const vale = options.vale ?? await runStaticVale(options.root, options.files);
 	if (options.rawDirectory) {
 		await mkdir(options.rawDirectory, { recursive: true });
 		await Bun.write(resolve(options.rawDirectory, 'vale.json'), `${JSON.stringify(vale, null, 2)}\n`);
+		if (options.sampling) await Bun.write(resolve(options.rawDirectory, 'sampling.json'), `${JSON.stringify(options.sampling, null, 2)}\n`);
 	}
 	const built = await buildStaticCandidates(options.name, options.root, vale, options.files);
 	const { candidates } = built;
@@ -412,6 +535,7 @@ export async function auditProject(options: {
 			raw_vale: vale,
 			source_health: built.source_health,
 			parse_health: built.parse_health,
+			...(options.sampling ? { sampling: options.sampling } : {}),
 			findings: [...deterministic, ...semantic.map((candidate): AuditFinding => ({
 				...stripPrivate(candidate), action: 'review', reason: 'Jev was disabled; semantic classification was not attempted.', signals: {},
 			}))],
@@ -460,6 +584,7 @@ export async function auditProject(options: {
 		raw_vale: vale,
 		source_health: built.source_health,
 		parse_health: built.parse_health,
+		...(options.sampling ? { sampling: options.sampling } : {}),
 	};
 }
 
@@ -471,5 +596,5 @@ export const STATIC_RULES = [
 	'google-passive-hidden-actor',
 ] as const;
 
-export const STATIC_RULE_SET_VERSION = 'google-research-v1';
-export const PIPELINE_VERSION = 'style-lab-v2';
+export const STATIC_RULE_SET_VERSION = 'google-research-v2';
+export const PIPELINE_VERSION = 'style-lab-v3';

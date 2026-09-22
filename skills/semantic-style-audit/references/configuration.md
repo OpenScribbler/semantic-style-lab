@@ -15,8 +15,15 @@ Each project needs:
 - `include`: Markdown/MDX glob patterns relative to `root`
 - `exclude`: optional generated, vendored, build, or dependency paths
 - `max_files`: optional positive limit for a small first run; selection uses a stable path hash rather than the alphabetical head
+- `sampling`: optional `rule-stratified` selection for a bounded experiment; requires `max_files` and accepts `min_candidates_per_rule`
 
 The top-level `output_dir` is also relative to the configuration file. Each invocation creates a timestamped directory instead of overwriting an earlier run.
+
+With `sampling.strategy: rule-stratified`, the CLI first runs Vale across all
+eligible files, then deterministically selects up to `max_files` while trying to
+reach `min_candidates_per_rule` for every available fixed rule. Inspect
+`raw/<project>/sampling.json`; a rule with no available candidates is unmeasured,
+not successful.
 
 `parsing.max_unparsed_file_ratio` controls when missing source classification makes
 the command exit unsuccessfully after preserving its artifacts. The default is `0`.

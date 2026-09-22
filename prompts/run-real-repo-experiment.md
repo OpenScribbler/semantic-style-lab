@@ -30,8 +30,9 @@ adopts those labels.
 ## Procedure
 
 1. Create an ignored `style-lab.config.json` with representative include/exclude
-   globs and a small `max_files` sample. Keep `parsing.max_unparsed_file_ratio` at
-   `0` for the first run.
+   globs and a small `max_files` sample. For multi-rule evaluation, use
+   `sampling.strategy: rule-stratified` and record any rule whose candidate target
+   cannot be met. Keep `parsing.max_unparsed_file_ratio` at `0` for the first run.
 2. Run `--no-jev` first. Inspect `source-health.json` and report AST, fallback, and
    unparsed coverage. If the limit fails, preserve the artifacts and fix or report
    the input problem; do not substitute your own review or select a friendlier subset.
