@@ -357,15 +357,16 @@ function addSemicolonQuestions(questions: Record<string, Question>, key: string,
 function addPassiveQuestion(questions: Record<string, Question>, key: string, index: number) {
 	questions[`${key}__responsibility`] = choice(
 		{
-			question: `How should the omitted actor in the marked construction in \`candidates[${index}].marked_context\` be treated?`,
+			question: `How does Google's voice guideline apply to the marked construction in \`candidates[${index}].marked_context\`?`,
 			inspect: `candidates[${index}]`,
-			focus: 'Judge the reported construction only. Passive voice is not automatically a violation. Distinguish a materially missing responsibility from an actor that is already clear nearby or genuinely unnecessary. Treat requirements, configuration steps, permissions, failures, and troubleshooting consequences as operationally important when knowing who or what acts would help the reader.',
+			focus: 'Judge the reported construction only. Google prefers active voice because a passive can leave the reader unsure who or what performs an action, and so who should act. Google accepts a passive in three cases: to emphasize the object, to de-emphasize the actor, and when the reader does not need to know who is responsible. A passive that leaves the reader unsure whether they must act, whether a component acts automatically, or who is responsible is not covered by those cases.',
 		},
 		{
-			missing_actor_matters: 'The passage omits who or what acts, and naming that actor would materially help the reader act, configure, assign responsibility, understand a requirement, or troubleshoot.',
-			actor_clear_from_context: 'The marked construction omits the actor, but the nearby passage already makes who or what acts sufficiently clear.',
-			actor_not_needed: 'The actor is irrelevant, unknown, deliberately generalized, or unnecessary because the result or affected object is appropriately emphasized.',
-			not_passive_or_unclear: 'The match is not a relevant passive construction, or the available passage is insufficient to decide among the other categories.',
+			hides_actor: 'The reader cannot tell who or what performs the action, and that uncertainty affects what they do or understand: whether they must act, whether the action happens automatically, or who is responsible.',
+			emphasizes_object: 'The construction keeps the focus on the object or result, and the actor is named nearby or is obvious to the reader.',
+			actor_irrelevant: 'The reader does not need to know who acts: the outcome and what the reader does are the same whoever acts.',
+			not_passive: 'The match describes a state or works as an adjective, such as "is unchanged" or "is stuck", so no action and no actor exist.',
+			unclear: 'The available passage is insufficient to decide among the other categories.',
 		},
 	);
 }
@@ -381,7 +382,7 @@ export function buildStaticJevRequest(candidates: StaticCandidate[], model: stri
 	return {
 		model,
 		state: {
-			rule_defaults: { semicolons: semicolonRule.source.default, passive_voice: 'Prefer active voice when naming the actor gives the reader useful responsibility or operational information.' },
+			rule_defaults: { semicolons: semicolonRule.source.default, passive_voice: 'Use active voice instead of passive voice, except to emphasize the object, to de-emphasize the actor, or when the reader does not need to know who is responsible.' },
 			candidates: candidates.map((candidate) => ({
 				file: candidate.file,
 				line: candidate.line,
@@ -477,16 +478,16 @@ function composeSemicolon(candidate: StaticCandidate, key: string, response: { a
 export function composePassive(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }): AuditFinding {
 	const answer = readChoice(response, `${key}__responsibility`);
 	const probability = answer.probabilities[answer.choice] ?? 0;
-	const safeCategory = answer.choice === 'actor_clear_from_context' || answer.choice === 'actor_not_needed';
-	const action: AuditAction = answer.choice === 'missing_actor_matters' && probability >= 0.75
+	const safeCategory = answer.choice === 'emphasizes_object' || answer.choice === 'actor_irrelevant' || answer.choice === 'not_passive';
+	const action: AuditAction = answer.choice === 'hides_actor' && probability >= 0.75
 		? 'flag'
 		: safeCategory && probability >= 0.85
 			? 'suppress'
 			: 'review';
 	const reason = action === 'flag'
-		? `Jev classified the omitted actor as materially useful (${probability.toFixed(3)}).`
+		? `Jev classified the passive as hiding an actor the reader needs (${probability.toFixed(3)}).`
 		: action === 'suppress'
-			? `Jev classified the actor as ${answer.choice === 'actor_clear_from_context' ? 'clear from nearby context' : 'unnecessary'} (${probability.toFixed(3)}).`
+			? `Jev classified the passive as ${answer.choice} under a Google exception (${probability.toFixed(3)}).`
 			: `${answer.choice} was not strong enough for automatic action (${probability.toFixed(3)}, confidence ${answer.confidence.toFixed(3)}).`;
 	return { ...stripPrivate(candidate), action, reason, signals: { ...answer.probabilities, choice_confidence: answer.confidence } };
 }
@@ -596,5 +597,5 @@ export const STATIC_RULES = [
 	'google-passive-hidden-actor',
 ] as const;
 
-export const STATIC_RULE_SET_VERSION = 'google-research-v2';
+export const STATIC_RULE_SET_VERSION = 'google-research-v3';
 export const PIPELINE_VERSION = 'style-lab-v3';

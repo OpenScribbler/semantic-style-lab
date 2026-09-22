@@ -178,14 +178,17 @@ describe('shareable style-lab CLI', () => {
 		};
 		const response = (choice: string, probability: number) => ({ answers: { c1__responsibility: {
 			choice, confidence: probability, probabilities: {
-				missing_actor_matters: choice === 'missing_actor_matters' ? probability : (1 - probability) / 3,
-				actor_clear_from_context: choice === 'actor_clear_from_context' ? probability : (1 - probability) / 3,
-				actor_not_needed: choice === 'actor_not_needed' ? probability : (1 - probability) / 3,
-				not_passive_or_unclear: choice === 'not_passive_or_unclear' ? probability : (1 - probability) / 3,
+				hides_actor: choice === 'hides_actor' ? probability : (1 - probability) / 4,
+				emphasizes_object: choice === 'emphasizes_object' ? probability : (1 - probability) / 4,
+				actor_irrelevant: choice === 'actor_irrelevant' ? probability : (1 - probability) / 4,
+				not_passive: choice === 'not_passive' ? probability : (1 - probability) / 4,
+				unclear: choice === 'unclear' ? probability : (1 - probability) / 4,
 			},
 		} } });
-		expect(composePassive(candidate, 'c1', response('actor_not_needed', 0.7)).action).toBe('review');
-		expect(composePassive(candidate, 'c1', response('actor_not_needed', 0.9)).action).toBe('suppress');
-		expect(composePassive(candidate, 'c1', response('missing_actor_matters', 0.8)).action).toBe('flag');
+		expect(composePassive(candidate, 'c1', response('actor_irrelevant', 0.7)).action).toBe('review');
+		expect(composePassive(candidate, 'c1', response('actor_irrelevant', 0.9)).action).toBe('suppress');
+		expect(composePassive(candidate, 'c1', response('not_passive', 0.9)).action).toBe('suppress');
+		expect(composePassive(candidate, 'c1', response('unclear', 0.9)).action).toBe('review');
+		expect(composePassive(candidate, 'c1', response('hides_actor', 0.8)).action).toBe('flag');
 	});
 });
