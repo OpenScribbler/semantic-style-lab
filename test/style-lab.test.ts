@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 
 import { afterEach, describe, expect, test } from 'vitest';
 
-import { auditProject, batchForQuestionLimit, buildStaticCandidates, buildStaticJevRequest, composePassive, composeVocabulary, runStaticVale, selectRuleStratifiedFiles } from '../src/style-lab-audit';
+import { auditProject, batchForQuestionLimit, buildStaticCandidates, buildStaticJevRequest, composeVocabulary, runStaticVale, selectRuleStratifiedFiles } from '../src/style-lab-audit';
 import type { StaticCandidate } from '../src/style-lab-audit';
 import { loadRules } from '../src/rules';
 import { discoverProjectFiles, loadStyleLabConfig } from '../src/style-lab-config';
@@ -118,15 +118,15 @@ describe('shareable style-lab CLI', () => {
 		const file = resolve(root, 'guide.mdx');
 		const { candidates } = await buildStaticCandidates('fixture', root, await runStaticVale(root, [file]), [file]);
 		const rule = await Bun.file('compiled-rules/google-semicolons.json').json();
-		const request = buildStaticJevRequest(candidates, 'jev-latest', rule);
+		const judged = candidates.filter((candidate) => candidate.rule_kind !== 'passive-hidden-actor');
+		const request = buildStaticJevRequest(judged, 'jev-latest', rule);
 		const serialized = JSON.stringify(request);
 		expect(serialized).not.toContain('expected_label');
 		expect(serialized).not.toContain('acceptable');
-		expect(Object.keys(request.questions).length).toBe(candidates.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : 1), 0));
-		for (const [index, candidate] of candidates.entries()) {
+		expect(Object.keys(request.questions).length).toBe(judged.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : 1), 0));
+		for (const [index, candidate] of judged.entries()) {
 			const key = `c${index + 1}`;
 			if (candidate.rule_id === 'command-line' || candidate.rule_id === 'real-time') expect(request.questions[`${key}__function`]?.type).toBe('choice');
-			if (candidate.rule_kind === 'passive-hidden-actor') expect(request.questions[`${key}__responsibility`]?.type).toBe('choice');
 		}
 	});
 
@@ -169,26 +169,20 @@ describe('shareable style-lab CLI', () => {
 		expect(finding.expected_form).toBe('command-line');
 	});
 
-	test('requires positive evidence before suppressing a passive candidate', () => {
-		const candidate: StaticCandidate = {
-			id: 'fixture:guide.md:1:Lab.PassiveHiddenActor:1', project: 'fixture', file: 'guide.md', absolute_file: '/tmp/guide.md',
-			line: 1, span: [1, 13], check: 'Lab.PassiveHiddenActor', rule_id: 'google-passive-hidden-actor', rule_kind: 'passive-hidden-actor',
-			match: 'is terminated', message: 'candidate', context: 'The Pod is terminated.', marked_context: 'The Pod ⟦is terminated⟧.',
-			source_class: 'prose', source_parser: 'markdown_ast',
-		};
-		const response = (choice: string, probability: number) => ({ answers: { c1__responsibility: {
-			choice, confidence: probability, probabilities: {
-				hides_actor: choice === 'hides_actor' ? probability : (1 - probability) / 4,
-				emphasizes_object: choice === 'emphasizes_object' ? probability : (1 - probability) / 4,
-				actor_irrelevant: choice === 'actor_irrelevant' ? probability : (1 - probability) / 4,
-				not_passive: choice === 'not_passive' ? probability : (1 - probability) / 4,
-				unclear: choice === 'unclear' ? probability : (1 - probability) / 4,
-			},
-		} } });
-		expect(composePassive(candidate, 'c1', response('actor_irrelevant', 0.7)).action).toBe('review');
-		expect(composePassive(candidate, 'c1', response('actor_irrelevant', 0.9)).action).toBe('suppress');
-		expect(composePassive(candidate, 'c1', response('not_passive', 0.9)).action).toBe('suppress');
-		expect(composePassive(candidate, 'c1', response('unclear', 0.9)).action).toBe('review');
-		expect(composePassive(candidate, 'c1', response('hides_actor', 0.8)).action).toBe('flag');
+	test('sends passive candidates to review without calling Jev', async () => {
+		const directory = await mkdtemp(resolve(tmpdir(), 'style-lab-passive-'));
+		temporary.push(directory);
+		const file = resolve(directory, 'passive.md');
+		await Bun.write(file, 'The Pod is terminated when the node is drained.\n');
+		const saved = process.env.TYPESAFE_API_KEY;
+		delete process.env.TYPESAFE_API_KEY;
+		try {
+			const result = await auditProject({ name: 'fixture', root: directory, files: [file], model: 'jev-latest', batchQuestionLimit: 200 });
+			expect(result.candidate_count).toBeGreaterThan(0);
+			expect(result.jev_call_count).toBe(0);
+			expect(result.findings.every((finding) => finding.rule_kind === 'passive-hidden-actor' && finding.action === 'review')).toBe(true);
+		} finally {
+			if (saved !== undefined) process.env.TYPESAFE_API_KEY = saved;
+		}
 	});
 });

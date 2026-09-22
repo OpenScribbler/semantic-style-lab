@@ -279,7 +279,6 @@ export async function buildStaticCandidates(project: string, root: string, vale:
 
 function questionCount(candidate: StaticCandidate) {
 	if (candidate.rule_kind === 'semicolon') return 3;
-	if (candidate.rule_kind === 'passive-hidden-actor') return 1;
 	return candidate.rule_id === 'setup' ? 3 : 1;
 }
 
@@ -354,35 +353,17 @@ function addSemicolonQuestions(questions: Record<string, Question>, key: string,
 	);
 }
 
-function addPassiveQuestion(questions: Record<string, Question>, key: string, index: number) {
-	questions[`${key}__responsibility`] = choice(
-		{
-			question: `How does Google's voice guideline apply to the marked construction in \`candidates[${index}].marked_context\`?`,
-			inspect: `candidates[${index}]`,
-			focus: 'Judge the reported construction only. Google prefers active voice because a passive can leave the reader unsure who or what performs an action, and so who should act. Google accepts a passive in three cases: to emphasize the object, to de-emphasize the actor, and when the reader does not need to know who is responsible. A passive that leaves the reader unsure whether they must act, whether a component acts automatically, or who is responsible is not covered by those cases.',
-		},
-		{
-			hides_actor: 'The reader cannot tell who or what performs the action, and that uncertainty affects what they do or understand: whether they must act, whether the action happens automatically, or who is responsible.',
-			emphasizes_object: 'The construction keeps the focus on the object or result, and the actor is named nearby or is obvious to the reader.',
-			actor_irrelevant: 'The reader does not need to know who acts: the outcome and what the reader does are the same whoever acts.',
-			not_passive: 'The match describes a state or works as an adjective, such as "is unchanged" or "is stuck", so no action and no actor exist.',
-			unclear: 'The available passage is insufficient to decide among the other categories.',
-		},
-	);
-}
-
 export function buildStaticJevRequest(candidates: StaticCandidate[], model: string, semicolonRule: SemicolonRule) {
 	const questions: Record<string, Question> = {};
 	for (const [index, candidate] of candidates.entries()) {
 		const key = `c${index + 1}`;
 		if (candidate.rule_kind === 'contextual-vocabulary') addVocabularyQuestions(questions, key, index, candidate);
-		else if (candidate.rule_kind === 'semicolon') addSemicolonQuestions(questions, key, index, semicolonRule.semantic_exceptions);
-		else addPassiveQuestion(questions, key, index);
+		else addSemicolonQuestions(questions, key, index, semicolonRule.semantic_exceptions);
 	}
 	return {
 		model,
 		state: {
-			rule_defaults: { semicolons: semicolonRule.source.default, passive_voice: 'Use active voice instead of passive voice, except to emphasize the object, to de-emphasize the actor, or when the reader does not need to know who is responsible.' },
+			rule_defaults: { semicolons: semicolonRule.source.default },
 			candidates: candidates.map((candidate) => ({
 				file: candidate.file,
 				line: candidate.line,
@@ -475,23 +456,6 @@ function composeSemicolon(candidate: StaticCandidate, key: string, response: { a
 	return { ...stripPrivate(candidate), action, reason, signals };
 }
 
-export function composePassive(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }): AuditFinding {
-	const answer = readChoice(response, `${key}__responsibility`);
-	const probability = answer.probabilities[answer.choice] ?? 0;
-	const safeCategory = answer.choice === 'emphasizes_object' || answer.choice === 'actor_irrelevant' || answer.choice === 'not_passive';
-	const action: AuditAction = answer.choice === 'hides_actor' && probability >= 0.75
-		? 'flag'
-		: safeCategory && probability >= 0.85
-			? 'suppress'
-			: 'review';
-	const reason = action === 'flag'
-		? `Jev classified the passive as hiding an actor the reader needs (${probability.toFixed(3)}).`
-		: action === 'suppress'
-			? `Jev classified the passive as ${answer.choice} under a Google exception (${probability.toFixed(3)}).`
-			: `${answer.choice} was not strong enough for automatic action (${probability.toFixed(3)}, confidence ${answer.confidence.toFixed(3)}).`;
-	return { ...stripPrivate(candidate), action, reason, signals: { ...answer.probabilities, choice_confidence: answer.confidence } };
-}
-
 function deterministicFinding(candidate: StaticCandidate): AuditFinding | null {
 	if (candidate.source_class === 'prose') return null;
 	if (candidate.source_class === 'unparsed_source') return {
@@ -527,6 +491,8 @@ export async function auditProject(options: {
 	);
 	const deterministic = candidates.map(deterministicFinding).filter((item): item is AuditFinding => Boolean(item));
 	const semantic = candidates.filter((candidate) => candidate.source_class === 'prose');
+	const passive = semantic.filter((candidate) => candidate.rule_kind === 'passive-hidden-actor');
+	const judged = semantic.filter((candidate) => candidate.rule_kind !== 'passive-hidden-actor');
 	if (options.noJev) {
 		return {
 			name: options.name, root: options.root, files: options.files.map((file) => relative(options.root, file).replaceAll('\\', '/')),
@@ -542,14 +508,16 @@ export async function auditProject(options: {
 			}))],
 		};
 	}
-	if (semantic.length && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. Load it in the parent shell and restart this process; never paste it into a prompt or config. Use --no-jev to enumerate candidates without calling Jev. See docs/api-key-security.md.');
+	if (judged.length && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. Load it in the parent shell and restart this process; never paste it into a prompt or config. Use --no-jev to enumerate candidates without calling Jev. See docs/api-key-security.md.');
 	const contextualRules = await loadRules(resolve(labRoot, 'rules/contextual-vocabulary'));
 	const semicolonRule = await Bun.file(resolve(labRoot, 'compiled-rules/google-semicolons.json')).json() as SemicolonRule;
-	const findings = [...deterministic];
+	const findings = [...deterministic, ...passive.map((candidate): AuditFinding => ({
+		...stripPrivate(candidate), action: 'review', reason: 'Jev does not judge passive voice; human review required.', signals: {},
+	}))];
 	const rawExchanges: RawExchange[] = [];
 	let inputTokens = 0;
 	let outputTokens = 0;
-	for (const [batchIndex, batch] of batchForQuestionLimit(semantic, options.batchQuestionLimit).entries()) {
+	for (const [batchIndex, batch] of batchForQuestionLimit(judged, options.batchQuestionLimit).entries()) {
 		const request = buildStaticJevRequest(batch, options.model, semicolonRule);
 		const exchangeNumber = String(batchIndex + 1).padStart(3, '0');
 		if (options.rawDirectory) await Bun.write(
@@ -567,8 +535,7 @@ export async function auditProject(options: {
 		for (const [index, candidate] of batch.entries()) {
 			const key = `c${index + 1}`;
 			if (candidate.rule_kind === 'contextual-vocabulary') findings.push(composeVocabulary(candidate, key, response, contextualRules));
-			else if (candidate.rule_kind === 'semicolon') findings.push(composeSemicolon(candidate, key, response, semicolonRule.semantic_exceptions));
-			else findings.push(composePassive(candidate, key, response));
+			else findings.push(composeSemicolon(candidate, key, response, semicolonRule.semantic_exceptions));
 		}
 	}
 	return {
@@ -578,7 +545,7 @@ export async function auditProject(options: {
 		vale_alert_count: candidates.length,
 		candidate_count: candidates.length,
 		jev_call_count: rawExchanges.length,
-		jev_candidate_count: semantic.length,
+		jev_candidate_count: judged.length,
 		usage: { input_tokens: inputTokens, output_tokens: outputTokens },
 		findings: findings.sort((left, right) => left.file.localeCompare(right.file) || left.line - right.line),
 		raw_exchanges: rawExchanges,
@@ -597,5 +564,5 @@ export const STATIC_RULES = [
 	'google-passive-hidden-actor',
 ] as const;
 
-export const STATIC_RULE_SET_VERSION = 'google-research-v3';
+export const STATIC_RULE_SET_VERSION = 'google-research-v4';
 export const PIPELINE_VERSION = 'style-lab-v3';
