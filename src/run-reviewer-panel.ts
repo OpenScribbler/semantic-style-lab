@@ -204,8 +204,9 @@ async function main() {
 	if (!reviewer || !['claude', 'copilot', 'codex', 'antigravity'].includes(reviewer)) throw new Error('--reviewer must be claude, copilot, codex, or antigravity');
 	const output = argument('--output', `reports/reviewer-panel-${reviewer}.json`)!;
 	const chunkSize = Number(argument('--chunk-size', '40'));
-	const items = await buildItems();
-	await Bun.write('experiments/reviewer-panel-items.json', `${JSON.stringify(items, null, 2)}\n`);
+	const itemsPath = argument('--items');
+	const items: PanelItem[] = itemsPath ? await Bun.file(itemsPath).json() : await buildItems();
+	if (!itemsPath) await Bun.write('experiments/reviewer-panel-items.json', `${JSON.stringify(items, null, 2)}\n`);
 	const schemaPath = resolve('schemas/reviewer-panel.schema.json');
 	const schema = await Bun.file(schemaPath).text();
 	const tempDirectory = resolve('.tmp/reviewer-panel');
