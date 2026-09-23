@@ -134,6 +134,8 @@ function lexicalRanges(source: string, ranges: ProtectedRange[], format: Markdow
 		regexRanges(source, /(`+)(?!`)[\s\S]*?\1/g, 'inline_code', ranges);
 	}
 	regexRanges(source, /{{[<%][\s\S]*?[>%]}}/g, 'template_syntax', ranges);
+	// A Hugo mermaid shortcode body is diagram source, not prose.
+	regexRanges(source, /{{<\s*mermaid\b[^}]*>}}[\s\S]*?{{<\s*\/mermaid\s*>}}/g, 'code_or_pre_block', ranges);
 	regexRanges(source, /<!--(?:[\s\S]*?)-->/g, 'html_comment', ranges);
 	if (format === 'mdx') {
 		regexRanges(source, /^(?:import|export)\b[^;\n]*(?:;|\r?\n|$)/gm, 'mdx_module_syntax', ranges);
