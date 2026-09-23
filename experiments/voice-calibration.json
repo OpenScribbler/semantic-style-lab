@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "description": "Voice examples harvested verbatim from published style guides. construction is my annotation of the marked words, following the guide's own Active/Passive answer where it gives one. voice is the guide's verdict: accepted, rejected, or null for active controls. basis: example = the guide labels this sentence's voice; exercise = the guide asks readers to rewrite it as active; rule = the guide labels it passive only, and the verdict follows from its general rule.",
+  "harvested_at": "2026-09-22",
+  "cases": [
+    {
+      "id": "google-style-01",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Use active voice",
+      "text": "The service is queried, and an acknowledgment is sent.",
+      "match": "is queried",
+      "span": [
+        13,
+        22
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "Marked Not recommended."
+    },
+    {
+      "id": "google-style-02",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Use active voice",
+      "text": "The service is queried, and an acknowledgment is sent.",
+      "match": "is sent",
+      "span": [
+        47,
+        53
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "Marked Not recommended."
+    },
+    {
+      "id": "google-style-03",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Use active voice",
+      "text": "The service is queried by you, and an acknowledgment is sent by the server.",
+      "match": "is queried by",
+      "span": [
+        13,
+        25
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "Marked Not recommended."
+    },
+    {
+      "id": "google-style-04",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Use active voice",
+      "text": "The service is queried by you, and an acknowledgment is sent by the server.",
+      "match": "is sent by",
+      "span": [
+        54,
+        63
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "Marked Not recommended."
+    },
+    {
+      "id": "google-style-05",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Exceptions",
+      "text": "The file is saved.",
+      "match": "is saved",
+      "span": [
+        10,
+        17
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "accepted",
+      "basis": "example",
+      "note": "Exception: to emphasize an object over an action."
+    },
+    {
+      "id": "google-style-06",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Exceptions",
+      "text": "Over 50 conflicts were found in the file.",
+      "match": "were found",
+      "span": [
+        19,
+        28
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "accepted",
+      "basis": "example",
+      "note": "Exception: to de-emphasize a subject or actor."
+    },
+    {
+      "id": "google-style-07",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Exceptions",
+      "text": "The database was purged in January.",
+      "match": "was purged",
+      "span": [
+        14,
+        23
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "accepted",
+      "basis": "example",
+      "note": "Exception: readers don't need to know who's responsible."
+    },
+    {
+      "id": "google-style-08",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Use active voice",
+      "text": "Send a query to the service. The server sends an acknowledgment.",
+      "match": "sends",
+      "span": [
+        41,
+        45
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Marked Recommended; active control."
+    },
+    {
+      "id": "google-style-09",
+      "source": "google-style",
+      "url": "https://developers.google.com/style/voice",
+      "section": "Exceptions",
+      "text": "You created over 50 conflicts in the file.",
+      "match": "created",
+      "span": [
+        5,
+        11
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Active; marked Not recommended for blaming the reader, which is outside the voice rule."
+    },
+    {
+      "id": "microsoft-style-10",
+      "source": "microsoft-style",
+      "url": "https://learn.microsoft.com/en-us/style-guide/grammar/verbs",
+      "section": "Active and passive voice",
+      "text": "That site can’t be found. Double-check the site address in the Address bar.",
+      "match": "be found",
+      "span": [
+        17,
+        24
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "accepted",
+      "basis": "example",
+      "note": "Passive use: avoiding condescending text or blaming the customer."
+    },
+    {
+      "id": "microsoft-style-11",
+      "source": "microsoft-style",
+      "url": "https://learn.microsoft.com/en-us/style-guide/grammar/verbs",
+      "section": "Active and passive voice",
+      "text": "When the user clicks OK, the transaction is committed.",
+      "match": "is committed",
+      "span": [
+        42,
+        53
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "accepted",
+      "basis": "example",
+      "note": "Passive use: emphasizing the receiver of the action (content for developers)."
+    },
+    {
+      "id": "microsoft-style-12",
+      "source": "microsoft-style",
+      "url": "https://learn.microsoft.com/en-us/style-guide/grammar/verbs",
+      "section": "Active and passive voice",
+      "text": "Divide your document into as many sections as you want.",
+      "match": "Divide",
+      "span": [
+        1,
+        6
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Active example."
+    },
+    {
+      "id": "microsoft-style-13",
+      "source": "microsoft-style",
+      "url": "https://learn.microsoft.com/en-us/style-guide/grammar/verbs",
+      "section": "Active and passive voice",
+      "text": "Office 365 includes the Office 2016 apps for PC and Mac.",
+      "match": "includes",
+      "span": [
+        12,
+        19
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Active example."
+    },
+    {
+      "id": "google-tw1-14",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Passive voice examples",
+      "text": "The mat was sat on by the cat.",
+      "match": "was sat on by",
+      "span": [
+        9,
+        21
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Labeled passive; Google style says to recast named-actor passives whenever possible."
+    },
+    {
+      "id": "google-tw1-15",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Passive voice examples",
+      "text": "The mat was sat on.",
+      "match": "was sat on",
+      "span": [
+        9,
+        18
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "\"Readers can only guess.\""
+    },
+    {
+      "id": "google-tw1-16",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "Read-only access is provided by MutableInput.",
+      "match": "is provided by",
+      "span": [
+        18,
+        31
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Passive."
+    },
+    {
+      "id": "google-tw1-17",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "Performance was measured.",
+      "match": "was measured",
+      "span": [
+        13,
+        24
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Passive; no actor."
+    },
+    {
+      "id": "google-tw1-18",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "Python was invented by Guido van Rossum in the twentieth century.",
+      "match": "was invented by",
+      "span": [
+        8,
+        22
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Passive."
+    },
+    {
+      "id": "google-tw1-19",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "This information is used by the policy enforcement team.",
+      "match": "is used by",
+      "span": [
+        18,
+        27
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Passive."
+    },
+    {
+      "id": "google-tw1-20",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "The orbit was calculated by Katherine Johnson.",
+      "match": "was calculated by",
+      "span": [
+        11,
+        27
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Passive."
+    },
+    {
+      "id": "google-tw1-21",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "MutableInput provides read-only access.",
+      "match": "provides",
+      "span": [
+        14,
+        21
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Answer key: Active."
+    },
+    {
+      "id": "google-tw1-22",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "David Korn discovered the KornShell quite by accident.",
+      "match": "discovered",
+      "span": [
+        12,
+        21
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Answer key: Active."
+    },
+    {
+      "id": "google-tw1-23",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 1",
+      "text": "Click the Submit button.",
+      "match": "Click",
+      "span": [
+        1,
+        5
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Answer key: Active (imperative)."
+    },
+    {
+      "id": "google-tw1-24",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 2",
+      "text": "Performance metrics are required by the team, though I prefer wild guesses.",
+      "match": "are required by",
+      "span": [
+        21,
+        35
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Passive, Active."
+    },
+    {
+      "id": "google-tw1-25",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 2",
+      "text": "When software engineers attempt something new and innovative, a reward should be given.",
+      "match": "be given",
+      "span": [
+        79,
+        86
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "rule",
+      "note": "Answer key: Active, Passive."
+    },
+    {
+      "id": "google-tw1-26",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 2",
+      "text": "The QA team loves ice cream, but the writers prefer sorbet.",
+      "match": "prefer",
+      "span": [
+        46,
+        51
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Answer key: Active, Active."
+    },
+    {
+      "id": "google-tw1-27",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Scientific research reports",
+      "text": "It has been suggested that...",
+      "match": "has been suggested",
+      "span": [
+        4,
+        21
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "\"Do we know who is doing what to whom? No.\""
+    },
+    {
+      "id": "google-tw1-28",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Scientific research reports",
+      "text": "Data was taken...",
+      "match": "was taken",
+      "span": [
+        6,
+        14
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "\"Do we know who is doing what to whom? No.\""
+    },
+    {
+      "id": "google-tw1-29",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Scientific research reports",
+      "text": "Statistics were calculated...",
+      "match": "were calculated",
+      "span": [
+        12,
+        26
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "\"Do we know who is doing what to whom? No.\""
+    },
+    {
+      "id": "google-tw1-30",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Scientific research reports",
+      "text": "Results were evaluated.",
+      "match": "were evaluated",
+      "span": [
+        9,
+        22
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "\"Do we know who is doing what to whom? No.\""
+    },
+    {
+      "id": "google-tw1-31",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 3",
+      "text": "The flags weren't parsed by the Mungifier.",
+      "match": "weren't parsed by",
+      "span": [
+        11,
+        27
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "exercise",
+      "note": "Rewrite exercise; answer is active."
+    },
+    {
+      "id": "google-tw1-32",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 3",
+      "text": "A wrapper is generated by the Op registration process.",
+      "match": "is generated by",
+      "span": [
+        11,
+        25
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "exercise",
+      "note": "Rewrite exercise; answer is active."
+    },
+    {
+      "id": "google-tw1-33",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 3",
+      "text": "Only one experiment per layer is selected by the Frombus system.",
+      "match": "is selected by",
+      "span": [
+        31,
+        44
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "exercise",
+      "note": "Rewrite exercise; answer is active."
+    },
+    {
+      "id": "google-tw1-34",
+      "source": "google-tw1",
+      "url": "https://developers.google.com/tech-writing/one/active-voice",
+      "section": "Exercise 3",
+      "text": "Quality metrics are identified by asterisks; ampersands identify bad metrics.",
+      "match": "are identified by",
+      "span": [
+        17,
+        33
+      ],
+      "construction": "passive_actor_named",
+      "voice": "rejected",
+      "basis": "exercise",
+      "note": "Rewrite exercise; answer is active."
+    },
+    {
+      "id": "kubernetes-style-35",
+      "source": "kubernetes-style",
+      "url": "https://kubernetes.io/docs/contribute/style/style-guide/#use-active-voice",
+      "section": "Use active voice",
+      "text": "The API can be explored using a browser.",
+      "match": "be explored",
+      "span": [
+        13,
+        23
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "Marked Don't."
+    },
+    {
+      "id": "kubernetes-style-36",
+      "source": "kubernetes-style",
+      "url": "https://kubernetes.io/docs/contribute/style/style-guide/#use-active-voice",
+      "section": "Use active voice",
+      "text": "The replica count is specified in the YAML file.",
+      "match": "is specified",
+      "span": [
+        19,
+        30
+      ],
+      "construction": "passive_actor_unnamed",
+      "voice": "rejected",
+      "basis": "example",
+      "note": "Marked Don't."
+    },
+    {
+      "id": "kubernetes-style-37",
+      "source": "kubernetes-style",
+      "url": "https://kubernetes.io/docs/contribute/style/style-guide/#use-active-voice",
+      "section": "Use active voice",
+      "text": "You can explore the API using a browser.",
+      "match": "explore",
+      "span": [
+        9,
+        15
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Marked Do."
+    },
+    {
+      "id": "kubernetes-style-38",
+      "source": "kubernetes-style",
+      "url": "https://kubernetes.io/docs/contribute/style/style-guide/#use-active-voice",
+      "section": "Use active voice",
+      "text": "The YAML file specifies the replica count.",
+      "match": "specifies",
+      "span": [
+        15,
+        23
+      ],
+      "construction": "not_passive",
+      "voice": null,
+      "basis": "example",
+      "note": "Marked Do."
+    }
+  ]
+}
