@@ -22,4 +22,4 @@ contexts:
   ambiguous:
     description: The passage is incomplete and does not reveal whether a following noun is being modified.
 review_at: 0.55
-flag_at: 0.9
+flag_at: 0.85

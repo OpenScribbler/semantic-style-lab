@@ -26,4 +26,4 @@ contexts:
   ambiguous:
     description: The passage is genuinely incomplete or admits multiple grammatical parses, so the term's function cannot be determined.
 review_at: 0.55
-flag_at: 0.9
+flag_at: 0.85
