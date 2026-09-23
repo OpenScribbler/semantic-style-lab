@@ -123,6 +123,14 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 		{ question: 'Would naming who performs the marked action tell the reader something they need and cannot already infer from the passage and its context?', inspect },
 		{ true: 'Naming the performer would give the reader needed information they currently lack.', false: 'The reader already knows or does not need to know who performs it.' },
 	),
+	result_report: noul(
+		{ question: 'Does the marked construction report a result or state the reader can observe or rely on, such as a file being saved or a record being removed, rather than describe an action that someone carries out as a step, method, or procedure?', inspect },
+		{ true: 'It reports a result or state; who produced it is beside the point.', false: 'It describes an action someone carries out, as a step, method, or procedure.' },
+	),
+	active_rewrite_worse: noul(
+		{ question: 'Would rewriting the marked construction in active voice, naming who acts, make the passage worse for the reader, for example by blaming the reader, by naming an actor who does not matter, or by pulling focus from the object that matters?', inspect },
+		{ true: 'An active rewrite would make the passage worse for the reader.', false: 'An active rewrite that names the actor would be as good or better.' },
+	),
 	google_voice: choice(
 		{ question: "How does Google's voice guideline apply to the marked construction? Google prefers active voice and accepts a passive only to emphasize the object, to de-emphasize the actor, or when the reader does not need to know who is responsible.", inspect },
 		{
