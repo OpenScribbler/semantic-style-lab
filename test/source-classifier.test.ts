@@ -20,6 +20,13 @@ describe('format-aware source classification', () => {
 		expect(classifier.classify(source.indexOf('plain;') + 5)).toBe('code_or_pre_block');
 	});
 
+	test('protects Hugo highlight code source', () => {
+		const source = 'Set the command line flag.\n\n{{< highlight yaml "linenos=false" >}}\n# Same value as the --oidc-ca-file command line argument.\nkey: value\n{{< /highlight >}}\n';
+		const classifier = createSourceClassifier(source, 'markdown');
+		expect(classifier.classify(source.indexOf('command line'))).toBe('prose');
+		expect(classifier.classify(source.lastIndexOf('command line'))).toBe('code_or_pre_block');
+	});
+
 	test('falls back lexically when MDX rejects Hugo syntax', () => {
 		const source = '<!-- overview -->\n\n{{< note >}}\nSet up the client.\n{{< /note >}}\n';
 		const classifier = createSourceClassifier(source, 'mdx');
