@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 
 import { afterEach, describe, expect, test } from 'vitest';
 
-import { auditProject, batchForQuestionLimit, buildStaticCandidates, buildStaticJevRequest, composeVocabulary, runStaticVale, selectRuleStratifiedFiles } from '../src/style-lab-audit';
+import { auditProject, buildStaticCandidates, buildStaticJevRequest, composeVocabulary, runStaticVale, selectRuleStratifiedFiles } from '../src/style-lab-audit';
 import type { StaticCandidate } from '../src/style-lab-audit';
 import { loadRules } from '../src/rules';
 import { discoverProjectFiles, loadStyleLabConfig } from '../src/style-lab-config';
@@ -130,24 +130,12 @@ describe('shareable style-lab CLI', () => {
 		}
 	});
 
-	test('respects the configured Jev question limit', async () => {
-		const root = resolve('test/fixtures/shareable-docs');
-		const file = resolve(root, 'guide.mdx');
-		const { candidates } = await buildStaticCandidates('fixture', root, await runStaticVale(root, [file]), [file]);
-		const batches = batchForQuestionLimit(candidates, 4);
-		expect(batches.length).toBeGreaterThan(1);
-		for (const batch of batches) {
-			const questions = batch.reduce((sum, candidate) => sum + (candidate.rule_kind === 'semicolon' || candidate.rule_id === 'setup' ? 3 : 1), 0);
-			expect(questions).toBeLessThanOrEqual(4);
-		}
-	});
-
 	test('supports a no-key shadow run', async () => {
 		const root = resolve('test/fixtures/shareable-docs');
 		const rawDirectory = await mkdtemp(resolve(tmpdir(), 'style-lab-raw-'));
 		temporary.push(rawDirectory);
 		const result = await auditProject({
-			name: 'fixture', root, files: [resolve(root, 'guide.mdx')], model: 'jev-latest', batchQuestionLimit: 200, noJev: true, rawDirectory,
+			name: 'fixture', root, files: [resolve(root, 'guide.mdx')], model: 'jev-latest', noJev: true, rawDirectory,
 		});
 		expect(result.candidate_count).toBeGreaterThan(0);
 		expect(result.raw_exchanges).toHaveLength(0);
@@ -177,7 +165,7 @@ describe('shareable style-lab CLI', () => {
 		const saved = process.env.TYPESAFE_API_KEY;
 		delete process.env.TYPESAFE_API_KEY;
 		try {
-			const result = await auditProject({ name: 'fixture', root: directory, files: [file], model: 'jev-latest', batchQuestionLimit: 200 });
+			const result = await auditProject({ name: 'fixture', root: directory, files: [file], model: 'jev-latest' });
 			expect(result.candidate_count).toBeGreaterThan(0);
 			expect(result.jev_call_count).toBe(0);
 			expect(result.findings.every((finding) => finding.rule_kind === 'passive-hidden-actor' && finding.action === 'review')).toBe(true);

@@ -277,30 +277,6 @@ export async function buildStaticCandidates(project: string, root: string, vale:
 	return { candidates, source_health: sourceHealth, parse_health: summarizeParseHealth(sourceHealth) };
 }
 
-function questionCount(candidate: StaticCandidate) {
-	if (candidate.rule_kind === 'semicolon') return 3;
-	return candidate.rule_id === 'setup' ? 3 : 1;
-}
-
-export function batchForQuestionLimit(candidates: StaticCandidate[], limit: number) {
-	const batches: StaticCandidate[][] = [];
-	let current: StaticCandidate[] = [];
-	let count = 0;
-	for (const candidate of candidates) {
-		const needed = questionCount(candidate);
-		if (needed > limit) throw new Error(`${candidate.id} requires ${needed} questions, above the configured limit ${limit}.`);
-		if (current.length && count + needed > limit) {
-			batches.push(current);
-			current = [];
-			count = 0;
-		}
-		current.push(candidate);
-		count += needed;
-	}
-	if (current.length) batches.push(current);
-	return batches;
-}
-
 function addVocabularyQuestions(questions: Record<string, Question>, key: string, index: number, candidate: StaticCandidate) {
 	const inspect = `candidates[${index}]`;
 	if (candidate.rule_id === 'command-line' || candidate.rule_id === 'real-time') {
@@ -471,7 +447,6 @@ export async function auditProject(options: {
 	root: string;
 	files: string[];
 	model: string;
-	batchQuestionLimit: number;
 	noJev?: boolean;
 	rawDirectory?: string;
 	vale?: Record<string, ExtendedValeAlert[]>;
@@ -517,26 +492,39 @@ export async function auditProject(options: {
 	const rawExchanges: RawExchange[] = [];
 	let inputTokens = 0;
 	let outputTokens = 0;
-	for (const [batchIndex, batch] of batchForQuestionLimit(judged, options.batchQuestionLimit).entries()) {
-		const request = buildStaticJevRequest(batch, options.model, semicolonRule);
-		const exchangeNumber = String(batchIndex + 1).padStart(3, '0');
-		if (options.rawDirectory) await Bun.write(
-			resolve(options.rawDirectory, `jev-${exchangeNumber}.request.json`),
-			`${JSON.stringify({ candidate_ids: batch.map((candidate) => candidate.id), request }, null, 2)}\n`,
-		);
-		const response = await new TypeSafeClient().systemOne(request);
-		if (options.rawDirectory) await Bun.write(
-			resolve(options.rawDirectory, `jev-${exchangeNumber}.response.json`),
-			`${JSON.stringify(response, null, 2)}\n`,
-		);
-		inputTokens += response.usage.input_tokens;
-		outputTokens += response.usage.output_tokens;
-		rawExchanges.push({ request, response, candidate_ids: batch.map((candidate) => candidate.id) });
-		for (const [index, candidate] of batch.entries()) {
-			const key = `c${index + 1}`;
-			if (candidate.rule_kind === 'contextual-vocabulary') findings.push(composeVocabulary(candidate, key, response, contextualRules));
-			else findings.push(composeSemicolon(candidate, key, response, semicolonRule.semantic_exceptions));
+	// One candidate and one question per request. Batched requests demoted
+	// panel-confirmed flags and suppressed confirmed violations (Q21).
+	const jobs = judged.flatMap((candidate) => {
+		const whole = buildStaticJevRequest([candidate], options.model, semicolonRule);
+		return Object.entries(whole.questions).map(([id, question]) => ({ candidate, id, request: { ...whole, questions: { [id]: question } } }));
+	});
+	const answers = new Map<string, Record<string, unknown>>();
+	const client = jobs.length ? new TypeSafeClient() : undefined;
+	let next = 0;
+	await Promise.all(Array.from({ length: jobs.length ? 8 : 0 }, async () => {
+		while (next < jobs.length) {
+			const number = next++;
+			const job = jobs[number]!;
+			const exchangeNumber = String(number + 1).padStart(4, '0');
+			if (options.rawDirectory) await Bun.write(
+				resolve(options.rawDirectory, `jev-${exchangeNumber}.request.json`),
+				`${JSON.stringify({ candidate_ids: [job.candidate.id], request: job.request }, null, 2)}\n`,
+			);
+			const response = await client!.systemOne(job.request);
+			if (options.rawDirectory) await Bun.write(
+				resolve(options.rawDirectory, `jev-${exchangeNumber}.response.json`),
+				`${JSON.stringify(response, null, 2)}\n`,
+			);
+			inputTokens += response.usage.input_tokens;
+			outputTokens += response.usage.output_tokens;
+			rawExchanges[number] = { request: job.request, response, candidate_ids: [job.candidate.id] };
+			answers.set(job.candidate.id, { ...answers.get(job.candidate.id), [job.id]: response.answers[job.id] });
 		}
+	}));
+	for (const candidate of judged) {
+		const response = { answers: answers.get(candidate.id) ?? {} };
+		if (candidate.rule_kind === 'contextual-vocabulary') findings.push(composeVocabulary(candidate, 'c1', response, contextualRules));
+		else findings.push(composeSemicolon(candidate, 'c1', response, semicolonRule.semantic_exceptions));
 	}
 	return {
 		name: options.name,

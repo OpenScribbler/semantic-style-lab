@@ -20,7 +20,6 @@ export interface StyleLabConfig {
 	projects: ProjectConfig[];
 	jev: {
 		model: string;
-		batch_question_limit: number;
 	};
 	parsing: {
 		max_unparsed_file_ratio: number;
@@ -96,10 +95,6 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 	const jev = value.jev && typeof value.jev === 'object' ? value.jev as Record<string, unknown> : {};
 	const model = jev.model ?? 'jev-latest';
 	if (typeof model !== 'string' || !model.trim()) throw new Error('jev.model must be a non-empty string.');
-	const questionLimit = jev.batch_question_limit ?? 200;
-	if (!Number.isInteger(questionLimit) || (questionLimit as number) < 1 || (questionLimit as number) > 255) {
-		throw new Error('jev.batch_question_limit must be an integer from 1 through 255.');
-	}
 	const output = value.output_dir ?? '.style-lab';
 	if (typeof output !== 'string' || !output.trim()) throw new Error('output_dir must be a non-empty string.');
 	const parsing = value.parsing && typeof value.parsing === 'object' ? value.parsing as Record<string, unknown> : {};
@@ -112,7 +107,7 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 		config_path: configPath,
 		output_dir: isAbsolute(output) ? output : resolve(base, output),
 		projects,
-		jev: { model, batch_question_limit: questionLimit as number },
+		jev: { model },
 		parsing: { max_unparsed_file_ratio: maxUnparsedFileRatio },
 	};
 }

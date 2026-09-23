@@ -69,7 +69,6 @@ async function main() {
 			root: project.root,
 			files,
 			model: config.jev.model,
-			batchQuestionLimit: config.jev.batch_question_limit,
 			noJev,
 			rawDirectory,
 			vale,

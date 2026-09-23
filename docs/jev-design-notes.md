@@ -17,8 +17,9 @@ agent skill is a compact implementation guide.
    We independently ask whether the occurrence is literal, whether the explicit
    next word is a noun modified by it, and—for `setup`—whether it expresses an
    action.
-4. **Batch shared state.** All independent questions for a page or fixture batch
-   share one structured state and are evaluated in one request.
+4. **Send one question per request.** Each request carries one candidate and one
+   question. Batched requests changed verdicts: on the Kubernetes shadow run they
+   suppressed confirmed violations and demoted confirmed flags to review.
 5. **Do not confuse confidence with correctness.** Choice confidence describes
    concentration among supplied options. Noul supplies a direct yes probability.
    Neither eliminates the need for labeled target-domain fixtures and calibrated
