@@ -442,7 +442,7 @@ export function composeVocabulary(candidate: StaticCandidate, key: string, respo
 	};
 }
 
-function composeSemicolon(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }, exceptions: SemanticException[]): AuditFinding {
+export function composeSemicolon(candidate: StaticCandidate, key: string, response: { answers: Record<string, unknown> }, exceptions: SemanticException[]): AuditFinding {
 	const signals = Object.fromEntries(exceptions.map((exception) => [exception.id, readNoul(response, `${key}__${exception.id}`)]));
 	const autoExceptions = ['complex_series', 'conjunctive_connector'];
 	const suppressing = autoExceptions.find((id) => (signals[id] ?? 0) >= 0.75);
