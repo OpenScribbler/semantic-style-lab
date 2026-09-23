@@ -155,6 +155,37 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 		{ question: 'Does the passage make clear that the marked action happens on its own, carried out by the system or software, so the reader has nothing to do about it and gains nothing from knowing which part performs it?', inspect },
 		{ true: 'The marked action happens automatically and the reader needs neither to act nor to know which part performs it.', false: 'The reader may need to act on the marked action or to know who or what performs it.' },
 	),
+	passage_kind: choice(
+		{ question: 'What job does the sentence containing the marked construction do for the reader?', inspect },
+		{
+			system_behavior: 'It describes what software, a system, or a process does on its own, or the result of that behavior.',
+			reader_step: 'It is part of instructions or a procedure the reader carries out.',
+			caller_contract: 'It states what an API, SDK, command, or configuration field does or requires when the reader uses it.',
+			definition_or_rule: 'It defines a term, names a concept, or states a limit, rule, or property.',
+			problem_or_fix: 'It describes a failure, a symptom, or its cause, or tells the reader how to fix or avoid one.',
+			opinion_or_advice: 'It gives a recommendation, opinion, expectation, or hedge without saying whose it is.',
+		},
+	),
+	instruction_nearby: noul(
+		{ question: 'In the sentence with the marked construction or the sentence right after it, does the passage tell the reader to do something, with an imperative verb or with "you must", "you should", or "you can"?', inspect },
+		{ true: 'The passage gives the reader an instruction next to the marked construction.', false: 'No instruction to the reader appears next to the marked construction.' },
+	),
+	trigger_named: noul(
+		{ question: 'Does the passage name the event or condition that causes the marked action, such as "when you click OK", "after the job finishes", or "if the node fails"?', inspect },
+		{ true: 'The passage names what triggers the marked action.', false: 'The passage does not say what triggers the marked action.' },
+	),
+	process_chain: noul(
+		{ question: 'Does the passage describe a sequence of actions by different components, in which the marked action is one step and the component doing it is not named?', inspect },
+		{ true: 'The marked action is an unattributed step in a multi-component sequence.', false: 'The marked action is not an unattributed step in a multi-component sequence.' },
+	),
+	reader_controls: noul(
+		{ question: 'Does the passage say or imply that the reader can change, disable, tune, or trigger the marked action through a setting, flag, field, or command?', inspect },
+		{ true: 'The reader can control the marked action.', false: 'The passage gives the reader no control over the marked action.' },
+	),
+	subject_is_topic: noul(
+		{ question: 'Is the grammatical subject of the marked clause the thing the passage is mainly about, so that putting it first keeps the reader focused on the passage topic?', inspect },
+		{ true: 'The subject of the marked clause is the passage topic.', false: 'The subject of the marked clause is not the passage topic.' },
+	),
 	active_rewrite_worse: noul(
 		{ question: 'Would rewriting the marked construction in active voice, naming who acts, make the passage worse for the reader, for example by blaming the reader, by naming an actor who does not matter, or by pulling focus from the object that matters?', inspect },
 		{ true: 'An active rewrite would make the passage worse for the reader.', false: 'An active rewrite that names the actor would be as good or better.' },
