@@ -13,7 +13,8 @@ interface Case {
 }
 
 const out = resolve(process.argv[2] ?? '.style-lab-voice-calibration/input');
-const { cases } = await Bun.file('experiments/voice-calibration.json').json() as { cases: Case[] };
+const casesPath = process.argv[3] ?? 'experiments/voice-calibration.json';
+const { cases } = await Bun.file(casesPath).json() as { cases: Case[] };
 await mkdir(resolve(out, 'docs'), { recursive: true });
 const findings = [];
 for (const item of cases) {

@@ -127,6 +127,34 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 		{ question: 'Does the marked construction report a result or state the reader can observe or rely on, such as a file being saved or a record being removed, rather than describe an action that someone carries out as a step, method, or procedure?', inspect },
 		{ true: 'It reports a result or state; who produced it is beside the point.', false: 'It describes an action someone carries out, as a step, method, or procedure.' },
 	),
+	actor_in_passage: noul(
+		{ question: 'Does the passage name, anywhere in its text, the specific person, component, or tool that performs the marked action, whether in a by-phrase, another phrase such as "from the API server", or a nearby sentence?', inspect },
+		{ true: 'The passage names who or what performs the marked action.', false: 'The passage never names who or what performs the marked action.' },
+	),
+	responsibility_needed: noul(
+		{ question: 'To do what the passage asks, or to fix, prevent, repeat, or follow up on the marked action, would the reader need to know who or what performed it?', inspect },
+		{ true: 'The reader needs to know who or what performed the marked action.', false: 'The reader does not need to know who or what performed the marked action.' },
+	),
+	problem_followup: noul(
+		{ question: 'Does the passage present the marked action, or its outcome, as a problem, incident, or unwanted change that the reader is asked to fix, prevent, investigate, or respond to?', inspect },
+		{ true: 'The marked action or its outcome is a problem the reader must respond to.', false: 'The marked action is not a problem the reader must respond to.' },
+	),
+	reader_is_actor: noul(
+		{ question: 'Is the reader, the person following this documentation, the one who performs or is expected to perform the marked action?', inspect },
+		{ true: 'The reader performs, or is expected to perform, the marked action.', false: 'Someone or something other than the reader performs the marked action, or no one does.' },
+	),
+	actor_referenced: noul(
+		{ question: 'Does the passage refer to whoever performs the marked action without naming it, for example with "it", "its", "the responsible controller", or "the component", and ask the reader to configure, check, restart, or change that performer?', inspect },
+		{ true: 'The passage points the reader at the unnamed performer of the marked action.', false: 'The passage does not point the reader at the performer of the marked action.' },
+	),
+	reader_could_act: noul(
+		{ question: 'Could a reader following this passage reasonably take the marked action to be a step they must carry out themselves?', inspect },
+		{ true: 'A reader could reasonably take the marked action to be their own step.', false: 'No reader would take the marked action to be their own step.' },
+	),
+	automatic_no_owner: noul(
+		{ question: 'Does the passage make clear that the marked action happens on its own, carried out by the system or software, so the reader has nothing to do about it and gains nothing from knowing which part performs it?', inspect },
+		{ true: 'The marked action happens automatically and the reader needs neither to act nor to know which part performs it.', false: 'The reader may need to act on the marked action or to know who or what performs it.' },
+	),
 	active_rewrite_worse: noul(
 		{ question: 'Would rewriting the marked construction in active voice, naming who acts, make the passage worse for the reader, for example by blaming the reader, by naming an actor who does not matter, or by pulling focus from the object that matters?', inspect },
 		{ true: 'An active rewrite would make the passage worse for the reader.', false: 'An active rewrite that names the actor would be as good or better.' },
