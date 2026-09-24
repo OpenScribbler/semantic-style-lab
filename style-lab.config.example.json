@@ -27,5 +27,16 @@
   },
   "parsing": {
     "max_unparsed_file_ratio": 0
+  },
+  "rules": [
+    "command-line",
+    "real-time",
+    "setup",
+    "google-semicolons",
+    "google-passive-hidden-actor"
+  ],
+  "passive": {
+    "mode": "review",
+    "guide": "google"
   }
 }

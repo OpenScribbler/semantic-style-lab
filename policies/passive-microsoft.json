@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "guide": "microsoft",
+  "model": "logistic",
+  "runs": 3,
+  "training": {
+    "items": 584,
+    "violations": 239,
+    "labels": "k8s + pairs, rubric labels (panel majority, tie = violation)"
+  },
+  "questions": [
+    "active_subject_available",
+    "actor_identity",
+    "actor_in_passage",
+    "actor_kind",
+    "actor_needed",
+    "actor_referenced",
+    "automatic_no_owner",
+    "blame_avoided",
+    "construction",
+    "google_voice",
+    "hidden_actor_pointer",
+    "hidden_stance_holder",
+    "instruction_nearby",
+    "microsoft_rubric",
+    "microsoft_voice",
+    "passage_kind",
+    "problem_followup",
+    "process_chain",
+    "reader_controls",
+    "reader_could_act",
+    "reader_is_actor",
+    "reader_unsure",
+    "responsibility_needed",
+    "result_report",
+    "subject_is_topic",
+    "trigger_named"
+  ],
+  "features": [
+    {
+      "name": "active_subject_available",
+      "mean": 0.583527,
+      "sd": 0.164875,
+      "weight": -0.301164
+    },
+    {
+      "name": "actor_identity.identifiable_component",
+      "mean": 0.360542,
+      "sd": 0.268867,
+      "weight": 0.546016
+    },
+    {
+      "name": "actor_identity.irrelevant",
+      "mean": 0.015303,
+      "sd": 0.015966,
+      "weight": 0.271061
+    },
+    {
+      "name": "actor_identity.no_action",
+      "mean": 0.21601,
+      "sd": 0.207816,
+      "weight": 0.031766
+    },
+    {
+      "name": "actor_identity.reader",
+      "mean": 0.062043,
+      "sd": 0.156676,
+      "weight": -0.474842
+    },
+    {
+      "name": "actor_identity.unidentified",
+      "mean": 0.345879,
+      "sd": 0.251957,
+      "weight": -0.33282
+    },
+    {
+      "name": "actor_in_passage",
+      "mean": 0.271387,
+      "sd": 0.20445,
+      "weight": 0.487303
+    },
+    {
+      "name": "actor_kind.no_action",
+      "mean": 0.301644,
+      "sd": 0.276169,
+      "weight": -0.077122
+    },
+    {
+      "name": "actor_kind.other_person",
+      "mean": 0.112626,
+      "sd": 0.184575,
+      "weight": 0.242984
+    },
+    {
+      "name": "actor_kind.reader",
+      "mean": 0.062608,
+      "sd": 0.144583,
+      "weight": 0.644544
+    },
+    {
+      "name": "actor_kind.software",
+      "mean": 0.523054,
+      "sd": 0.324847,
+      "weight": -0.352662
+    },
+    {
+      "name": "actor_needed",
+      "mean": 0.24859,
+      "sd": 0.074264,
+      "weight": -0.522561
+    },
+    {
+      "name": "actor_referenced",
+      "mean": 0.121769,
+      "sd": 0.07495,
+      "weight": -0.18575
+    },
+    {
+      "name": "automatic_no_owner",
+      "mean": 0.356884,
+      "sd": 0.211598,
+      "weight": -0.352372
+    },
+    {
+      "name": "blame_avoided",
+      "mean": 0.061124,
+      "sd": 0.079168,
+      "weight": 0.013319
+    },
+    {
+      "name": "construction.not_passive",
+      "mean": 0.068105,
+      "sd": 0.111181,
+      "weight": -0.592852
+    },
+    {
+      "name": "construction.passive_actor_named",
+      "mean": 0.068168,
+      "sd": 0.175547,
+      "weight": 0.727057
+    },
+    {
+      "name": "construction.passive_actor_unnamed",
+      "mean": 0.795542,
+      "sd": 0.241462,
+      "weight": -0.15408
+    },
+    {
+      "name": "construction.state_or_adjective",
+      "mean": 0.068065,
+      "sd": 0.133976,
+      "weight": -0.150071
+    },
+    {
+      "name": "google_voice.actor_irrelevant",
+      "mean": 0.616313,
+      "sd": 0.213449,
+      "weight": 0.138093
+    },
+    {
+      "name": "google_voice.emphasizes_object",
+      "mean": 0.284207,
+      "sd": 0.221472,
+      "weight": -0.264732
+    },
+    {
+      "name": "google_voice.hides_actor",
+      "mean": 0.090354,
+      "sd": 0.070518,
+      "weight": 0.368048
+    },
+    {
+      "name": "google_voice.unclear",
+      "mean": 0.00895,
+      "sd": 0.018728,
+      "weight": 0.129648
+    },
+    {
+      "name": "hidden_actor_pointer",
+      "mean": 0.116986,
+      "sd": 0.062813,
+      "weight": 0.185929
+    },
+    {
+      "name": "hidden_stance_holder",
+      "mean": 0.132272,
+      "sd": 0.174554,
+      "weight": 0.029174
+    },
+    {
+      "name": "instruction_nearby",
+      "mean": 0.204966,
+      "sd": 0.205242,
+      "weight": -0.376525
+    },
+    {
+      "name": "microsoft_rubric.awkward_active",
+      "mean": 0.131307,
+      "sd": 0.128349,
+      "weight": -0.354433
+    },
+    {
+      "name": "microsoft_rubric.hidden_stance",
+      "mean": 0.021182,
+      "sd": 0.127256,
+      "weight": 0.590099
+    },
+    {
+      "name": "microsoft_rubric.hidden_work",
+      "mean": 0.031792,
+      "sd": 0.089758,
+      "weight": 0.293235
+    },
+    {
+      "name": "microsoft_rubric.named_performer",
+      "mean": 0.066963,
+      "sd": 0.170297,
+      "weight": 0.343214
+    },
+    {
+      "name": "microsoft_rubric.not_passive",
+      "mean": 0.213813,
+      "sd": 0.269527,
+      "weight": -0.006204
+    },
+    {
+      "name": "microsoft_rubric.other_violation",
+      "mean": 0.010953,
+      "sd": 0.012054,
+      "weight": 0.349792
+    },
+    {
+      "name": "microsoft_rubric.reader_blamed",
+      "mean": 0.015719,
+      "sd": 0.081974,
+      "weight": -0.116753
+    },
+    {
+      "name": "microsoft_rubric.reader_performs",
+      "mean": 0.06597,
+      "sd": 0.183811,
+      "weight": -0.147145
+    },
+    {
+      "name": "microsoft_rubric.receiver_emphasis",
+      "mean": 0.441684,
+      "sd": 0.292248,
+      "weight": -0.305173
+    },
+    {
+      "name": "microsoft_voice.avoids_awkward",
+      "mean": 0.119315,
+      "sd": 0.070349,
+      "weight": -0.175012
+    },
+    {
+      "name": "microsoft_voice.avoids_blame",
+      "mean": 0.018265,
+      "sd": 0.071302,
+      "weight": -0.514191
+    },
+    {
+      "name": "microsoft_voice.no_action",
+      "mean": 0.157854,
+      "sd": 0.215412,
+      "weight": -0.207666
+    },
+    {
+      "name": "microsoft_voice.receiver_emphasis",
+      "mean": 0.53528,
+      "sd": 0.21879,
+      "weight": -0.047413
+    },
+    {
+      "name": "microsoft_voice.violation",
+      "mean": 0.169098,
+      "sd": 0.118051,
+      "weight": 0.860668
+    },
+    {
+      "name": "passage_kind.caller_contract",
+      "mean": 0.133253,
+      "sd": 0.196902,
+      "weight": 0.394349
+    },
+    {
+      "name": "passage_kind.definition_or_rule",
+      "mean": 0.210297,
+      "sd": 0.275177,
+      "weight": -0.187382
+    },
+    {
+      "name": "passage_kind.opinion_or_advice",
+      "mean": 0.043562,
+      "sd": 0.174293,
+      "weight": 0.133417
+    },
+    {
+      "name": "passage_kind.problem_or_fix",
+      "mean": 0.08125,
+      "sd": 0.222025,
+      "weight": 0.465445
+    },
+    {
+      "name": "passage_kind.reader_step",
+      "mean": 0.087557,
+      "sd": 0.21249,
+      "weight": 0.038875
+    },
+    {
+      "name": "passage_kind.system_behavior",
+      "mean": 0.443864,
+      "sd": 0.352182,
+      "weight": -0.442024
+    },
+    {
+      "name": "problem_followup",
+      "mean": 0.159172,
+      "sd": 0.242047,
+      "weight": -0.380321
+    },
+    {
+      "name": "process_chain",
+      "mean": 0.379304,
+      "sd": 0.223686,
+      "weight": 0.190613
+    },
+    {
+      "name": "reader_controls",
+      "mean": 0.300531,
+      "sd": 0.270286,
+      "weight": 0.24492
+    },
+    {
+      "name": "reader_could_act",
+      "mean": 0.270108,
+      "sd": 0.205438,
+      "weight": 0.074339
+    },
+    {
+      "name": "reader_is_actor",
+      "mean": 0.252763,
+      "sd": 0.228164,
+      "weight": 0.828156
+    },
+    {
+      "name": "reader_unsure",
+      "mean": 0.317203,
+      "sd": 0.145824,
+      "weight": 0.124031
+    },
+    {
+      "name": "responsibility_needed",
+      "mean": 0.268584,
+      "sd": 0.107085,
+      "weight": -0.225362
+    },
+    {
+      "name": "result_report",
+      "mean": 0.653664,
+      "sd": 0.226877,
+      "weight": -0.507218
+    },
+    {
+      "name": "subject_is_topic",
+      "mean": 0.484852,
+      "sd": 0.188067,
+      "weight": -0.294692
+    },
+    {
+      "name": "trigger_named",
+      "mean": 0.368219,
+      "sd": 0.23705,
+      "weight": 0.368314
+    }
+  ],
+  "bias": -0.54122
+}

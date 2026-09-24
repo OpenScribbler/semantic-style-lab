@@ -35,8 +35,8 @@ but an external, permission-restricted file is safer.
 ## Run the shareable CLI
 
 The portable shadow-mode command scans one or more configured documentation
-repositories with a deliberately fixed research rule set. Copy the example and
-edit repository paths and Markdown/MDX globs:
+repositories with a small research rule set. Copy the example and edit
+repository paths and Markdown/MDX globs:
 
 ```bash
 cp style-lab.config.example.json style-lab.config.json
@@ -53,6 +53,29 @@ sampling. The CLI enumerates Vale candidates across the eligible corpus before
 Jev runs, selects files that cover each available fixed rule, and records both
 available and selected counts. This avoids accidentally measuring hundreds of
 passive candidates while leaving a rarer rule untested.
+
+### Choose rules and passive triage
+
+`rules` lists the rules to run. It defaults to all 5: `command-line`,
+`real-time`, `setup`, `google-semicolons`, and `google-passive-hidden-actor`.
+
+`passive` sets how the CLI handles passive voice findings:
+
+| Key | Values | Effect |
+|---|---|---|
+| `mode` | `review` (default) | Every passive finding goes to review, and Jev is not called for it. |
+| | `rank` | Jev answers the guide's single-fact questions 3 times per finding. A logistic model turns the answers into a violation probability, and the report lists passive findings from most to least likely. Every passive finding still goes to review. |
+| `guide` | `google`, `microsoft`, `redhat` | The guide whose model ranks the findings. Required for `rank`. |
+
+Rank mode never suppresses, because no passive gate met the pass thresholds on
+unseen pages. It helps you choose where to start reviewing. On the held-out
+Kubernetes set, the top half of the Red Hat queue held 29 of 30 violations, and
+the top half of the Microsoft queue held 65 of 79. The Google model has weaker
+backing: it was trained on Kubernetes pages alone and never scored on unseen
+pages. Rank mode costs about 75 Jev calls per passive finding.
+
+The models live in `policies/passive-<guide>.json`, and
+`experiments/passive/export_weights.py` rebuilds them from the lab data.
 
 The [passive voice experiment](docs/passive-voice-experiment.md) records why
 per-guide passive gates missed the zero-miss threshold on unseen Kubernetes pages,

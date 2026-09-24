@@ -1,0 +1,2348 @@
+{
+ "microsoft": [
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/concepts/overview/working-with-objects/common-labels.md:109:Lab.PassiveHiddenActor:41",
+   "runs": [
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "unidentified": 0.17,
+      "identifiable_component": 0.33,
+      "no_action": 0.48,
+      "irrelevant": 0.01,
+      "reader": 0.01
+     },
+     "actor_in_passage": 0.18,
+     "actor_kind": {
+      "no_action": 0.57,
+      "other_person": 0.03,
+      "reader": 0.02,
+      "software": 0.38
+     },
+     "actor_needed": 0.25,
+     "actor_referenced": 0.14,
+     "automatic_no_owner": 0.18,
+     "blame_avoided": 0.03,
+     "construction": {
+      "passive_actor_unnamed": 0.76,
+      "not_passive": 0.07,
+      "passive_actor_named": 0.08,
+      "state_or_adjective": 0.09
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.55,
+      "unclear": 0.01,
+      "hides_actor": 0.04,
+      "emphasizes_object": 0.39
+     },
+     "hidden_actor_pointer": 0.1,
+     "hidden_stance_holder": 0.21,
+     "instruction_nearby": 0.06,
+     "microsoft_rubric": {
+      "named_performer": 0,
+      "reader_blamed": 0,
+      "reader_performs": 0,
+      "receiver_emphasis": 0.34,
+      "hidden_work": 0.01,
+      "not_passive": 0.58,
+      "other_violation": 0.01,
+      "hidden_stance": 0,
+      "awkward_active": 0.06
+     },
+     "microsoft_voice": {
+      "violation": 0.16,
+      "avoids_blame": 0,
+      "avoids_awkward": 0.14,
+      "receiver_emphasis": 0.59,
+      "no_action": 0.11
+     },
+     "passage_kind": {
+      "definition_or_rule": 0.24,
+      "opinion_or_advice": 0,
+      "reader_step": 0.01,
+      "caller_contract": 0.5,
+      "system_behavior": 0.25,
+      "problem_or_fix": 0
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.11,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.2,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.35,
+     "responsibility_needed": 0.21,
+     "result_report": 0.68,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.08
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "reader": 0.01,
+      "irrelevant": 0.03,
+      "unidentified": 0.19,
+      "identifiable_component": 0.34,
+      "no_action": 0.43
+     },
+     "actor_in_passage": 0.21,
+     "actor_kind": {
+      "software": 0.38,
+      "no_action": 0.57,
+      "reader": 0.02,
+      "other_person": 0.03
+     },
+     "actor_needed": 0.24,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.17,
+     "blame_avoided": 0.03,
+     "construction": {
+      "state_or_adjective": 0.1,
+      "passive_actor_named": 0.1,
+      "passive_actor_unnamed": 0.71,
+      "not_passive": 0.09
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.58,
+      "emphasizes_object": 0.37,
+      "unclear": 0.01,
+      "hides_actor": 0.04
+     },
+     "hidden_actor_pointer": 0.12,
+     "hidden_stance_holder": 0.22,
+     "instruction_nearby": 0.06,
+     "microsoft_rubric": {
+      "hidden_stance": 0,
+      "reader_performs": 0,
+      "reader_blamed": 0,
+      "receiver_emphasis": 0.32,
+      "hidden_work": 0,
+      "awkward_active": 0.06,
+      "named_performer": 0,
+      "not_passive": 0.6,
+      "other_violation": 0.02
+     },
+     "microsoft_voice": {
+      "violation": 0.17,
+      "avoids_blame": 0,
+      "receiver_emphasis": 0.56,
+      "no_action": 0.12,
+      "avoids_awkward": 0.15
+     },
+     "passage_kind": {
+      "definition_or_rule": 0.22,
+      "opinion_or_advice": 0,
+      "caller_contract": 0.52,
+      "reader_step": 0.01,
+      "system_behavior": 0.25,
+      "problem_or_fix": 0
+     },
+     "problem_followup": 0.05,
+     "process_chain": 0.12,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.21,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.35,
+     "responsibility_needed": 0.21,
+     "result_report": 0.7,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.08
+    },
+    {
+     "active_subject_available": 0.54,
+     "actor_identity": {
+      "irrelevant": 0.02,
+      "unidentified": 0.19,
+      "no_action": 0.43,
+      "reader": 0.01,
+      "identifiable_component": 0.35
+     },
+     "actor_in_passage": 0.17,
+     "actor_kind": {
+      "other_person": 0.04,
+      "reader": 0.02,
+      "no_action": 0.53,
+      "software": 0.41
+     },
+     "actor_needed": 0.25,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.17,
+     "blame_avoided": 0.03,
+     "construction": {
+      "passive_actor_unnamed": 0.6799999999999999,
+      "passive_actor_named": 0.19,
+      "state_or_adjective": 0.08,
+      "not_passive": 0.05
+     },
+     "google_voice": {
+      "unclear": 0.02,
+      "actor_irrelevant": 0.56,
+      "emphasizes_object": 0.37,
+      "hides_actor": 0.05
+     },
+     "hidden_actor_pointer": 0.11,
+     "hidden_stance_holder": 0.21,
+     "instruction_nearby": 0.06,
+     "microsoft_rubric": {
+      "hidden_stance": 0,
+      "reader_performs": 0,
+      "reader_blamed": 0,
+      "receiver_emphasis": 0.37,
+      "not_passive": 0.54,
+      "awkward_active": 0.06,
+      "named_performer": 0,
+      "hidden_work": 0.01,
+      "other_violation": 0.02
+     },
+     "microsoft_voice": {
+      "avoids_awkward": 0.14,
+      "receiver_emphasis": 0.54,
+      "violation": 0.19,
+      "avoids_blame": 0,
+      "no_action": 0.13
+     },
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.51,
+      "reader_step": 0.01,
+      "system_behavior": 0.26,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.22
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.12,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.18,
+     "reader_is_actor": 0.23,
+     "reader_unsure": 0.39,
+     "responsibility_needed": 0.21,
+     "result_report": 0.68,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.07
+    }
+   ],
+   "expected": 0.562423
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/concepts/workloads/pods/pod-qos.md:222:Lab.PassiveHiddenActor:17",
+   "runs": [
+    {
+     "active_subject_available": 0.44,
+     "actor_identity": {
+      "identifiable_component": 0.2,
+      "no_action": 0.14,
+      "irrelevant": 0.01,
+      "reader": 0,
+      "unidentified": 0.65
+     },
+     "actor_in_passage": 0.12,
+     "actor_kind": {
+      "no_action": 0.24,
+      "other_person": 0.01,
+      "reader": 0,
+      "software": 0.75
+     },
+     "actor_needed": 0.3,
+     "actor_referenced": 0.06,
+     "automatic_no_owner": 0.71,
+     "blame_avoided": 0.04,
+     "construction": {
+      "not_passive": 0,
+      "passive_actor_unnamed": 0.97,
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.03
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.85,
+      "emphasizes_object": 0.11,
+      "unclear": 0,
+      "hides_actor": 0.04
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.12,
+     "instruction_nearby": 0.09,
+     "microsoft_rubric": {
+      "named_performer": 0.01,
+      "receiver_emphasis": 0.5,
+      "hidden_stance": 0,
+      "hidden_work": 0.02,
+      "other_violation": 0.01,
+      "not_passive": 0.39,
+      "reader_performs": 0,
+      "reader_blamed": 0,
+      "awkward_active": 0.07
+     },
+     "microsoft_voice": {
+      "avoids_blame": 0,
+      "violation": 0.09,
+      "no_action": 0.04,
+      "avoids_awkward": 0.05,
+      "receiver_emphasis": 0.82
+     },
+     "passage_kind": {
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0,
+      "caller_contract": 0,
+      "reader_step": 0,
+      "system_behavior": 0.38,
+      "definition_or_rule": 0.62
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.15,
+     "reader_could_act": 0.09,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.22,
+     "responsibility_needed": 0.23,
+     "result_report": 0.87,
+     "subject_is_topic": 0.74,
+     "trigger_named": 0.54
+    },
+    {
+     "active_subject_available": 0.46,
+     "actor_identity": {
+      "irrelevant": 0.01,
+      "unidentified": 0.6900000000000001,
+      "reader": 0,
+      "no_action": 0.12,
+      "identifiable_component": 0.18
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0.01,
+      "reader": 0,
+      "no_action": 0.24,
+      "software": 0.75
+     },
+     "actor_needed": 0.32,
+     "actor_referenced": 0.07,
+     "automatic_no_owner": 0.68,
+     "blame_avoided": 0.04,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.98,
+      "state_or_adjective": 0.02,
+      "not_passive": 0
+     },
+     "google_voice": {
+      "hides_actor": 0.03,
+      "emphasizes_object": 0.13,
+      "actor_irrelevant": 0.84,
+      "unclear": 0
+     },
+     "hidden_actor_pointer": 0.06,
+     "hidden_stance_holder": 0.11,
+     "instruction_nearby": 0.09,
+     "microsoft_rubric": {
+      "not_passive": 0.42,
+      "hidden_work": 0.02,
+      "hidden_stance": 0,
+      "receiver_emphasis": 0.45999999999999996,
+      "named_performer": 0.01,
+      "other_violation": 0.01,
+      "reader_performs": 0,
+      "reader_blamed": 0,
+      "awkward_active": 0.08
+     },
+     "microsoft_voice": {
+      "avoids_blame": 0,
+      "violation": 0.07,
+      "receiver_emphasis": 0.84,
+      "avoids_awkward": 0.05,
+      "no_action": 0.04
+     },
+     "passage_kind": {
+      "reader_step": 0,
+      "system_behavior": 0.38,
+      "caller_contract": 0.01,
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0,
+      "definition_or_rule": 0.61
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.14,
+     "reader_could_act": 0.1,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.24,
+     "responsibility_needed": 0.26,
+     "result_report": 0.86,
+     "subject_is_topic": 0.72,
+     "trigger_named": 0.64
+    },
+    {
+     "active_subject_available": 0.46,
+     "actor_identity": {
+      "unidentified": 0.65,
+      "no_action": 0.14,
+      "identifiable_component": 0.19,
+      "irrelevant": 0.02,
+      "reader": 0
+     },
+     "actor_in_passage": 0.12,
+     "actor_kind": {
+      "software": 0.76,
+      "no_action": 0.23,
+      "other_person": 0.01,
+      "reader": 0
+     },
+     "actor_needed": 0.33,
+     "actor_referenced": 0.07,
+     "automatic_no_owner": 0.69,
+     "blame_avoided": 0.04,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.98,
+      "state_or_adjective": 0.02,
+      "not_passive": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.85,
+      "hides_actor": 0.04,
+      "unclear": 0,
+      "emphasizes_object": 0.11
+     },
+     "hidden_actor_pointer": 0.06,
+     "hidden_stance_holder": 0.12,
+     "instruction_nearby": 0.11,
+     "microsoft_rubric": {
+      "hidden_stance": 0,
+      "reader_performs": 0,
+      "reader_blamed": 0,
+      "receiver_emphasis": 0.45,
+      "not_passive": 0.45,
+      "awkward_active": 0.05,
+      "named_performer": 0.01,
+      "hidden_work": 0.03,
+      "other_violation": 0.01
+     },
+     "microsoft_voice": {
+      "violation": 0.08,
+      "receiver_emphasis": 0.84,
+      "avoids_blame": 0,
+      "no_action": 0.04,
+      "avoids_awkward": 0.04
+     },
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.61,
+      "caller_contract": 0,
+      "system_behavior": 0.39,
+      "reader_step": 0
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.15,
+     "reader_could_act": 0.1,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.22,
+     "responsibility_needed": 0.22,
+     "result_report": 0.87,
+     "subject_is_topic": 0.76,
+     "trigger_named": 0.56
+    }
+   ],
+   "expected": 0.007577
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/tasks/administer-cluster/kms-provider.md:66:Lab.PassiveHiddenActor:38",
+   "runs": [
+    {
+     "active_subject_available": 0.57,
+     "actor_identity": {
+      "irrelevant": 0.01,
+      "identifiable_component": 0.28,
+      "reader": 0,
+      "no_action": 0.04,
+      "unidentified": 0.66
+     },
+     "actor_in_passage": 0.29,
+     "actor_kind": {
+      "reader": 0,
+      "no_action": 0.14,
+      "other_person": 0.52,
+      "software": 0.34
+     },
+     "actor_needed": 0.38,
+     "actor_referenced": 0.16,
+     "automatic_no_owner": 0.34,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.93,
+      "state_or_adjective": 0.02,
+      "not_passive": 0.05
+     },
+     "google_voice": {
+      "hides_actor": 0.19,
+      "actor_irrelevant": 0.54,
+      "emphasizes_object": 0.26,
+      "unclear": 0.01
+     },
+     "hidden_actor_pointer": 0.14,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.08,
+     "microsoft_rubric": {
+      "reader_blamed": 0,
+      "hidden_stance": 0,
+      "reader_performs": 0,
+      "hidden_work": 0.08,
+      "other_violation": 0.01,
+      "awkward_active": 0.18,
+      "named_performer": 0.03,
+      "not_passive": 0.14,
+      "receiver_emphasis": 0.56
+     },
+     "microsoft_voice": {
+      "avoids_blame": 0,
+      "avoids_awkward": 0.12,
+      "receiver_emphasis": 0.57,
+      "violation": 0.27,
+      "no_action": 0.04
+     },
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.03,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.07,
+      "system_behavior": 0.87,
+      "reader_step": 0.03
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.6,
+     "reader_controls": 0.24,
+     "reader_could_act": 0.34,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.68,
+     "responsibility_needed": 0.39,
+     "result_report": 0.4,
+     "subject_is_topic": 0.27,
+     "trigger_named": 0.64
+    },
+    {
+     "active_subject_available": 0.56,
+     "actor_identity": {
+      "unidentified": 0.58,
+      "identifiable_component": 0.33,
+      "no_action": 0.08,
+      "reader": 0,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.24,
+     "actor_kind": {
+      "other_person": 0.45,
+      "no_action": 0.15,
+      "software": 0.4,
+      "reader": 0
+     },
+     "actor_needed": 0.38,
+     "actor_referenced": 0.16,
+     "automatic_no_owner": 0.31,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.02,
+      "passive_actor_unnamed": 0.92,
+      "not_passive": 0.06
+     },
+     "google_voice": {
+      "unclear": 0.01,
+      "hides_actor": 0.19,
+      "actor_irrelevant": 0.52,
+      "emphasizes_object": 0.28
+     },
+     "hidden_actor_pointer": 0.15,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.07,
+     "microsoft_rubric": {
+      "not_passive": 0.1,
+      "hidden_work": 0.12,
+      "hidden_stance": 0,
+      "receiver_emphasis": 0.54,
+      "named_performer": 0.03,
+      "other_violation": 0.01,
+      "reader_performs": 0,
+      "reader_blamed": 0,
+      "awkward_active": 0.2
+     },
+     "microsoft_voice": {
+      "violation": 0.28,
+      "avoids_blame": 0,
+      "avoids_awkward": 0.14,
+      "receiver_emphasis": 0.53,
+      "no_action": 0.05
+     },
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "definition_or_rule": 0.07,
+      "reader_step": 0.01,
+      "caller_contract": 0.02,
+      "system_behavior": 0.9,
+      "opinion_or_advice": 0
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.62,
+     "reader_controls": 0.21,
+     "reader_could_act": 0.35,
+     "reader_is_actor": 0.2,
+     "reader_unsure": 0.67,
+     "responsibility_needed": 0.39,
+     "result_report": 0.37,
+     "subject_is_topic": 0.26,
+     "trigger_named": 0.61
+    },
+    {
+     "active_subject_available": 0.57,
+     "actor_identity": {
+      "reader": 0,
+      "identifiable_component": 0.35,
+      "unidentified": 0.56,
+      "irrelevant": 0.01,
+      "no_action": 0.08
+     },
+     "actor_in_passage": 0.26,
+     "actor_kind": {
+      "no_action": 0.16,
+      "software": 0.4,
+      "other_person": 0.44,
+      "reader": 0
+     },
+     "actor_needed": 0.4,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.31,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.02,
+      "not_passive": 0.05,
+      "passive_actor_unnamed": 0.93
+     },
+     "google_voice": {
+      "emphasizes_object": 0.22,
+      "hides_actor": 0.2,
+      "actor_irrelevant": 0.57,
+      "unclear": 0.01
+     },
+     "hidden_actor_pointer": 0.14,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.09,
+     "microsoft_rubric": {
+      "named_performer": 0.02,
+      "receiver_emphasis": 0.62,
+      "hidden_work": 0.07,
+      "hidden_stance": 0,
+      "other_violation": 0.01,
+      "reader_blamed": 0,
+      "reader_performs": 0.01,
+      "not_passive": 0.09,
+      "awkward_active": 0.18
+     },
+     "microsoft_voice": {
+      "receiver_emphasis": 0.55,
+      "violation": 0.28,
+      "avoids_blame": 0,
+      "no_action": 0.04,
+      "avoids_awkward": 0.13
+     },
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.02,
+      "system_behavior": 0.88,
+      "reader_step": 0.03,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.07
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.6,
+     "reader_controls": 0.23,
+     "reader_could_act": 0.37,
+     "reader_is_actor": 0.2,
+     "reader_unsure": 0.7,
+     "responsibility_needed": 0.42,
+     "result_report": 0.38,
+     "subject_is_topic": 0.27,
+     "trigger_named": 0.69
+    }
+   ],
+   "expected": 0.6373
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md:1046:Lab.PassiveHiddenActor:70",
+   "runs": [
+    {
+     "active_subject_available": 0.48,
+     "actor_identity": {
+      "reader": 0,
+      "no_action": 0.16,
+      "unidentified": 0.54,
+      "identifiable_component": 0.29,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0.01,
+      "software": 0.84,
+      "reader": 0.01,
+      "no_action": 0.14
+     },
+     "actor_needed": 0.21,
+     "actor_referenced": 0.1,
+     "automatic_no_owner": 0.29,
+     "blame_avoided": 0.07,
+     "construction": {
+      "state_or_adjective": 0.05,
+      "not_passive": 0.12,
+      "passive_actor_unnamed": 0.83,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.78,
+      "emphasizes_object": 0.1,
+      "unclear": 0.04,
+      "hides_actor": 0.08
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.09,
+     "instruction_nearby": 0.21,
+     "microsoft_rubric": {
+      "named_performer": 0,
+      "receiver_emphasis": 0.47,
+      "hidden_work": 0,
+      "hidden_stance": 0.01,
+      "other_violation": 0.02,
+      "not_passive": 0.1,
+      "reader_performs": 0.26,
+      "reader_blamed": 0,
+      "awkward_active": 0.14
+     },
+     "microsoft_voice": {
+      "avoids_blame": 0.01,
+      "violation": 0.06,
+      "avoids_awkward": 0.18,
+      "receiver_emphasis": 0.42,
+      "no_action": 0.33
+     },
+     "passage_kind": {
+      "caller_contract": 0.4,
+      "system_behavior": 0.18,
+      "problem_or_fix": 0,
+      "opinion_or_advice": 0,
+      "reader_step": 0.01,
+      "definition_or_rule": 0.41
+     },
+     "problem_followup": 0.12,
+     "process_chain": 0.16,
+     "reader_controls": 0.22,
+     "reader_could_act": 0.57,
+     "reader_is_actor": 0.37,
+     "reader_unsure": 0.59,
+     "responsibility_needed": 0.12,
+     "result_report": 0.48,
+     "subject_is_topic": 0.52,
+     "trigger_named": 0.47
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "identifiable_component": 0.23,
+      "unidentified": 0.54,
+      "reader": 0,
+      "no_action": 0.22,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.15,
+     "actor_kind": {
+      "software": 0.87,
+      "other_person": 0,
+      "no_action": 0.12,
+      "reader": 0.01
+     },
+     "actor_needed": 0.23,
+     "actor_referenced": 0.1,
+     "automatic_no_owner": 0.32,
+     "blame_avoided": 0.06,
+     "construction": {
+      "passive_actor_unnamed": 0.83,
+      "not_passive": 0.11,
+      "state_or_adjective": 0.06,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "hides_actor": 0.08,
+      "actor_irrelevant": 0.72,
+      "emphasizes_object": 0.14,
+      "unclear": 0.06
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.09,
+     "instruction_nearby": 0.21,
+     "microsoft_rubric": {
+      "reader_performs": 0.24,
+      "named_performer": 0,
+      "other_violation": 0.02,
+      "awkward_active": 0.15,
+      "hidden_stance": 0.01,
+      "receiver_emphasis": 0.45,
+      "hidden_work": 0,
+      "reader_blamed": 0,
+      "not_passive": 0.13
+     },
+     "microsoft_voice": {
+      "violation": 0.08,
+      "avoids_blame": 0.01,
+      "receiver_emphasis": 0.34,
+      "no_action": 0.42,
+      "avoids_awkward": 0.15
+     },
+     "passage_kind": {
+      "system_behavior": 0.18,
+      "reader_step": 0.01,
+      "caller_contract": 0.38,
+      "definition_or_rule": 0.42,
+      "problem_or_fix": 0.01,
+      "opinion_or_advice": 0
+     },
+     "problem_followup": 0.11,
+     "process_chain": 0.16,
+     "reader_controls": 0.18,
+     "reader_could_act": 0.56,
+     "reader_is_actor": 0.36,
+     "reader_unsure": 0.58,
+     "responsibility_needed": 0.13,
+     "result_report": 0.54,
+     "subject_is_topic": 0.47,
+     "trigger_named": 0.49
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "identifiable_component": 0.27,
+      "reader": 0,
+      "unidentified": 0.51,
+      "irrelevant": 0.01,
+      "no_action": 0.21
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0,
+      "software": 0.8,
+      "no_action": 0.19,
+      "reader": 0.01
+     },
+     "actor_needed": 0.22,
+     "actor_referenced": 0.09,
+     "automatic_no_owner": 0.34,
+     "blame_avoided": 0.07,
+     "construction": {
+      "state_or_adjective": 0.06,
+      "not_passive": 0.13,
+      "passive_actor_unnamed": 0.81,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.73,
+      "hides_actor": 0.09,
+      "unclear": 0.05,
+      "emphasizes_object": 0.13
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.1,
+     "instruction_nearby": 0.19,
+     "microsoft_rubric": {
+      "receiver_emphasis": 0.52,
+      "named_performer": 0,
+      "awkward_active": 0.16,
+      "hidden_work": 0,
+      "reader_performs": 0.19,
+      "reader_blamed": 0,
+      "hidden_stance": 0,
+      "other_violation": 0.02,
+      "not_passive": 0.11
+     },
+     "microsoft_voice": {
+      "avoids_blame": 0.01,
+      "avoids_awkward": 0.15,
+      "receiver_emphasis": 0.34,
+      "violation": 0.06,
+      "no_action": 0.44
+     },
+     "passage_kind": {
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0.01,
+      "caller_contract": 0.39,
+      "reader_step": 0.01,
+      "system_behavior": 0.17,
+      "definition_or_rule": 0.42
+     },
+     "problem_followup": 0.14,
+     "process_chain": 0.15,
+     "reader_controls": 0.25,
+     "reader_could_act": 0.56,
+     "reader_is_actor": 0.41,
+     "reader_unsure": 0.62,
+     "responsibility_needed": 0.13,
+     "result_report": 0.54,
+     "subject_is_topic": 0.49,
+     "trigger_named": 0.54
+    }
+   ],
+   "expected": 0.290211
+  }
+ ],
+ "redhat": [
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/concepts/overview/working-with-objects/common-labels.md:109:Lab.PassiveHiddenActor:41",
+   "runs": [
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "unidentified": 0.17,
+      "identifiable_component": 0.33,
+      "no_action": 0.48,
+      "irrelevant": 0.01,
+      "reader": 0.01
+     },
+     "actor_in_passage": 0.18,
+     "actor_kind": {
+      "no_action": 0.57,
+      "other_person": 0.03,
+      "reader": 0.02,
+      "software": 0.38
+     },
+     "actor_needed": 0.25,
+     "actor_referenced": 0.14,
+     "automatic_no_owner": 0.18,
+     "blame_avoided": 0.03,
+     "construction": {
+      "passive_actor_unnamed": 0.76,
+      "not_passive": 0.07,
+      "passive_actor_named": 0.08,
+      "state_or_adjective": 0.09
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.55,
+      "unclear": 0.01,
+      "hides_actor": 0.04,
+      "emphasizes_object": 0.39
+     },
+     "hidden_actor_pointer": 0.1,
+     "hidden_stance_holder": 0.21,
+     "instruction_nearby": 0.06,
+     "passage_kind": {
+      "definition_or_rule": 0.24,
+      "opinion_or_advice": 0,
+      "reader_step": 0.01,
+      "caller_contract": 0.5,
+      "system_behavior": 0.25,
+      "problem_or_fix": 0
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.11,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.2,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.35,
+     "redhat_voice": {
+      "violation": 0.1,
+      "receiver_focus": 0.1,
+      "prerequisite": 0.02,
+      "no_action": 0.37,
+      "clearer_passive": 0.23,
+      "avoids_blame": 0,
+      "system_action": 0.18
+     },
+     "responsibility_needed": 0.21,
+     "result_report": 0.68,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.08
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "reader": 0.01,
+      "irrelevant": 0.03,
+      "unidentified": 0.19,
+      "identifiable_component": 0.34,
+      "no_action": 0.43
+     },
+     "actor_in_passage": 0.21,
+     "actor_kind": {
+      "software": 0.38,
+      "no_action": 0.57,
+      "reader": 0.02,
+      "other_person": 0.03
+     },
+     "actor_needed": 0.24,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.17,
+     "blame_avoided": 0.03,
+     "construction": {
+      "state_or_adjective": 0.1,
+      "passive_actor_named": 0.1,
+      "passive_actor_unnamed": 0.71,
+      "not_passive": 0.09
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.58,
+      "emphasizes_object": 0.37,
+      "unclear": 0.01,
+      "hides_actor": 0.04
+     },
+     "hidden_actor_pointer": 0.12,
+     "hidden_stance_holder": 0.22,
+     "instruction_nearby": 0.06,
+     "passage_kind": {
+      "definition_or_rule": 0.22,
+      "opinion_or_advice": 0,
+      "caller_contract": 0.52,
+      "reader_step": 0.01,
+      "system_behavior": 0.25,
+      "problem_or_fix": 0
+     },
+     "problem_followup": 0.05,
+     "process_chain": 0.12,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.21,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.35,
+     "redhat_voice": {
+      "avoids_blame": 0,
+      "receiver_focus": 0.11,
+      "prerequisite": 0.02,
+      "clearer_passive": 0.25,
+      "violation": 0.1,
+      "no_action": 0.34,
+      "system_action": 0.18
+     },
+     "responsibility_needed": 0.21,
+     "result_report": 0.7,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.08
+    },
+    {
+     "active_subject_available": 0.54,
+     "actor_identity": {
+      "irrelevant": 0.02,
+      "unidentified": 0.19,
+      "no_action": 0.43,
+      "reader": 0.01,
+      "identifiable_component": 0.35
+     },
+     "actor_in_passage": 0.17,
+     "actor_kind": {
+      "other_person": 0.04,
+      "reader": 0.02,
+      "no_action": 0.53,
+      "software": 0.41
+     },
+     "actor_needed": 0.25,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.17,
+     "blame_avoided": 0.03,
+     "construction": {
+      "passive_actor_unnamed": 0.6799999999999999,
+      "passive_actor_named": 0.19,
+      "state_or_adjective": 0.08,
+      "not_passive": 0.05
+     },
+     "google_voice": {
+      "unclear": 0.02,
+      "actor_irrelevant": 0.56,
+      "emphasizes_object": 0.37,
+      "hides_actor": 0.05
+     },
+     "hidden_actor_pointer": 0.11,
+     "hidden_stance_holder": 0.21,
+     "instruction_nearby": 0.06,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.51,
+      "reader_step": 0.01,
+      "system_behavior": 0.26,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.22
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.12,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.18,
+     "reader_is_actor": 0.23,
+     "reader_unsure": 0.39,
+     "redhat_voice": {
+      "clearer_passive": 0.25,
+      "receiver_focus": 0.11,
+      "system_action": 0.19,
+      "no_action": 0.33,
+      "prerequisite": 0.02,
+      "avoids_blame": 0,
+      "violation": 0.1
+     },
+     "responsibility_needed": 0.21,
+     "result_report": 0.68,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.07
+    }
+   ],
+   "expected": 0.039045
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/concepts/workloads/pods/pod-qos.md:222:Lab.PassiveHiddenActor:17",
+   "runs": [
+    {
+     "active_subject_available": 0.44,
+     "actor_identity": {
+      "identifiable_component": 0.2,
+      "no_action": 0.14,
+      "irrelevant": 0.01,
+      "reader": 0,
+      "unidentified": 0.65
+     },
+     "actor_in_passage": 0.12,
+     "actor_kind": {
+      "no_action": 0.24,
+      "other_person": 0.01,
+      "reader": 0,
+      "software": 0.75
+     },
+     "actor_needed": 0.3,
+     "actor_referenced": 0.06,
+     "automatic_no_owner": 0.71,
+     "blame_avoided": 0.04,
+     "construction": {
+      "not_passive": 0,
+      "passive_actor_unnamed": 0.97,
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.03
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.85,
+      "emphasizes_object": 0.11,
+      "unclear": 0,
+      "hides_actor": 0.04
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.12,
+     "instruction_nearby": 0.09,
+     "passage_kind": {
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0,
+      "caller_contract": 0,
+      "reader_step": 0,
+      "system_behavior": 0.38,
+      "definition_or_rule": 0.62
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.15,
+     "reader_could_act": 0.09,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.22,
+     "redhat_voice": {
+      "avoids_blame": 0,
+      "receiver_focus": 0.15,
+      "prerequisite": 0.05,
+      "no_action": 0.04,
+      "clearer_passive": 0.09,
+      "violation": 0.04,
+      "system_action": 0.63
+     },
+     "responsibility_needed": 0.23,
+     "result_report": 0.87,
+     "subject_is_topic": 0.74,
+     "trigger_named": 0.54
+    },
+    {
+     "active_subject_available": 0.46,
+     "actor_identity": {
+      "irrelevant": 0.01,
+      "unidentified": 0.6900000000000001,
+      "reader": 0,
+      "no_action": 0.12,
+      "identifiable_component": 0.18
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0.01,
+      "reader": 0,
+      "no_action": 0.24,
+      "software": 0.75
+     },
+     "actor_needed": 0.32,
+     "actor_referenced": 0.07,
+     "automatic_no_owner": 0.68,
+     "blame_avoided": 0.04,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.98,
+      "state_or_adjective": 0.02,
+      "not_passive": 0
+     },
+     "google_voice": {
+      "hides_actor": 0.03,
+      "emphasizes_object": 0.13,
+      "actor_irrelevant": 0.84,
+      "unclear": 0
+     },
+     "hidden_actor_pointer": 0.06,
+     "hidden_stance_holder": 0.11,
+     "instruction_nearby": 0.09,
+     "passage_kind": {
+      "reader_step": 0,
+      "system_behavior": 0.38,
+      "caller_contract": 0.01,
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0,
+      "definition_or_rule": 0.61
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.14,
+     "reader_could_act": 0.1,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.24,
+     "redhat_voice": {
+      "prerequisite": 0.07,
+      "receiver_focus": 0.13,
+      "violation": 0.04,
+      "system_action": 0.59,
+      "no_action": 0.05,
+      "avoids_blame": 0,
+      "clearer_passive": 0.12
+     },
+     "responsibility_needed": 0.26,
+     "result_report": 0.86,
+     "subject_is_topic": 0.72,
+     "trigger_named": 0.64
+    },
+    {
+     "active_subject_available": 0.46,
+     "actor_identity": {
+      "unidentified": 0.65,
+      "no_action": 0.14,
+      "identifiable_component": 0.19,
+      "irrelevant": 0.02,
+      "reader": 0
+     },
+     "actor_in_passage": 0.12,
+     "actor_kind": {
+      "software": 0.76,
+      "no_action": 0.23,
+      "other_person": 0.01,
+      "reader": 0
+     },
+     "actor_needed": 0.33,
+     "actor_referenced": 0.07,
+     "automatic_no_owner": 0.69,
+     "blame_avoided": 0.04,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.98,
+      "state_or_adjective": 0.02,
+      "not_passive": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.85,
+      "hides_actor": 0.04,
+      "unclear": 0,
+      "emphasizes_object": 0.11
+     },
+     "hidden_actor_pointer": 0.06,
+     "hidden_stance_holder": 0.12,
+     "instruction_nearby": 0.11,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.61,
+      "caller_contract": 0,
+      "system_behavior": 0.39,
+      "reader_step": 0
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.15,
+     "reader_could_act": 0.1,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.22,
+     "redhat_voice": {
+      "violation": 0.04,
+      "avoids_blame": 0,
+      "receiver_focus": 0.16,
+      "no_action": 0.04,
+      "prerequisite": 0.04,
+      "system_action": 0.62,
+      "clearer_passive": 0.1
+     },
+     "responsibility_needed": 0.22,
+     "result_report": 0.87,
+     "subject_is_topic": 0.76,
+     "trigger_named": 0.56
+    }
+   ],
+   "expected": 0.026418
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/tasks/administer-cluster/kms-provider.md:66:Lab.PassiveHiddenActor:38",
+   "runs": [
+    {
+     "active_subject_available": 0.57,
+     "actor_identity": {
+      "irrelevant": 0.01,
+      "identifiable_component": 0.28,
+      "reader": 0,
+      "no_action": 0.04,
+      "unidentified": 0.66
+     },
+     "actor_in_passage": 0.29,
+     "actor_kind": {
+      "reader": 0,
+      "no_action": 0.14,
+      "other_person": 0.52,
+      "software": 0.34
+     },
+     "actor_needed": 0.38,
+     "actor_referenced": 0.16,
+     "automatic_no_owner": 0.34,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.93,
+      "state_or_adjective": 0.02,
+      "not_passive": 0.05
+     },
+     "google_voice": {
+      "hides_actor": 0.19,
+      "actor_irrelevant": 0.54,
+      "emphasizes_object": 0.26,
+      "unclear": 0.01
+     },
+     "hidden_actor_pointer": 0.14,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.08,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.03,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.07,
+      "system_behavior": 0.87,
+      "reader_step": 0.03
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.6,
+     "reader_controls": 0.24,
+     "reader_could_act": 0.34,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.68,
+     "redhat_voice": {
+      "avoids_blame": 0,
+      "violation": 0.22,
+      "system_action": 0.5,
+      "no_action": 0.04,
+      "clearer_passive": 0.18,
+      "prerequisite": 0.01,
+      "receiver_focus": 0.05
+     },
+     "responsibility_needed": 0.39,
+     "result_report": 0.4,
+     "subject_is_topic": 0.27,
+     "trigger_named": 0.64
+    },
+    {
+     "active_subject_available": 0.56,
+     "actor_identity": {
+      "unidentified": 0.58,
+      "identifiable_component": 0.33,
+      "no_action": 0.08,
+      "reader": 0,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.24,
+     "actor_kind": {
+      "other_person": 0.45,
+      "no_action": 0.15,
+      "software": 0.4,
+      "reader": 0
+     },
+     "actor_needed": 0.38,
+     "actor_referenced": 0.16,
+     "automatic_no_owner": 0.31,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.02,
+      "passive_actor_unnamed": 0.92,
+      "not_passive": 0.06
+     },
+     "google_voice": {
+      "unclear": 0.01,
+      "hides_actor": 0.19,
+      "actor_irrelevant": 0.52,
+      "emphasizes_object": 0.28
+     },
+     "hidden_actor_pointer": 0.15,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.07,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "definition_or_rule": 0.07,
+      "reader_step": 0.01,
+      "caller_contract": 0.02,
+      "system_behavior": 0.9,
+      "opinion_or_advice": 0
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.62,
+     "reader_controls": 0.21,
+     "reader_could_act": 0.35,
+     "reader_is_actor": 0.2,
+     "reader_unsure": 0.67,
+     "redhat_voice": {
+      "avoids_blame": 0,
+      "system_action": 0.53,
+      "violation": 0.21,
+      "no_action": 0.04,
+      "clearer_passive": 0.16,
+      "receiver_focus": 0.05,
+      "prerequisite": 0.01
+     },
+     "responsibility_needed": 0.39,
+     "result_report": 0.37,
+     "subject_is_topic": 0.26,
+     "trigger_named": 0.61
+    },
+    {
+     "active_subject_available": 0.57,
+     "actor_identity": {
+      "reader": 0,
+      "identifiable_component": 0.35,
+      "unidentified": 0.56,
+      "irrelevant": 0.01,
+      "no_action": 0.08
+     },
+     "actor_in_passage": 0.26,
+     "actor_kind": {
+      "no_action": 0.16,
+      "software": 0.4,
+      "other_person": 0.44,
+      "reader": 0
+     },
+     "actor_needed": 0.4,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.31,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.02,
+      "not_passive": 0.05,
+      "passive_actor_unnamed": 0.93
+     },
+     "google_voice": {
+      "emphasizes_object": 0.22,
+      "hides_actor": 0.2,
+      "actor_irrelevant": 0.57,
+      "unclear": 0.01
+     },
+     "hidden_actor_pointer": 0.14,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.09,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.02,
+      "system_behavior": 0.88,
+      "reader_step": 0.03,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.07
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.6,
+     "reader_controls": 0.23,
+     "reader_could_act": 0.37,
+     "reader_is_actor": 0.2,
+     "reader_unsure": 0.7,
+     "redhat_voice": {
+      "avoids_blame": 0,
+      "system_action": 0.5,
+      "violation": 0.22,
+      "no_action": 0.04,
+      "clearer_passive": 0.17,
+      "receiver_focus": 0.06,
+      "prerequisite": 0.01
+     },
+     "responsibility_needed": 0.42,
+     "result_report": 0.38,
+     "subject_is_topic": 0.27,
+     "trigger_named": 0.69
+    }
+   ],
+   "expected": 0.144545
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md:1046:Lab.PassiveHiddenActor:70",
+   "runs": [
+    {
+     "active_subject_available": 0.48,
+     "actor_identity": {
+      "reader": 0,
+      "no_action": 0.16,
+      "unidentified": 0.54,
+      "identifiable_component": 0.29,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0.01,
+      "software": 0.84,
+      "reader": 0.01,
+      "no_action": 0.14
+     },
+     "actor_needed": 0.21,
+     "actor_referenced": 0.1,
+     "automatic_no_owner": 0.29,
+     "blame_avoided": 0.07,
+     "construction": {
+      "state_or_adjective": 0.05,
+      "not_passive": 0.12,
+      "passive_actor_unnamed": 0.83,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.78,
+      "emphasizes_object": 0.1,
+      "unclear": 0.04,
+      "hides_actor": 0.08
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.09,
+     "instruction_nearby": 0.21,
+     "passage_kind": {
+      "caller_contract": 0.4,
+      "system_behavior": 0.18,
+      "problem_or_fix": 0,
+      "opinion_or_advice": 0,
+      "reader_step": 0.01,
+      "definition_or_rule": 0.41
+     },
+     "problem_followup": 0.12,
+     "process_chain": 0.16,
+     "reader_controls": 0.22,
+     "reader_could_act": 0.57,
+     "reader_is_actor": 0.37,
+     "reader_unsure": 0.59,
+     "redhat_voice": {
+      "receiver_focus": 0.11,
+      "avoids_blame": 0.01,
+      "violation": 0.04,
+      "system_action": 0.54,
+      "no_action": 0.11,
+      "prerequisite": 0.05,
+      "clearer_passive": 0.14
+     },
+     "responsibility_needed": 0.12,
+     "result_report": 0.48,
+     "subject_is_topic": 0.52,
+     "trigger_named": 0.47
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "identifiable_component": 0.23,
+      "unidentified": 0.54,
+      "reader": 0,
+      "no_action": 0.22,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.15,
+     "actor_kind": {
+      "software": 0.87,
+      "other_person": 0,
+      "no_action": 0.12,
+      "reader": 0.01
+     },
+     "actor_needed": 0.23,
+     "actor_referenced": 0.1,
+     "automatic_no_owner": 0.32,
+     "blame_avoided": 0.06,
+     "construction": {
+      "passive_actor_unnamed": 0.83,
+      "not_passive": 0.11,
+      "state_or_adjective": 0.06,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "hides_actor": 0.08,
+      "actor_irrelevant": 0.72,
+      "emphasizes_object": 0.14,
+      "unclear": 0.06
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.09,
+     "instruction_nearby": 0.21,
+     "passage_kind": {
+      "system_behavior": 0.18,
+      "reader_step": 0.01,
+      "caller_contract": 0.38,
+      "definition_or_rule": 0.42,
+      "problem_or_fix": 0.01,
+      "opinion_or_advice": 0
+     },
+     "problem_followup": 0.11,
+     "process_chain": 0.16,
+     "reader_controls": 0.18,
+     "reader_could_act": 0.56,
+     "reader_is_actor": 0.36,
+     "reader_unsure": 0.58,
+     "redhat_voice": {
+      "violation": 0.06,
+      "system_action": 0.55,
+      "avoids_blame": 0.01,
+      "receiver_focus": 0.11,
+      "prerequisite": 0.03,
+      "clearer_passive": 0.15,
+      "no_action": 0.09
+     },
+     "responsibility_needed": 0.13,
+     "result_report": 0.54,
+     "subject_is_topic": 0.47,
+     "trigger_named": 0.49
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "identifiable_component": 0.27,
+      "reader": 0,
+      "unidentified": 0.51,
+      "irrelevant": 0.01,
+      "no_action": 0.21
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0,
+      "software": 0.8,
+      "no_action": 0.19,
+      "reader": 0.01
+     },
+     "actor_needed": 0.22,
+     "actor_referenced": 0.09,
+     "automatic_no_owner": 0.34,
+     "blame_avoided": 0.07,
+     "construction": {
+      "state_or_adjective": 0.06,
+      "not_passive": 0.13,
+      "passive_actor_unnamed": 0.81,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.73,
+      "hides_actor": 0.09,
+      "unclear": 0.05,
+      "emphasizes_object": 0.13
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.1,
+     "instruction_nearby": 0.19,
+     "passage_kind": {
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0.01,
+      "caller_contract": 0.39,
+      "reader_step": 0.01,
+      "system_behavior": 0.17,
+      "definition_or_rule": 0.42
+     },
+     "problem_followup": 0.14,
+     "process_chain": 0.15,
+     "reader_controls": 0.25,
+     "reader_could_act": 0.56,
+     "reader_is_actor": 0.41,
+     "reader_unsure": 0.62,
+     "redhat_voice": {
+      "avoids_blame": 0.01,
+      "violation": 0.05,
+      "receiver_focus": 0.1,
+      "no_action": 0.09,
+      "prerequisite": 0.05,
+      "system_action": 0.55,
+      "clearer_passive": 0.15
+     },
+     "responsibility_needed": 0.13,
+     "result_report": 0.54,
+     "subject_is_topic": 0.49,
+     "trigger_named": 0.54
+    }
+   ],
+   "expected": 0.016046
+  }
+ ],
+ "google": [
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/concepts/overview/working-with-objects/common-labels.md:109:Lab.PassiveHiddenActor:41",
+   "runs": [
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "unidentified": 0.17,
+      "identifiable_component": 0.33,
+      "no_action": 0.48,
+      "irrelevant": 0.01,
+      "reader": 0.01
+     },
+     "actor_in_passage": 0.18,
+     "actor_kind": {
+      "no_action": 0.57,
+      "other_person": 0.03,
+      "reader": 0.02,
+      "software": 0.38
+     },
+     "actor_needed": 0.25,
+     "actor_referenced": 0.14,
+     "automatic_no_owner": 0.18,
+     "blame_avoided": 0.03,
+     "construction": {
+      "passive_actor_unnamed": 0.76,
+      "not_passive": 0.07,
+      "passive_actor_named": 0.08,
+      "state_or_adjective": 0.09
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.55,
+      "unclear": 0.01,
+      "hides_actor": 0.04,
+      "emphasizes_object": 0.39
+     },
+     "hidden_actor_pointer": 0.1,
+     "hidden_stance_holder": 0.21,
+     "instruction_nearby": 0.06,
+     "passage_kind": {
+      "definition_or_rule": 0.24,
+      "opinion_or_advice": 0,
+      "reader_step": 0.01,
+      "caller_contract": 0.5,
+      "system_behavior": 0.25,
+      "problem_or_fix": 0
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.11,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.2,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.35,
+     "responsibility_needed": 0.21,
+     "result_report": 0.68,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.08
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "reader": 0.01,
+      "irrelevant": 0.03,
+      "unidentified": 0.19,
+      "identifiable_component": 0.34,
+      "no_action": 0.43
+     },
+     "actor_in_passage": 0.21,
+     "actor_kind": {
+      "software": 0.38,
+      "no_action": 0.57,
+      "reader": 0.02,
+      "other_person": 0.03
+     },
+     "actor_needed": 0.24,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.17,
+     "blame_avoided": 0.03,
+     "construction": {
+      "state_or_adjective": 0.1,
+      "passive_actor_named": 0.1,
+      "passive_actor_unnamed": 0.71,
+      "not_passive": 0.09
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.58,
+      "emphasizes_object": 0.37,
+      "unclear": 0.01,
+      "hides_actor": 0.04
+     },
+     "hidden_actor_pointer": 0.12,
+     "hidden_stance_holder": 0.22,
+     "instruction_nearby": 0.06,
+     "passage_kind": {
+      "definition_or_rule": 0.22,
+      "opinion_or_advice": 0,
+      "caller_contract": 0.52,
+      "reader_step": 0.01,
+      "system_behavior": 0.25,
+      "problem_or_fix": 0
+     },
+     "problem_followup": 0.05,
+     "process_chain": 0.12,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.21,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.35,
+     "responsibility_needed": 0.21,
+     "result_report": 0.7,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.08
+    },
+    {
+     "active_subject_available": 0.54,
+     "actor_identity": {
+      "irrelevant": 0.02,
+      "unidentified": 0.19,
+      "no_action": 0.43,
+      "reader": 0.01,
+      "identifiable_component": 0.35
+     },
+     "actor_in_passage": 0.17,
+     "actor_kind": {
+      "other_person": 0.04,
+      "reader": 0.02,
+      "no_action": 0.53,
+      "software": 0.41
+     },
+     "actor_needed": 0.25,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.17,
+     "blame_avoided": 0.03,
+     "construction": {
+      "passive_actor_unnamed": 0.6799999999999999,
+      "passive_actor_named": 0.19,
+      "state_or_adjective": 0.08,
+      "not_passive": 0.05
+     },
+     "google_voice": {
+      "unclear": 0.02,
+      "actor_irrelevant": 0.56,
+      "emphasizes_object": 0.37,
+      "hides_actor": 0.05
+     },
+     "hidden_actor_pointer": 0.11,
+     "hidden_stance_holder": 0.21,
+     "instruction_nearby": 0.06,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.51,
+      "reader_step": 0.01,
+      "system_behavior": 0.26,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.22
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.12,
+     "reader_controls": 0.08,
+     "reader_could_act": 0.18,
+     "reader_is_actor": 0.23,
+     "reader_unsure": 0.39,
+     "responsibility_needed": 0.21,
+     "result_report": 0.68,
+     "subject_is_topic": 0.56,
+     "trigger_named": 0.07
+    }
+   ],
+   "expected": 0.740359
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/concepts/workloads/pods/pod-qos.md:222:Lab.PassiveHiddenActor:17",
+   "runs": [
+    {
+     "active_subject_available": 0.44,
+     "actor_identity": {
+      "identifiable_component": 0.2,
+      "no_action": 0.14,
+      "irrelevant": 0.01,
+      "reader": 0,
+      "unidentified": 0.65
+     },
+     "actor_in_passage": 0.12,
+     "actor_kind": {
+      "no_action": 0.24,
+      "other_person": 0.01,
+      "reader": 0,
+      "software": 0.75
+     },
+     "actor_needed": 0.3,
+     "actor_referenced": 0.06,
+     "automatic_no_owner": 0.71,
+     "blame_avoided": 0.04,
+     "construction": {
+      "not_passive": 0,
+      "passive_actor_unnamed": 0.97,
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.03
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.85,
+      "emphasizes_object": 0.11,
+      "unclear": 0,
+      "hides_actor": 0.04
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.12,
+     "instruction_nearby": 0.09,
+     "passage_kind": {
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0,
+      "caller_contract": 0,
+      "reader_step": 0,
+      "system_behavior": 0.38,
+      "definition_or_rule": 0.62
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.15,
+     "reader_could_act": 0.09,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.22,
+     "responsibility_needed": 0.23,
+     "result_report": 0.87,
+     "subject_is_topic": 0.74,
+     "trigger_named": 0.54
+    },
+    {
+     "active_subject_available": 0.46,
+     "actor_identity": {
+      "irrelevant": 0.01,
+      "unidentified": 0.6900000000000001,
+      "reader": 0,
+      "no_action": 0.12,
+      "identifiable_component": 0.18
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0.01,
+      "reader": 0,
+      "no_action": 0.24,
+      "software": 0.75
+     },
+     "actor_needed": 0.32,
+     "actor_referenced": 0.07,
+     "automatic_no_owner": 0.68,
+     "blame_avoided": 0.04,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.98,
+      "state_or_adjective": 0.02,
+      "not_passive": 0
+     },
+     "google_voice": {
+      "hides_actor": 0.03,
+      "emphasizes_object": 0.13,
+      "actor_irrelevant": 0.84,
+      "unclear": 0
+     },
+     "hidden_actor_pointer": 0.06,
+     "hidden_stance_holder": 0.11,
+     "instruction_nearby": 0.09,
+     "passage_kind": {
+      "reader_step": 0,
+      "system_behavior": 0.38,
+      "caller_contract": 0.01,
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0,
+      "definition_or_rule": 0.61
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.14,
+     "reader_could_act": 0.1,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.24,
+     "responsibility_needed": 0.26,
+     "result_report": 0.86,
+     "subject_is_topic": 0.72,
+     "trigger_named": 0.64
+    },
+    {
+     "active_subject_available": 0.46,
+     "actor_identity": {
+      "unidentified": 0.65,
+      "no_action": 0.14,
+      "identifiable_component": 0.19,
+      "irrelevant": 0.02,
+      "reader": 0
+     },
+     "actor_in_passage": 0.12,
+     "actor_kind": {
+      "software": 0.76,
+      "no_action": 0.23,
+      "other_person": 0.01,
+      "reader": 0
+     },
+     "actor_needed": 0.33,
+     "actor_referenced": 0.07,
+     "automatic_no_owner": 0.69,
+     "blame_avoided": 0.04,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.98,
+      "state_or_adjective": 0.02,
+      "not_passive": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.85,
+      "hides_actor": 0.04,
+      "unclear": 0,
+      "emphasizes_object": 0.11
+     },
+     "hidden_actor_pointer": 0.06,
+     "hidden_stance_holder": 0.12,
+     "instruction_nearby": 0.11,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.61,
+      "caller_contract": 0,
+      "system_behavior": 0.39,
+      "reader_step": 0
+     },
+     "problem_followup": 0.06,
+     "process_chain": 0.59,
+     "reader_controls": 0.15,
+     "reader_could_act": 0.1,
+     "reader_is_actor": 0.07,
+     "reader_unsure": 0.22,
+     "responsibility_needed": 0.22,
+     "result_report": 0.87,
+     "subject_is_topic": 0.76,
+     "trigger_named": 0.56
+    }
+   ],
+   "expected": 0.009999
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/tasks/administer-cluster/kms-provider.md:66:Lab.PassiveHiddenActor:38",
+   "runs": [
+    {
+     "active_subject_available": 0.57,
+     "actor_identity": {
+      "irrelevant": 0.01,
+      "identifiable_component": 0.28,
+      "reader": 0,
+      "no_action": 0.04,
+      "unidentified": 0.66
+     },
+     "actor_in_passage": 0.29,
+     "actor_kind": {
+      "reader": 0,
+      "no_action": 0.14,
+      "other_person": 0.52,
+      "software": 0.34
+     },
+     "actor_needed": 0.38,
+     "actor_referenced": 0.16,
+     "automatic_no_owner": 0.34,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "passive_actor_unnamed": 0.93,
+      "state_or_adjective": 0.02,
+      "not_passive": 0.05
+     },
+     "google_voice": {
+      "hides_actor": 0.19,
+      "actor_irrelevant": 0.54,
+      "emphasizes_object": 0.26,
+      "unclear": 0.01
+     },
+     "hidden_actor_pointer": 0.14,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.08,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.03,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.07,
+      "system_behavior": 0.87,
+      "reader_step": 0.03
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.6,
+     "reader_controls": 0.24,
+     "reader_could_act": 0.34,
+     "reader_is_actor": 0.21,
+     "reader_unsure": 0.68,
+     "responsibility_needed": 0.39,
+     "result_report": 0.4,
+     "subject_is_topic": 0.27,
+     "trigger_named": 0.64
+    },
+    {
+     "active_subject_available": 0.56,
+     "actor_identity": {
+      "unidentified": 0.58,
+      "identifiable_component": 0.33,
+      "no_action": 0.08,
+      "reader": 0,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.24,
+     "actor_kind": {
+      "other_person": 0.45,
+      "no_action": 0.15,
+      "software": 0.4,
+      "reader": 0
+     },
+     "actor_needed": 0.38,
+     "actor_referenced": 0.16,
+     "automatic_no_owner": 0.31,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.02,
+      "passive_actor_unnamed": 0.92,
+      "not_passive": 0.06
+     },
+     "google_voice": {
+      "unclear": 0.01,
+      "hides_actor": 0.19,
+      "actor_irrelevant": 0.52,
+      "emphasizes_object": 0.28
+     },
+     "hidden_actor_pointer": 0.15,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.07,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "definition_or_rule": 0.07,
+      "reader_step": 0.01,
+      "caller_contract": 0.02,
+      "system_behavior": 0.9,
+      "opinion_or_advice": 0
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.62,
+     "reader_controls": 0.21,
+     "reader_could_act": 0.35,
+     "reader_is_actor": 0.2,
+     "reader_unsure": 0.67,
+     "responsibility_needed": 0.39,
+     "result_report": 0.37,
+     "subject_is_topic": 0.26,
+     "trigger_named": 0.61
+    },
+    {
+     "active_subject_available": 0.57,
+     "actor_identity": {
+      "reader": 0,
+      "identifiable_component": 0.35,
+      "unidentified": 0.56,
+      "irrelevant": 0.01,
+      "no_action": 0.08
+     },
+     "actor_in_passage": 0.26,
+     "actor_kind": {
+      "no_action": 0.16,
+      "software": 0.4,
+      "other_person": 0.44,
+      "reader": 0
+     },
+     "actor_needed": 0.4,
+     "actor_referenced": 0.15,
+     "automatic_no_owner": 0.31,
+     "blame_avoided": 0.02,
+     "construction": {
+      "passive_actor_named": 0,
+      "state_or_adjective": 0.02,
+      "not_passive": 0.05,
+      "passive_actor_unnamed": 0.93
+     },
+     "google_voice": {
+      "emphasizes_object": 0.22,
+      "hides_actor": 0.2,
+      "actor_irrelevant": 0.57,
+      "unclear": 0.01
+     },
+     "hidden_actor_pointer": 0.14,
+     "hidden_stance_holder": 0.08,
+     "instruction_nearby": 0.09,
+     "passage_kind": {
+      "problem_or_fix": 0,
+      "caller_contract": 0.02,
+      "system_behavior": 0.88,
+      "reader_step": 0.03,
+      "opinion_or_advice": 0,
+      "definition_or_rule": 0.07
+     },
+     "problem_followup": 0.04,
+     "process_chain": 0.6,
+     "reader_controls": 0.23,
+     "reader_could_act": 0.37,
+     "reader_is_actor": 0.2,
+     "reader_unsure": 0.7,
+     "responsibility_needed": 0.42,
+     "result_report": 0.38,
+     "subject_is_topic": 0.27,
+     "trigger_named": 0.69
+    }
+   ],
+   "expected": 0.132231
+  },
+  {
+   "id": "kubernetes-website-en-docs:content/en/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions.md:1046:Lab.PassiveHiddenActor:70",
+   "runs": [
+    {
+     "active_subject_available": 0.48,
+     "actor_identity": {
+      "reader": 0,
+      "no_action": 0.16,
+      "unidentified": 0.54,
+      "identifiable_component": 0.29,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0.01,
+      "software": 0.84,
+      "reader": 0.01,
+      "no_action": 0.14
+     },
+     "actor_needed": 0.21,
+     "actor_referenced": 0.1,
+     "automatic_no_owner": 0.29,
+     "blame_avoided": 0.07,
+     "construction": {
+      "state_or_adjective": 0.05,
+      "not_passive": 0.12,
+      "passive_actor_unnamed": 0.83,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.78,
+      "emphasizes_object": 0.1,
+      "unclear": 0.04,
+      "hides_actor": 0.08
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.09,
+     "instruction_nearby": 0.21,
+     "passage_kind": {
+      "caller_contract": 0.4,
+      "system_behavior": 0.18,
+      "problem_or_fix": 0,
+      "opinion_or_advice": 0,
+      "reader_step": 0.01,
+      "definition_or_rule": 0.41
+     },
+     "problem_followup": 0.12,
+     "process_chain": 0.16,
+     "reader_controls": 0.22,
+     "reader_could_act": 0.57,
+     "reader_is_actor": 0.37,
+     "reader_unsure": 0.59,
+     "responsibility_needed": 0.12,
+     "result_report": 0.48,
+     "subject_is_topic": 0.52,
+     "trigger_named": 0.47
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "identifiable_component": 0.23,
+      "unidentified": 0.54,
+      "reader": 0,
+      "no_action": 0.22,
+      "irrelevant": 0.01
+     },
+     "actor_in_passage": 0.15,
+     "actor_kind": {
+      "software": 0.87,
+      "other_person": 0,
+      "no_action": 0.12,
+      "reader": 0.01
+     },
+     "actor_needed": 0.23,
+     "actor_referenced": 0.1,
+     "automatic_no_owner": 0.32,
+     "blame_avoided": 0.06,
+     "construction": {
+      "passive_actor_unnamed": 0.83,
+      "not_passive": 0.11,
+      "state_or_adjective": 0.06,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "hides_actor": 0.08,
+      "actor_irrelevant": 0.72,
+      "emphasizes_object": 0.14,
+      "unclear": 0.06
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.09,
+     "instruction_nearby": 0.21,
+     "passage_kind": {
+      "system_behavior": 0.18,
+      "reader_step": 0.01,
+      "caller_contract": 0.38,
+      "definition_or_rule": 0.42,
+      "problem_or_fix": 0.01,
+      "opinion_or_advice": 0
+     },
+     "problem_followup": 0.11,
+     "process_chain": 0.16,
+     "reader_controls": 0.18,
+     "reader_could_act": 0.56,
+     "reader_is_actor": 0.36,
+     "reader_unsure": 0.58,
+     "responsibility_needed": 0.13,
+     "result_report": 0.54,
+     "subject_is_topic": 0.47,
+     "trigger_named": 0.49
+    },
+    {
+     "active_subject_available": 0.49,
+     "actor_identity": {
+      "identifiable_component": 0.27,
+      "reader": 0,
+      "unidentified": 0.51,
+      "irrelevant": 0.01,
+      "no_action": 0.21
+     },
+     "actor_in_passage": 0.13,
+     "actor_kind": {
+      "other_person": 0,
+      "software": 0.8,
+      "no_action": 0.19,
+      "reader": 0.01
+     },
+     "actor_needed": 0.22,
+     "actor_referenced": 0.09,
+     "automatic_no_owner": 0.34,
+     "blame_avoided": 0.07,
+     "construction": {
+      "state_or_adjective": 0.06,
+      "not_passive": 0.13,
+      "passive_actor_unnamed": 0.81,
+      "passive_actor_named": 0
+     },
+     "google_voice": {
+      "actor_irrelevant": 0.73,
+      "hides_actor": 0.09,
+      "unclear": 0.05,
+      "emphasizes_object": 0.13
+     },
+     "hidden_actor_pointer": 0.07,
+     "hidden_stance_holder": 0.1,
+     "instruction_nearby": 0.19,
+     "passage_kind": {
+      "opinion_or_advice": 0,
+      "problem_or_fix": 0.01,
+      "caller_contract": 0.39,
+      "reader_step": 0.01,
+      "system_behavior": 0.17,
+      "definition_or_rule": 0.42
+     },
+     "problem_followup": 0.14,
+     "process_chain": 0.15,
+     "reader_controls": 0.25,
+     "reader_could_act": 0.56,
+     "reader_is_actor": 0.41,
+     "reader_unsure": 0.62,
+     "responsibility_needed": 0.13,
+     "result_report": 0.54,
+     "subject_is_topic": 0.49,
+     "trigger_named": 0.54
+    }
+   ],
+   "expected": 0.449191
+  }
+ ]
+}

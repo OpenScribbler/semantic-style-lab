@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "guide": "redhat",
+  "model": "logistic",
+  "runs": 3,
+  "training": {
+    "items": 585,
+    "violations": 131,
+    "labels": "k8s + pairs, rubric labels (panel majority, tie = violation)"
+  },
+  "questions": [
+    "active_subject_available",
+    "actor_identity",
+    "actor_in_passage",
+    "actor_kind",
+    "actor_needed",
+    "actor_referenced",
+    "automatic_no_owner",
+    "blame_avoided",
+    "construction",
+    "google_voice",
+    "hidden_actor_pointer",
+    "hidden_stance_holder",
+    "instruction_nearby",
+    "passage_kind",
+    "problem_followup",
+    "process_chain",
+    "reader_controls",
+    "reader_could_act",
+    "reader_is_actor",
+    "reader_unsure",
+    "redhat_voice",
+    "responsibility_needed",
+    "result_report",
+    "subject_is_topic",
+    "trigger_named"
+  ],
+  "features": [
+    {
+      "name": "active_subject_available",
+      "mean": 0.554855,
+      "sd": 0.159049,
+      "weight": -0.596977
+    },
+    {
+      "name": "actor_identity.identifiable_component",
+      "mean": 0.311567,
+      "sd": 0.246887,
+      "weight": 0.170508
+    },
+    {
+      "name": "actor_identity.irrelevant",
+      "mean": 0.016376,
+      "sd": 0.016531,
+      "weight": 0.31299
+    },
+    {
+      "name": "actor_identity.no_action",
+      "mean": 0.206467,
+      "sd": 0.203542,
+      "weight": -0.172514
+    },
+    {
+      "name": "actor_identity.reader",
+      "mean": 0.07894,
+      "sd": 0.172062,
+      "weight": 0.03957
+    },
+    {
+      "name": "actor_identity.unidentified",
+      "mean": 0.38645,
+      "sd": 0.260493,
+      "weight": -0.050631
+    },
+    {
+      "name": "actor_in_passage",
+      "mean": 0.239966,
+      "sd": 0.176567,
+      "weight": 0.367546
+    },
+    {
+      "name": "actor_kind.no_action",
+      "mean": 0.298638,
+      "sd": 0.278422,
+      "weight": -0.16347
+    },
+    {
+      "name": "actor_kind.other_person",
+      "mean": 0.166262,
+      "sd": 0.23456,
+      "weight": 0.342628
+    },
+    {
+      "name": "actor_kind.reader",
+      "mean": 0.075618,
+      "sd": 0.155063,
+      "weight": 0.051456
+    },
+    {
+      "name": "actor_kind.software",
+      "mean": 0.459413,
+      "sd": 0.325338,
+      "weight": -0.134703
+    },
+    {
+      "name": "actor_needed",
+      "mean": 0.26412,
+      "sd": 0.083812,
+      "weight": 0.160084
+    },
+    {
+      "name": "actor_referenced",
+      "mean": 0.113014,
+      "sd": 0.065239,
+      "weight": 0.334726
+    },
+    {
+      "name": "automatic_no_owner",
+      "mean": 0.337476,
+      "sd": 0.212172,
+      "weight": -0.414069
+    },
+    {
+      "name": "blame_avoided",
+      "mean": 0.053476,
+      "sd": 0.079252,
+      "weight": -0.446091
+    },
+    {
+      "name": "construction.not_passive",
+      "mean": 0.067652,
+      "sd": 0.111117,
+      "weight": -0.686761
+    },
+    {
+      "name": "construction.passive_actor_named",
+      "mean": 0.040085,
+      "sd": 0.133159,
+      "weight": 0.053592
+    },
+    {
+      "name": "construction.passive_actor_unnamed",
+      "mean": 0.821732,
+      "sd": 0.227455,
+      "weight": 0.178347
+    },
+    {
+      "name": "construction.state_or_adjective",
+      "mean": 0.070405,
+      "sd": 0.135937,
+      "weight": 0.222415
+    },
+    {
+      "name": "google_voice.actor_irrelevant",
+      "mean": 0.643379,
+      "sd": 0.172831,
+      "weight": -0.109655
+    },
+    {
+      "name": "google_voice.emphasizes_object",
+      "mean": 0.247328,
+      "sd": 0.174899,
+      "weight": 0.2693
+    },
+    {
+      "name": "google_voice.hides_actor",
+      "mean": 0.099145,
+      "sd": 0.082265,
+      "weight": -0.381302
+    },
+    {
+      "name": "google_voice.unclear",
+      "mean": 0.009932,
+      "sd": 0.027975,
+      "weight": 0.060675
+    },
+    {
+      "name": "hidden_actor_pointer",
+      "mean": 0.110524,
+      "sd": 0.045405,
+      "weight": -0.019134
+    },
+    {
+      "name": "hidden_stance_holder",
+      "mean": 0.142011,
+      "sd": 0.187375,
+      "weight": 0.758346
+    },
+    {
+      "name": "instruction_nearby",
+      "mean": 0.189829,
+      "sd": 0.191682,
+      "weight": -0.440429
+    },
+    {
+      "name": "passage_kind.caller_contract",
+      "mean": 0.130934,
+      "sd": 0.191007,
+      "weight": -0.159253
+    },
+    {
+      "name": "passage_kind.definition_or_rule",
+      "mean": 0.231333,
+      "sd": 0.281372,
+      "weight": -0.315317
+    },
+    {
+      "name": "passage_kind.opinion_or_advice",
+      "mean": 0.053009,
+      "sd": 0.187674,
+      "weight": 0.096931
+    },
+    {
+      "name": "passage_kind.problem_or_fix",
+      "mean": 0.042923,
+      "sd": 0.157393,
+      "weight": 0.570556
+    },
+    {
+      "name": "passage_kind.reader_step",
+      "mean": 0.115618,
+      "sd": 0.235865,
+      "weight": 0.510293
+    },
+    {
+      "name": "passage_kind.system_behavior",
+      "mean": 0.425972,
+      "sd": 0.346002,
+      "weight": -0.307022
+    },
+    {
+      "name": "problem_followup",
+      "mean": 0.112422,
+      "sd": 0.171642,
+      "weight": -0.604425
+    },
+    {
+      "name": "process_chain",
+      "mean": 0.370256,
+      "sd": 0.225552,
+      "weight": 0.319091
+    },
+    {
+      "name": "reader_controls",
+      "mean": 0.296752,
+      "sd": 0.264711,
+      "weight": -0.3746
+    },
+    {
+      "name": "reader_could_act",
+      "mean": 0.29098,
+      "sd": 0.219153,
+      "weight": -0.016171
+    },
+    {
+      "name": "reader_is_actor",
+      "mean": 0.285943,
+      "sd": 0.244746,
+      "weight": 0.80434
+    },
+    {
+      "name": "reader_unsure",
+      "mean": 0.33914,
+      "sd": 0.157841,
+      "weight": -0.096993
+    },
+    {
+      "name": "redhat_voice.avoids_blame",
+      "mean": 0.016786,
+      "sd": 0.080642,
+      "weight": -0.184555
+    },
+    {
+      "name": "redhat_voice.clearer_passive",
+      "mean": 0.14351,
+      "sd": 0.118842,
+      "weight": -0.392097
+    },
+    {
+      "name": "redhat_voice.no_action",
+      "mean": 0.150564,
+      "sd": 0.206341,
+      "weight": -0.693132
+    },
+    {
+      "name": "redhat_voice.prerequisite",
+      "mean": 0.148593,
+      "sd": 0.260729,
+      "weight": 0.154031
+    },
+    {
+      "name": "redhat_voice.receiver_focus",
+      "mean": 0.118547,
+      "sd": 0.112611,
+      "weight": 0.122329
+    },
+    {
+      "name": "redhat_voice.system_action",
+      "mean": 0.307447,
+      "sd": 0.272974,
+      "weight": 0.013622
+    },
+    {
+      "name": "redhat_voice.violation",
+      "mean": 0.114348,
+      "sd": 0.10228,
+      "weight": 1.450287
+    },
+    {
+      "name": "responsibility_needed",
+      "mean": 0.25816,
+      "sd": 0.089365,
+      "weight": -0.796339
+    },
+    {
+      "name": "result_report",
+      "mean": 0.632302,
+      "sd": 0.228597,
+      "weight": -0.203307
+    },
+    {
+      "name": "subject_is_topic",
+      "mean": 0.482211,
+      "sd": 0.184229,
+      "weight": 0.460552
+    },
+    {
+      "name": "trigger_named",
+      "mean": 0.344291,
+      "sd": 0.232949,
+      "weight": 0.347123
+    }
+  ],
+  "bias": -2.824571
+}

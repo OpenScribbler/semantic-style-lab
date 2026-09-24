@@ -144,9 +144,22 @@ The nearest projects are a method and two partial tools. Trust or Escalate is th
 
 Passive voice is near the top for rules a linter can find, but it isn't the hardest rule in a style guide. Rules about tone, audience, jargon, or conciseness are harder, because no linter can nominate a candidate, so this method doesn't reach them at all. Rules with a finite list of exceptions are easier, as the semicolon result shows.
 
+## Ranking instead of gating
+
+The same models rank well even though they gate badly. A gate has to put every violation on the right side of one threshold. A ranking only has to put most violations above most acceptable passives. On the held-out set 6, the per-guide model ordered candidates like this:
+
+| Guide | Violations in set 6 | Ranking AUC | Violations in the top quarter | Violations in the top half |
+|---|---|---|---|---|
+| Red Hat | 30 of 200 | 0.91 | 24 | 29 |
+| Microsoft | 79 of 200 | 0.89 | 45 | 65 |
+
+A reviewer who starts at the top of the Red Hat queue finds 29 of the 30 violations in the first 100 items. The CLI now offers this as `passive.mode: rank`. It lists every passive finding for review, most likely violation first, and suppresses nothing.
+
+The Google model has weaker backing. It was trained on the Kubernetes tuning set alone, with labels from LLM reviewers and no rubric, and it was never scored on unseen pages. Cross-validated by page on that tuning set, its ranking AUC is 0.88.
+
 ## What to try next
 
-- **Change the contract.** Accept a small, measured miss rate and report it, or never suppress and use Jev only to rank flags. Both give up the pass thresholds, so both need a new decision.
+- **Change the contract.** Accept a small, measured miss rate and report it. That gives up the pass thresholds, so it needs a new decision. Ranking, the other option, is now in the CLI.
 - **Bound the miss rate with statistics.** Methods such as [conformal risk control](https://arxiv.org/abs/2208.02814) pick the suppression threshold from labeled data, so the miss rate stays under a chosen bound. They bound a rate, so none of them can promise zero misses.
 - **Train a task-specific classifier.** We now hold about 1,500 labeled candidates per guide. A small fine-tuned model could learn the rare patterns that Jev's fixed questions miss.
 - **Test the active rewrite directly.** The Microsoft rubric asks whether an active rewrite needs an invented actor. A generative model can write that rewrite, and Jev can then judge it with a yes/no question.

@@ -44,6 +44,7 @@ export function buildHtmlReport(report: {
 	pipeline_version: string;
 	rule_set_version: string;
 	static_rules: readonly string[];
+	passive: { mode: 'review' | 'rank'; guide?: string };
 	projects: ProjectAudit[];
 	summary: { files: number; candidates: number; flag: number; review: number; suppress: number; unparsed: number; ast_parsed_files: number; fallback_files: number; unparsed_files: number; jev_calls: number; jev_candidates: number; input_tokens: number; estimated_input_cost_usd: number };
 }) {
@@ -62,6 +63,10 @@ export function buildHtmlReport(report: {
 		const sample = project.sampling!;
 		const rows = Object.keys(sample.available_candidates).sort().map((rule) => `<tr><td><code>${escapeHtml(rule)}</code></td><td>${sample.available_candidates[rule]}</td><td>${sample.selected_candidates[rule]}</td><td>${sample.target_met[rule] ? 'yes' : sample.all_available_selected[rule] ? 'all available; target unavailable' : 'no'}</td></tr>`).join('');
 		return `<h3>${escapeHtml(project.name)}</h3><p><strong>${sample.selected_files}</strong> of ${sample.eligible_files} eligible files selected; target ${sample.min_candidates_per_rule} candidates per available rule.</p><table><thead><tr><th>Rule</th><th>Available</th><th>Selected</th><th>Target met</th></tr></thead><tbody>${rows}</tbody></table>`;
+	}).join('');
+	const queue = report.projects.filter((project) => project.passive_queue?.length).map((project) => {
+		const rows = project.passive_queue!.map((item) => `<tr><td>${item.violation_probability.toFixed(3)}</td><td>${escapeHtml(item.file)}:${item.line}</td></tr>`).join('');
+		return `<h3>${escapeHtml(project.name)}</h3><table><thead><tr><th>Violation probability</th><th>Location</th></tr></thead><tbody>${rows}</tbody></table>`;
 	}).join('');
 	return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,7 +88,8 @@ export function buildHtmlReport(report: {
 </section>
 <section class="panel"><h2>Parse health</h2><p><strong>${report.summary.ast_parsed_files}</strong> AST-parsed · <strong>${report.summary.fallback_files}</strong> protected lexical fallback · <strong>${report.summary.unparsed_files}</strong> unparsed.</p>${degraded ? `<ul>${degraded}</ul>` : '<p class="muted">Every file used its format-specific AST parser.</p>'}<p class="muted">Fallback candidates may still reach Jev after code, template, link, and frontmatter ranges are protected. Unparsed candidates never count as semantic review or effectiveness evidence.</p></section>
 ${sampling ? `<section class="panel"><h2>Rule-stratified sampling</h2>${sampling}<p class="muted">Selection used Vale candidates only, before any Jev response. Unavailable rules remain explicitly unmeasured.</p></section>` : ''}
-<section class="panel"><h2>Fixed rule set</h2><ul>${ruleItems}</ul><p class="muted">Suppression is a shadow-mode recommendation only. This command does not edit source files or change CI.</p></section>
+${queue ? `<section class="panel"><h2>Passive review queue</h2><p>Passive findings ordered by violation probability under the ${escapeHtml(report.passive.guide)} passive model. Review from the top. Rank mode never suppresses, because no passive gate met the pass thresholds on unseen pages.</p>${queue}</section>` : ''}
+<section class="panel"><h2>Rule set</h2><ul>${ruleItems}</ul><p class="muted">Suppression is a shadow-mode recommendation only. This command does not edit source files or change CI.</p></section>
 <section class="panel"><h2>Experimental boundary</h2><p>The primary judgments in this report come from Jev probabilities composed by code. An agent may configure, run, and diagnose the experiment, but must not replace skipped Jev calls with its own style judgments or count agent-authored labels as primary effectiveness evidence.</p></section>
 <section class="panel"><h2>All candidates</h2><table><thead><tr><th>Disposition</th><th>Location</th><th>Rule</th><th>Passage and reason</th></tr></thead><tbody>${rows || '<tr><td colspan="4">No candidates found.</td></tr>'}</tbody></table></section>
 <p class="muted">Generated ${escapeHtml(report.generated_at)} with ${escapeHtml(report.model)}. Raw requests and responses are stored beside this report.</p>

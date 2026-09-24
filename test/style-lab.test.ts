@@ -173,4 +173,30 @@ describe('shareable style-lab CLI', () => {
 			if (saved !== undefined) process.env.TYPESAFE_API_KEY = saved;
 		}
 	});
+
+	test('requires a key before ranking passive candidates', async () => {
+		const directory = await mkdtemp(resolve(tmpdir(), 'style-lab-rank-'));
+		temporary.push(directory);
+		const file = resolve(directory, 'passive.md');
+		await Bun.write(file, 'The Pod is terminated when the node is drained.\n');
+		const saved = process.env.TYPESAFE_API_KEY;
+		delete process.env.TYPESAFE_API_KEY;
+		try {
+			await expect(auditProject({ name: 'fixture', root: directory, files: [file], model: 'jev-latest', passive: { mode: 'rank', guide: 'google' } })).rejects.toThrow('TYPESAFE_API_KEY is not set');
+		} finally {
+			if (saved !== undefined) process.env.TYPESAFE_API_KEY = saved;
+		}
+	});
+
+	test('runs only the configured rules', async () => {
+		const directory = await mkdtemp(resolve(tmpdir(), 'style-lab-rules-'));
+		temporary.push(directory);
+		const file = resolve(directory, 'mixed.md');
+		await Bun.write(file, 'The Pod is terminated when the node is drained; the kubelet then restarts it.\n');
+		const all = await auditProject({ name: 'fixture', root: directory, files: [file], model: 'jev-latest', noJev: true });
+		const semicolons = await auditProject({ name: 'fixture', root: directory, files: [file], model: 'jev-latest', noJev: true, rules: ['google-semicolons'] });
+		expect(new Set(all.findings.map((finding) => finding.rule_id))).toEqual(new Set(['google-semicolons', 'google-passive-hidden-actor']));
+		expect(semicolons.findings.map((finding) => finding.rule_id)).toEqual(['google-semicolons']);
+		expect(semicolons.source_health[0]?.candidate_count).toBe(1);
+	});
 });

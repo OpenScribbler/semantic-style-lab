@@ -5,6 +5,9 @@ import { choice, noul, TypeSafeClient } from '@typesafe-ai/sdk';
 import type { ChoiceResponse, NoulResponse, Question } from '@typesafe-ai/sdk';
 
 import { decideStatus } from './jev';
+import { passiveContext, PASSIVE_QUESTIONS } from './passive-lab';
+import { loadPassivePolicy, passiveViolationProbability } from './passive-rank';
+import type { PassiveAnswers, PassiveGuide } from './passive-rank';
 import { composeContext, followingWord, followingWordForModifier } from './jev-noul';
 import { createSourceClassifier, offsetAtLineColumn } from './mdx-source-classifier';
 import type { MarkdownFormat, MdxSourceClass, SourceParser } from './mdx-source-classifier';
@@ -97,6 +100,14 @@ export interface ProjectAudit {
 	source_health: SourceHealth[];
 	parse_health: ParseHealthSummary;
 	sampling?: SamplingSummary;
+	passive_queue?: PassiveQueueItem[];
+}
+
+export interface PassiveQueueItem {
+	id: string;
+	file: string;
+	line: number;
+	violation_probability: number;
 }
 
 export interface SamplingSummary {
@@ -137,9 +148,10 @@ export function selectRuleStratifiedFiles(
 	vale: Record<string, ExtendedValeAlert[]>,
 	maxFiles: number,
 	minimum: number,
+	rules?: readonly string[],
 ) {
 	const fileRows = files.map((path) => ({ path, hash: stablePathHash(root, path), counts: relevantCounts(vale[resolve(path)] ?? []) }));
-	const ruleIds = [...new Set([...checkKinds.values()].map((kind) => kind.rule_id))];
+	const ruleIds = [...new Set([...checkKinds.values()].map((kind) => kind.rule_id))].filter((rule) => !rules || rules.includes(rule));
 	const available = Object.fromEntries(ruleIds.map((rule) => [rule, fileRows.reduce((sum, row) => sum + (row.counts[rule] ?? 0), 0)]));
 	const selected = new Set<string>();
 	const selectedCounts = Object.fromEntries(ruleIds.map((rule) => [rule, 0]));
@@ -233,7 +245,7 @@ export function summarizeParseHealth(sourceHealth: SourceHealth[]): ParseHealthS
 	};
 }
 
-export async function buildStaticCandidates(project: string, root: string, vale: Record<string, ExtendedValeAlert[]>, files = Object.keys(vale)) {
+export async function buildStaticCandidates(project: string, root: string, vale: Record<string, ExtendedValeAlert[]>, files = Object.keys(vale), rules?: readonly string[]) {
 	const candidates: StaticCandidate[] = [];
 	const sourceHealth: SourceHealth[] = [];
 	for (const absoluteFile of [...files].map((file) => resolve(root, file)).sort()) {
@@ -241,7 +253,10 @@ export async function buildStaticCandidates(project: string, root: string, vale:
 		const source = await Bun.file(absoluteFile).text();
 		const classifier = createSourceClassifier(source, markdownFormat(absoluteFile));
 		const local = relative(root, absoluteFile).replaceAll('\\', '/');
-		const relevantAlerts = alerts.filter((alert) => checkKinds.has(alert.Check));
+		const relevantAlerts = alerts.filter((alert) => {
+			const kind = checkKinds.get(alert.Check);
+			return kind !== undefined && (!rules || rules.includes(kind.rule_id));
+		});
 		sourceHealth.push({
 			file: local,
 			format: classifier.format,
@@ -451,6 +466,8 @@ export async function auditProject(options: {
 	rawDirectory?: string;
 	vale?: Record<string, ExtendedValeAlert[]>;
 	sampling?: SamplingSummary;
+	rules?: readonly string[];
+	passive?: { mode: 'review' | 'rank'; guide?: PassiveGuide };
 }) : Promise<ProjectAudit> {
 	const vale = options.vale ?? await runStaticVale(options.root, options.files);
 	if (options.rawDirectory) {
@@ -458,7 +475,7 @@ export async function auditProject(options: {
 		await Bun.write(resolve(options.rawDirectory, 'vale.json'), `${JSON.stringify(vale, null, 2)}\n`);
 		if (options.sampling) await Bun.write(resolve(options.rawDirectory, 'sampling.json'), `${JSON.stringify(options.sampling, null, 2)}\n`);
 	}
-	const built = await buildStaticCandidates(options.name, options.root, vale, options.files);
+	const built = await buildStaticCandidates(options.name, options.root, vale, options.files, options.rules);
 	const { candidates } = built;
 	if (options.rawDirectory) await Bun.write(
 		resolve(options.rawDirectory, 'source-health.json'),
@@ -483,22 +500,46 @@ export async function auditProject(options: {
 			}))],
 		};
 	}
-	if (judged.length && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. Load it in the parent shell and restart this process; never paste it into a prompt or config. Use --no-jev to enumerate candidates without calling Jev. See docs/api-key-security.md.');
+	const rank = options.passive?.mode === 'rank' && passive.length > 0;
+	if ((judged.length || rank) && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. Load it in the parent shell and restart this process; never paste it into a prompt or config. Use --no-jev to enumerate candidates without calling Jev. See docs/api-key-security.md.');
 	const contextualRules = await loadRules(resolve(labRoot, 'rules/contextual-vocabulary'));
 	const semicolonRule = await Bun.file(resolve(labRoot, 'compiled-rules/google-semicolons.json')).json() as SemicolonRule;
-	const findings = [...deterministic, ...passive.map((candidate): AuditFinding => ({
+	const findings = rank ? [...deterministic] : [...deterministic, ...passive.map((candidate): AuditFinding => ({
 		...stripPrivate(candidate), action: 'review', reason: 'Jev does not judge passive voice; human review required.', signals: {},
 	}))];
 	const rawExchanges: RawExchange[] = [];
 	let inputTokens = 0;
 	let outputTokens = 0;
+	const answers = new Map<string, Record<string, unknown>>();
 	// One candidate and one question per request. Batched requests demoted
 	// panel-confirmed flags and suppressed confirmed violations (Q21).
-	const jobs = judged.flatMap((candidate) => {
+	const jobs: { candidate: StaticCandidate; request: unknown; record: (answer: unknown) => void }[] = judged.flatMap((candidate) => {
 		const whole = buildStaticJevRequest([candidate], options.model, semicolonRule);
-		return Object.entries(whole.questions).map(([id, question]) => ({ candidate, id, request: { ...whole, questions: { [id]: question } } }));
+		return Object.entries(whole.questions).map(([id, question]) => ({
+			candidate,
+			request: { ...whole, questions: { [id]: question } },
+			record: (answer: unknown) => answers.set(candidate.id, { ...answers.get(candidate.id), [id]: answer }),
+		}));
 	});
-	const answers = new Map<string, Record<string, unknown>>();
+	// Rank mode asks each question the policy needs once per run, with the
+	// enclosing paragraph as the passage, exactly as the training runs did.
+	const policy = rank ? await loadPassivePolicy(options.passive!.guide!) : undefined;
+	const passiveRuns = new Map<string, PassiveAnswers[]>();
+	if (policy) for (const candidate of passive) {
+		const source = await Bun.file(candidate.absolute_file).text();
+		const context = passiveContext(source, markdownFormat(candidate.absolute_file) === 'mdx', candidate.line, candidate.span);
+		const runs: PassiveAnswers[] = Array.from({ length: policy.runs }, () => ({}));
+		passiveRuns.set(candidate.id, runs);
+		for (const run of runs) for (const name of policy.questions) jobs.push({
+			candidate,
+			request: { model: options.model, state: { passage: context.passage }, questions: { answer: PASSIVE_QUESTIONS[name]! } },
+			record: (answer) => {
+				const value = answer as { type?: string; noul?: number; probabilities?: Record<string, number> } | undefined;
+				if (value?.type === 'choice' && value.probabilities) run[name] = value.probabilities;
+				else if (typeof value?.noul === 'number') run[name] = value.noul;
+			},
+		});
+	}
 	const client = jobs.length ? new TypeSafeClient() : undefined;
 	let next = 0;
 	await Promise.all(Array.from({ length: jobs.length ? 8 : 0 }, async () => {
@@ -510,7 +551,7 @@ export async function auditProject(options: {
 				resolve(options.rawDirectory, `jev-${exchangeNumber}.request.json`),
 				`${JSON.stringify({ candidate_ids: [job.candidate.id], request: job.request }, null, 2)}\n`,
 			);
-			const response = await client!.systemOne(job.request);
+			const response = await client!.systemOne(job.request as Parameters<TypeSafeClient['systemOne']>[0]);
 			if (options.rawDirectory) await Bun.write(
 				resolve(options.rawDirectory, `jev-${exchangeNumber}.response.json`),
 				`${JSON.stringify(response, null, 2)}\n`,
@@ -518,7 +559,7 @@ export async function auditProject(options: {
 			inputTokens += response.usage.input_tokens;
 			outputTokens += response.usage.output_tokens;
 			rawExchanges[number] = { request: job.request, response, candidate_ids: [job.candidate.id] };
-			answers.set(job.candidate.id, { ...answers.get(job.candidate.id), [job.id]: response.answers[job.id] });
+			job.record(Object.values(response.answers)[0]);
 		}
 	}));
 	for (const candidate of judged) {
@@ -526,6 +567,17 @@ export async function auditProject(options: {
 		if (candidate.rule_kind === 'contextual-vocabulary') findings.push(composeVocabulary(candidate, 'c1', response, contextualRules));
 		else findings.push(composeSemicolon(candidate, 'c1', response, semicolonRule.semantic_exceptions));
 	}
+	const passiveQueue: PassiveQueueItem[] = [];
+	if (policy) for (const candidate of passive) {
+		const probability = passiveViolationProbability(policy, passiveRuns.get(candidate.id)!);
+		passiveQueue.push({ id: candidate.id, file: candidate.file, line: candidate.line, violation_probability: probability });
+		findings.push({
+			...stripPrivate(candidate), action: 'review',
+			reason: `Violation probability ${probability.toFixed(3)} under the ${policy.guide} passive model. Rank mode orders review and never suppresses.`,
+			signals: { violation_probability: probability },
+		});
+	}
+	passiveQueue.sort((left, right) => right.violation_probability - left.violation_probability || left.id.localeCompare(right.id));
 	return {
 		name: options.name,
 		root: options.root,
@@ -533,7 +585,7 @@ export async function auditProject(options: {
 		vale_alert_count: candidates.length,
 		candidate_count: candidates.length,
 		jev_call_count: rawExchanges.length,
-		jev_candidate_count: judged.length,
+		jev_candidate_count: judged.length + (policy ? passive.length : 0),
 		usage: { input_tokens: inputTokens, output_tokens: outputTokens },
 		findings: findings.sort((left, right) => left.file.localeCompare(right.file) || left.line - right.line),
 		raw_exchanges: rawExchanges,
@@ -541,6 +593,7 @@ export async function auditProject(options: {
 		source_health: built.source_health,
 		parse_health: built.parse_health,
 		...(options.sampling ? { sampling: options.sampling } : {}),
+		...(policy ? { passive_queue: passiveQueue } : {}),
 	};
 }
 

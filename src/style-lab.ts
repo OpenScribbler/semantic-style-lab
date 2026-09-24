@@ -23,8 +23,9 @@ Options:
   --no-jev          Enumerate candidates without calling Jev
   --help            Show this help
 
-The rule set is fixed in this research release. The command runs in shadow mode
-and never edits documentation.`);
+The configuration chooses which rules run (\`rules\`) and how passive voice
+findings are handled (\`passive.mode\`: review or rank, with \`passive.guide\`).
+The command runs in shadow mode and never edits documentation.`);
 }
 
 function publicProject(project: Awaited<ReturnType<typeof auditProject>>) {
@@ -55,7 +56,7 @@ async function main() {
 			const eligible = await discoverProjectFiles(project, false);
 			console.error(`${project.name}: enumerating Vale candidates across ${eligible.length} eligible files for rule-stratified sampling`);
 			const allVale = await runStaticVale(project.root, eligible);
-			const selection = selectRuleStratifiedFiles(project.root, eligible, allVale, project.max_files!, project.sampling.min_candidates_per_rule);
+			const selection = selectRuleStratifiedFiles(project.root, eligible, allVale, project.max_files!, project.sampling.min_candidates_per_rule, config.rules);
 			files = selection.files;
 			sampling = selection.summary;
 			vale = Object.fromEntries(files.map((file) => [resolve(file), allVale[resolve(file)] ?? []]));
@@ -73,6 +74,8 @@ async function main() {
 			rawDirectory,
 			vale,
 			sampling,
+			rules: config.rules,
+			passive: config.passive,
 		});
 		projects.push(result);
 	}
@@ -104,7 +107,8 @@ async function main() {
 		no_jev: noJev,
 		pipeline_version: PIPELINE_VERSION,
 		rule_set_version: STATIC_RULE_SET_VERSION,
-		static_rules: STATIC_RULES,
+		static_rules: STATIC_RULES.filter((rule) => config.rules.some((id) => rule.endsWith(id))),
+		passive: config.passive,
 		methodology: {
 			primary_judgments: 'Jev probabilities composed by code',
 			agent_role: 'Configure, execute, validate plumbing, and analyze saved evidence; never substitute agent judgments for skipped Jev calls.',

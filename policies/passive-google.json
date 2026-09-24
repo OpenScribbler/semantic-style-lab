@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "guide": "google",
+  "model": "logistic",
+  "runs": 3,
+  "training": {
+    "items": 465,
+    "violations": 168,
+    "labels": "k8s only, conservative LLM labels (any vote other than acceptable = violation); never scored on unseen pages"
+  },
+  "questions": [
+    "active_subject_available",
+    "actor_identity",
+    "actor_in_passage",
+    "actor_kind",
+    "actor_needed",
+    "actor_referenced",
+    "automatic_no_owner",
+    "blame_avoided",
+    "construction",
+    "google_voice",
+    "hidden_actor_pointer",
+    "hidden_stance_holder",
+    "instruction_nearby",
+    "passage_kind",
+    "problem_followup",
+    "process_chain",
+    "reader_controls",
+    "reader_could_act",
+    "reader_is_actor",
+    "reader_unsure",
+    "responsibility_needed",
+    "result_report",
+    "subject_is_topic",
+    "trigger_named"
+  ],
+  "features": [
+    {
+      "name": "active_subject_available",
+      "mean": 0.572724,
+      "sd": 0.156286,
+      "weight": 0.255633
+    },
+    {
+      "name": "actor_identity.identifiable_component",
+      "mean": 0.330007,
+      "sd": 0.244554,
+      "weight": -0.128959
+    },
+    {
+      "name": "actor_identity.irrelevant",
+      "mean": 0.017082,
+      "sd": 0.016689,
+      "weight": 1.102265
+    },
+    {
+      "name": "actor_identity.no_action",
+      "mean": 0.234595,
+      "sd": 0.212421,
+      "weight": -0.245941
+    },
+    {
+      "name": "actor_identity.reader",
+      "mean": 0.069771,
+      "sd": 0.165201,
+      "weight": 0.454077
+    },
+    {
+      "name": "actor_identity.unidentified",
+      "mean": 0.348337,
+      "sd": 0.241341,
+      "weight": -0.033498
+    },
+    {
+      "name": "actor_in_passage",
+      "mean": 0.243742,
+      "sd": 0.172678,
+      "weight": 0.758544
+    },
+    {
+      "name": "actor_kind.no_action",
+      "mean": 0.329799,
+      "sd": 0.283069,
+      "weight": -0.411878
+    },
+    {
+      "name": "actor_kind.other_person",
+      "mean": 0.120796,
+      "sd": 0.181376,
+      "weight": -0.112642
+    },
+    {
+      "name": "actor_kind.reader",
+      "mean": 0.069713,
+      "sd": 0.151811,
+      "weight": 0.413301
+    },
+    {
+      "name": "actor_kind.software",
+      "mean": 0.479634,
+      "sd": 0.315642,
+      "weight": 0.238164
+    },
+    {
+      "name": "actor_needed",
+      "mean": 0.251914,
+      "sd": 0.073654,
+      "weight": -0.14
+    },
+    {
+      "name": "actor_referenced",
+      "mean": 0.115269,
+      "sd": 0.066095,
+      "weight": 0.179078
+    },
+    {
+      "name": "automatic_no_owner",
+      "mean": 0.349763,
+      "sd": 0.209591,
+      "weight": -0.133016
+    },
+    {
+      "name": "blame_avoided",
+      "mean": 0.04676,
+      "sd": 0.044748,
+      "weight": 0.150108
+    },
+    {
+      "name": "construction.not_passive",
+      "mean": 0.081176,
+      "sd": 0.120873,
+      "weight": -0.406227
+    },
+    {
+      "name": "construction.passive_actor_named",
+      "mean": 0.035154,
+      "sd": 0.127907,
+      "weight": 0.776624
+    },
+    {
+      "name": "construction.passive_actor_unnamed",
+      "mean": 0.801993,
+      "sd": 0.23594,
+      "weight": 0.020568
+    },
+    {
+      "name": "construction.state_or_adjective",
+      "mean": 0.081541,
+      "sd": 0.144895,
+      "weight": -0.358619
+    },
+    {
+      "name": "google_voice.actor_irrelevant",
+      "mean": 0.646724,
+      "sd": 0.165866,
+      "weight": -0.267132
+    },
+    {
+      "name": "google_voice.emphasizes_object",
+      "mean": 0.249584,
+      "sd": 0.16772,
+      "weight": 0.194892
+    },
+    {
+      "name": "google_voice.hides_actor",
+      "mean": 0.091434,
+      "sd": 0.072365,
+      "weight": -0.06411
+    },
+    {
+      "name": "google_voice.unclear",
+      "mean": 0.012057,
+      "sd": 0.030978,
+      "weight": 0.435339
+    },
+    {
+      "name": "hidden_actor_pointer",
+      "mean": 0.109699,
+      "sd": 0.04814,
+      "weight": 0.214494
+    },
+    {
+      "name": "hidden_stance_holder",
+      "mean": 0.146272,
+      "sd": 0.187218,
+      "weight": 0.815404
+    },
+    {
+      "name": "instruction_nearby",
+      "mean": 0.193584,
+      "sd": 0.190423,
+      "weight": -0.363635
+    },
+    {
+      "name": "passage_kind.caller_contract",
+      "mean": 0.152616,
+      "sd": 0.203806,
+      "weight": 0.355632
+    },
+    {
+      "name": "passage_kind.definition_or_rule",
+      "mean": 0.241484,
+      "sd": 0.280073,
+      "weight": 0.067026
+    },
+    {
+      "name": "passage_kind.opinion_or_advice",
+      "mean": 0.051778,
+      "sd": 0.189768,
+      "weight": -0.286217
+    },
+    {
+      "name": "passage_kind.problem_or_fix",
+      "mean": 0.030839,
+      "sd": 0.115169,
+      "weight": -0.243106
+    },
+    {
+      "name": "passage_kind.reader_step",
+      "mean": 0.096509,
+      "sd": 0.22172,
+      "weight": -0.340804
+    },
+    {
+      "name": "passage_kind.system_behavior",
+      "mean": 0.426545,
+      "sd": 0.347681,
+      "weight": 0.207624
+    },
+    {
+      "name": "problem_followup",
+      "mean": 0.109914,
+      "sd": 0.15183,
+      "weight": 0.369028
+    },
+    {
+      "name": "process_chain",
+      "mean": 0.361878,
+      "sd": 0.220623,
+      "weight": 0.127496
+    },
+    {
+      "name": "reader_controls",
+      "mean": 0.319341,
+      "sd": 0.270939,
+      "weight": -0.113936
+    },
+    {
+      "name": "reader_could_act",
+      "mean": 0.283082,
+      "sd": 0.210496,
+      "weight": 0.006485
+    },
+    {
+      "name": "reader_is_actor",
+      "mean": 0.269756,
+      "sd": 0.233066,
+      "weight": 0.937301
+    },
+    {
+      "name": "reader_unsure",
+      "mean": 0.331484,
+      "sd": 0.150206,
+      "weight": 0.192479
+    },
+    {
+      "name": "responsibility_needed",
+      "mean": 0.251254,
+      "sd": 0.086691,
+      "weight": -0.350364
+    },
+    {
+      "name": "result_report",
+      "mean": 0.632014,
+      "sd": 0.229368,
+      "weight": -0.754622
+    },
+    {
+      "name": "subject_is_topic",
+      "mean": 0.453247,
+      "sd": 0.182772,
+      "weight": 0.145305
+    },
+    {
+      "name": "trigger_named",
+      "mean": 0.359806,
+      "sd": 0.235492,
+      "weight": -0.718781
+    }
+  ],
+  "bias": -0.852156
+}

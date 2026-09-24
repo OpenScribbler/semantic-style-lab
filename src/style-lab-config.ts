@@ -2,6 +2,12 @@ import { createHash } from 'node:crypto';
 import { stat } from 'node:fs/promises';
 import { dirname, isAbsolute, relative, resolve } from 'node:path';
 
+import { PASSIVE_GUIDES } from './passive-rank';
+import type { PassiveGuide } from './passive-rank';
+
+export const RULE_IDS = ['command-line', 'real-time', 'setup', 'google-semicolons', 'google-passive-hidden-actor'] as const;
+export type RuleId = typeof RULE_IDS[number];
+
 export interface ProjectConfig {
 	name: string;
 	root: string;
@@ -23,6 +29,11 @@ export interface StyleLabConfig {
 	};
 	parsing: {
 		max_unparsed_file_ratio: number;
+	};
+	rules: RuleId[];
+	passive: {
+		mode: 'review' | 'rank';
+		guide?: PassiveGuide;
 	};
 }
 
@@ -102,6 +113,14 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 	if (typeof maxUnparsedFileRatio !== 'number' || maxUnparsedFileRatio < 0 || maxUnparsedFileRatio > 1) {
 		throw new Error('parsing.max_unparsed_file_ratio must be a number from 0 through 1.');
 	}
+	const rules = value.rules === undefined ? [...RULE_IDS] : nonemptyStrings(value.rules, 'rules');
+	for (const rule of rules) if (!(RULE_IDS as readonly string[]).includes(rule)) throw new Error(`rules: unknown rule ${rule}. Known rules: ${RULE_IDS.join(', ')}.`);
+	const passive = value.passive && typeof value.passive === 'object' ? value.passive as Record<string, unknown> : {};
+	const mode = passive.mode ?? 'review';
+	if (mode !== 'review' && mode !== 'rank') throw new Error('passive.mode must be review or rank.');
+	const guide = passive.guide;
+	if (guide !== undefined && !(PASSIVE_GUIDES as readonly unknown[]).includes(guide)) throw new Error(`passive.guide must be one of ${PASSIVE_GUIDES.join(', ')}.`);
+	if (mode === 'rank' && guide === undefined) throw new Error('passive.guide is required when passive.mode is rank.');
 	return {
 		schema_version: 1,
 		config_path: configPath,
@@ -109,6 +128,8 @@ export async function loadStyleLabConfig(path = 'style-lab.config.json'): Promis
 		projects,
 		jev: { model },
 		parsing: { max_unparsed_file_ratio: maxUnparsedFileRatio },
+		rules: [...new Set(rules)] as RuleId[],
+		passive: { mode, ...(guide === undefined ? {} : { guide: guide as PassiveGuide }) },
 	};
 }
 

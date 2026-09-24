@@ -20,6 +20,7 @@ extend, not a filter to deploy.
 | `rubric_build.py`, `gold_build.py` | Build reviewer items with the rule text and rubric |
 | `adj_build.py` | Builds blind adjudication chunks for split votes |
 | `gold_score.py` | Scores reviewers against labels taken from the guide's own examples |
+| `export_weights.py` | Writes each guide's model to `policies/passive-<guide>.json` for the CLI's rank mode |
 
 The data is not tracked. Jev requests and responses, reviewer labels, and
 adjudications for all sets take about 1 GB. The scripts expect them in the
@@ -78,6 +79,27 @@ repository root, and you run every command from the root.
    `OP`), average runs instead of taking the maximum (`BAGG=mean`), read rubric
    labels (`LABELS=rubric`), and add held-out sets to the scoring (`H4`, `H5`,
    `H6`).
+
+## Rank in the CLI
+
+`export_weights.py` retrains each guide's logistic model and writes its
+features, means, standard deviations, and weights to `policies/`. The Microsoft
+and Red Hat models come from `lrgate.py` with the frozen set 6 settings. The
+Google model trains on the Kubernetes tuning set alone, because Google has no
+rubric labels and no pairs set. Its label counts a candidate as a violation when
+any reviewer said anything other than acceptable, which is the reading the Google
+gate was tuned on. Its labels are in the gitignored
+`.style-lab-guides/google/labels/`.
+
+```bash
+uv run --with numpy python experiments/passive/export_weights.py
+```
+
+The CLI's `passive.mode: rank` applies these weights to fresh Jev answers. It asks
+each question the model needs 3 times, averages the runs, and orders the review
+list by the resulting probability. `test/fixtures/passive-rank.json` holds real
+Kubernetes answers with the Python model's probabilities, and the tests check that
+the TypeScript port matches them.
 
 ## Known gaps
 
