@@ -225,6 +225,11 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 			no_action: 'The marked words describe a state or property, not an action anyone performs.',
 		},
 	),
+	// Asked only with --performers: a dependency parser picks the candidate performer, so Jev judges one role and finds nothing.
+	candidate_performs: noul(
+		{ question: 'Does the thing named in `candidate_performer` itself carry out the marked action, rather than only triggering it, receiving it, or appearing nearby?', inspect: `${inspect} \`candidate_performer\` quotes words from the passage.` },
+		{ true: 'The named thing carries out the marked action.', false: 'The named thing does not carry out the marked action.' },
+	),
 	microsoft_rubric: choice(
 		{ question: 'Under the Microsoft Writing Style Guide voice rule, which case best fits the marked construction? Check the cases in the order listed and pick the first that fits.', inspect },
 		{
@@ -292,23 +297,27 @@ async function main() {
 	const root = argument('--root');
 	const variant = argument('--context') ?? 'paragraph';
 	const dry = process.argv.includes('--dry');
-	if (!candidatesPath || !out || !root) throw new Error('Usage: bun src/passive-lab.ts --candidates <report.json> --root <docs root> --out <dir> [--context paragraph|paragraph_plus] [--questions a,b] [--concurrency 8] [--dry]');
+	if (!candidatesPath || !out || !root) throw new Error('Usage: bun src/passive-lab.ts --candidates <report.json> --root <docs root> --out <dir> [--context paragraph|paragraph_plus] [--questions a,b] [--concurrency 8] [--performers <id-to-text.json>] [--dry]');
 	if (variant !== 'paragraph' && variant !== 'paragraph_plus') throw new Error('--context must be paragraph or paragraph_plus');
 	const names = (argument('--questions') ?? Object.keys(PASSIVE_QUESTIONS).join(',')).split(',');
 	for (const name of names) if (!PASSIVE_QUESTIONS[name]) throw new Error(`Unknown question ${name}`);
 	if (!dry && !process.env.TYPESAFE_API_KEY?.trim()) throw new Error('TYPESAFE_API_KEY is not set. See docs/api-key-security.md.');
 	const report = await Bun.file(candidatesPath).json() as { projects: { findings: Finding[] }[] };
 	const candidates = report.projects[0]!.findings.filter((finding) => finding.check === 'Lab.PassiveHiddenActor' && finding.source_class === 'prose');
+	const performersPath = argument('--performers');
+	const performers = performersPath ? await Bun.file(performersPath).json() as Record<string, string> : undefined;
 	const rawDirectory = resolve(out, 'raw');
 	await mkdir(rawDirectory, { recursive: true });
 	const sources = new Map<string, string>();
 	const jobs = [];
 	for (const candidate of candidates) {
+		if (performers && !performers[candidate.id]) continue;
 		if (!sources.has(candidate.file)) sources.set(candidate.file, await Bun.file(resolve(root, candidate.file)).text());
 		const context = passiveContext(sources.get(candidate.file)!, candidate.file.endsWith('.mdx'), candidate.line, candidate.span);
 		const state: Record<string, string | null> = variant === 'paragraph'
 			? { passage: context.passage }
 			: { passage: context.passage, section_heading: context.section_heading, previous_block: context.previous_block, page_type: context.page_type };
+		if (performers) state.candidate_performer = performers[candidate.id]!;
 		for (const name of names) jobs.push({ candidate, context, name, request: { model: 'jev-latest', state, questions: { answer: PASSIVE_QUESTIONS[name]! } } });
 	}
 	const client = dry ? undefined : new TypeSafeClient();
