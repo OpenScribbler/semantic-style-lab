@@ -225,6 +225,20 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 			no_action: 'The marked words describe a state or property, not an action anyone performs.',
 		},
 	),
+	microsoft_rubric: choice(
+		{ question: 'Under the Microsoft Writing Style Guide voice rule, which case best fits the marked construction? Check the cases in the order listed and pick the first that fits.', inspect },
+		{
+			not_passive: 'The words name a state, property, value, or relation rather than an action done to the subject, such as "is based on", "is available", or "is set to 3 by default".',
+			reader_blamed: 'The sentence reports an error or unwanted result, and the hidden actor is the reader or the reader\'s input, so an active version would blame the reader.',
+			reader_performs: 'The reader performs or must perform the action, including "should be", "must be", or "needs to be" directives and conditions on what the reader passes or configures.',
+			named_performer: 'The sentence names a specific performer, in a by-phrase or as the subject of an earlier clause, so an active rewrite with that performer as subject is plain.',
+			hidden_stance: 'An impersonal phrase hides the writer or vendor giving advice or a judgment the reader should act on, such as "it is recommended".',
+			hidden_work: 'The sentence reports work that a person or team did, or is doing, and hides who did it.',
+			awkward_active: 'An active version would need an invented actor such as "someone" or "the system", or a heavy actor (several actors, or a class of actors that a clause defines), or the passive sits in a chain of verbs that share the subject, or in a reduced modifier.',
+			receiver_emphasis: 'The sentence is about what happens to the object or its resulting state, and the product acts implicitly or the actor is unknown; this includes capability statements ("can be reused") and version status lines.',
+			other_violation: 'None of the cases above fits, and an active rewrite would serve the reader better.',
+		},
+	),
 	redhat_verdict: noul(
 		{ question: `Apply this rule to the marked construction: ${RULES.redhat}\nWould rewriting the marked construction in active voice improve conformance with this rule without harming the technical meaning?`, inspect },
 		{ true: 'The rule applies: an active rewrite would improve conformance without harming the meaning.', false: 'The rule does not apply, or an accepted exception covers the passive, or an active rewrite would harm the meaning.' },
