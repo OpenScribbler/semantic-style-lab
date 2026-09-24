@@ -82,6 +82,9 @@ async function buildItems() {
 }
 
 function promptFor(items: PanelItem[], guide: string) {
+	// A rule text every item shares (such as a rubric) is stated once rather than per item.
+	const shared = new Set(items.map(item => item.rule_summary)).size === 1 && items.length > 1 ? items[0].rule_summary : undefined;
+	const listed = shared ? items.map(({ rule_summary: _, ...item }) => item) : items;
 	return `Independently review documentation style candidates against ${guide}. You are a labeling reviewer, not an editor.
 
 For every item:
@@ -93,8 +96,8 @@ For every item:
 - Give calibrated confidence and a rationale of at most 18 words.
 - Treat each item independently. Return every id exactly once and do not add ids.
 
-Items:
-${JSON.stringify(items, null, 2)}`;
+${shared ? `Every item is judged against this rule:\n${shared}\n\n` : ''}Items:
+${JSON.stringify(listed, null, 2)}`;
 }
 
 function parseJson(text: string) {
