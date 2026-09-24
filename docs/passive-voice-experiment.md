@@ -157,6 +157,23 @@ A reviewer who starts at the top of the Red Hat queue finds 29 of the 30 violati
 
 The Google model has weaker backing. It was trained on the Kubernetes tuning set alone, with labels from LLM reviewers and no rubric, and it was never scored on unseen pages. Cross-validated by page on that tuning set, its ranking AUC is 0.88.
 
+## An open-weights alternative: Laya
+
+[Laya](https://github.com/NandhaKishorM/laya) is an Apache 2.0 model from Convai Innovations with Jev's three question types and a Jev-style request format. It runs locally: on a laptop CPU, with no GPU, it loaded in 28 seconds and then answered in a median 613 ms per call. That makes it the obvious candidate for teams that can't send docs to a hosted service.
+
+I replayed 4 of Jev's stored set 6 questions through Laya's English checkpoint, request for request, on all 200 items. Each cell is the ranking AUC against the rubric labels, Jev (mean of 3 runs) first and Laya second. An AUC of 0.5 is chance. `actor_needed` runs in reverse for both models, so its distance from 0.5 is what counts.
+
+| Question | Type | Red Hat AUC, Jev / Laya | Microsoft AUC, Jev / Laya | Correlation of the two models' answers |
+|---|---|---|---|---|
+| `redhat_voice` | Choice | 0.65 / 0.45 | — | −0.05 |
+| `microsoft_voice` | Choice | — | 0.66 / 0.52 | −0.07 |
+| `reader_is_actor` | Noul | 0.83 / 0.51 | 0.79 / 0.61 | 0.08 |
+| `actor_needed` | Noul | 0.33 / 0.44 | 0.41 / 0.50 | −0.01 |
+
+Laya's answers didn't track Jev's on any question, and they sat near chance against the labels. On the two guide questions, it picked the same top option as Jev on only 11% (Red Hat) and 20% (Microsoft) of items. Rewriting the structured instructions as a plain sentence didn't change that. I didn't rebuild a full per-guide model on Laya's answers, because that needs all 27 questions, 3 times each.
+
+This tests Laya out of the box on questions written for Jev. Laya publishes a checkpoint meant for fine-tuning, and the 1,500 labels per guide from this experiment are the kind of data that could train it. `experiments/passive/laya_compare.py` reruns the comparison.
+
 ## What to try next
 
 - **Change the contract.** Accept a small, measured miss rate and report it. That gives up the pass thresholds, so it needs a new decision. Ranking, the other option, is now in the CLI.

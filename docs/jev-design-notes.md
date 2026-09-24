@@ -14,7 +14,7 @@ agent skill is a compact implementation guide.
    recall-oriented regex candidate finding followed by a constrained Jev judgment.
    Here, Vale finds the term and code extracts the first word after it.
 3. **Ask atomic questions.** A Noul returns `P(yes)` for one defined proposition.
-   We independently ask whether the occurrence is literal, whether the explicit
+   I independently ask whether the occurrence is literal, whether the explicit
    next word is a noun modified by it, and—for `setup`—whether it expresses an
    action.
 4. **Send one question per request.** Each request carries one candidate and one

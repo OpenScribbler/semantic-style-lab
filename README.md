@@ -2,15 +2,15 @@
 
 Research code and results for style rules that a pattern can't settle alone,
 such as "use `setup` as a noun, `set up` as a verb" or "avoid passive voice unless
-the actor doesn't matter." Vale finds the candidates, a classifier model answers
+the actor doesn't matter." Vale finds the candidates, Jev (a classifier model from TypeSafe) answers
 narrow questions about each one, and code decides.
 
 - **Who it's for:** docs teams who already run Vale and want to know whether a
   model can settle the flags Vale can only raise.
-- **Status:** a research record with a working CLI. The CLI reports in shadow
-  mode and never edits docs or CI.
-- **Headline result:** the passive voice gates hid real violations on unseen
-  pages, so the CLI never suppresses passive findings. It ranks them instead, and
+- **Status:** a research record with a working CLI. The CLI reports findings
+  and never edits docs or CI.
+- **Headline result:** the passive voice gates, models that decide which flags
+  to drop, hid real violations on unseen pages, so the CLI never suppresses passive findings. It ranks them instead, and
   the top half of the ranked queue held 29 of 30 Red Hat violations.
 - **What you need:** Bun and Vale. Live classifier calls also need a TypeSafe API
   key.
@@ -32,10 +32,20 @@ context:
 - `real time` / `real-time`
 
 This is intentionally different from asking a model to apply an entire style
-guide. Each request contains marked passages and narrow semantic questions. The
-pipeline uses Choice for exclusive grammatical categories and independent Noul
-judgments for exceptions that can overlap, then composes the results into policy
-with code.
+guide. Each request contains marked passages and narrow semantic questions, in
+one of Jev's three question types:
+
+- **Choice** picks one of several named options and returns a probability for
+  each. The rules use it for exclusive categories, such as whether `setup` is a
+  noun, a verb, or a modifier.
+- **Noul** answers one yes-or-no question with the probability of yes. The rules
+  use it for exceptions that can overlap, so each exception gets its own question.
+- **Score** places a passage on an ordered scale you define, such as 0 to 3, and
+  returns the expected level with a probability for each. No rule here uses it,
+  because none has an ordered answer.
+
+Code then composes the answers into a decision. The
+[Jev design notes](docs/jev-design-notes.md) cover why.
 
 ## Setup
 
@@ -61,7 +71,7 @@ but an external, permission-restricted file is safer.
 
 ## Run the shareable CLI
 
-The portable shadow-mode command scans one or more configured documentation
+The portable command scans one or more configured documentation
 repositories with a small research rule set. Copy the example and edit
 repository paths and Markdown/MDX globs:
 
@@ -71,7 +81,8 @@ bun run style-lab -- --config style-lab.config.json --no-jev
 ```
 
 The no-Jev pass validates file discovery and Vale candidates without requiring a
-key or spending tokens. After reviewing that result, set `TYPESAFE_API_KEY` and
+key or spending tokens. Without Jev, every candidate that needs a judgment goes
+to review. After reviewing that result, set `TYPESAFE_API_KEY` and
 run the same command without `--no-jev`. Use `--project <name>` to select one of
 several configured repositories.
 
@@ -116,7 +127,7 @@ failures, the revised typed judgments and conservative composition policy, and
 the frozen rule-stratified dry corpus.
 
 Every invocation creates a timestamped directory under `output_dir` containing a
-dark HTML report, complete JSON, a page-localized editor checklist, a config
+dark HTML report, complete JSON, a page-by-page editor checklist (`editor-checklist.json`), a config
 snapshot, source-parse health, raw Vale output, and every exact Jev request and
 response. Markdown and MDX use different parsers; protected lexical fallback is
 reported explicitly rather than silently blocking Jev. The command does not edit
@@ -265,6 +276,14 @@ can't say whether one would be more accurate. The closest evidence is the
 labeling panel. Three frontier models reviewing the same passives agreed
 unanimously on only 141 of 200 Microsoft items.
 
+I also tried [Laya](https://github.com/NandhaKishorM/laya), an open-weights model
+with the same three question types that runs on a laptop. Replaying 4 of Jev's
+stored passive questions through Laya, its answers didn't track Jev's and didn't
+separate violations from acceptable passives. That was Laya out of the box, not
+tuned for these questions. The
+[passive voice write-up](docs/passive-voice-experiment.md#an-open-weights-alternative-laya)
+has the numbers.
+
 ### Can I use my own style guide?
 
 Yes, but plan for labeling rather than prompting. A vocabulary rule is one record
@@ -279,8 +298,9 @@ through tuning rules as labels accumulate.
 ### Isn't this just LLMs grading LLMs?
 
 Partly, and the write-up says so. The labels came from 3 LLM reviewers and an
-LLM adjudicator applying a written rubric, and in an earlier experiment they
-matched the guide owner on 5 of 7 spot checks. A human gold set is on the list
+LLM adjudicator applying a written rubric. No person checked the passive labels.
+A different, earlier panel reviewing Google style findings in the Syllago docs
+matched a person on 5 of 7 spot checks, which says little about this one. A human gold set is on the list
 under [what to try next](docs/passive-voice-experiment.md#what-to-try-next).
 
 ### How was this built?

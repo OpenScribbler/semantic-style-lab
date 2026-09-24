@@ -103,7 +103,7 @@ including whether each issue requires semantic context or could be owned by a
 deterministic Vale rule. The 23 finding-mapped corrections can then be accepted,
 revised, or rejected. The interactive HTML report stores those choices in
 browser local storage and can export them as JSON. Only after that review should
-we estimate finding precision, edit acceptance, or rule-level expansion priorities.
+I estimate finding precision, edit acceptance, or rule-level expansion priorities.
 
 This experiment also does not prove complete Google-guide coverage. The
 inventory is a roadmap and the 12 rules are an initial semantic slice.

@@ -21,11 +21,17 @@ extend, not a filter to deploy.
 | `adj_build.py` | Builds blind adjudication chunks for split votes |
 | `gold_score.py` | Scores reviewers against labels taken from the guide's own examples |
 | `export_weights.py` | Writes each guide's model to `policies/passive-<guide>.json` for the CLI's rank mode |
+| `laya_compare.py` | Replays set 6 Jev requests through [Laya](https://github.com/NandhaKishorM/laya), an open-weights model, and compares the answers |
 
 The data is not tracked. Jev requests and responses, reviewer labels, and
 adjudications for all sets take about 1 GB. The scripts expect them in the
 gitignored `.style-lab-guides/` and `.style-lab-k8s-*` directories at the
 repository root, and you run every command from the root.
+
+The scripts need Python 3 and [uv](https://docs.astral.sh/uv/). Every script
+except `laya_compare.py` runs under `uv run --with numpy python`, and
+`laya_compare.py` needs a Python with `laya` installed. An exploratory step used
+spaCy to pick performer candidates, and that step isn't scripted here.
 
 ## Run the method
 

@@ -25,7 +25,7 @@ Options:
 
 The configuration chooses which rules run (\`rules\`) and how passive voice
 findings are handled (\`passive.mode\`: review or rank, with \`passive.guide\`).
-The command runs in shadow mode and never edits documentation.`);
+The command reports findings and never edits documentation.`);
 }
 
 function publicProject(project: Awaited<ReturnType<typeof auditProject>>) {
