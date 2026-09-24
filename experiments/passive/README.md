@@ -11,7 +11,7 @@ extend, not a filter to deploy.
 
 | File | Role |
 |---|---|
-| `rules.json` | Each guide's passive voice rule text and source URL |
+| `rules.json` | Each guide's passive voice rule text and source URL. [`NOTICE.md`](NOTICE.md) covers the quoted text |
 | `microsoft/rubric.md`, `redhat/rubric.md` | The frozen rubrics the reviewers applied |
 | `lib.py` | Loads Jev answers, reviewer votes, and adjudicated labels |
 | `guidegate.py` | Fixed guard rules and the Google gate's settings |

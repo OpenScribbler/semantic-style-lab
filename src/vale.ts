@@ -1,6 +1,7 @@
 import type { Candidate, ContextualRule, ValeAlert } from './types';
 
 async function runVale(files: string[]) {
+	if (!Bun.which('vale')) throw new Error('Vale is not on PATH. Install it from https://vale.sh/docs/install and rerun.');
 	const child = Bun.spawn(['vale', '--output=JSON', ...files], { stdout: 'pipe', stderr: 'pipe' });
 	const [stdout, stderr, exitCode] = await Promise.all([
 		new Response(child.stdout).text(),

@@ -1,9 +1,28 @@
 # Semantic Style Lab
 
-An experiment in compiling contextual style guidance into small, testable rule
-records. Vale deterministically enumerates candidate terms; Jev classifies the
-grammatical or literal context; the rule record maps that classification to the
-expected form.
+Research code and results for style rules that a pattern can't settle alone,
+such as "use `setup` as a noun, `set up` as a verb" or "avoid passive voice unless
+the actor doesn't matter." Vale finds the candidates, a classifier model answers
+narrow questions about each one, and code decides.
+
+- **Who it's for:** docs teams who already run Vale and want to know whether a
+  model can settle the flags Vale can only raise.
+- **Status:** a research record with a working CLI. The CLI reports in shadow
+  mode and never edits docs or CI.
+- **Headline result:** the passive voice gates hid real violations on unseen
+  pages, so the CLI never suppresses passive findings. It ranks them instead, and
+  the top half of the ranked queue held 29 of 30 Red Hat violations.
+- **What you need:** Bun and Vale. Live classifier calls also need a TypeSafe API
+  key.
+
+The rest of this page covers the vocabulary rules first, then the CLI, the
+experiments, and [common questions](#common-questions).
+
+## How the rules work
+
+Each rule is a small, testable record. Vale enumerates candidate terms, Jev
+classifies the grammatical or literal context, and the rule record maps that
+classification to the expected form.
 
 The first vertical slice checks three families whose punctuation depends on
 context:
@@ -20,10 +39,18 @@ with code.
 
 ## Setup
 
-Requirements: Bun, Vale, and a TypeSafe API key for live Jev calls.
+Requirements: [Bun](https://bun.sh), [Vale](https://vale.sh/docs/install), and
+a TypeSafe API key for live Jev calls.
+
+Jev is a classifier model from [TypeSafe](https://docs.typesafe.ai). It answers a
+fixed question with a probability for each answer option and never writes text.
+This repo doesn't cover signing up for a key. Runs are cheap: a live rank-mode
+run on one Kubernetes page made 1,248 Jev calls with 596,000 input tokens for
+$0.025, at September 2026 prices.
 
 ```bash
 bun install
+bun test
 ```
 
 Run the candidate-only pass without a key. Before a live run, follow the
@@ -78,8 +105,11 @@ The models live in `policies/passive-<guide>.json`, and
 `experiments/passive/export_weights.py` rebuilds them from the lab data.
 
 The [passive voice experiment](docs/passive-voice-experiment.md) records why
-per-guide passive gates missed the zero-miss threshold on unseen Kubernetes pages,
-and [`experiments/passive/`](experiments/passive/) holds the method to rerun it.
+per-guide passive gates missed the zero-miss threshold on unseen Kubernetes pages.
+[`experiments/passive/`](experiments/passive/) holds the code, questions, and
+rubrics. The Jev responses and labels aren't tracked, so you can read the method
+but can't rerun it from this repo. `test/fixtures/passive-rank.json` is the one
+replayable slice.
 
 The [v2 experiment design](docs/v2-design.md) records the Kubernetes baseline
 failures, the revised typed judgments and conservative composition policy, and
@@ -162,7 +192,9 @@ revisions, links, and licenses are under [`corpus/`](corpus/).
 ## Compile and test the Google style guide
 
 The larger experiment inventories the public Google developer documentation
-style guide, runs 12 initial semantic rules over 27 real Syllago pages, and
+style guide, runs 12 initial semantic rules over 27 real pages from the docs for
+[Syllago](https://github.com/OpenScribbler/syllago), an open-source tool for
+moving AI coding-assistant content between tools, and
 compares two constrained editors on 20 pages:
 
 ```bash
@@ -212,6 +244,52 @@ See the [dark HTML result](reports/semicolon-exception-result.html), the
 [calibrated rule](compiled-rules/google-semicolons-calibrated.json), and every
 saved request and raw response under
 [`reports/semicolon-exceptions-raw/`](reports/semicolon-exceptions-raw/).
+
+## Common questions
+
+### Does this replace editors?
+
+No. The passive voice result argues the opposite: the models hid real violations
+whenever they suppressed a flag, so the CLI sends every passive finding to a
+person and only changes the order. The expensive part was labeling enough
+examples to trust a gate, not running the model. See
+[what it means for products](docs/passive-voice-experiment.md#what-it-means-for-products).
+
+### Why Jev instead of asking a general LLM yes or no?
+
+Jev returns a probability for every answer option, so code can set thresholds,
+average repeated runs, and rank findings. A generative model returns text to
+parse, and its confidence isn't exposed the same way. That's a design reason,
+not a measured one: this repo never ran a general LLM as the classifier, so it
+can't say whether one would be more accurate. The closest evidence is the
+labeling panel. Three frontier models reviewing the same passives agreed
+unanimously on only 141 of 200 Microsoft items.
+
+### Can I use my own style guide?
+
+Yes, but plan for labeling rather than prompting. A vocabulary rule is one record
+in [`rules/`](rules/) plus labeled examples in `test/`. A judgment rule like
+passive voice needs its own questions, a written rubric, and labeled candidates
+for each guide. The shipped passive models took about 1,500 labeled candidates
+per guide. [`experiments/passive/`](experiments/passive/) shows how those were
+built, and the
+[Semantic Style Audit skill](skills/semantic-style-audit/SKILL.md) walks an agent
+through tuning rules as labels accumulate.
+
+### Isn't this just LLMs grading LLMs?
+
+Partly, and the write-up says so. The labels came from 3 LLM reviewers and an
+LLM adjudicator applying a written rubric, and in an earlier experiment they
+matched the guide owner on 5 of 7 spot checks. A human gold set is on the list
+under [what to try next](docs/passive-voice-experiment.md#what-to-try-next).
+
+### Who made this?
+
+[Holden Hewett](https://github.com/holdenhewett), a technical writer, built it
+with AI coding agents under the
+[experimental protocol](docs/experimental-protocol.md). To cite it, link the
+repository and the commit you used. Results from your own docs are welcome as
+GitHub issues.
 
 ## Design boundary
 

@@ -33,7 +33,7 @@ adopts those labels.
    globs and a small `max_files` sample. For multi-rule evaluation, use
    `sampling.strategy: rule-stratified` and record any rule whose candidate target
    cannot be met. Keep `parsing.max_unparsed_file_ratio` at `0` for the first run.
-2. Run `--no-jev` first. Inspect `source-health.json` and report AST, fallback, and
+2. Run `--no-jev` first. Inspect `raw/<project>/source-health.json` in the run directory and report AST, fallback, and
    unparsed coverage. If the limit fails, preserve the artifacts and fix or report
    the input problem; do not substitute your own review or select a friendlier subset.
 3. After coverage is acceptable, run the identical configuration with Jev. The key

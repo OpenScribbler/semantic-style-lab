@@ -123,6 +123,7 @@ async function main() {
 	await Bun.write(resolve(runDirectory, 'config.snapshot.json'), `${JSON.stringify({ ...config, config_path: undefined }, null, 2)}\n`);
 	console.log(runDirectory);
 	console.error(`${summary.candidates} candidates: ${summary.flag} flag, ${summary.review} review, ${summary.suppress} suppress, ${summary.unparsed} unparsed; ${summary.jev_candidates} reached Jev in ${summary.jev_calls} calls`);
+	if (noJev && config.passive.mode === 'rank') console.error('Warning: passive.mode is rank, but --no-jev skips Jev, so passive findings went to review unranked.');
 	if (fallbackFiles) console.error(`Warning: ${fallbackFiles} files used protected lexical fallback; see raw/*/source-health.json.`);
 	if (unparsedFiles) console.error(`Warning: ${unparsedFiles} files could not be classified; no Jev judgment was made for their candidates.`);
 	const overLimit = projects.filter((project) => {

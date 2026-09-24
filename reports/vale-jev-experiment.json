@@ -8,7 +8,7 @@
     "suppress_at_or_below": 0.25,
     "otherwise": "review"
   },
-  "repo": "/home/hhewett/.local/src/syllago-docs",
+  "repo": "<syllago-docs>",
   "page_count": 27,
   "vale_alert_count": 256,
   "vale_jev": {

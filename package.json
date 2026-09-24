@@ -27,7 +27,7 @@
     "candidates": "bun src/candidates-cli.ts",
     "evaluate": "bun src/evaluate.ts",
     "report:real-world": "bun src/summarize-real-world.ts",
-    "test": "vitest run",
+    "test": "bun test",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

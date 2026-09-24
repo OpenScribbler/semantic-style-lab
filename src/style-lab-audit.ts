@@ -197,6 +197,7 @@ function chunks<T>(items: T[], size: number) {
 }
 
 export async function runStaticVale(root: string, files: string[]) {
+	if (!Bun.which('vale')) throw new Error('Vale is not on PATH. Install it from https://vale.sh/docs/install and rerun.');
 	const combined: Record<string, ExtendedValeAlert[]> = {};
 	for (const batch of chunks(files, 200)) {
 		const child = Bun.spawn(['vale', `--config=${valeConfig}`, '--output=JSON', ...batch], {

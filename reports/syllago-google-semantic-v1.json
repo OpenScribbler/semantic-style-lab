@@ -2,7 +2,7 @@
   "generated_at": "2026-09-18T02:03:49.377Z",
   "model": "jev-latest",
   "strategy_version": "google-semantic-v1",
-  "root": "/home/hhewett/.local/src/syllago-docs/src/content/docs",
+  "root": "<syllago-docs>/src/content/docs",
   "page_count": 27,
   "rule_count": 12,
   "candidate_count": 480,
