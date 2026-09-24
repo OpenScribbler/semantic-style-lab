@@ -18,7 +18,7 @@ agent skill is a compact implementation guide.
    next word is a noun modified by it, and—for `setup`—whether it expresses an
    action.
 4. **Send one question per request.** Each request carries one candidate and one
-   question. Batched requests changed verdicts: on the Kubernetes shadow run they
+   question. Batched requests changed verdicts: on the first Kubernetes run they
    suppressed confirmed violations and demoted confirmed flags to review.
 5. **Do not confuse confidence with correctness.** Choice confidence describes
    concentration among supplied options. Noul supplies a direct yes probability.

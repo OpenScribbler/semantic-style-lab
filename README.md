@@ -8,10 +8,13 @@ narrow questions about each one, and code decides.
 - **Who it's for:** docs teams who already run Vale and want to know whether a
   model can settle the flags Vale can only raise.
 - **Status:** a research record with a working CLI. The CLI reports findings
-  and never edits docs or CI.
-- **Headline result:** the passive voice gates, models that decide which flags
-  to drop, hid real violations on unseen pages, so the CLI never suppresses passive findings. It ranks them instead, and
-  the top half of the ranked queue held 29 of 30 Red Hat violations.
+  and never edits docs. It can run in CI as a report step. Findings never fail
+  the build; it exits non-zero only on a setup error or when too many files
+  can't be parsed.
+- **Headline result:** the passive voice gates (the models that decide which
+  flags to drop) hid real violations on unseen pages, so the CLI never
+  suppresses a passive finding. It ranks them instead: the top half of the Red
+  Hat queue held 29 of 30 violations.
 - **What you need:** Bun and Vale. Live classifier calls also need a TypeSafe API
   key.
 
@@ -55,7 +58,7 @@ a TypeSafe API key for live Jev calls.
 Jev is a classifier model from [TypeSafe](https://docs.typesafe.ai). It answers a
 fixed question with a probability for each answer option and never writes text.
 This repo doesn't cover signing up for a key. Runs are cheap: a live rank-mode
-run on one Kubernetes page made 1,248 Jev calls with 596,000 input tokens for
+run on one Kubernetes page made 1,248 Jev calls (about 75 per passive finding) with 596,000 input tokens for
 $0.025, at September 2026 prices.
 
 ```bash
@@ -73,7 +76,8 @@ but an external, permission-restricted file is safer.
 
 The portable command scans one or more configured documentation
 repositories with a small research rule set. Copy the example and edit
-repository paths and Markdown/MDX globs:
+repository paths and Markdown/MDX globs. A relative `root` resolves from the
+config file's folder:
 
 ```bash
 cp style-lab.config.example.json style-lab.config.json
@@ -122,16 +126,16 @@ rubrics. The Jev responses and labels aren't tracked, so you can read the method
 but can't rerun it from this repo. `test/fixtures/passive-rank.json` is the one
 replayable slice.
 
-The [v2 experiment design](docs/v2-design.md) records the Kubernetes baseline
-failures, the revised typed judgments and conservative composition policy, and
-the frozen rule-stratified dry corpus.
+The [v2 experiment design](docs/v2-design.md) records what went wrong in the
+first Kubernetes run, the revised questions and decision rules, and the fixed
+test corpus with a set number of candidates per rule.
 
 Every invocation creates a timestamped directory under `output_dir` containing a
 dark HTML report, complete JSON, a page-by-page editor checklist (`editor-checklist.json`), a config
-snapshot, source-parse health, raw Vale output, and every exact Jev request and
-response. Markdown and MDX use different parsers; protected lexical fallback is
-reported explicitly rather than silently blocking Jev. The command does not edit
-documentation or change CI.
+snapshot, raw Vale output, and every exact Jev request and response. The report
+also says which files parsed as Markdown or MDX, which fell back to plain-text
+matching with code and links masked, and which couldn't be parsed. The command
+does not edit documentation.
 
 The [experimental protocol](docs/experimental-protocol.md) makes the measurement
 boundary explicit: an LLM agent can operate and diagnose the experiment, but it
@@ -294,6 +298,15 @@ per guide. [`experiments/passive/`](experiments/passive/) shows how those were
 built, and the
 [Semantic Style Audit skill](skills/semantic-style-audit/SKILL.md) walks an agent
 through tuning rules as labels accumulate.
+
+### Where do my docs go?
+
+Only Jev calls leave your machine, and `--no-jev` makes none. A vocabulary or
+semicolon request sends the file path, line, matched word, and the text around
+it. A passive request sends the paragraph that holds the passive. Each goes to
+TypeSafe's hosted API, and the run directory keeps a copy of every exact request.
+[Laya](docs/passive-voice-experiment.md#an-open-weights-alternative-laya) runs
+locally, but it isn't accurate on these questions yet.
 
 ### Isn't this just LLMs grading LLMs?
 

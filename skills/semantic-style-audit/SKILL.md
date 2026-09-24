@@ -5,7 +5,7 @@ description: Set up, run, interpret, and carefully tune Semantic Style Lab audit
 
 # Semantic Style Audit
 
-Use the Semantic Style Lab CLI as an instrumented shadow-mode audit. Vale enumerates a fixed candidate set; source parsing removes non-prose spans; Jev supplies narrow probabilities; code decides whether to flag, review, or suppress. Do not replace this pipeline with a prompt containing an entire style guide.
+Use the Semantic Style Lab CLI as an instrumented report-only audit. Vale enumerates a fixed candidate set; source parsing removes non-prose spans; Jev supplies narrow probabilities; code decides whether to flag, review, or suppress. Do not replace this pipeline with a prompt containing an entire style guide.
 
 ## Choose the task
 
@@ -17,7 +17,7 @@ Use the Semantic Style Lab CLI as an instrumented shadow-mode audit. Vale enumer
 
 - Keep `TYPESAFE_API_KEY` in the user's inherited environment. Check only whether it is non-empty. Never request, locate, read, print, copy, persist, or commit it.
 - Start with `--no-jev`; confirm the intended files and Vale candidates before making live calls.
-- Treat `flag`, `review`, and `suppress` as shadow-mode recommendations. Do not edit docs, modify CI, or hide findings unless the user separately asks.
+- Treat `flag`, `review`, and `suppress` as recommendations only. Do not edit docs, modify CI, or hide findings unless the user separately asks.
 - Preserve each run’s config snapshot, Vale output, exact Jev requests, and exact Jev responses. Do not overwrite prior runs.
 - Keep evaluation labels out of Jev state, questions, and prompt examples. Join them only after inference.
 - Do not perform the semantic judgments that the experiment is intended to measure Jev performing. If Jev was not called, report `unparsed` or `not evaluated`; never replace the missing result with an agent verdict.

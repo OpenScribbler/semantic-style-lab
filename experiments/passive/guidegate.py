@@ -1,6 +1,6 @@
 import json,re,glob,os,sys,collections
 sys.path.insert(0,os.path.dirname(__file__)); from lib import *
-# Google passive gate (gate3.py v4 + f2) rebuilt on lib.features, plus per-guide knobs.
+# Google passive gate rebuilt on lib.features, plus per-guide knobs.
 # P holds the knobs; every threshold applies to all 3 runs ("any" for blocks, "all" for paths).
 GOOGLE=dict(ra=0.6,rr=0.6,pf=0.5,ar=0.25,rc=0.22,flag_rr=0.6,flag_ra=0.3,
   block_kind={},          # actor_kind option -> block suppress when prob >= t in any run

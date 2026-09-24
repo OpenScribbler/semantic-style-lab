@@ -12,7 +12,7 @@ Use the Semantic Style Lab checkout at:
 
 `[SEMANTIC_STYLE_LAB_PATH]`
 
-Test this documentation repository in shadow mode:
+Test this documentation repository in report-only mode:
 
 `[TARGET_REPOSITORY_PATH]`
 

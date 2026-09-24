@@ -130,7 +130,7 @@ describe('shareable style-lab CLI', () => {
 		}
 	});
 
-	test('supports a no-key shadow run', async () => {
+	test('supports a no-key report-only run', async () => {
 		const root = resolve('test/fixtures/shareable-docs');
 		const rawDirectory = await mkdtemp(resolve(tmpdir(), 'style-lab-raw-'));
 		temporary.push(rawDirectory);

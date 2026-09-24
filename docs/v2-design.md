@@ -1,7 +1,7 @@
 # Vale + Jev v2 experiment
 
 V2 addresses defects found by the first Kubernetes baseline. It remains a
-shadow-mode research rule set, not a production quality gate.
+report-only research rule set, not a production quality gate.
 
 ## Baseline evidence
 

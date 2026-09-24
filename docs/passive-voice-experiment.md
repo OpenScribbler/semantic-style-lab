@@ -161,7 +161,7 @@ The Google model has weaker backing. It was trained on the Kubernetes tuning set
 
 [Laya](https://github.com/NandhaKishorM/laya) is an Apache 2.0 model from Convai Innovations with Jev's three question types and a Jev-style request format. It runs locally: on a laptop CPU, with no GPU, it loaded in 28 seconds and then answered in a median 613 ms per call. That makes it the obvious candidate for teams that can't send docs to a hosted service.
 
-I replayed 4 of Jev's stored set 6 questions through Laya's English checkpoint, request for request, on all 200 items. Each cell is the ranking AUC against the rubric labels, Jev (mean of 3 runs) first and Laya second. An AUC of 0.5 is chance. `actor_needed` runs in reverse for both models, so its distance from 0.5 is what counts.
+I replayed 4 of Jev's stored set 6 questions through Laya's English checkpoint, request for request, on all 200 items. Each cell is the ranking AUC against the rubric labels, Jev (mean of 3 runs) first and Laya (1 run) second. Each single Jev run lands within 0.01 of that mean, so averaging doesn't favor Jev. An AUC of 0.5 is chance. `actor_needed` runs in reverse for both models, so its distance from 0.5 is what counts.
 
 | Question | Type | Red Hat AUC, Jev / Laya | Microsoft AUC, Jev / Laya | Correlation of the two models' answers |
 |---|---|---|---|---|

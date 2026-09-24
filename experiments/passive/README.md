@@ -109,6 +109,8 @@ the TypeScript port matches them.
 
 ## Known gaps
 
+- The rubrics cite `examples/adjudicate-out.json`, the file where the guides'
+  own examples were vetted against each rule. That file isn't tracked.
 - The script that sampled sets 4-6 was not kept. The rule it applied is in
   step 1.
 - The scripts use short, terse names and hard-coded data paths. They record
