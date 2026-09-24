@@ -81,11 +81,11 @@ async function buildItems() {
 	return [...valeItems, ...semanticItems];
 }
 
-function promptFor(items: PanelItem[]) {
-	return `Independently review documentation style candidates against the Google developer documentation style guide. You are a labeling reviewer, not an editor.
+function promptFor(items: PanelItem[], guide: string) {
+	return `Independently review documentation style candidates against ${guide}. You are a labeling reviewer, not an editor.
 
 For every item:
-- verdict=violation only when the exact reported rule genuinely applies to this passage and acting on it would improve Google-style conformance without harming technical meaning.
+- verdict=violation only when the exact reported rule genuinely applies to this passage and acting on it would improve conformance with that guide without harming technical meaning.
 - verdict=not_violation for contextual false positives, literal UI/code/product text, inapplicable rules, or harmful recommendations.
 - verdict=uncertain only when the supplied passage is insufficient or the rule permits a genuine judgment call.
 - For semantic_gap items, vale_fit says whether a conventional deterministic Vale/regex rule could reliably make this decision with acceptable noise: deterministic, semantic, or uncertain.
@@ -119,7 +119,7 @@ function unwrapResponse(value: unknown): unknown {
 
 async function callClaude(prompt: string, schema: string): Promise<ReviewerCall> {
 	const process = Bun.spawn([
-		'claude', '-p', '--model', 'haiku', '--effort', 'low', '--restricted', '--safe-mode',
+		'claude', '-p', '--model', argument('--model', 'haiku')!, '--effort', 'low', '--restricted', '--safe-mode',
 		'--no-session-persistence', '--output-format', 'json', '--json-schema', schema,
 	], { stdin: new Blob([prompt]), stdout: 'pipe', stderr: 'pipe' });
 	const [code, stdout, stderr] = await Promise.all([process.exited, new Response(process.stdout).text(), new Response(process.stderr).text()]);
@@ -128,7 +128,7 @@ async function callClaude(prompt: string, schema: string): Promise<ReviewerCall>
 
 async function callCopilot(prompt: string): Promise<ReviewerCall> {
 	const process = Bun.spawn([
-		'copilot', '-p', prompt, '-s', '--model', 'auto', '--auto-tier', 'efficiency',
+		'copilot', '-p', prompt, '-s', ...(argument('--model') ? ['--model', argument('--model')!] : ['--model', 'auto', '--auto-tier', 'efficiency']),
 		'--no-custom-instructions', '--disable-builtin-mcps', '--no-ask-user', '--max-ai-credits', '30',
 	], { stdout: 'pipe', stderr: 'pipe' });
 	const [code, stdout, stderr] = await Promise.all([process.exited, new Response(process.stdout).text(), new Response(process.stderr).text()]);
@@ -217,7 +217,7 @@ async function main() {
 	for (let start = 0; start < items.length; start += chunkSize) {
 		const chunk = items.slice(start, start + chunkSize);
 		console.error(`${reviewer}: items ${start + 1}-${start + chunk.length}/${items.length}`);
-		const prompt = promptFor(chunk);
+		const prompt = promptFor(chunk, argument('--guide', 'the Google developer documentation style guide')!);
 		const chunkName = `chunk-${String(start / chunkSize + 1).padStart(3, '0')}`;
 		const promptPath = resolve(rawDirectory, `${chunkName}.prompt.json`);
 		const responsePath = resolve(rawDirectory, `${chunkName}.response.json`);
