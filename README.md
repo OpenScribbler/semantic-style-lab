@@ -283,10 +283,9 @@ LLM adjudicator applying a written rubric, and in an earlier experiment they
 matched the guide owner on 5 of 7 spot checks. A human gold set is on the list
 under [what to try next](docs/passive-voice-experiment.md#what-to-try-next).
 
-### Who made this?
+### How was this built?
 
-[Holden Hewett](https://github.com/holdenhewett), a technical writer, built it
-with AI coding agents under the
+A technical writer built it with AI coding agents, working under the
 [experimental protocol](docs/experimental-protocol.md). To cite it, link the
 repository and the commit you used. Results from your own docs are welcome as
 GitHub issues.
