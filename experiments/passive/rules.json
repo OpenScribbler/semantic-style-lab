@@ -1,0 +1,12 @@
+{
+ "microsoft": {
+  "name": "Microsoft Writing Style Guide",
+  "url": "https://learn.microsoft.com/en-us/style-guide/grammar/verbs",
+  "rule": "Active and passive voice. Voice is either active or passive. Keep it active whenever you can. In active voice, the subject of the sentence performs the action. In passive voice, the subject is the receiver of the action.\nActive voice is for most Microsoft content. Examples: \"Divide your document into as many sections as you want.\" \"Office 365 includes the Office 2016 apps for PC and Mac.\"\nPassive voice is for these uses only: (1) avoiding condescending text or blaming the customer, especially in errors, warnings, or notifications; (2) avoiding awkward constructions; (3) emphasizing the receiver of the action. Examples: \"That site can't be found. Double-check the site address in the Address bar.\" \"When the user clicks OK, the transaction is committed.\" (in content for developers)"
+ },
+ "redhat": {
+  "name": "Red Hat documentation style (Red Hat supplementary style guide, with IBM Style as its primary source)",
+  "url": "https://redhat-documentation.github.io/vale-at-red-hat/ (PassiveVoice rule) and https://redhat-documentation.github.io/supplementary-style-guide/",
+  "rule": "Passive voice. Avoid the passive voice where possible. Active voice focuses on the performer of the action and is often clearer, shorter, and more direct than the passive voice.\nAccording to IBM Style, the passive voice is acceptable in the following situations: when the system performs the action; when it is more appropriate to focus on the receiver of the action; when you want to avoid blaming the user for an error, such as in an error message; when the information is clearer in the passive voice; when the information requires the passive voice, for example, glossary definitions.\nAccording to the Red Hat supplementary style guide, you can use the passive voice in prerequisites: \"When writing prerequisites, be as clear and concise as possible. You can use the passive voice, if necessary, to achieve that end.\" Example of an acceptable prerequisite: \"JDK 11 or later is installed.\" (the agent is unknown or unimportant)."
+ }
+}

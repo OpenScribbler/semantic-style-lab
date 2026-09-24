@@ -54,6 +54,10 @@ Jev runs, selects files that cover each available fixed rule, and records both
 available and selected counts. This avoids accidentally measuring hundreds of
 passive candidates while leaving a rarer rule untested.
 
+The [passive voice experiment](docs/passive-voice-experiment.md) records why
+per-guide passive gates missed the zero-miss threshold on unseen Kubernetes pages,
+and [`experiments/passive/`](experiments/passive/) holds the method to rerun it.
+
 The [v2 experiment design](docs/v2-design.md) records the Kubernetes baseline
 failures, the revised typed judgments and conservative composition policy, and
 the frozen rule-stratified dry corpus.
