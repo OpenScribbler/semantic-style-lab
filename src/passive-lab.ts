@@ -237,6 +237,18 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 		{ question: 'Would rewriting the marked construction in active voice, naming who acts, make the passage worse for the reader, for example by blaming the reader, by naming an actor who does not matter, or by pulling focus from the object that matters?', inspect },
 		{ true: 'An active rewrite would make the passage worse for the reader.', false: 'An active rewrite that names the actor would be as good or better.' },
 	),
+	active_subject_available: noul(
+		{ question: "Could the marked construction be rewritten in natural active voice with a specific subject that the passage names or makes obvious, such as a component, tool, service, team, or the reader (for example \"the queue guarantees\", \"the scheduler prefers\", \"the provisioner creates a volume\")?", inspect },
+		{ true: 'A specific, obvious subject exists and the active rewrite reads naturally.', false: 'No specific performer is obvious, or the active rewrite would be awkward, vague ("something", "someone"), or would blame the reader.' },
+	),
+	hidden_actor_pointer: noul(
+		{ question: 'Later in the passage, does a pronoun or noun phrase such as "its", "their", "the component", or "the responsible controller" point back to whoever performs the marked action, rather than to the grammatical subject of the marked construction?', inspect },
+		{ true: 'A later word points back to the unnamed performer of the marked action.', false: 'No later word points back to the performer, or it points to the grammatical subject instead.' },
+	),
+	hidden_stance_holder: noul(
+		{ question: 'Does the marked construction state a judgment, promise, estimate, or preference, such as "is considered", "is guaranteed", "is estimated", "is expected", "is preferred", or "is recommended", without saying who holds it?', inspect },
+		{ true: 'It states a judgment, promise, estimate, or preference and hides who holds it.', false: 'It describes an action or state rather than a judgment, or it names who holds the judgment.' },
+	),
 	google_voice: choice(
 		{ question: "How does Google's voice guideline apply to the marked construction? Google prefers active voice and accepts a passive only to emphasize the object, to de-emphasize the actor, or when the reader does not need to know who is responsible.", inspect },
 		{
