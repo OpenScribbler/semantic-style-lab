@@ -151,6 +151,10 @@ export const PASSIVE_QUESTIONS: Record<string, Question> = {
 		{ question: 'Does the passage refer to whoever performs the marked action without naming it, for example with "it", "its", "the responsible controller", or "the component", and ask the reader to configure, check, restart, or change that performer?', inspect },
 		{ true: 'The passage points the reader at the unnamed performer of the marked action.', false: 'The passage does not point the reader at the performer of the marked action.' },
 	),
+	person_action: noul(
+		{ question: 'Is the marked action the kind of step a person takes, such as choosing, setting, configuring, running, using, or passing something, rather than work that software carries out on its own?', inspect },
+		{ true: 'A person takes the marked action as a step.', false: 'Software carries out the marked action on its own.' },
+	),
 	reader_could_act: noul(
 		{ question: 'Could a reader following this passage reasonably take the marked action to be a step they must carry out themselves?', inspect },
 		{ true: 'A reader could reasonably take the marked action to be their own step.', false: 'No reader would take the marked action to be their own step.' },
@@ -305,7 +309,7 @@ async function main() {
 	const report = await Bun.file(candidatesPath).json() as { projects: { findings: Finding[] }[] };
 	const candidates = report.projects[0]!.findings.filter((finding) => finding.check === 'Lab.PassiveHiddenActor' && finding.source_class === 'prose');
 	const performersPath = argument('--performers');
-	const performers = performersPath ? await Bun.file(performersPath).json() as Record<string, string> : undefined;
+	const performers = performersPath ? await Bun.file(performersPath).json() as Record<string, string | string[]> : undefined;
 	const rawDirectory = resolve(out, 'raw');
 	await mkdir(rawDirectory, { recursive: true });
 	const sources = new Map<string, string>();
@@ -317,8 +321,12 @@ async function main() {
 		const state: Record<string, string | null> = variant === 'paragraph'
 			? { passage: context.passage }
 			: { passage: context.passage, section_heading: context.section_heading, previous_block: context.previous_block, page_type: context.page_type };
-		if (performers) state.candidate_performer = performers[candidate.id]!;
-		for (const name of names) jobs.push({ candidate, context, name, request: { model: 'jev-latest', state, questions: { answer: PASSIVE_QUESTIONS[name]! } } });
+		// Several parser picks for one candidate each get their own request, recorded as <question>.<k>.
+		const picks = performers ? [performers[candidate.id]!].flat() : [undefined];
+		for (const [k, pick] of picks.entries()) {
+			const pickState = pick === undefined ? state : { ...state, candidate_performer: pick };
+			for (const name of names) jobs.push({ candidate, context, name: picks.length > 1 ? `${name}.${k}` : name, request: { model: 'jev-latest', state: pickState, questions: { answer: PASSIVE_QUESTIONS[name]! } } });
+		}
 	}
 	const client = dry ? undefined : new TypeSafeClient();
 	const results: unknown[] = [];
